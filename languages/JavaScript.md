@@ -164,7 +164,7 @@ logo.innerHTML = "<img src=\"logo.png\">";
 
 ## Event Handling
 
-<mark>TODO</mark>: Use `addEventListener`
+<span style="background-color: #FFFF00">TODO</span>: Use `addEventListener`
 
 ```html
 <a href="#" onclick="return clickHandler(element);">Test Link</a>
