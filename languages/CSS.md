@@ -19,9 +19,9 @@ Styling in head section:
 <head>
     <style>
         p {
-            ...
+            /* ... */
         }
-        ...
+        /* ... */
     </style>
 </head>
 ```
@@ -175,5 +175,5 @@ http://stackoverflow.com/questions/572768/styling-an-input-type-file-button
 http://jsfiddle.net/4cwpLvae/
 
 ## Good Google Fonts
-- Lato
-- Open Sans
+- [Lato](https://fonts.google.com/specimen/Lato)
+- [Open Sans](https://fonts.google.com/specimen/Open+Sans)
