@@ -44,19 +44,19 @@ p {
 ## Selectors
 
 ```css
-p                    /* Tag */
-#id                 /* Id */
+p                  /* Tag */
+#id                /* Id */
 .class             /* Class */
-p a                 /* Anchor inside Paragraph */
+p a                /* Anchor inside Paragraph */
 p > a              /* Anchor direct child from Paragraph */
 p + a              /* Anchor immediately after Paragraph */
 p ~ a              /* Anchor after Paragraph (sibling) */
-a:not(.class)   /* Anchor without class */
+a:not(.class)      /* Anchor without class */
 a:link, a:visited, a:hover, a:active    /* LoVe HAte, proper link css order */
-button:hover   /* When mouse is over the element */
-button:focus    /* When button is focused (after click or tab) */
-#hello:target   /* Applies when the URL is <site>#hello */
-input[name="log"]    /* Query including attribute */
+button:hover       /* When mouse is over the element */
+button:focus       /* When button is focused (after click or tab) */
+#hello:target      /* Applies when the URL is <site>#hello */
+input[name="log"]  /* Query including attribute */
 ```
 
 ## Properties
