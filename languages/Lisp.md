@@ -516,12 +516,17 @@ To avoid stack overflows, use Tail-Recursion: add an aux parameter to the functi
 
 ## Conditions (Exceptions)
 ```lisp
-(handler-case                        ;; High-level, control jumps back from failure
+(define-condition my-error (error)       ;; Define a type of error
+  ((text :initarg :text :reader text)))
+
+(error 'my-error :text "oh no!")         ;; Throw error
+
+(handler-case                            ;; High-level, control jumps back from failure
     (do-something)
-    (my-error-condition (e)
+    (my-error (e)
         (print "Error found")))
 
-(handler-bind ((my-error-condition   ;; Lower-level, control stays inside failure
+(handler-bind ((my-error                 ;; Lower-level, control stays inside failure
     #'(lambda (e)
         (print "Error found!"))))
     (do-something)
