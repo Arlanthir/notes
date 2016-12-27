@@ -98,7 +98,7 @@
 ```
 
 ## Hash Tables
-```
+```lisp
 (make-hash-table)                              ;; Create hash table
 (make-hash-table :test #'string.=)             ;; Specify compare function for keys
 (make-hash-table :size xxx :rehash-size yyy)   ;; Specify sizes and rehash sizes
@@ -459,6 +459,7 @@ p1::x                        ;; Accesses symbol regardless of export
 ```
 
 Order of methods' execution:
+
 1. Specific around -> generic arounds
 2. Specific befores -> generic befores
 3. Most specific Primary method
