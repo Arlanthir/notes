@@ -336,8 +336,14 @@
 
 (do*                                ;; Initializes in order and increments in order
 
-;; Explicit return from any loop or block/function:
+;; Explicit return from the immediate parent loop or block/function:
 (return [val])
+
+;; Return from a named block/function:
+(defun myfun ...
+    (block myblock
+        (return-from myblock [val]))
+    (return-from myfun [val]))
 
 ;; Infinite cycle until (return), has exhaustive syntax for different behaviors
 (loop ...)
