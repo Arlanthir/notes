@@ -270,6 +270,18 @@ On newer browsers (IE10+), look into FormData
 
 -->
 
+## Overloading coercion operators
+
+```javascript
+obj.valueOf = function() {
+    return myValueAsNumber;
+}
+
+obj.toString = function() {
+    return myValueAsString;
+}
+```
+
 ## RESTful APIs
 
 **RE**presentational **S**tate **T**ransfer APIs should use the HTTP methods and URIs
