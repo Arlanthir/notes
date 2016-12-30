@@ -280,6 +280,10 @@ obj.valueOf = function() {
 obj.toString = function() {
     return myValueAsString;
 }
+
+obj.toJSON = function() {
+    return objectWithPropertiesToSerialize;
+}
 ```
 
 ## RESTful APIs
