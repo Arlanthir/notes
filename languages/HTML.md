@@ -102,3 +102,46 @@ Use only one &lt;h1&gt; tag per page
 ```
 
 More icons are needed for iphone, Android, etc... Check online tools
+
+## Newsletters
+
+### Guidelines
+- Inline styles for each element
+- Layout through `<table>`s
+- Explicit width in `<td>`s
+- Explicit width and height in images, both as attributes and CSS
+- Display block in images
+- Images must use explicit height/width, both in CSS as width/height html4 attributes
+- Images must have the `alt` attribute. If none is wanted, use `alt=""`
+- Use margins of `<div>` children instead of paddings in adjacent `<td>`s
+
+```html
+<body style="margin: 0; border: 0; padding: 0; background-color: #c9e4f7;">
+    <center>
+        <table style="margin: 0 auto; border: 0; padding: 0; width: 900px; border-spacing: 0; text-align: left; table-layout: fixed;" cellspacing="0">
+            <colgroup>
+                <col style="width: 87px;">
+                <col style="width: 606px;">
+                <col style="width: 118px;">
+                <col style="width: 89px;">
+            </colgroup>
+
+            <!-- Fix for Outlook: because we use colspan in the first line -->
+            <tr style="margin: 0; border: 0; padding: 0;">
+                <td width="87" style="margin: 0; border: 0; padding: 0;"></td>
+                <td width="606" style="margin: 0; border: 0; padding: 0;"></td>
+                <td width="118" style="margin: 0; border: 0; padding: 0;"></td>
+                <td width="89" style="margin: 0; border: 0; padding: 0;"></td>
+            </tr>
+        </table>
+    </center>
+</body>
+```
+
+### Show images without proxy in GMail
+
+Run in the Javascript console
+
+```javascript
+(function(){ while(img = document.evaluate('//img[contains(@src, \'googleusercontent.com\')]', document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue){ var src = img.attributes.src.value; src = src.substr(src.indexOf('#')+1); img.attributes.src.value = src; } })();
+```
