@@ -90,8 +90,13 @@ Cecking if variable is defined:
 if (typeof myVar !== 'undefined')
 
 // Alternatively:
-// (can only check properties of objects, use window for global vars)
+// (can only check declared variables and properties of objects, use window for global vars)
+// Will fail for variables assigned falsy values ('', 0, null)
 if (window.myVar)
+
+// Safe since ES5
+// (can only check declared variables and properties of objects, use window for global vars)
+if (window.myVar === undefined)
 ```
 
 ### Simulate Classes
