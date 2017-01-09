@@ -182,6 +182,19 @@ function clickHandler(element) {
 </script>
 ```
 
+
+## On Ready (not load)
+```javascript
+function onrReady(fn) {
+    if (document.readyState !== 'loading') {
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+```
+
+
 ## Promises
 
 Async code execution without passing callback function arguments.
