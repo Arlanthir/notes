@@ -175,14 +175,14 @@ hwclock --systohc --utc
 
 ### Install GRUB
 
-#### MBR:
+#### MBR
 ```bash
 pacman -S grub os-prober
 grub-install --target=i386-pc /dev/sdx
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-#### OSX EFI:
+#### OSX EFI
 See bottom notes.
 
 ### Network
@@ -233,7 +233,7 @@ systemctl enable gdm.service
 systemctl enable NetworkManager.service
 ```
 
-### Configure Synaptics touchpad:
+### Configure Synaptics touchpad
 ```bash
 nano /usr/share/X11/xorg.conf.d/70-synaptics.conf
 # Add to touchpad catchall
@@ -256,17 +256,17 @@ EDITOR="nano" visudo
 Defaults env_keep += "HOME"
 ```
 
-### Printing:
+### Printing
 ```bash
 sudo pacman -S cups ghostscript gsfonts cups-pdf hplip system-config-printer
 sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 ```
 
-### Useful packages:
+### Useful packages
 AUR: `ttf-ms-fonts adobe-source-han-sans-otc-fonts`
 
-### Android MTP:
+### Android MTP
 ```bash
 sudo pacman -S libmtp gvfs-mtp gvfs-gphoto2
 sudo reboot
@@ -276,7 +276,7 @@ sudo reboot
 
 ### GRUB
 
-#### GRUB-EFI (EFI, OSX):
+#### GRUB-EFI (EFI, OSX)
 ```bash
 pacman -S grub-efi-x86_64
 nano /etc/default/grub
@@ -334,6 +334,204 @@ sudo nano /etc/modprobe.d/50-disabling.conf
 blacklist bluetooth
 blacklist btusb
 ```
+
+### Macbook Air Tweaks
+
+#### Fix suspend backlight in Macbook:
+
+Install AUR package `mba6x_bl-dkms-git`
+```bash
+# OLD:
+# copy to /etc/systemd/system/backlightfix.service (at least on Arch Linux)
+# sudo systemctl enable backlightfix.service
+
+[Unit]
+Description=Remove and reload mba6x to workaround no brightness bug
+
+
+[Service]
+ExecStart=/bin/sh -c "modprobe -r mba6x_bl && modprobe mba6x_bl"
+Type=oneshot
+
+
+[Install]
+WantedBy=multi-user.target
+```
+
+#### Check CPU specs
+```bash
+cat /proc/cpuinfo
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+```
+
+#### Check CPU freq
+```bash
+cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq
+```
+
+#### kworker issue
+Sometime with the addition of Yosemite, some users found that kworker CPU usage will spike, as discussed here. This is sometimes the result of runaway ACPI interrupts.
+
+To check and see, you can count the number of recent ACPI interrupts and see if any of them are out of control.
+```bash
+grep . -r /sys/firmware/acpi/interrupts/
+```
+If you see that one particular interrupt is out of control (possibly GPE66 or GPE4E), i.e., registering hundreds of thousands of lines, you can try disabling it (replace XX with the runaway interrupt):
+```bash
+echo "disable" > sudo tee /sys/firmware/acpi/interrupts/gpeXX
+```
+To make permanent:
+```bash
+sudo nano /etc/systemd/system/suppress-gpe4E.service
+
+[Unit]
+Description=Disables GPE4E, an interrupt that is going crazy on Macs
+[Service]
+ExecStart=/usr/bin/bash -c 'echo "disable" > /sys/firmware/acpi/interrupts/gpe4E'
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl enable suppress-gpe4E.service
+sudo systemctl start suppress-gpe4E.service
+```
+
+#### Making the fans work
+```bash
+# Add to /etc/modules:
+applesmc
+coretemp
+# Install the AUR package mbpfan-git, controls the fan speed according to the current temperature
+sudo systemctl enable mbpfan.service
+
+# Check that /sys/devices/platform/applesmc.768/fan1_manual is set to 0 (at least after reboot)
+
+Install AUR package thermald
+sudo systemctl enable thermald.service
+
+sudo pacman -S cpupower
+sudo systemctl enable cpupower
+sudo systemctl start cpupower
+sudo cpupower frequency-set -g powersave
+```
+
+#### Monitor power usage
+```bash
+sudo pacman -S tlp acpi_call powertop
+sudo systemctl enable tlp
+sudy systemctl start tlp
+sudo powertop --calibrate # wait a long time
+sudo powertop # leave open for a long time
+sudo powertop --auto-tune
+
+# When it works, make it permanent:
+
+sudo nano /etc/systemd/system/powertop.service
+[Unit]
+Description=Powertop Service
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/powertop --auto-tune
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl enable powertop
+sudo systemctl start powertop
+```
+
+#### Try setting a max CPU freq
+```bash
+sudo nano /etc/default/cpupower
+governor='powersave'
+max_freq="2.6GHz"
+```
+
+Monitor temps:
+```bash
+sudo pacman -S psensor
+```
+
+#### Fix wakeups
+
+Check wakeup reasons:
+```bash
+journalctl | grep -i wake
+```
+
+Disable problematic wakeups;
+```bash
+cat /proc/acpi/wakeup
+echo XHC1 > sudo tee /proc/acpi/wakeup
+# to make permanent:
+sudo nano /etc/udev/rules.d/90-xhc_sleep.rules
+# disable wake from S3 on XHC1
+SUBSYSTEM=="pci", KERNEL=="0000:00:14.0", ATTR{power/wakeup}="disabled"
+```
+
+#### Set FN keys to F1-F12 instead of brightness, etc
+```bash
+echo 2 > sudo tee /sys/module/hid_apple/parameters/fnmode
+```
+
+Reverse:
+```bash
+echo 1 > sudo tee /sys/module/hid_apple/parameters/fnmode
+```
+
+#### Enable 3-finger gestures
+
+##### xSwipe
+```bash
+sudo pacman -R xf86-input-synaptics
+# install AUR xf86-input-synaptics-xswipe-git perl-x11-guitest perl-smart-comments
+git clone https://github.com/iberianpig/xSwipe.git
+cd xSwipe/
+nano eventKey.cfg                                    # or nScroll/eventKey.cfg if natural scroll is wanted
+# configure it, in gnome there's a DOW instead of DOWN, etc
+
+sudo nano /etc/X11/xorg.conf.d/50-synaptics.conf
+
+        Option "VertScrollDelta" "-222"
+        Option "HorizScrollDelta" "-222"
+        Option "TapButton1" "1"
+        Option "MaxTapTime" "80"
+
+        Option "Protocol" "event"
+        Option "SHMConfig" "on"
+
+sudo reboot
+```
+
+To test:
+```bash
+perl xSwipe.pl -d 0.25 -m 30
+```
+
+Add to autostart:
+```bash
+nano ~/.config/autostart/xswipe.desktop
+
+[Desktop Entry]
+Type=Application
+Path=/home/arlanthir/xSwipe/
+Exec=perl xSwipe.pl -n -d 0.25 -m 30
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name=xSwipe
+Comment=Listen to touchpad gestures
+```
+
+##### TODO alternative
+Test https://aur.archlinux.org/packages/xf86-input-mtrack-git/
+
+
+#### More tips in
+https://medium.com/@philpl/arch-linux-running-on-my-macbook-2ea525ebefe3#.h3deucjeu
+https://mchladek.me/post/arch-mbp/
+
+
+
+
 
 
 ## VirtualBox
