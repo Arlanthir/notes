@@ -126,3 +126,131 @@ swapon /dev/sdxY
 Mount root partition  
 `mount /dev/sdxY /mnt`
 
+
+### Installation
+
+Update mirror list with preferred mirrors on the top:
+```bash
+nano /etc/pacman.d/mirrorlist
+```
+(To cut two lines, press Ctrl+K two times in a row)
+
+Install:
+```bash
+pacstrap -i /mnt base base-devel
+```
+
+Generate fstab:
+```bash
+# genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -L /mnt >> /mnt/etc/fstab     # Labels instead of UUIDs
+```
+
+Copy any other configuration files to the new system in `/mnt` (such as netctl profiles in `/etc/netctl`)  
+Then chroot to it:
+```bash
+arch-chroot /mnt /bin/bash
+nano /etc/locale.gen
+# Uncomment en_US.UTF-8 UTF-8, as well as other needed localizations
+locale-gen
+```
+
+Create `/etc/locale.conf`, where `LANG` refers to the first column of an uncommented entry in `/etc/locale.gen`:
+```bash
+nano /etc/locale.conf
+LANG=en_US.UTF-8
+
+nano /etc/vconsole.conf
+KEYMAP=pt-latin1
+#FONT=Lat2-Terminus16
+```
+
+#### Update time
+```bash
+tzselect
+# ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
+ln -s /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
+hwclock --systohc --utc
+```
+
+### Install GRUB
+
+#### MBR:
+```bash
+pacman -S grub os-prober
+grub-install --target=i386-pc /dev/sdx
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+#### GRUB-EFI (EFI, OSX):
+```bash
+pacman -S grub-efi-x86_64
+nano /etc/default/grub
+GRUB_TIMEOUT=0
+# Uncomment GRUB_HIDDEN_TIMEOUT and ..._QUIET
+GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi="
+
+grub-mkconfig -o /boot/grub/grub.cfg
+grub-mkstandalone -o boot.efi -d /usr/lib/grub/x86_64-efi -O x86_64-efi --compress=xz /boot/grub/grub.cfg
+mkdir /mnt/usbdisk && mount /dev/sdy /mnt/usbdisk
+cp boot.efi /mnt/usbdisk/
+```
+
+Reboot to OSX, Erase the bootloader partition
+```bash
+cd /Volumes/Linux\ Bootloader
+mkdir System mach_kernel
+cd System
+mkdir -p Library/CoreServices
+cd Library/CoreServices
+touch SystemVersion.plist
+cp /Volumes/usbdrive/boot.efi .
+```
+
+Edit SystemVersion.plist to look like this
+```xml
+<xml version="1.0" encoding="utf-8"?>
+<plist version="1.0">
+<dict>
+    <key>ProductBuildVersion</key>
+    <string></string>
+    <key>ProductName</key>
+    <string>Linux</string>
+    <key>ProductVersion</key>
+    <string>Arch Linux</string>
+</dict>
+</plist>
+```
+
+To make Arch the default (and avoid pressing Alt/Option at boot):  
+Enable bless in El Capitan:  
+  1. Boot to Recovery OS by restarting your machine and holding down the Command and R keys at startup. (Or option and choosing "Recovery 10.xx")
+  2. Launch Terminal from the Utilities menu.
+  3. Enter the following command: csrutil enable
+  4. Reboot
+
+```bash
+sudo bless --device /dev/disk0s4 --setBoot
+```
+
+### Network
+
+Add your chosen computer name in `ano /etc/hostname` and after each localhost entry in `nano /etc/hosts`
+
+```bash
+pacman -S iw wpa_supplicant dialog
+```
+Reconfigure Wireless:
+`wifi-menu`
+
+Set the root password:
+```bash
+passwd
+```
+
+Reboot:
+```bash
+exit
+umount -R /mnt
+reboot
+```
+
