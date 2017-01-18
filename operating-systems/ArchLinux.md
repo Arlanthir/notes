@@ -181,6 +181,101 @@ pacman -S grub os-prober
 grub-install --target=i386-pc /dev/sdx
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
+#### OSX EFI:
+See bottom notes.
+
+### Network
+
+Add your chosen computer name in `ano /etc/hostname` and after each localhost entry in `nano /etc/hosts`
+
+```bash
+pacman -S iw wpa_supplicant dialog
+```
+Reconfigure Wireless:
+`wifi-menu`
+
+Set the root password:
+```bash
+passwd
+```
+
+Reboot:
+```bash
+exit
+umount -R /mnt
+reboot
+```
+
+## Post-install
+
+Enable multilib repository:  
+Uncomment from /etc/pacman.conf:
+```
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+
+```bash
+pacman -Sy
+```
+
+### Install Graphical Environment
+
+```bash
+pacman -S xorg-server xorg-server-utils
+pacman -S xf86-video-intel mesa-libgl lib32-mesa-libgl  # Intel drivers
+pacman -S xf86-input-synaptics                          # If asked, choose evdev.
+
+pacman -S gnome gnome-extra
+
+systemctl enable gdm.service
+systemctl enable NetworkManager.service
+```
+
+### Configure Synaptics touchpad:
+```bash
+nano /usr/share/X11/xorg.conf.d/70-synaptics.conf
+# Add to touchpad catchall
+        Option "VertScrollDelta" "-222"
+        Option "HorizScrollDelta" "-222"
+        Option "TapButton1" "1"
+        Option "MaxTapTime" "75"
+        MatchDevicePath "/dev/input/event*"
+```
+
+### Add another user to SUDOers
+```bash
+pacman -S sudo
+EDITOR="nano" visudo
+
+# Add:
+<USERNAME>        ALL=(ALL) ALL
+
+# Uncomment the line:
+Defaults env_keep += "HOME"
+```
+
+### Printing:
+```bash
+sudo pacman -S cups ghostscript gsfonts cups-pdf hplip system-config-printer
+sudo systemctl enable org.cups.cupsd.service
+sudo systemctl start org.cups.cupsd.service
+```
+
+### Useful packages:
+AUR: `ttf-ms-fonts adobe-source-han-sans-otc-fonts`
+
+### Android MTP:
+```bash
+sudo pacman -S libmtp gvfs-mtp gvfs-gphoto2
+sudo reboot
+```
+
+## Macbook Air
+
+### GRUB
+
 #### GRUB-EFI (EFI, OSX):
 ```bash
 pacman -S grub-efi-x86_64
@@ -232,25 +327,46 @@ Enable bless in El Capitan:
 sudo bless --device /dev/disk0s4 --setBoot
 ```
 
-### Network
 
-Add your chosen computer name in `ano /etc/hostname` and after each localhost entry in `nano /etc/hosts`
-
+### Disable Bluetooth
 ```bash
-pacman -S iw wpa_supplicant dialog
-```
-Reconfigure Wireless:
-`wifi-menu`
-
-Set the root password:
-```bash
-passwd
+sudo nano /etc/modprobe.d/50-disabling.conf
+blacklist bluetooth
+blacklist btusb
 ```
 
-Reboot:
+
+## VirtualBox
+Install Guest Additions:
 ```bash
-exit
-umount -R /mnt
-reboot
+pacman -S virtualbox-guest-utils      # (use arch)
+systemctl enable vboxservice.service
 ```
 
+## VMWare - Virtual Machine
+
+Possible Key: `GA1T0-AXGDL-484GZ-4YWNX-PV0V8`
+
+https://wiki.archlinux.org/index.php/VMware/Installing_Arch_as_a_guest
+
+### Open VM Tools (open source)
+```bash
+sudo pacman -S open-vm-tools
+cat /proc/version > /etc/arch-release
+# (shared folders: AUR open-vm-tools-dkms)
+sudo systemctl enable vmware-vmblock-fuse.service
+# (shared folders: sudo systemctl enable dkms.service)
+```
+
+### VMWare Tools (official, closed source)
+Download from http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/
+
+```bash
+for x in {0..6}; do mkdir -p /etc/init.d/rc${x}.d; done
+pacman -S net-tools gtkmm xf86-input-vmmouse xf86-video-vmware mesa
+```
+
+Extract and install with
+```bash
+./vmware-install.pl   # Choose /etc/init.d/ for the rc0.d...rc6.d directory
+```
