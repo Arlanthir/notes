@@ -64,8 +64,13 @@ Change keyboard layout
 Optionally change the console font  
 `setfont Lat2-Terminus16`
 
-Enable wired connection
+Check if wired connection is available
+```bash
+ping archlinux.org
 ```
+
+If not, enable wired connection
+```bash
 ip link                                       # to find out <interface>
 systemctl enable dhcpcd@<interface>.service
 dhcpcd
@@ -74,8 +79,14 @@ dhcpcd
 Configure Wireless  
 `wifi-menu`
 
+Check if UEFI mode is on
+```bash
+ls /sys/firmware/efi/efivars      # only exists if UEFI
+```
+
 Start time sync and check status
 ```bash
+timedatectl status
 timedatectl set-ntp true
 timedatectl status
 ```
@@ -94,10 +105,19 @@ Check current partition table
 **Note**: This bricked an Acer's HDD, maybe because Swap comes first or because lack of formatting
 ```bash
 parted /dev/sdx
-mklabel msdos
+mklabel msdos                             # create new partition table
 mkpart primary linux-swap 1MiB 6GiB
 mkpart primary ext4 6GiB 100%
 set 2 boot on
+quit
+```
+
+##### Partitioning using MBR, / without swap
+```bash
+parted /dev/sdx
+mklabel msdos                             # create new partition table
+mkpart primary ext4 1MiB 100%
+set 1 boot on
 quit
 ```
 
@@ -117,7 +137,7 @@ Check partitions
 Format ext4 partitions  
 `mkfs.ext4 /dev/sdxY`
 
-Activate swap
+Activate swap partition if any
 ```bash
 mkswap /dev/sdxY
 swapon /dev/sdxY
@@ -126,6 +146,13 @@ swapon /dev/sdxY
 Mount root partition  
 `mount /dev/sdxY /mnt`
 
+Configure swap file if not using a partition
+```bash
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+```
 
 ### Installation
 
@@ -146,10 +173,15 @@ Generate fstab:
 genfstab -L /mnt >> /mnt/etc/fstab     # Labels instead of UUIDs
 ```
 
+Check the generated fstab:
+```bash
+cat /mnt/etc/fstab
+```
+
 Copy any other configuration files to the new system in `/mnt` (such as netctl profiles in `/etc/netctl`)  
 Then chroot to it:
 ```bash
-arch-chroot /mnt /bin/bash
+arch-chroot /mnt
 nano /etc/locale.gen
 # Uncomment en_US.UTF-8 UTF-8, as well as other needed localizations
 locale-gen
@@ -171,6 +203,11 @@ tzselect
 # ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 ln -s /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
 hwclock --systohc --utc
+```
+
+If using Windows, remember to change it to UTC hardware clock as well:
+```dos
+reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 ```
 
 ### Install GRUB
