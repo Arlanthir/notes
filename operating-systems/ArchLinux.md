@@ -148,10 +148,10 @@ Mount root partition
 
 Configure swap file if not using a partition
 ```bash
-fallocate -l 4G /swapfile
-chmod 600 /swapfile
-mkswap /swapfile
-swapon /swapfile
+fallocate -l 4G /mnt/swapfile
+chmod 600 /mnt/swapfile
+mkswap /mnt/swapfile
+swapon /mnt/swapfile
 ```
 
 ### Installation
@@ -173,7 +173,7 @@ Generate fstab:
 genfstab -L /mnt >> /mnt/etc/fstab     # Labels instead of UUIDs
 ```
 
-Check the generated fstab:
+Check the generated fstab (in particular remove `/mnt` from swapfile if needed):
 ```bash
 cat /mnt/etc/fstab
 ```
