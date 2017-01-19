@@ -108,7 +108,7 @@ parted /dev/sdx
 mklabel msdos                             # create new partition table
 mkpart primary linux-swap 1MiB 6GiB
 mkpart primary ext4 6GiB 100%
-set 2 boot on
+set 2 boot on                             # if dual-booting, don't change boot flag
 quit
 ```
 
@@ -117,7 +117,7 @@ quit
 parted /dev/sdx
 mklabel msdos                             # create new partition table
 mkpart primary ext4 1MiB 100%
-set 1 boot on
+set 1 boot on                             # if dual-booting, don't change boot flag
 quit
 ```
 
