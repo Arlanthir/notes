@@ -185,7 +185,7 @@ function clickHandler(element) {
 
 ## On Ready (not load)
 ```javascript
-function onrReady(fn) {
+function onReady(fn) {
     if (document.readyState !== 'loading') {
         fn();
     } else {
