@@ -209,6 +209,11 @@ If using Windows, remember to change it to UTC hardware clock as well:
 ```dos
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 ```
+It may also be necessary to disable internet time update in Windows.  
+Alternatively, you can use Arch in localtime as well (not recommended):
+```bash
+timedatectl set-local-rtc 1
+```
 
 ### Install GRUB
 
