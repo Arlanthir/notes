@@ -207,9 +207,9 @@ hwclock --systohc --utc
 
 If using Windows, remember to change it to UTC hardware clock as well:
 ```dos
-reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_QWORD /f
 ```
-It may also be necessary to disable internet time update in Windows.  
+It may also be necessary to disable internet time update in Windows (at least timezone update).  
 Alternatively, you can use Arch in localtime as well (not recommended):
 ```bash
 timedatectl set-local-rtc 1
