@@ -5,12 +5,17 @@
 ```bash
 sudo pacman -S nginx-mainline
 sudo systemctl enable nginx.service
+sudo systemctl start nginx.service
 ```
 
-### Configure nginx to run as another user
+### Configure nginx
 ```
 sudo nano /etc/nginx/nginx.conf
+
 # Uncomment "user xxx;" to run as another user
+error_log /var/log/nginx/error.log notice;
+
+# edit server { location / { root
 ```
 
 ### Add PHP support
@@ -32,6 +37,9 @@ sudo pacman -S php php-fpm php-mcrypt phpmyadmin
 sudo nano /etc/php/php-fpm.conf
 
 error_log = /var/log/php-fpm.log
+
+sudo systemctl enable php-fpm.service
+sudo systemctl start php-fpm.service
 ```
 
 ### Configure php-fpm to run as another user
