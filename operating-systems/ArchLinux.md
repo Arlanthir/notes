@@ -43,11 +43,6 @@ makepkg -sri
 #### Update packages automatically
 `cower -duf --timeout=20`
 
-#### Suggested packages
-- broadcom-wl-dkms
-- bcwc-pcie-firmware
-- bcwc-pcie-dkms
-
 ## Installation guide (2016-03-03)
 
 ### First steps
@@ -312,7 +307,14 @@ sudo systemctl start org.cups.cupsd.service
 ```
 
 ### Useful packages
-AUR: `ttf-ms-fonts adobe-source-han-sans-otc-fonts`
+Pacman: `atom`  
+AUR: `cower` + `google-chrome`  
+AUR Candidates (need test): `ttf-ms-fonts adobe-source-han-sans-otc-fonts`
+
+### GNOME Extensions
+Visit URLs in the GNOME Web browser
+
+- https://extensions.gnome.org/extension/307/dash-to-dock/
 
 ### Android MTP
 ```bash
@@ -384,6 +386,11 @@ blacklist btusb
 ```
 
 ### Macbook Air Tweaks
+
+#### Suggested AUR packages
+- broadcom-wl-dkms
+- bcwc-pcie-firmware
+- bcwc-pcie-dkms
 
 #### Fix suspend backlight in Macbook:
 
