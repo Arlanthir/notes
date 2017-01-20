@@ -3,7 +3,8 @@
 ## NGINX
 
 ```bash
-sudo pacman -S nginx-mainline 
+sudo pacman -S nginx-mainline
+sudo systemctl enable nginx.service
 ```
 
 ### Configure nginx to run as another user
