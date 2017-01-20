@@ -6,7 +6,7 @@
 sudo pacman -S nginx-mainline 
 ```
 
-### Configure nginx to run as another user:
+### Configure nginx to run as another user
 ```
 sudo nano /etc/nginx/nginx.conf
 # Uncomment "user xxx;" to run as another user
@@ -19,11 +19,10 @@ sudo pacman -S php php-fpm php-mcrypt phpmyadmin
 sudo nano /etc/php/php-fpm.conf
 
 error_log = /var/log/php-fpm.log
+```
 
-# Change php-fpm to run as another user:
-
-Add:
-
+### Configure php-fpm to run as another user
+```bash
 sudo nano /etc/php/php-fpm.d/www.conf
 [www]
 user = xxx
@@ -32,8 +31,12 @@ group = xxx
 listen.owner = xxx
 listen.group = xxx
 ;listen.mode = 0660
+```
+### Configure modules
+```bash
+nano /etc/php/php.ini
 
-# Ensure the following modules are enabled:
+# Ensure the following PHP modules are enabled
 
 bz2
 curl
