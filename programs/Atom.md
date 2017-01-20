@@ -64,15 +64,6 @@ Can be installed using the GUI or by running
 `apm install <package-name>`
 
 ```
-autocomplete-plus
-color-picker
-docblockr
 file-icons
-git-control
-# git-plus just runs git commands
-# grunt-runner didn't work correctly
-merge-conflicts
-project-manager
-# terminal-status didn't work correctly
-todo-show
+#project-manager
 ```
