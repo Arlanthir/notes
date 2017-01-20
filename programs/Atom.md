@@ -10,24 +10,22 @@ config.cson:
 
 ```cson
 "*":
-  "exception-reporting":
-    userId: "77b6584e-6673-8fb5-59f5-cccfb3b1d466"
-  welcome:
-    showOnStartup: false
   core:
-    excludeVcsIgnoredPaths: false
+    allowPendingPaneItems: false
+    projectHome: "/home/arlanthir/dev"
+    telemetryConsent: "limited"
   editor:
+    fontSize: 12
     invisibles:
       cr: " "
       eol: " "
     scrollPastEnd: true
     showInvisibles: true
     tabLength: 4
-    softTabs: false
-    fontSize: 12
-  docblockr: {}
-  "autocomplete-plus":
-    confirmCompletion: "enter"
+  "exception-reporting":
+    userId: "eb62e58d-81ef-e59d-743b-9298cdb32e1f"
+  welcome:
+    showOnStartup: false
 ```
 
 keymap.cson:
