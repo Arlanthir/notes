@@ -12,6 +12,18 @@ sudo nano /etc/nginx/nginx.conf
 # Uncomment "user xxx;" to run as another user
 ```
 
+### Add PHP support
+```bash
+sudo nano /etc/nginx/nginx.conf
+
+location ~ \.php$ {
+  fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
+  fastcgi_index index.php;
+  root /srv/http;
+  include fastcgi.conf;
+}
+```
+
 ## PHP + phpMyAdmin
 ```bash
 sudo pacman -S php php-fpm php-mcrypt phpmyadmin
