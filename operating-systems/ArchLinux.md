@@ -289,6 +289,7 @@ nano /usr/share/X11/xorg.conf.d/70-synaptics.conf
 ### Add another user
 ```bash
 useradd -m -G wheel -s /bin/bash <username>      # -m: creates home dir, wheel is the administrators group
+passwd <username>                                # setup password
 ```
 
 ### Add another user to SUDOers
