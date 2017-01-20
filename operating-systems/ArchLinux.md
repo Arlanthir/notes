@@ -229,7 +229,7 @@ See bottom notes.
 
 ### Network
 
-Add your chosen computer name in `ano /etc/hostname` and after each localhost entry in `nano /etc/hosts`
+Add your chosen computer name in `nano /etc/hostname` and after each localhost entry in `nano /etc/hosts`
 
 ```bash
 pacman -S iw wpa_supplicant dialog
