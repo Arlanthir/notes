@@ -272,6 +272,12 @@ systemctl enable gdm.service
 systemctl enable NetworkManager.service
 ```
 
+To check (later) that Direct Rendering is being used:  
+```bash
+sudo pacman -S mesa-demos
+glxinfo | grep direct
+```
+
 ### Configure Synaptics touchpad
 ```bash
 nano /usr/share/X11/xorg.conf.d/70-synaptics.conf
