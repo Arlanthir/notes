@@ -261,7 +261,9 @@ pacman -Sy
 
 ```bash
 pacman -S xorg-server xorg-server-utils
+# Important optional packages
 pacman -S xf86-video-intel mesa-libgl lib32-mesa-libgl  # Intel drivers
+pacman -S nvidia nvidia-libgl lib32-nvidia-libgl        # Nvidia drivers
 pacman -S xf86-input-synaptics                          # If asked, choose evdev.
 
 pacman -S gnome gnome-extra
