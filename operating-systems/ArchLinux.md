@@ -319,10 +319,15 @@ Pacman: `atom openssh`
 AUR: `cower` + `google-chrome`  
 AUR Candidates (need test): `ttf-ms-fonts adobe-source-han-sans-otc-fonts`
 
-### GNOME Extensions
+### GNOME Extensions and tweaks
 Visit URLs in the GNOME Web browser
 
 - https://extensions.gnome.org/extension/307/dash-to-dock/
+
+#### Alt-tab switch only between workspace apps
+```bash
+gsettings set org.gnome.shell.app-switcher current-workspace-only true
+```
 
 ### Android MTP
 ```bash
