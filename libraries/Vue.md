@@ -238,7 +238,7 @@ But you can also pass other arguments and the event explicitly:
 <button v-on:click="reverseMessage($event, message)">
 ```
 
-You can also modifiers:
+You can also use modifiers:
 ```html
 <!-- $event.stopPropagation() -->
 <a v-on:click.stop="doThis"></a>
@@ -385,9 +385,78 @@ Must be registered before the Vue instance call.
 
 ```javascript
 Vue.component('todo-item', {
-    props: ['todo'],          // Allows <todo-item v-bind:todo="This is a todo">
-    template: '<li>This is a todo: {{todo}}</li>'
+    props: ['todo'],            // Allows <todo-item v-bind:todo="This is a todo">
+    template: '<li>This is a todo: {{todo}}</li>',
+    data: function() {
+        return {
+            ...
+        };            
+    }
 });
 ```
+
+### Rules:  
+- Component data must be a function (object would be shared across instances)
+- Component's can't mutate props, they should copy them to a local data property first
+  - Alternatively, use a computed property
+
+### Props validation
+```javascript
+Vue.component('example', {
+    props: {
+        // basic type check (`null` means accept any type)
+        propA: Number,
+        // multiple possible types
+        propB: [String, Number],
+        // a required string
+        propC: {
+            type: String,
+            required: true
+        },
+        // a number with default value
+        propD: {
+            type: Number,
+            default: 100
+        },
+        // object/array defaults should be returned from a
+        // factory function
+        propE: {
+            type: Object,
+            default: function () {
+                return { message: 'hello' }
+            }
+        },
+        // custom validator function
+        propF: {
+            validator: function (value) {
+                return value > 10
+            }
+        }
+    }
+})
+```
+
+### Custom events
+```javascript
+this.$emit('myevent', eventValue);
+```
+
+To listen to a native event with the same name as a custom event:
+```html
+<my-component v-on:click.native="onClick">
+```
+
+#### Support `v-model`
+`v-model` is syntactic sugar for `v-bind:value` and `v-on:input`.  
+To support it, a custom component just has to register prop `value` and emit  event `input` with new values.
+
+### Component-component interaction (naive)
+```javascript
+var bus = new Vue();
+bus.$emit('someMessage', value);
+bus.$on('someMessage, function(value) { ... });
+```
+
+
 
 
