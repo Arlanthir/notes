@@ -395,6 +395,8 @@ Vue.component('todo-item', {
 });
 ```
 
+**Note**: The original `<todo-item>` tag will be replaced with the new `<li>` tag. Classes/attributes in both tags will be merged. This is very different from what happens in Angular.io.
+
 ### Rules:  
 - Component data must be a function (object would be shared across instances)
 - Component's can't mutate props, they should copy them to a local data property first
@@ -454,9 +456,83 @@ To support it, a custom component just has to register prop `value` and emit  ev
 ```javascript
 var bus = new Vue();
 bus.$emit('someMessage', value);
-bus.$on('someMessage, function(value) { ... });
+bus.$on('someMessage', function(value) { ... });
 ```
 
+### Content Distribution (AKA transclusion)
 
+Child components can define `slot`s for parent components to add content.
 
+#### Single slot
+
+```javascript
+Vue.component('my-component', {
+    template: '<div>Hello <slot></slot>!</div>'
+});
+```
+
+```html
+<my-component>World</my-component>
+```
+
+#### Named slots
+
+```javascript
+Vue.component('my-component', {
+    template: '<div><slot name="first"></slot> <slot name="second"></slot>!</div>'
+});
+```
+
+```html
+<my-component>
+    <span slot="first">Hello</span>
+    <span slot="second">World</span>
+</my-component>
+```
+
+#### Scoped slots
+
+```javascript
+Vue.component('my-component', {
+    template: '<div class="child"><slot text="hello from child"></slot></div>'
+});
+```
+
+```html
+<div class="parent">
+    <my-component>
+        <template scope="props">
+            <span>hello from parent</span>
+            <span>{{ props.text }}</span>
+        </template>
+    </my-component>
+</div>
+```
+
+### Dynamic components (simple routing)
+
+```javascript
+var vm = new Vue({
+    data: {
+        currentView: 'home'
+    }
+});
+```
+
+```html
+<keep-alive> <!-- Optional, will keep switched-out components in memory to preserve state -->
+    <component v-bind:is="currentView">
+        <!-- Will instantiate component <home> -->
+    </component>
+</keep-alive>
+```
+### Child reference
+
+```html
+<my-component ref="comp"></my-component>
+```
+
+```javascript
+var myComponent = this.$refs.comp;
+```
 
