@@ -625,3 +625,15 @@ p {
 }
 </style>
 ```
+
+# Build tools: vue-cli with Webpack and vue-loader
+```bash
+npm install -g vue-cli
+vue init <template-name> <project-name>
+cd <project-name>
+npm install
+npm run dev          # Development version with Node.js server
+npm run build        # Production version in folder /dist
+```
+
+
