@@ -63,5 +63,5 @@ Can be installed using the GUI or by running
 
 ```
 file-icons
-#project-manager
+project-manager
 ```
