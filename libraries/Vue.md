@@ -536,3 +536,92 @@ var vm = new Vue({
 var myComponent = this.$refs.comp;
 ```
 
+## Custom directives
+
+```javascript
+// Register a global custom directive called v-focus
+Vue.directive('focus', {
+    // When the bound element is inserted into the DOM...
+    inserted: function (el) {
+        // Focus the element
+        el.focus();
+    }
+});
+```
+
+Available hooks:  
+- bind: Directive was bound to its element
+- inserted: Component was inserted in parent
+- update: Component was updated
+- componentUpdated: Component and its children were updated
+- unbind: Directive was unbound from element
+
+Hook arguments:
+- el
+- binding  `v-name:arg.modifiers="value"`
+  - name
+  - value
+  - oldValue
+  - expression
+  - arg
+  - modifiers
+- vnode
+- oldVnode
+
+
+## Mixins
+
+Allow code reuse across different components.
+
+```javascript
+// define a mixin object
+var myMixin = {
+    created: function () {
+        this.hello();
+    },
+    methods: {
+        hello: function () {
+            console.log('hello from mixin!');
+        }
+    }
+}:
+
+// define a component that uses this mixin
+var Component = Vue.extend({
+    mixins: [myMixin]
+});
+
+var component = new Component(); // -> "hello from mixin!"
+```
+
+Mixin hooks will be called before component hooks.  
+Methods, components, directives, etc, will give priority to the component.
+
+
+## Single file components
+
+Leverage Webpack or Browserify to transform component files in HTML, JavaScript and CSS files.
+
+`mycomponent.vue`
+```vue
+<template>
+    <p>{{ greeting }} World!</p>
+</template
+
+<script>
+module.exports = {
+    data: function() {
+        return {
+            greeting: 'Hello'
+        };
+    }
+};
+</script>
+
+<style scoped>
+p {
+    font-size: 2em;
+    text-align: center;
+}
+</style>
+```
