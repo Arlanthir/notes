@@ -315,7 +315,7 @@ sudo systemctl start org.cups.cupsd.service
 ```
 
 ### Useful packages
-Pacman: `atom openssh`  
+Pacman: `atom openssh gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav`  
 AUR: `cower` + `google-chrome`  
 AUR Candidates (need test): `ttf-ms-fonts adobe-source-han-sans-otc-fonts`
 
