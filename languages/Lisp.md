@@ -330,7 +330,7 @@
 (do ((<var1> <init1> <step1>)       ;; Do cycle with multiple variables
      ...
      (<varn> <initn> <stepn>))      ;; var2 can use var1 in increment, not in initialization
-    (<test> <return-value>)
+    (<end-condition> <return-value>)
      ...
     )
 
