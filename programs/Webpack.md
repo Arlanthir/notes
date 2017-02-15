@@ -69,11 +69,52 @@ webpack.config.js
 var path = require('path');
 
 module.exports = {
-    // Support import statements and concats imported JS files
+    // Supports import statements and concats imported JS files
     entry: './app/app.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
+    },
+    // Adds sass capabilities to import, allowing:
+    // import './styles.scss';
+    module: {
+        rules: [{
+            test: /\.scss$/,
+            use: [
+                'style-loader', // Creates style nodes from JS strings
+                'css-loader',   // Translates CSS into CommonJS
+                'sass-loader'   // Compiles Sass to CSS
+            ]
+        }]
     }
+}
+```
+
+### More complex configuration for production code
+```javascript
+var path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+module.exports = {
+    // Supports import statements and concats imported JS files
+    entry: './app/app.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    // Convert styles.scss to styles.css, allowing
+    // <link rel="stylesheet" href="dist/styles.css">
+    module: {
+        rules: [{
+            test: /\.scss$/,
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: ['css-loader', 'sass-loader']
+            })
+        }]
+    },
+    plugins: [
+        new ExtractTextPlugin('app/styles.scss'),
+    ]
 }
 ```
