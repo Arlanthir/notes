@@ -602,12 +602,10 @@ Methods, components, directives, etc, will give priority to the component.
 
 Leverage Webpack or Browserify to transform component files in HTML, JavaScript and CSS files.
 
+**Note**: I could only make this work if script comes before template.
+
 `mycomponent.vue`
 ```vue
-<template>
-    <p>{{ greeting }} World!</p>
-</template
-
 <script>
 module.exports = {
     data: function() {
@@ -617,6 +615,10 @@ module.exports = {
     }
 };
 </script>
+
+<template>
+    <p>{{ greeting }} World!</p>
+</template
 
 <style scoped>
 p {
@@ -636,4 +638,17 @@ npm run dev          # Development version with Node.js server
 npm run build        # Production version in folder /dist
 ```
 
+## Manual setup
+```bash
+npm install --save-dev vue-loader vue-template-compiler
+```
 
+webpack.config.js:
+```javascript
+module: {
+    rules: [{
+        test: /\.vue$/,
+        use: 'vue-loader'
+    }]
+}
+```
