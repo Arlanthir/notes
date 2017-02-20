@@ -602,23 +602,21 @@ Methods, components, directives, etc, will give priority to the component.
 
 Leverage Webpack or Browserify to transform component files in HTML, JavaScript and CSS files.
 
-**Note**: I could only make this work if script comes before template.
-
 `mycomponent.vue`
 ```vue
+<template>
+    <p>{{ greeting }} World!</p>
+</template>
+
 <script>
-module.exports = {
-    data: function() {
+module.exports = {                // ES2015 alternative: export default {
+    data: function() {            // ES2015 alternative: data() {
         return {
             greeting: 'Hello'
         };
     }
 };
 </script>
-
-<template>
-    <p>{{ greeting }} World!</p>
-</template
 
 <style scoped>
 p {
