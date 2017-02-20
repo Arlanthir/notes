@@ -631,7 +631,7 @@ p {
 # Build tools: vue-cli with Webpack and vue-loader
 ```bash
 npm install -g vue-cli
-vue init <template-name> <project-name>
+vue init <template-name> <project-name> # Interesting templates: webpack, webpack-simple
 cd <project-name>
 npm install
 npm run dev          # Development version with Node.js server
