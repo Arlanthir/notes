@@ -639,6 +639,8 @@ npm run build        # Production version in folder /dist
 ## Manual setup
 ```bash
 npm install --save-dev vue-loader vue-template-compiler
+# ES2015 transpiler:
+npm install --save-dev babel-core babel-loader babel-preset-es2015
 ```
 
 webpack.config.js:
@@ -648,5 +650,14 @@ module: {
         test: /\.vue$/,
         use: 'vue-loader'
     }]
+}
+```
+
+.babelrc:
+```javascript
+{
+    "presets": [
+        ["es2015", { "modules": false }]
+    ]
 }
 ```
