@@ -104,6 +104,7 @@ module.exports = {
     },
     // Convert styles.scss to styles.css, allowing
     // <link rel="stylesheet" href="dist/styles.css">
+    // Still needs the import in JS code, and breaks Hot Module Reload (HMR)
     module: {
         rules: [{
             test: /\.scss$/,
@@ -117,4 +118,33 @@ module.exports = {
         new ExtractTextPlugin('app/styles.scss'),
     ]
 }
+```
+
+### Livereload
+
+Webpack supports Hot Module Reload with a dedicated server.
+
+To add Livereload to your own server instead, use `webpack-livereload-plugin`.
+
+```javascript
+const LiveReloadPlugin = require('webpack-livereload-plugin');
+// ...
+plugins: [
+    new LiveReloadPlugin({
+        appendScriptTag: true
+    })
+]
+```
+
+package.json:
+```javascript
+"scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+}
+```
+
+To run:
+```bash
+npm run watch
 ```
