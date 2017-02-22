@@ -70,7 +70,7 @@ var path = require('path');
 
 module.exports = {
     // Supports import statements and concats imported JS files
-    entry: './app/app.js',
+    entry: './src/main.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -97,7 +97,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     // Supports import statements and concats imported JS files
-    entry: './app/app.js',
+    entry: './src/main.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -115,7 +115,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new ExtractTextPlugin('app/styles.scss'),
+        new ExtractTextPlugin('styles.css'),
     ]
 }
 ```
