@@ -687,7 +687,8 @@ Vue.component('bye-component', ByeComponent);
 
 const router = new VueRouter({
     routes: [
-        { path: '/hello/:thing', component: HelloComponent }, // Param thing will be in $route.params.thing
+        // Param thing will be in $route.params.thing
+        { path: '/hello/:thing', component: HelloComponent },
         { path: '/bye', component: ByeComponent }
     ]
 })
@@ -698,6 +699,8 @@ let vm = new Vue({
     render: h => h(AppComponent)
 });
 ```
+
+To get notified of changes in params, a component can watch the $route property.
 
 ## In templates
 ```html
