@@ -676,6 +676,9 @@ module: {
 
 ## Setup
 ```javascript
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+
 import AppComponent from './app-component.vue';
 import HelloComponent from './hello-component.vue';
 import ByeComponent from './bye-component.vue';
@@ -700,7 +703,7 @@ const router = new VueRouter({
 let vm = new Vue({
     router,
     el: '#app',
-    render: h => h(AppComponent)
+    // ...
 });
 ```
 
@@ -744,3 +747,86 @@ routes: [
 { path: '/hello', component: HelloComponent, props: { myParam: 'World' } }
 ```
 
+# State management: vuex
+
+Provides a single data store for components to use.
+Enforces rules for data mutation and offers a state tree, as well as debugging features.
+
+## Setup
+```javascript
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+Vue.use(Vuex);
+
+// Define global application state
+const store = new Vuex.Store({
+    state: {
+        count: 0
+    },
+    getters: {
+        countPreview(state, getters) {
+          return state.count + 1;
+        }
+    },
+    mutations: {
+        increment(state, n = 1) {
+            state.count += n;
+        }
+    },
+    actions: {
+        // Asynchronous mutations
+        incrementAsync(context, n = 1) {
+            setTimeout(() => {
+                context.commit('increment', n);
+            }, 1000);
+        }
+    }
+});
+
+let vm = new Vue({
+    store,
+    el: '#app',
+    // ...
+});
+```
+
+## Display state
+```javascript
+template: `<div>{{ count }}</div>`,
+computed: {
+    localComputed() { /* ... */ },
+    count () {
+        return this.$store.state.count;
+    }
+}
+
+// Alternatively:
+template: `<div>{{ count }}</div>`,
+computed: {
+    localComputed() { /* ... */ },
+    ...mapState(['count'])
+    // ...mapGetters ...mapMutations
+}
+```
+
+## Change state
+```javascript
+this.$store.commit('increment');
+this.$store.dispatch('increment', 2);
+```
+
+## Modules
+```javascript
+const store = new Vuex.Store({
+    // ...
+    modules: {
+        counter: {
+            state: {
+                count: 0
+            },
+            // ...
+        }
+    }
+});
+```
