@@ -671,3 +671,40 @@ module: {
     ]
 }
 ```
+
+# Vue-router
+
+## Setup
+```javascript
+import AppComponent from './app-component.vue';
+import HelloComponent from './hello-component.vue';
+import ByeComponent from './bye-component.vue';
+
+Vue.use(VueRouter);
+
+Vue.component('hello-component', HelloComponent);
+Vue.component('bye-component', ByeComponent);
+
+const router = new VueRouter({
+    routes: [
+        { path: '/hello/:thing', component: HelloComponent }, // Param thing will be in $route.params.thing
+        { path: '/bye', component: ByeComponent }
+    ]
+})
+
+let vm = new Vue({
+    router,
+    el: '#app',
+    render: h => h(AppComponent)
+});
+```
+
+## In templates
+```html
+<router-link to="/hello/world">Hello</router-link>
+<router-link to="/bye">Bye</router-link>
+<router-view></router-view>
+```
+
+
+
