@@ -830,3 +830,61 @@ const store = new Vuex.Store({
     }
 });
 ```
+
+# Vue Resource (AJAX)
+
+## Setup
+
+```javascript
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+
+Vue.use(VueResource);
+
+let vm = new Vue({
+    http: {
+        root: '/api'
+    },
+    el: '#app',
+    // ...
+});
+```
+
+## Sending requests
+
+```javascript
+// Use Vue.http or this.$http
+this.$http.post('/someUrl', {foo: 'bar'}).then(response => {
+    // Example properties:
+    response.status;
+    response.statusText;
+    response.headers.get('Expires');
+    response.body;
+    response.json();
+}, response => {
+    // Error callback
+});
+```
+
+## Resources
+```javascript
+var customActions = {
+    foo: {method: 'GET', url: 'someItem/foo{/id}'},
+    bar: {method: 'POST', url: 'someItem/bar{/id}'}
+}
+
+var resource = this.$resource('someItem{/id}', {}, customActions);
+
+// GET someItem/foo/1
+resource.foo({id: 1}).then(response => {
+    this.item = response.body;
+});
+
+// POST someItem/bar/1
+resource.bar({id: 1}, {item: this.item}).then(response => {
+    // success callback
+}, response => {
+    // error callback
+});
+
+```
