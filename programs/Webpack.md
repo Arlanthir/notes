@@ -56,6 +56,14 @@ output: {
 ### Loaders
 By default, Webpack only knows how to load JavaScript. Third-party loaders tell Webpack how to load other files, such as ES2015, Sass, etc.
 
+To load a file, just write:
+
+```javascript
+import 'file';
+```
+
+Webpack will look for the file in the configuration aliases, the current directory and even in installed node modules.
+
 ### Plugins
 Actions performed on multiple files / bundled modules instead of a single file type (e.g.: minification).
 
@@ -117,6 +125,22 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin('styles.css'),
     ]
+}
+```
+
+### Aliases
+
+Shortcuts for imports (instead of writing the full path every time).
+
+```javascript
+var path = require('path');
+
+module.exports = {
+    resolve: {
+        alias: {
+            'vue$': path.resolve(__dirname, 'lib/vue.js')
+        }
+    }
 }
 ```
 
