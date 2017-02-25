@@ -686,10 +686,14 @@ Vue.component('hello-component', HelloComponent);
 Vue.component('bye-component', ByeComponent);
 
 const router = new VueRouter({
+    // HTML5 mode
+    mode: 'history',
     routes: [
         // Param thing will be in $route.params.thing
         { path: '/hello/:thing', component: HelloComponent },
-        { path: '/bye', component: ByeComponent }
+        { path: '/bye', component: ByeComponent, alias: '/adios' },
+        { path: '/', redirect: '/hello/world' },
+        { path: '*', component: NotFoundComponent }
     ]
 })
 
@@ -702,12 +706,41 @@ let vm = new Vue({
 
 To get notified of changes in params, a component can watch the $route property.
 
-## In templates
+## Linking in templates
 ```html
+<!-- Link -->
 <router-link to="/hello/world">Hello</router-link>
-<router-link to="/bye">Bye</router-link>
+<!-- Link without pushing history -->
+<router-link :to="/bye">Bye</router-link>
+
 <router-view></router-view>
 ```
 
+## Linking in code
+```javascript
+router.push('hello/world');
+router.push({path: 'home', params: {thing: 'world'}});
+// Link without pushing history
+router.replace(...);
+```
 
+## Nested routes
+```javascript
+routes: [
+    { path: '/page', component: PageComponent,
+        children: [
+            { path: '', component: HomeSubpageComponent }
+            { path: 'subpage', component: SubpageComponent }
+        ]
+    }
+]
+```
+
+## Decoupling route params into component props
+```javascript
+// Passes the route params as props
+{ path: '/hello/:thing', component: HelloComponent, props: true },
+// Passes static props
+{ path: '/hello', component: HelloComponent, props: { myParam: 'World' } }
+```
 
