@@ -63,5 +63,6 @@ Can be installed using the GUI or by running
 
 ```
 file-icons
+linter-eslint
 project-manager
 ```
