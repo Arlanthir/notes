@@ -63,6 +63,8 @@ Can be installed using the GUI or by running
 
 ```
 file-icons
+language-vue
+lint-sass-vue
 linter-eslint
 project-manager
 ```
