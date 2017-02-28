@@ -139,9 +139,9 @@ Vue.js adds vendor prefixes automatically if needed.
 #### If
 
 ```html
-<div v-if="showThis">
-<div v-else-if="showThat">
-<div v-else>
+<div v-if="showThis"></div>
+<div v-else-if="showThat"></div>
+<div v-else></div>
 ```
 
 Or applied to multiple elements:
