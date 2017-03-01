@@ -17,6 +17,12 @@ var vm = new Vue({
 ## Properties
 Vue automatically re-renders the HTML when a `data` property changes.
 
+To mark a data property as immutable and gain a performance boost (specially memory-wise), use `Object.freeze(...)`.
+To modify a frozen object, copy it:
+```javascript
+let newFrozenObject = Object.freeze(Object.assign({}, oldFrozenObject, changedFields));
+```
+
 Exceptions:  
 - `array[index] = value;`
   - Use `Vue.set(array, index, value)` instead
