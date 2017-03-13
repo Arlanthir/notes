@@ -355,10 +355,12 @@
 (format t "Hello ~a" x)            ;; Like printf. ~a is anything, ~% is newline, ~& is newline if not blank line already, ~~ is tilde
 (format nil ...)                   ;; Return string (like sprintf)
 (format <stream> ...)              ;; Print to stream (ex: file)
+(write-sequence <data> <stream> [:start 0 :end nil])    ;; Write to stream
 
 (read [<stream> <eof-error-p> <eof-value>])   ;; Read from stream, optionally error on EOF or instead return a specific value.
 (read)                                        ;; Read from stdin
 (read-line ...)                               ;; Read whole line
+(read-sequence <destination> <stream> [:start 0 :end nil])  ;; Read section of stream, return positions read
 (read-from-string <string> ...)               ;; Read from string
 
 (with-open-file (file "filename.txt" :direction (:input|:output)
