@@ -196,7 +196,8 @@
 (eql <e1> <e2>)           ;; eq or same number with same type, or char=
 (equal <e1> <e2>)         ;; eql or lists with first and rest equal or arrays eq ; Isomorphism
 (equalp <e1> <e2>)        ;; Deep equal, works with structures
-(string= <s1> <s2>)       ;; String comparison
+(string= <s1> <s2>)       ;; String comparison (case sensitive)
+(string-equal <s1> <s2>)  ;; String comparison (case insensitive) 
 ```
 
 ## Functions
