@@ -56,7 +56,7 @@
 (cons <el> <list>)              ;; Adds el to list in first position
 (push <el> <list>)              ;; Destructive cons
 (pushnew <el> <list>)           ;; Destructive cons if not in list already
-(nth <pos> <list>)              ;; Returns the element in position pos of list
+(nth <pos> <list>)              ;; Returns the element in position pos of list (0-based)
 (remove <el> <list>)            ;; Remove el from list
 (delete <el> <list>)            ;; Remove el from list desctructively
 (append <l1> <l2>)              ;; Concatenate two lists
