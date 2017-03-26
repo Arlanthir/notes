@@ -62,6 +62,7 @@ Can be installed using the GUI or by running
 `apm install <package-name>`
 
 ```
+docblockr
 file-icons
 language-vue
 linter-eslint
