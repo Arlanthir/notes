@@ -10,6 +10,7 @@ find . -name "*.js" -o -name "*.html" -type f # Search for .js and .html files
 find . -name "*reports*" -type d              # Search for directories containing 'reports'
 find . \( -path ./a -o -path ./b) -prune -o -print   # Exclude subfiles of ./a and ./b
 find . -name "*.js" -exec echo {} \;          # Execute echo for each found .js file
+find . -name '*.txt' -exec sh -c 'mv "$0" "${0%.txt}.html"' {} \;  # Change extensions from .txt to .html
 ```
 
 | Argument                | Description                    |
