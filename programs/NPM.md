@@ -25,6 +25,9 @@ Files will be installed to node_modules
 #### Install packages in package.json
 ```npm install```
 
+#### Install current module globally (useful for developing modules)
+```npm install -g```
+
 #### Update packages [optionally save them in package.json]
 ```npm update [--save]```
 
