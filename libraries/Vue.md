@@ -17,6 +17,8 @@ var vm = new Vue({
 ## Properties
 Vue automatically re-renders the HTML when a `data` property changes.
 
+Data must be a **plain JavaScript object** (recursively).
+
 To mark a data property as immutable and gain a performance boost (specially memory-wise), use `Object.freeze(...)`.
 To modify a frozen object, copy it:
 ```javascript
