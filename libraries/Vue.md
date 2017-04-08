@@ -24,8 +24,9 @@ let newFrozenObject = Object.freeze(Object.assign({}, oldFrozenObject, changedFi
 ```
 
 Exceptions:  
-- `array[index] = value;`
-  - Use `Vue.set(array, index, value)` instead
+- `object.index = value;`
+  `array[index] = value;`
+  - Use `Vue.set(object, index, value)` instead
 - `array.length = newLength;`
   - Use `array.splice(newLength)` instead
 
