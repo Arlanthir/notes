@@ -290,6 +290,7 @@
 ```lisp
 (cond (<cond1>
        <then1>)
+      ;; Doesn't fall through
       ...
       (<condn>
        <thenn>)
