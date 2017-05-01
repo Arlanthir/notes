@@ -324,7 +324,7 @@ Visit URLs in the GNOME Web browser
 
 - https://extensions.gnome.org/extension/307/dash-to-dock/
 
-#### Mouse scroll wheel speed
+#### Mouse scroll wheel speed (Introduces more problems than it fixes)
 Install AUR package `imwheel`
 
 `nano .imwheelrc`:
@@ -340,9 +340,17 @@ Shift_L,   Down, Shift_L|Button5
 ```
 
 Add to startup:
-```
-imwheel --kill --buttons 45
-```
+
+`nano ~/.config/autostart/imwheel.desktop`:
+
+[Desktop Entry]
+Type=Application
+Exec=imwheel --kill --buttons 45
+Hidden=true
+X-GNOME-Autostart-enabled=true
+Name=imwheel
+Comment=Increase mouse scroll wheel speed
+
 
 #### Alt-tab switch only between workspace apps
 ```bash
