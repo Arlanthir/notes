@@ -324,6 +324,26 @@ Visit URLs in the GNOME Web browser
 
 - https://extensions.gnome.org/extension/307/dash-to-dock/
 
+#### Mouse scroll wheel speed
+Install AUR package `imwheel`
+
+`nano .imwheelrc`
+
+```
+".*"
+None,      Up,   Button4, 5
+None,      Down, Button5, 5
+Control_L, Up,   Control_L|Button4
+Control_L, Down, Control_L|Button5
+Shift_L,   Up,   Shift_L|Button4
+Shift_L,   Down, Shift_L|Button5
+```
+
+Add to startup:
+```
+imwheel --kill --buttons "4 5"
+```
+
 #### Alt-tab switch only between workspace apps
 ```bash
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
