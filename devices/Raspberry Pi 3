@@ -1,0 +1,50 @@
+# Raspberry Pi 3
+
+## Pinout
+
+PP1	VCC +5V
+PP2	VCC +5V
+PP3	DND
+PP4	GND
+PP5	GND
+PP6	GND
+PP7
+PP8
+PP9
+PP10	Power LED
+PP11
+PP12
+PP13	Status ACT LED
+PP20
+PP21	RUN
+PP22	Ethernet Activity LED
+PP23	Ethernet Link
+PP24	Composit Video
+PP25	L Audio
+PP26	R Audio
+PP27	USB VCC
+PP28
+PP35	VCC +5V
+PP36	USB D-
+PP39
+PP40
+PP41	USB D+
+PP42	USB D-
+PP43	USB D+
+PP44	USB D-
+PP45	USB D+
+PP46	USB D-
+PP47	USB D+
+PP48	GND
+PP49	GND
+PP50	GND
+PP51	GND
+PP52	Ethernet TX+	?
+PP53	Ethernet 3v3	?
+PP54	Ethernet RX+	?
+PP55	Ethernet TX-	?
+PP56	Ethernet RX-	?
+PP57	Ethernet 3v3	?
+PP58
+PP59
+PP60
