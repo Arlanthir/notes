@@ -2,6 +2,7 @@
 
 ## Pinout
 
+```
 PP1	VCC +5V
 PP2	VCC +5V
 PP3	DND
@@ -48,3 +49,4 @@ PP57	Ethernet 3v3	?
 PP58
 PP59
 PP60
+```
