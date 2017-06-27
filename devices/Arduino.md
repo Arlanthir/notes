@@ -48,6 +48,11 @@ V = R x I   <=>   R = V / I
 
 (la **V**ache qui **RI**t)
 
+Kirchoff's Law implies:
+
+Serial Resistors: Req = R1 + R2 + R3
+Parallel Resistors: 1/Req = 1/R1 + 1/R2 + 1/R3
+
 #### Baud rate / Bit rate
 Number of transferred bits per second in serial communication
 
