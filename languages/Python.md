@@ -1,4 +1,4 @@
-# Python
+# Python 3
 
 ## Basics
 
@@ -12,5 +12,11 @@
 program.py:
 ```python
 #!/usr/bin/env python
-print "Hello World"
+print("Hello World")
 ```
+
+# Packages
+
+Install a package manager: pip (in Arch: python-pip)
+
+`pip install --user <packagename>`
