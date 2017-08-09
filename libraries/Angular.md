@@ -14,3 +14,11 @@
 | `ng lint`                            | Lint the code                         |
 | `ng serve -o`                        | Code with livereload and open browser |
 | `ng build --prod`                    | Deploy for production                 |
+
+
+## Add sass-lint to linting
+
+Edit package.json scripts' lint to:
+`"lint": "ng lint && sass-lint 'src/**/*.scss' -v -q"`
+
+And use `npm run lint` instead of `ng lint`.
