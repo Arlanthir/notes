@@ -13,7 +13,7 @@ HyperText Markup Language - Define webpages content
 <head>
     <meta charset="utf-8">
     <title>My Webpage</title>
-<head>
+</head>
 
 <body>
 </body>
