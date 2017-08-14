@@ -239,6 +239,11 @@ Random int from X (inclusive) to Y (exclusive)
 Math.floor(Math.random() * (Y-X) + X)
 ```
 
+Get milliseconds for animations
+```javascript
+performance.now()
+```
+
 <!--
 
 /* Get the coordinates of a mouse event */
