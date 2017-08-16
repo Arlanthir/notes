@@ -37,6 +37,23 @@ Read and write to the property in the component's template:
 So far you have written: {{ searchText }}
 ```
 
+## Event handling
+
+Add a method to a component:
+
+```typescript
+export class MyComponent {
+    search() {
+    }
+}
+```
+
+Bind the events in the template:
+
+```html
+<input type="text" name="searchText" [(ngModel)]="searchText" (input)="search()">
+<button type="button" (click)="search()">Search</button>
+```
 
 # Angular-cli
 
@@ -56,10 +73,10 @@ So far you have written: {{ searchText }}
 | `ng e2e`                             | Run end-to-end tests (protractor)     | `npm run e2e`             |
 
 
-## Add sass-lint to linting
+## Add typechecking and sass-lint to linting
 
 Edit `package.json` scripts' lint to:
-`"lint": "ng lint && sass-lint 'src/**/*.scss' -v -q"`
+`"lint": "ng lint --type-check && sass-lint 'src/**/*.scss' -v -q"`
 
 And use `npm run lint` instead of `ng lint`.
 
