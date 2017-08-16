@@ -1,5 +1,43 @@
 # Angular
 
+## Data binding
+
+Make sure the App Module imports FormModule:
+
+```typescript
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+    imports: [
+        FormsModule
+    ]
+})
+export class AppModule { }
+```
+
+Add a string property to a component:
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'my',
+    templateUrl: './my.component.html',
+    styleUrls: ['./my.component.scss']
+})
+export class MyComponent {
+    searchText = '';
+}
+```
+
+Read and write to the property in the component's template:
+
+```html
+<input type="text" name="searchText" [(ngModel)]="searchText">
+So far you have written: {{ searchText }}
+```
+
+
 # Angular-cli
 
 ## Usage
