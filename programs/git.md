@@ -154,6 +154,7 @@ git commit --amend -m "New commit message"
 git log         # --stat para ver detalhes         -n3 para limitar aos ultimos 3
 
 git diff <commit1> <commit2>   # Compare two commits
+git diff master^ master        # Compare master with its parent (^ means "parent of")
 
 git blame <file>                         # Show git commit annotations in each line of a file
 git blame <file> > <newfile>     # As above but in a file instead of the terminal
