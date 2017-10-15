@@ -362,6 +362,7 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 To enable creation of SD Cards (and therefore AVDs):
 ```bash
 sudo pacman -S lib32-gcc-libs lib32-ncurses
+echo "export ANDROID_HOME=/opt/android-sdk" >> .bashrc
 ```
 
 ### Android MTP
