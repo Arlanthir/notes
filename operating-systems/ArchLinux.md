@@ -357,6 +357,13 @@ Comment=Increase mouse scroll wheel speed
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 ```
 
+### Android Studio
+(package in AUR)  
+To enable creation of SD Cards (and therefore AVDs):
+```bash
+sudo pacman -S lib32-gcc-libs lib32-ncurses
+```
+
 ### Android MTP
 ```bash
 sudo pacman -S libmtp gvfs-mtp gvfs-gphoto2
