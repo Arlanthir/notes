@@ -78,13 +78,16 @@ rating = VALUES(rating);
 ## Select X max per group
 
 ```sql
-SELECT type, variety, price,
-@num := IF(@type = type, @num + 1, 1) AS row_number,
-@type := type AS dummy
-FROM fruits
-LEFT JOIN (SELECT @num := 0, @type := '') AS varinit ON 1=1
-GROUP BY type, price, variety
-HAVING row_number <= 2;
+SET @num := 0, @type := '';
+
+SELECT type, variety, price
+FROM (
+   SELECT type, variety, price,
+      @num := IF(@type = type, @num + 1, 1) AS row_number,
+      @type := type AS dummy
+  FROM fruits
+  ORDER BY type, price
+) AS x WHERE x.row_number <= 2;
 ```
 
 http://www.xaprb.com/blog/2006/12/07/how-to-select-the-firstleastmax-row-per-group-in-sql/
