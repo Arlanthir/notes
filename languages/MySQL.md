@@ -78,6 +78,12 @@ rating = VALUES(rating);
 ## Select X max per group
 Without variables:
 ```sql
+SELECT t1.*
+FROM `Table` AS t1
+LEFT OUTER JOIN `Table` AS t2
+  ON t1.GroupId = t2.GroupId AND t1.OrderField < t2.OrderField
+WHERE t2.GroupId IS NULL
+
 SELECT f.type, f.variety, f.price
 FROM (
    SELECT type, min(price) AS minprice
@@ -98,7 +104,7 @@ FROM (
   ORDER BY type, price
 ) AS x WHERE x.row_number <= 2;
 ```
-
+https://stackoverflow.com/questions/8748986/get-records-with-highest-smallest-whatever-per-group
 http://www.xaprb.com/blog/2006/12/07/how-to-select-the-firstleastmax-row-per-group-in-sql/
 
 ## Read-modify-write
