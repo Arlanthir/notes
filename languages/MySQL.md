@@ -83,13 +83,8 @@ FROM Table AS t1
 LEFT OUTER JOIN Table AS t2
   ON t1.GroupId = t2.GroupId AND t1.OrderField < t2.OrderField
 WHERE t2.GroupId IS NULL
-
-SELECT f.type, f.variety, f.price
-FROM (
-   SELECT type, min(price) AS minprice
-   FROM fruits GROUP BY type
-) AS x INNER JOIN fruits AS f ON f.type = x.type AND f.price = x.minprice;
 ```
+https://stackoverflow.com/questions/8748986/get-records-with-highest-smallest-whatever-per-group
 
 With variables (MySQL):
 ```sql
@@ -104,7 +99,6 @@ FROM (
   ORDER BY type, price
 ) AS x WHERE x.row_number <= 2;
 ```
-https://stackoverflow.com/questions/8748986/get-records-with-highest-smallest-whatever-per-group
 http://www.xaprb.com/blog/2006/12/07/how-to-select-the-firstleastmax-row-per-group-in-sql/
 
 ## Read-modify-write
