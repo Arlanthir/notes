@@ -79,8 +79,8 @@ rating = VALUES(rating);
 Without variables:
 ```sql
 SELECT t1.*
-FROM Table AS t1
-LEFT OUTER JOIN Table AS t2
+FROM Table t1
+LEFT OUTER JOIN Table t2
   ON t1.GroupId = t2.GroupId AND t1.OrderField < t2.OrderField
 WHERE t2.GroupId IS NULL
 ```
