@@ -76,7 +76,16 @@ rating = VALUES(rating);
 ```
 
 ## Select X max per group
+Without variables:
+```sql
+SELECT f.type, f.variety, f.price
+FROM (
+   SELECT type, min(price) AS minprice
+   FROM fruits GROUP BY type
+) AS x INNER JOIN fruits AS f ON f.type = x.type AND f.price = x.minprice;
+```
 
+With variables (MySQL):
 ```sql
 SET @num := 0, @type := '';
 
