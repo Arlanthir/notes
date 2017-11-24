@@ -163,6 +163,8 @@ git blame -L 40,60 <file>          # Limit analyzed lines
 
 ## Branch logs with graph and colors:
 ```bash
+git log --oneline --format="%h %<(80,trunc)%s" # truncate commit messages
+
 git log --pretty=oneline
 git log --graph --oneline --decorate --all
 
@@ -172,6 +174,9 @@ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(
 ### Add to alias git graph:
 ```bash
 git config --global alias.graph "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# truncated:
+git config --global alias.graph "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %<(80,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
 ### And to show log with changed lines:
