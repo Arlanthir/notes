@@ -73,3 +73,23 @@ func _on_button_pressed():
 func _ready():
     get_node("Button").connect("pressed", self, "_on_button_pressed")  # Button is a child node named "Button"
 ```
+
+### Adding and deleting Scenes/Nodes
+```gdscript
+var scene = preload("res://myscene.scn") # will load when parsing the script
+# Alternative:
+var scene = load("res://myscene.scn") # will load when the script is instanced
+
+var node = scene.instance()
+add_child(node)
+
+node.queue_free() # remove the node and delete it while nothing is happening
+```
+
+
+```gdscript
+s = Sprite.new() # create a new sprite!
+add_child(s) # add it as a child of this node
+
+s.queue_free() # remove the node and delete it while nothing is happening
+```
