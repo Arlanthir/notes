@@ -31,8 +31,8 @@ _ready() # When the node and its children are injected in the scene
 
 ```gdscript
 func _on_button_pressed():
-    get_node("Label").set_text("HELLO!")
+    get_node("Label").set_text("HELLO!")  # Label is a child node named "Label"
 
 func _ready():
-    get_node("Button").connect("pressed", self, "_on_button_pressed")
+    get_node("Button").connect("pressed", self, "_on_button_pressed")  # Button is a child node named "Button"
 ```
