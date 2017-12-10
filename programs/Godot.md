@@ -16,6 +16,8 @@ Each scene has a root node (e.g.: Node2D). Each node can have child nodes (Sprit
 
 You can instantiate scenes as parts of another scene. If you design a scene for an enemy, you can create multiple instances of it to have a lot of enemies on screen.
 
+Nodes can be part of a Group. This helps when you want to execute code in multiple Nodes, e.g., alerting all enemies when the player is discovered by one of them.
+
 
 ## Scripts
 
@@ -24,7 +26,42 @@ Nodes can have scripts that run in an event-driven fashion (events are called si
 ### Common lifecycle hooks
 
 ```gdscript
-_ready() # When the node and its children are injected in the scene
+func _enter_tree():
+    # When the node enters the _Scene Tree_, it becomes active
+    # and  this function is called. Children nodes have not entered
+    # the active scene yet. In general, it's better to use _ready()
+    # for most cases.
+    pass
+
+func _ready():
+    # This function is called after _enter_tree, but it ensures
+    # that all children nodes have also entered the _Scene Tree_,
+    # and became active.
+    pass
+
+func _exit_tree():
+    # When the node exits the _Scene Tree_, this function is called.
+    # Children nodes have all exited the _Scene Tree_ at this point
+    # and all became inactive.
+    pass
+
+func _process(delta):
+    # When set_process() is enabled, this function is called every frame.
+    pass
+
+func _fixed_process(delta):
+    # When set_fixed_process() is enabled, this is called every physics
+    # frame.
+    pass
+
+func _paused():
+    # Called when game is paused. After this call, the node will not receive
+    # any more process callbacks.
+    pass
+
+func _unpaused():
+    # Called when game is unpaused.
+    pass
 ```
 
 ### Handle button press
