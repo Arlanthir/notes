@@ -107,4 +107,8 @@ add_child(node)
 node.queue_free() # remove the node and delete it while nothing is happening
 ```
 
+## Parallax Background
 
+Add the following nodes: ParallaxBackground > ParallaxLayer > Sprite
+
+In the ParallaxLayer, set the Motion Scale to scroll the Sprite at a different rate than the movement.
