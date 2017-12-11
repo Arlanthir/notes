@@ -21,10 +21,11 @@ Nodes can be part of a Group. This helps when you want to execute code in multip
 
 ## Physics
 
+- StaticBody: not affected by physics but affects others
+- KinematicBody: not affected by physics, but can be manipulated by code or animations (e.g. moving platforms)
 - RigidBody: affected by gravity and physics
-- StaticBody: not affected by physics but affect others
 
-Inside the rigid or static body, you can have the sprite and a CollisionShape to define its bounds.
+Inside the body, you can have a Sprite to render and a CollisionShape to define its physics bounds.
 
 ### No friction
 
