@@ -19,6 +19,14 @@ You can instantiate scenes as parts of another scene. If you design a scene for 
 Nodes can be part of a Group. This helps when you want to execute code in multiple Nodes, e.g., alerting all enemies when the player is discovered by one of them.
 
 
+## Physics
+
+- RigidBody: affected by gravity and physics
+- StaticBody: not affected by physics but affect others
+
+Inside the rigid or static body, you can have the sprite and a CollisionShape to define its bounds.
+
+
 ## Scripts
 
 Nodes can have scripts that run in an event-driven fashion (events are called signals in Godot).
