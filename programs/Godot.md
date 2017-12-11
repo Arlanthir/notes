@@ -26,6 +26,14 @@ Nodes can be part of a Group. This helps when you want to execute code in multip
 
 Inside the rigid or static body, you can have the sprite and a CollisionShape to define its bounds.
 
+### No friction
+
+To disable friction in a body, set the Friction and Damp Override to 0.
+
+### No rotation
+
+To disable rotation in a body, set its Mode to Character.
+
 
 ## Scripts
 
