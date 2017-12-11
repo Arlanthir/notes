@@ -112,3 +112,5 @@ node.queue_free() # remove the node and delete it while nothing is happening
 Add the following nodes: ParallaxBackground > ParallaxLayer > Sprite
 
 In the ParallaxLayer, set the Motion Scale to scroll the Sprite at a different rate than the movement.
+
+If needed, repeat the background by enabling Region in the Sprite (to a region bigger than the image) and add Repeat to the Texture Flags (inside the Sprite's texture).
