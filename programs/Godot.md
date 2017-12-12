@@ -128,8 +128,7 @@ If needed, repeat the background by enabling Region in the Sprite (to a region b
 
 1. Download Export Templates from https://godotengine.org/download
 2. Install Export Templates in Godot > Settings > Install Export Templates
-3. Configure Android Export:
-  - Settings > Editor Settings:
-  - Adb: `/home/<user>/Android/Sdk/platform-tools/adb`
-  - Jarsigner: `/opt/android-studio/jre/bin/jarsigner`
-  - Debug Keystore: `/home/<user>/.android/debug.keystore`
+3. Configure Android Export (Settings > Editor Settings):
+   - Adb: `/home/<user>/Android/Sdk/platform-tools/adb`
+   - Jarsigner: `/opt/android-studio/jre/bin/jarsigner`
+   - Debug Keystore: `/home/<user>/.android/debug.keystore`
