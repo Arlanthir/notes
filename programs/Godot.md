@@ -123,3 +123,13 @@ Add the following nodes: ParallaxBackground > ParallaxLayer > Sprite
 In the ParallaxLayer, set the Motion Scale to scroll the Sprite at a different rate than the movement.
 
 If needed, repeat the background by enabling Region in the Sprite (to a region bigger than the image) and add Repeat to the Texture Flags (inside the Sprite's texture).
+
+## Setup Export to Android
+
+1. Download Export Templates from https://godotengine.org/download
+2. Install Export Templates in Godot > Settings > Install Export Templates
+3. Configure Android Export:
+  - Settings > Editor Settings:
+  - Adb: `/home/<user>/Android/Sdk/platform-tools/adb`
+  - Jarsigner: `/opt/android-studio/jre/bin/jarsigner`
+  - Debug Keystore: `/home/<user>/.android/debug.keystore`
