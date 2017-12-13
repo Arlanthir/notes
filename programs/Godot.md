@@ -21,6 +21,8 @@ Nodes can be part of a Group. This helps when you want to execute code in multip
 
 ## Physics
 
+Remember to change the Default Gravity in the project's settings (Physics or Physics 2d)
+
 - StaticBody: not affected by physics but affects others
 - KinematicBody: not affected by physics, but can be manipulated by code or animations (e.g. moving platforms)
 - RigidBody: affected by gravity and physics
@@ -106,6 +108,8 @@ You can connect to children Nodes' signals by doing `get_node("...").connect(...
 
 Be careful with handler function arguments, they must match the signal exactly or they won't be called.
 
+You can also use the visual editor to connect Nodes (in the Inspector > Node section), a plug icon will be displayed next to the Script icon.
+
 #### Handle button press
 
 ```gdscript
@@ -140,6 +144,22 @@ add_child(node)
 
 node.queue_free() # remove the node and delete it while nothing is happening
 ```
+
+## Input Map
+
+To add input actions, go to Project Settings > Input Map. E.g.: add an action called `ui_tap`.
+
+To listen to it, do the following in a Script:
+
+```gdscript
+func _ready():
+    set_process(true) # Turn on frame processing
+
+func _process(delta):
+    if Input.is_action_pressed("ui_tap"):
+        print("tap")
+```
+
 
 ## Parallax Background
 
