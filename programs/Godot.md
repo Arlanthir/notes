@@ -105,10 +105,19 @@ func _my_handler()
 ```
 
 You can connect to children Nodes' signals by doing `get_node("...").connect(...)`.
+You can get other Nodes by doing `get_tree().get_root().get_node("...")`.
 
 Be careful with handler function arguments, they must match the signal exactly or they won't be called.
 
 You can also use the visual editor to connect Nodes (in the Inspector > Node section), a plug icon will be displayed next to the Script icon.
+
+#### Trigger custom signals
+
+```gdscript
+signal my_signal(param1, param2)
+...
+emit_signal("my_signal", "value1", "value2")
+```
 
 #### Handle button press
 
@@ -159,7 +168,9 @@ func _process(delta):
     if Input.is_action_pressed("ui_tap"):
         print("tap")
 ```
+## HUD
 
+To create a HUD, add a CanvasLayer Node.
 
 ## Parallax Background
 
