@@ -40,6 +40,15 @@ To disable rotation in a body, set its Mode to Character.
 
 Nodes can have scripts that run in an event-driven fashion (events are called signals in Godot).
 
+A Script defines a class that extends the Node's base class.
+
+**Conventions**:
+
+- Nodes are `CamelCase`.
+- Functions and variables are `snake_case`.
+- Private class members start with underscore `_`.
+- Signals are in the past tense `something_happened`.
+
 ### Common lifecycle hooks
 
 ```gdscript
@@ -81,7 +90,23 @@ func _unpaused():
     pass
 ```
 
-### Handle button press
+### Signals
+
+To handle a Node's signal, do:
+
+```gdscript
+func _ready():
+    connect("signal_name", self, "_my_handler")
+
+func _my_handler()
+    # Handle signal here
+```
+
+You can connect to children Nodes' signals by doing `get_node("...").connect(...)`.
+
+Be careful with handler function arguments, they must match the signal exactly or they won't be called.
+
+#### Handle button press
 
 ```gdscript
 func _on_button_pressed():
