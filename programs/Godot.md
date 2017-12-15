@@ -24,10 +24,11 @@ Create a TileSet:
 
 1. Turn on Project Settings > Display > Use 2d Pixel Snap
 2. Create a TileSet Scene
-3. Add a Sprite for each tile (specify the Region Rect for each individual Sprite to load different tiles from the same image)
-4. Name each Sprite correctly and uniquely
-5. Add collision to relevant tiles with StaticBody2D and CollisionPolygon2D/CollisionShape2D
-6. Scene > Convert To > TileSet
+3. Edit > Show Grid, Edit > Use Pixel Snap
+4. Add a Sprite for each tile (specify the Region Rect for each individual Sprite to load different tiles from the same image)
+5. Name each Sprite correctly and uniquely
+6. Add collision to relevant tiles with StaticBody2D and CollisionPolygon2D/CollisionShape2D
+7. Scene > Convert To > TileSet (.tres)
 
 Use a TileSet:
 
