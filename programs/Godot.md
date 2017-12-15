@@ -18,6 +18,24 @@ You can instantiate scenes as parts of another scene. If you design a scene for 
 
 Nodes can be part of a Group. This helps when you want to execute code in multiple Nodes, e.g., alerting all enemies when the player is discovered by one of them.
 
+## TileSets
+
+Create a TileSet:
+
+1. Turn on Project Settings > Display > Use 2d Pixel Snap
+2. Create a TileSet Scene
+3. Add a Sprite for each tile (specify the Region Rect for each individual Sprite to load different tiles from the same image)
+4. Name each Sprite correctly and uniquely
+5. Add collision to relevant tiles with StaticBody2D and CollisionPolygon2D/CollisionShape2D
+6. Scene > Convert To > TileSet
+
+Use a TileSet:
+
+1. Create a TileMap Node
+2. Load the TileSet
+3. Set the Cell Size to the correct value
+4. Lock the TileSet Node to avoid moving it unintentionally (lock icon in the toolbar)
+
 
 ## Physics
 
