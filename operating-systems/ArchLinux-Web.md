@@ -79,3 +79,13 @@ sudo systemctl enable mariadb.service
 sudo systemctl start mariadb.service
 mysql_secure_installation
 ```
+## NodeJS
+
+Installing global node_modules on /usr/lib may conflict with web packages installed from pacman/AUR.
+
+Add to .bashrc:
+```bash
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
+```
+
