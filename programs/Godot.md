@@ -56,6 +56,9 @@ To disable friction in a body, set the Friction and Damp Override to 0.
 
 To disable rotation in a body, set its Mode to Character.
 
+### Collision masks and layers
+
+You can set Player to Layer/Mask 1, Powerup to Layer/Mask 2 and Platform to Layers/Masks 1 + 2. The player and powerup will collide with platform but not with each other.
 
 ## Scripts
 
