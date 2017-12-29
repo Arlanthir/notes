@@ -109,7 +109,7 @@ If screen is black after playback:
 function omx { file=$1; noextension=${file%.*}; omxplayer -rb $file --subtitles $noextension.str --vol -1200; }
 ```
 
-Allows: omx <movie>
+Allows: `omx <movie>`
 
 
 ### Shortcuts
@@ -129,4 +129,13 @@ Down Arrow  | Seek -600
 Up Arrow    | Seek +600
 
 
+### Subtitles
+
+Download subtitles automatically with [OpenSubtitlesDownload](https://github.com/emericg/OpenSubtitlesDownload)
+
+Convert subtitles to UTF-8:
+
+```bash
+iconv -f LATIN1 -t UTF-8 in.srt > out.srt
+```
 
