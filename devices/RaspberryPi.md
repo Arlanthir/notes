@@ -21,7 +21,7 @@ sudo dd bs=4M if=2017-11-29-raspbian-stretch.img of=/dev/sdb conv=fsync
 
 sudo kill -USR1 $(pgrep ^dd$) # Monitor progress
 
-# sudo sync # Old way of syncing
+sudo sync
 ```
 
 Default username/password: pi / raspberry
