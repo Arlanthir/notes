@@ -65,13 +65,16 @@ sudo apt-get install transmission-daemon
 sudo service transmission-daemon stop
 sudo nano /etc/transmission-daemon/settings.json
 
-download-dir: /mnt/usb/Downloads
-rpc-authentication-required: true
-rpc-password: "CHOSEN PASSWORD"
-rpc-port: 9091
-rpc-whitelist: "192.168.1.*"
-rpc-whitelist-enabled: false    # don't restrict access to same network
-umask: 2                        # decimal for 002. inverse of (rwx,rwx,r-x)
+"download-dir": /mnt/usb/Downloads,
+"encryption": 2,
+"peer-port": 51414,
+"port-forwarding-enabled": true,
+"rpc-authentication-required": true,
+"rpc-password": "CHOSEN PASSWORD",
+"rpc-port": 9091,
+"rpc-whitelist": "192.168.1.*",
+"rpc-whitelist-enabled": false,    # don't restrict access to same network
+"umask": 2,                        # decimal for 002. inverse of (rwx,rwx,r-x)
 
 sudo chgrp debian-transmission -R /mnt/usb/Downloads/     # Or another folder
 chmod -R 775 /mnt/usb/Downloads
@@ -81,7 +84,7 @@ sudo service transmission-daemon start
 
 1. Access the web UI
 2. Click settings in the bottom left corner
-3. Set require encryption, another port (e.g. 51414) and port forwarding
+3. Check: Set require encryption, another port (e.g. 51414) and port forwarding
 
 ### Add torrents by CLI
 
