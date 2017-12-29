@@ -28,6 +28,19 @@ Default username/password: pi / raspberry
 
 ## Install a USB disk
 
+New:
+```bash
+sudo apt-get install ntfs-3g
+sudo blkid   # Check the UUID of your device, something like E47AFD7A7AFD49B6
+sudo mkdir /mnt/usb
+sudo chmod 775 /mnt/usb
+sudo mount /dev/disk/by-uuid/E47AFD7A7AFD49B6 /mnt/usb
+
+# Add to /etc/fstab:
+/dev/disk/by-uuid/E47AFD7A7AFD49B6   /mnt/usb    ntfs    defaults,permissions    0    0
+```
+
+Old:
 ```bash
 sudo apt-get install ntfs-3g
 sudo fdisk -l    # Check the name of your device, probably /dev/sda1
