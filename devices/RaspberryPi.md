@@ -89,3 +89,44 @@ sudo service transmission-daemon start
 ### Add torrents by CLI
 
 `transmission-remote -n '<user>:<pass>' -a <file.torrent>`
+
+## Playing video
+
+- `omxplayer` is already installed on latest Raspbian.
+- Decodes video in hardware.
+- Requires 64mb of graphical ram, 128 for 1080p.
+
+```bash
+omxplayer -rb <video> --subtitles <subtitles>
+```
+
+If screen is black after playback:
+
+`Alt+f2`, `Alf+f1`
+
+### Function in .bashrc (like alias)
+```bash
+function omx { file=$1; noextension=${file%.*}; omxplayer -rb $file --subtitles $noextension.str --vol -1200; }
+```
+
+Allows: omx <movie>
+
+
+### Shortcuts
+
+Key         | Function
+------------|-----------------------------------
+s           | Toggle subtitles
+d           | Subtitle delay -250 ms
+f           | Subtitle delay +250 ms
+q           | Exit OMXPlayer
+Space / p   | Pause/Resume
+\-          | Decrease Volume
+\+          | Increase Volume
+Left Arrow  | Seek -30
+Right Arrow | Seek +30
+Down Arrow  | Seek -600
+Up Arrow    | Seek +600
+
+
+
