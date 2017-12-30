@@ -44,12 +44,19 @@ from common import do_stuff
 ## Variables
 ```python
 my_var = 2
-names = ["John", "Jane", "Joe"] # list
 stop = False
 
 def mark_stop():
     global stop
     stop = True
+```
+
+## Booleans
+```python
+t = True
+not(t)       # False
+2 or True    # 2
+False and 2  # False
 ```
 
 ## Strings
@@ -61,6 +68,21 @@ length = len(hello)
 print(hello + ' ' + world)
 
 my_number_s = str(42)
+print('The number is {}'.format(42))
+```
+
+My string quotes style:
+- Use single quotes for everything; OR
+- Use single quotes for internal values and double quotes for strings shown to the user
+
+## Lists
+```python
+names = ["John", "Jane", "Joe"] # list
+```
+
+## Dictionaries
+```python
+food = {'ham': 'yes', 'egg': 'yes', 'spam': 'no' }
 ```
 
 ## Conditionals and Loops
