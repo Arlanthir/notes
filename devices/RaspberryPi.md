@@ -135,7 +135,7 @@ If screen is black after playback:
 
 ### Function in .bashrc (like alias)
 ```bash
-function omx { file=$1; noextension=${file%.*}; omxplayer -rb $file --subtitles $noextension.str --vol -1200; }
+function omx { file=$1; noextension=${file%.*}; omxplayer -rb $file --subtitles $noextension.srt --vol -1200; }
 ```
 
 Allows: `omx <movie>`
