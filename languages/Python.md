@@ -52,6 +52,16 @@ def mark_stop():
     stop = True
 ```
 
+## Strings
+```python
+str = 'Hello'
+other = "World"
+length = len(str)
+
+print(str + ' ' + other)
+
+```
+
 ## Conditionals and Loops
 ```python
 if not stop:
