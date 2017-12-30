@@ -54,6 +54,26 @@ sudo mount /dev/sda1 /mnt/usb
 
 ## Install Syncthing
 
+New:
+```bash
+sudo apt-get install syncthing
+sudo systemctl start syncthing@pi.service
+# Wait some time
+sudo systemctl stop syncthing@pi.service
+nano ~/.config/syncthing/config.xml
+
+<gui enabled="true" tls="false" debugging="false">
+        <address>0.0.0.0:8080</address>
+
+sudo systemctl start syncthing@pi.service
+# Access the web interface, change user/password
+# Restart
+sudo systemctl enable syncthing@pi.service
+```
+
+
+Old:
+
 1. Download the ARM version
 2. Copy the files to /home/pi/syncthing
 3. Run syncthing once to create the config.xml file in ~/.config/syncthing
@@ -94,10 +114,6 @@ chmod -R 775 /mnt/usb/Downloads
 sudo usermod -a -G debian-transmission pi # Add user pi to group debian-transmission
 sudo service transmission-daemon start
 ```
-
-1. Access the web UI
-2. Click settings in the bottom left corner
-3. Check: Set require encryption, another port (e.g. 51414) and port forwarding
 
 ### Add torrents by CLI
 
