@@ -29,7 +29,7 @@ def do_stuff():
     print("Hello World")
 
 # Run automatically only when called via CLI
-if __name__ == "__main__":
+if __name__ == '__main__':
     do_stuff()
 ```
 
@@ -77,7 +77,7 @@ My string quotes style:
 
 ## Lists
 ```python
-names = ["John", "Jane", "Joe"] # list
+names = ['John', 'Jane', 'Joe'] # list
 ```
 
 ## Dictionaries
