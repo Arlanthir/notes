@@ -54,12 +54,13 @@ def mark_stop():
 
 ## Strings
 ```python
-str = 'Hello'
-other = "World"
-length = len(str)
+hello = 'Hello'
+world = "World"
+length = len(hello)
 
-print(str + ' ' + other)
+print(hello + ' ' + world)
 
+my_number_s = str(42)
 ```
 
 ## Conditionals and Loops
