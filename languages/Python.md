@@ -78,6 +78,8 @@ My string quotes style:
 ## Lists
 ```python
 names = ['John', 'Jane', 'Joe'] # list
+names.insert(0, 'Mike')
+names.append('Jack')
 ```
 
 ## Dictionaries
