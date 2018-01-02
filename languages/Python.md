@@ -97,6 +97,9 @@ even = list(filter(lambda x: x % 2 == 0, numbers))
 
 from functools import reduce
 sum = reduce(lambda x, sum: sum + x, numbers)
+
+fifteen_numbers = [i for i in range(15)]
+fifteen_zeroes = [0 for i in range(15)]
 ```
 
 ## Dictionaries
