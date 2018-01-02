@@ -41,6 +41,16 @@ from common import do_stuff
 # ...
 ```
 
+## Functions
+```python
+def fn(name, surname="Doe"):
+    # surname is an optional parameter
+    print("Hello, {} {}!".format(name, surname))
+    
+# Anonymous functions (one-liners):
+lambda arg1, arg2: return-expression
+```
+
 ## Variables
 ```python
 my_var = 2
@@ -80,6 +90,13 @@ My string quotes style:
 names = ['John', 'Jane', 'Joe'] # list
 names.insert(0, 'Mike')
 names.append('Jack')
+
+numbers = [1, 2, 3, 4]
+inc1 = list(map(lambda x: x + 1, numbers))
+even = list(filter(lambda x: x % 2 == 0, numbers))
+
+from functools import reduce
+sum = reduce(lambda x, sum: sum + x, numbers)
 ```
 
 ## Dictionaries
