@@ -123,5 +123,7 @@ for n in range(10):
 ```python
 with open('myfile.txt', 'w') as file:
     file.write('whatever')
+
+with open('myfile.txt') as file:
     data = file.read() 
 ```
