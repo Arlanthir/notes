@@ -119,3 +119,9 @@ for n in range(10):
     print("Loop number {}".format(n))
 ```
 
+## Files
+```python
+with open('myfile.txt', 'w') as file:
+    file.write('whatever')
+    data = file.read() 
+```
