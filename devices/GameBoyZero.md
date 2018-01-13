@@ -7,7 +7,9 @@ These instructions are for a variant using a Raspberry Pi 3, for better performa
 ## Original project site and forums
 
 - [SudoMod](https://sudomod.com/)
-- https://sudomod.com/forum/viewtopic.php?f=9&t=1615
+- [Sota's variant](https://sudomod.com/forum/viewtopic.php?f=9&t=1615)
+- [Info on screens](https://www.sudomod.com/forum/viewtopic.php?f=8&t=15&hilit=gearbest&start=520)
+- [Screen performance](https://www.sudomod.com/forum/viewtopic.php?f=8&t=2850)
 
 ## Other resources
 
@@ -33,6 +35,10 @@ These instructions are for a variant using a Raspberry Pi 3, for better performa
 Keys:
 
 `TODO keys`
+
+`TODO theme`
+
+`TODO resolution`
 
 ## Housing
 
