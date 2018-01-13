@@ -57,7 +57,7 @@ Alternatively, redo the connections keeping AV2 and GND together and shielded, w
 
 If the screen displays poorly, try disabling the screen's voltage regulator from 12V to 5V, by shorting one of the pins of a chip:
 
-`TODO image`
+![Gearbest mod](gearbest-screen.jpg)
 
 ## Buttons
 
