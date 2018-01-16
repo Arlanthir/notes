@@ -148,3 +148,7 @@ cd wp-content/themes/mytheme/languages/
 find ../ -name '*.php' -exec xgettext --from-code=UTF-8 --keyword=__ --keyword=_e -o en_US.po '{}' ';'
 ```
 
+## Child themes
+
+Instead of modifying a downloaded theme, it is advisable to create a child theme of that one. In it, you can
+override functions by redeclaring them in your files (typically mirroring the structure of the original theme).
