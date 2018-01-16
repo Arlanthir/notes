@@ -32,6 +32,14 @@ They are divided in **actions** and **filters**, whether they are the result of 
 
 Plugins can define entities, represented by **custom post types** and **taxonomies** of **categories** for posts.
 
+### Actions
+```php
+function register_my_menu() {
+    // ...
+}
+add_action('after_setup_theme', 'register_my_menu');
+```
+
 
 ## Queries
 
@@ -74,3 +82,69 @@ wp_nav_menu(array(
     'theme_location' => 'primary'
 ));
 ```
+
+## Widget Areas
+
+To register widgets, in **functions.php**, action `widgets_init`:
+```php
+register_sidebar(array(
+     'name' => __( 'Widget Area', 'twentyfifteen' ),
+     'id' => 'sidebar-1',
+     'description' => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+     'after_widget' => '</aside>',
+     'before_title' => '<h2 class="widget-title">',
+     'after_title' => '</h2>',
+));
+```
+
+To display the widgets:
+```php
+<?php if (is_active_sidebar('sidebar-1')) { ?>
+     <div id="widget-area-1" class="widget-area">
+          <?php dynamic_sidebar('sidebar-1'); ?>
+     </div>
+<?php } ?>
+```
+
+## Enqueue scripts and styles
+
+```php
+function themename_scripts() {
+    wp_enqueue_style('themename-css', get_template_directory_uri() . '/css/style.css', array(), '20180101');
+    wp_enqueue_script('themename-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '20180101', true);
+}
+add_action('wp_enqueue_scripts', 'themename_scripts');
+```
+
+## AJAX Requests
+
+```javascript
+jQuery.ajax({
+    url: <?= admin_url("admin-ajax.php"); ?>,
+    type: 'POST',
+    data: {action = 'my_request', ...},
+    success: function(data, textStatus, jqXHR) {
+    }
+});
+```
+
+```php
+function ajax_my_request() {
+    echo json_encode(array('status' => 'success'));
+    exit;
+}
+add_action('wp_ajax_my_request', 'ajax_my_request');
+add_action('wp_ajax_nopriv_my_request', 'ajax_my_request');
+```
+
+## Translations
+
+Install Poedit to manage translations.
+
+Alternative to create .po file:
+```bash
+cd wp-content/themes/mytheme/languages/
+find ../ -name '*.php' -exec xgettext --from-code=UTF-8 --keyword=__ --keyword=_e -o en_US.po '{}' ';'
+```
+
