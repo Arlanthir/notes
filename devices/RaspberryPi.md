@@ -17,7 +17,7 @@ sudo fdisk -l
 umount /dev/sdb1
 umount /dev/sdb2
 
-sudo dd bs=4M if=2017-11-29-raspbian-stretch.img of=/dev/sdb conv=fsync
+sudo dd bs=4M if=2017-11-29-raspbian-stretch.img of=/dev/sdb status=progress conv=fsync
 
 sudo kill -USR1 $(pgrep ^dd$) # Monitor progress
 
