@@ -68,5 +68,6 @@ language-vue
 linter-eslint
 linter-sass-lint
 lint-sass-vue
+pigments
 project-manager
 ```
