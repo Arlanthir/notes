@@ -40,6 +40,14 @@ function register_my_menu() {
 add_action('after_setup_theme', 'register_my_menu');
 ```
 
+### Filters
+```php
+function my_filter($arg) {
+    // ...
+    return $arg;
+}
+add_filter('some_filter', 'my_filter');
+```
 
 ## Queries
 
