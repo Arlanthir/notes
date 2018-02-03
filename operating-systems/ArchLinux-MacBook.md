@@ -14,7 +14,7 @@ loadkeys pt-latin1
 ```
 
 
-
+## Legacy text copied from generic Arch instructions
 
 ### First steps
 
