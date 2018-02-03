@@ -29,11 +29,6 @@ Check if UEFI mode is on
 ls /sys/firmware/efi/efivars      # only exists if UEFI
 ```
 
-
-
-## Legacy text copied from generic Arch instructions
-
-
 Start time sync and check status
 ```bash
 timedatectl status
@@ -44,40 +39,19 @@ timedatectl status
 ### Setup disk
 
 Check disks  
-`lsblk                           # or: fdisk -l`
-
-Check current partition table  
-`parted /dev/sdx print`
-
-#### Swap  Partition
-
-##### Partitioning using MBR, / + swap
-**Note**: This bricked an Acer's HDD, maybe because Swap comes first or because lack of formatting
 ```bash
-parted /dev/sdx
-mklabel msdos                             # create new partition table
-mkpart primary linux-swap 1MiB 6GiB
-mkpart primary ext4 6GiB 100%
-set 2 boot on                             # if dual-booting, don't change boot flag
-quit
+lsblk                    # or: fdisk -l
+fdisk -l /dev/sdx        # where sdx is your desired disk
 ```
 
-##### Partitioning using MBR, / without swap
-```bash
-parted /dev/sdx
-mklabel msdos                             # create new partition table
-mkpart primary ext4 1MiB 100%
-set 1 boot on                             # if dual-booting, don't change boot flag
-quit
-```
+##### Partitioning using EFI, / without swap (Macbook)
+Remember to allocate 128 MiB in an HFS+ (af00) partition for a Linux Boot Loader.
+macOS likes to see a 128 MiB gap after partitions, so when you create the first partition after the last macOS partition, type in +128M when cgdisk asks for the first sector for the partition.
 
-##### Partitioning using EFI, / + swap (Macbook)
-Remember to allocate 128MB in an HFS+ (af00) partition for a Linux Boot Loader
 ```bash
 cgdisk /dev/sdx
-Linux boot loader 128 Mib
-swap 4200 Mib
-root Remaining Space
+128 MiB           Linux boot loader
+Remaining Space   Linux filesystem    
 Type codes: Ext4 is 8300 (the default), Linux swap is 8200
 ```
 
@@ -116,6 +90,9 @@ Install:
 ```bash
 pacstrap -i /mnt base base-devel
 ```
+
+## Legacy text copied from generic Arch instructions
+
 
 Generate fstab:
 ```bash
@@ -167,15 +144,57 @@ timedatectl set-local-rtc 1
 
 ### Install GRUB
 
-#### MBR
+#### GRUB-EFI (EFI, OSX)
 ```bash
-pacman -S grub os-prober
-grub-install --target=i386-pc /dev/sdx
+pacman -S grub-efi-x86_64
+nano /etc/default/grub
+GRUB_TIMEOUT=0
+# Uncomment GRUB_HIDDEN_TIMEOUT and ..._QUIET
+GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi="
+
 grub-mkconfig -o /boot/grub/grub.cfg
+grub-mkstandalone -o boot.efi -d /usr/lib/grub/x86_64-efi -O x86_64-efi --compress=xz /boot/grub/grub.cfg
+mkdir /mnt/usbdisk && mount /dev/sdy /mnt/usbdisk
+cp boot.efi /mnt/usbdisk/
 ```
 
-#### OSX EFI
-See bottom notes.
+Reboot to OSX, Erase the bootloader partition
+```bash
+cd /Volumes/Linux\ Bootloader
+mkdir System mach_kernel
+cd System
+mkdir -p Library/CoreServices
+cd Library/CoreServices
+touch SystemVersion.plist
+cp /Volumes/usbdrive/boot.efi .
+```
+
+Edit SystemVersion.plist to look like this
+```xml
+<xml version="1.0" encoding="utf-8"?>
+<plist version="1.0">
+<dict>
+    <key>ProductBuildVersion</key>
+    <string></string>
+    <key>ProductName</key>
+    <string>Linux</string>
+    <key>ProductVersion</key>
+    <string>Arch Linux</string>
+</dict>
+</plist>
+```
+
+To make Arch the default (and avoid pressing Alt/Option at boot):  
+Enable bless in El Capitan:  
+  1. Boot to Recovery OS by restarting your machine and holding down the Command and R keys at startup. (Or option and choosing "Recovery 10.xx")
+  2. Launch Terminal from the Utilities menu.
+  3. Enter the following command: csrutil enable
+  4. Reboot
+
+```bash
+sudo bless --device /dev/disk0s4 --setBoot
+```
+
 
 ### Network
 
@@ -329,57 +348,6 @@ sudo reboot
 ## Macbook Air
 
 ### GRUB
-
-#### GRUB-EFI (EFI, OSX)
-```bash
-pacman -S grub-efi-x86_64
-nano /etc/default/grub
-GRUB_TIMEOUT=0
-# Uncomment GRUB_HIDDEN_TIMEOUT and ..._QUIET
-GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi="
-
-grub-mkconfig -o /boot/grub/grub.cfg
-grub-mkstandalone -o boot.efi -d /usr/lib/grub/x86_64-efi -O x86_64-efi --compress=xz /boot/grub/grub.cfg
-mkdir /mnt/usbdisk && mount /dev/sdy /mnt/usbdisk
-cp boot.efi /mnt/usbdisk/
-```
-
-Reboot to OSX, Erase the bootloader partition
-```bash
-cd /Volumes/Linux\ Bootloader
-mkdir System mach_kernel
-cd System
-mkdir -p Library/CoreServices
-cd Library/CoreServices
-touch SystemVersion.plist
-cp /Volumes/usbdrive/boot.efi .
-```
-
-Edit SystemVersion.plist to look like this
-```xml
-<xml version="1.0" encoding="utf-8"?>
-<plist version="1.0">
-<dict>
-    <key>ProductBuildVersion</key>
-    <string></string>
-    <key>ProductName</key>
-    <string>Linux</string>
-    <key>ProductVersion</key>
-    <string>Arch Linux</string>
-</dict>
-</plist>
-```
-
-To make Arch the default (and avoid pressing Alt/Option at boot):  
-Enable bless in El Capitan:  
-  1. Boot to Recovery OS by restarting your machine and holding down the Command and R keys at startup. (Or option and choosing "Recovery 10.xx")
-  2. Launch Terminal from the Utilities menu.
-  3. Enter the following command: csrutil enable
-  4. Reboot
-
-```bash
-sudo bless --device /dev/disk0s4 --setBoot
-```
 
 
 ### Disable Bluetooth
