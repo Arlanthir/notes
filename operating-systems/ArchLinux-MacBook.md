@@ -13,42 +13,26 @@ For some reason, the mac-pt-latin1 keyboard layout is not working, do:
 loadkeys pt-latin1
 ```
 
-
-## Legacy text copied from generic Arch instructions
-
-### First steps
-
-Burn the ISO to a USB  
-`dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync`
-
-List available keyboard layouts  
-`ls /usr/share/kbd/keymaps/**/*.map.gz`
-
-Change keyboard layout  
-`loadkeys pt-latin1       # or: loadkeys mac-pt-latin1`
-
-Optionally change the console font  
-`setfont Lat2-Terminus16`
-
-Check if wired connection is available
+Connect the USB tethering Android phone and check for internet connection:
 ```bash
 ping archlinux.org
 ```
 
-If not, enable wired connection
+If down, enable wired connection
 ```bash
 ip link                                       # to find out <interface>
 systemctl enable dhcpcd@<interface>.service
 dhcpcd
 ```
-
-Configure Wireless  
-`wifi-menu`
-
 Check if UEFI mode is on
 ```bash
 ls /sys/firmware/efi/efivars      # only exists if UEFI
 ```
+
+
+
+## Legacy text copied from generic Arch instructions
+
 
 Start time sync and check status
 ```bash
