@@ -8,7 +8,7 @@
 | `pacman -R <package>`   | Remove package                       |
 | `pacman -Ss <query>`    | Search package                       |
 | `pacman -Syu`           | Update packages                      |
-| `pacman -Qo <file>`     | Check which package installed <file> |
+| `pacman -Qo <file>`      | Check which package installed <file>  |
 
 ## Arch User Repository (AUR)
 
@@ -45,21 +45,24 @@ makepkg -sri
 #### Update packages automatically
 `cower -duf --timeout=20`
 
-## Installation guide (2016-03-03)
+## Installation guide (2018-02-03)
 
 ### First steps
 
-Burn the ISO to a USB  
-`dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync`
+Burn the ISO to a USB
+```bash
+dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync
+```
 
-List available keyboard layouts  
-`ls /usr/share/kbd/keymaps/**/*.map.gz`
+List available keyboard layouts
+```bash
+ls /usr/share/kbd/keymaps/**/*.map.gz
+```
 
-Change keyboard layout  
-`loadkeys pt-latin1       # or: loadkeys mac-pt-latin1`
-
-Optionally change the console font  
-`setfont Lat2-Terminus16`
+Change keyboard layout
+```bash
+loadkeys pt-latin1
+```
 
 Check if wired connection is available
 ```bash
@@ -90,8 +93,11 @@ timedatectl status
 
 ### Setup disk
 
-Check disks  
-`lsblk                           # or: fdisk -l`
+Check disks
+```bash
+lsblk                   # or: fdisk -l
+fdisk -l /dev/sdx       # where sdx is your desired disk
+```
 
 Check current partition table  
 `parted /dev/sdx print`
@@ -119,10 +125,14 @@ quit
 ```
 
 Check partitions  
-`lsblk /dev/sdx`
+```bash
+lsblk /dev/sdx
+```
 
 Format ext4 partitions  
-`mkfs.ext4 /dev/sdxY`
+```bash
+mkfs.ext4 /dev/sdxY
+```
 
 Activate swap partition if any
 ```bash
@@ -131,7 +141,9 @@ swapon /dev/sdxY
 ```
 
 Mount root partition  
-`mount /dev/sdxY /mnt`
+```bash
+mount /dev/sdxY /mnt
+```
 
 Configure swap file if not using a partition
 ```bash
@@ -156,40 +168,29 @@ pacstrap -i /mnt base base-devel
 
 Generate fstab:
 ```bash
-# genfstab -U /mnt >> /mnt/etc/fstab
-genfstab -L /mnt >> /mnt/etc/fstab     # Labels instead of UUIDs
+genfstab -U /mnt >> /mnt/etc/fstab
+# genfstab -L /mnt >> /mnt/etc/fstab     # Alternative: Labels instead of UUIDs
 ```
 
-Check the generated fstab (in particular remove `/mnt` from swapfile if needed):
+Check the generated fstab and fix it:
 ```bash
-cat /mnt/etc/fstab
+nano /mnt/etc/fstab
 ```
+- Remove `/mnt`from swapfile if any
+- Add option `discard` to SSD drives
 
 Copy any other configuration files to the new system in `/mnt` (such as netctl profiles in `/etc/netctl`)  
 Then chroot to it:
 ```bash
 arch-chroot /mnt
-nano /etc/locale.gen
-# Uncomment en_US.UTF-8 UTF-8, as well as other needed localizations
-locale-gen
 ```
 
-Create `/etc/locale.conf`, where `LANG` refers to the first column of an uncommented entry in `/etc/locale.gen`:
-```bash
-nano /etc/locale.conf
-LANG=en_US.UTF-8
-
-nano /etc/vconsole.conf
-KEYMAP=pt-latin1
-#FONT=Lat2-Terminus16
-```
-
-#### Update time
+#### Set time zone
 ```bash
 tzselect
-# ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
-ln -s /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
-hwclock --systohc --utc
+# ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
+hwclock --systohc
 ```
 
 If using Windows, remember to change it to UTC hardware clock as well:
@@ -202,7 +203,55 @@ Alternatively, you can use Arch in localtime as well (not recommended):
 timedatectl set-local-rtc 1
 ```
 
-### Install GRUB
+#### Configure locale
+
+```bash
+nano /etc/locale.gen
+# Uncomment en_US.UTF-8 UTF-8, as well as other needed localizations
+locale-gen
+```
+
+Create `/etc/locale.conf`, where `LANG` refers to the first column of an uncommented entry in `/etc/locale.gen`:
+```bash
+nano /etc/locale.conf
+LANG=en_US.UTF-8
+```
+
+Setup console keymap and font (if needed):
+```bash
+nano /etc/vconsole.conf
+KEYMAP=pt-latin1
+#FONT=Lat2-Terminus16
+```
+
+### Hostname
+
+Add your chosen computer name in `nano /etc/hostname`. Make a matching edit to `/etc/hosts`:
+
+```bash
+127.0.0.1 localhost
+::1		localhost
+127.0.1.1	<myhostname>.localdomain	<myhostname>
+```
+
+```bash
+pacman -S iw wpa_supplicant dialog
+```
+
+Reconfigure Wireless:
+```bash
+wifi-menu
+```
+
+### Root password
+
+Set the root password:
+```bash
+passwd
+```
+
+
+### Bootloader: GRUB
 
 #### MBR
 ```bash
@@ -214,20 +263,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #### OSX EFI
 See bottom notes.
 
-### Network
-
-Add your chosen computer name in `nano /etc/hostname` and after each localhost entry in `nano /etc/hosts`
-
-```bash
-pacman -S iw wpa_supplicant dialog
-```
-Reconfigure Wireless:
-`wifi-menu`
-
-Set the root password:
-```bash
-passwd
-```
 
 Reboot:
 ```bash
@@ -252,11 +287,11 @@ pacman -Sy
 ### Install Graphical Environment
 
 ```bash
-pacman -S xorg-server xorg-server-utils
-# Important optional packages
-pacman -S xf86-video-intel mesa-libgl lib32-mesa-libgl  # Intel drivers
-pacman -S nvidia nvidia-libgl lib32-nvidia-libgl        # Nvidia drivers
-pacman -S xf86-input-synaptics                          # If asked, choose evdev.
+pacman -S xorg-server
+
+# Graphics drivers:
+pacman -S xf86-video-intel mesa lib32-mesa         # Intel drivers
+pacman -S nvidia nvidia-libgl lib32-nvidia-libgl   # Nvidia drivers
 
 pacman -S gnome gnome-extra
 
@@ -268,17 +303,6 @@ To check (later) that Direct Rendering is being used:
 ```bash
 sudo pacman -S mesa-demos
 glxinfo | grep direct
-```
-
-### Configure Synaptics touchpad
-```bash
-nano /usr/share/X11/xorg.conf.d/70-synaptics.conf
-# Add to touchpad catchall
-        Option "VertScrollDelta" "-222"
-        Option "HorizScrollDelta" "-222"
-        Option "TapButton1" "1"
-        Option "MaxTapTime" "75"
-        MatchDevicePath "/dev/input/event*"
 ```
 
 ### Add another user
@@ -316,34 +340,6 @@ Visit URLs in the GNOME Web browser
 
 - https://extensions.gnome.org/extension/307/dash-to-dock/
 
-#### Mouse scroll wheel speed (Introduces more problems than it fixes)
-Install AUR package `imwheel`
-
-`nano .imwheelrc`:
-
-```
-".*"
-None,      Up,   Button4, 3
-None,      Down, Button5, 3
-Control_L, Up,   Control_L|Button4
-Control_L, Down, Control_L|Button5
-Shift_L,   Up,   Shift_L|Button4
-Shift_L,   Down, Shift_L|Button5
-```
-
-Add to startup:
-
-`nano ~/.config/autostart/imwheel.desktop`:
-
-[Desktop Entry]
-Type=Application
-Exec=imwheel --kill --buttons 45
-Hidden=true
-X-GNOME-Autostart-enabled=true
-Name=imwheel
-Comment=Increase mouse scroll wheel speed
-
-
 #### Alt-tab switch only between workspace apps
 ```bash
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
@@ -362,271 +358,6 @@ echo "export ANDROID_HOME=/opt/android-sdk" >> .bashrc
 sudo pacman -S libmtp gvfs-mtp gvfs-gphoto2
 sudo reboot
 ```
-
-## Macbook Air
-
-### GRUB
-
-#### GRUB-EFI (EFI, OSX)
-```bash
-pacman -S grub-efi-x86_64
-nano /etc/default/grub
-GRUB_TIMEOUT=0
-# Uncomment GRUB_HIDDEN_TIMEOUT and ..._QUIET
-GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi="
-
-grub-mkconfig -o /boot/grub/grub.cfg
-grub-mkstandalone -o boot.efi -d /usr/lib/grub/x86_64-efi -O x86_64-efi --compress=xz /boot/grub/grub.cfg
-mkdir /mnt/usbdisk && mount /dev/sdy /mnt/usbdisk
-cp boot.efi /mnt/usbdisk/
-```
-
-Reboot to OSX, Erase the bootloader partition
-```bash
-cd /Volumes/Linux\ Bootloader
-mkdir System mach_kernel
-cd System
-mkdir -p Library/CoreServices
-cd Library/CoreServices
-touch SystemVersion.plist
-cp /Volumes/usbdrive/boot.efi .
-```
-
-Edit SystemVersion.plist to look like this
-```xml
-<xml version="1.0" encoding="utf-8"?>
-<plist version="1.0">
-<dict>
-    <key>ProductBuildVersion</key>
-    <string></string>
-    <key>ProductName</key>
-    <string>Linux</string>
-    <key>ProductVersion</key>
-    <string>Arch Linux</string>
-</dict>
-</plist>
-```
-
-To make Arch the default (and avoid pressing Alt/Option at boot):  
-Enable bless in El Capitan:  
-  1. Boot to Recovery OS by restarting your machine and holding down the Command and R keys at startup. (Or option and choosing "Recovery 10.xx")
-  2. Launch Terminal from the Utilities menu.
-  3. Enter the following command: csrutil enable
-  4. Reboot
-
-```bash
-sudo bless --device /dev/disk0s4 --setBoot
-```
-
-
-### Disable Bluetooth
-```bash
-sudo nano /etc/modprobe.d/50-disabling.conf
-blacklist bluetooth
-blacklist btusb
-```
-
-### Macbook Air Tweaks
-
-#### Suggested AUR packages
-- broadcom-wl-dkms
-- bcwc-pcie-firmware
-- bcwc-pcie-dkms
-
-#### Fix suspend backlight in Macbook:
-
-Install AUR package `mba6x_bl-dkms-git`
-```bash
-# OLD:
-# copy to /etc/systemd/system/backlightfix.service (at least on Arch Linux)
-# sudo systemctl enable backlightfix.service
-
-[Unit]
-Description=Remove and reload mba6x to workaround no brightness bug
-
-
-[Service]
-ExecStart=/bin/sh -c "modprobe -r mba6x_bl && modprobe mba6x_bl"
-Type=oneshot
-
-
-[Install]
-WantedBy=multi-user.target
-```
-
-#### Check CPU specs
-```bash
-cat /proc/cpuinfo
-cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
-cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-```
-
-#### Check CPU freq
-```bash
-cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq
-```
-
-#### kworker issue
-Sometime with the addition of Yosemite, some users found that kworker CPU usage will spike, as discussed here. This is sometimes the result of runaway ACPI interrupts.
-
-To check and see, you can count the number of recent ACPI interrupts and see if any of them are out of control.
-```bash
-grep . -r /sys/firmware/acpi/interrupts/
-```
-If you see that one particular interrupt is out of control (possibly GPE66 or GPE4E), i.e., registering hundreds of thousands of lines, you can try disabling it (replace XX with the runaway interrupt):
-```bash
-echo "disable" > sudo tee /sys/firmware/acpi/interrupts/gpeXX
-```
-To make permanent:
-```bash
-sudo nano /etc/systemd/system/suppress-gpe4E.service
-
-[Unit]
-Description=Disables GPE4E, an interrupt that is going crazy on Macs
-[Service]
-ExecStart=/usr/bin/bash -c 'echo "disable" > /sys/firmware/acpi/interrupts/gpe4E'
-[Install]
-WantedBy=multi-user.target
-
-sudo systemctl enable suppress-gpe4E.service
-sudo systemctl start suppress-gpe4E.service
-```
-
-#### Making the fans work
-```bash
-# Add to /etc/modules:
-applesmc
-coretemp
-# Install the AUR package mbpfan-git, controls the fan speed according to the current temperature
-sudo systemctl enable mbpfan.service
-
-# Check that /sys/devices/platform/applesmc.768/fan1_manual is set to 0 (at least after reboot)
-
-Install AUR package thermald
-sudo systemctl enable thermald.service
-
-sudo pacman -S cpupower
-sudo systemctl enable cpupower
-sudo systemctl start cpupower
-sudo cpupower frequency-set -g powersave
-```
-
-#### Monitor power usage
-```bash
-sudo pacman -S tlp acpi_call powertop
-sudo systemctl enable tlp
-sudy systemctl start tlp
-sudo powertop --calibrate # wait a long time
-sudo powertop # leave open for a long time
-sudo powertop --auto-tune
-
-# When it works, make it permanent:
-
-sudo nano /etc/systemd/system/powertop.service
-[Unit]
-Description=Powertop Service
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/powertop --auto-tune
-[Install]
-WantedBy=multi-user.target
-
-sudo systemctl enable powertop
-sudo systemctl start powertop
-```
-
-#### Try setting a max CPU freq
-```bash
-sudo nano /etc/default/cpupower
-governor='powersave'
-max_freq="2.6GHz"
-```
-
-Monitor temps:
-```bash
-sudo pacman -S psensor
-```
-
-#### Fix wakeups
-
-Check wakeup reasons:
-```bash
-journalctl | grep -i wake
-```
-
-Disable problematic wakeups;
-```bash
-cat /proc/acpi/wakeup
-echo XHC1 > sudo tee /proc/acpi/wakeup
-# to make permanent:
-sudo nano /etc/udev/rules.d/90-xhc_sleep.rules
-# disable wake from S3 on XHC1
-SUBSYSTEM=="pci", KERNEL=="0000:00:14.0", ATTR{power/wakeup}="disabled"
-```
-
-#### Set FN keys to F1-F12 instead of brightness, etc
-```bash
-echo 2 > sudo tee /sys/module/hid_apple/parameters/fnmode
-```
-
-Reverse:
-```bash
-echo 1 > sudo tee /sys/module/hid_apple/parameters/fnmode
-```
-
-#### Enable 3-finger gestures
-
-##### xSwipe
-```bash
-sudo pacman -R xf86-input-synaptics
-# install AUR xf86-input-synaptics-xswipe-git perl-x11-guitest perl-smart-comments
-git clone https://github.com/iberianpig/xSwipe.git
-cd xSwipe/
-nano eventKey.cfg                                    # or nScroll/eventKey.cfg if natural scroll is wanted
-# configure it, in gnome there's a DOW instead of DOWN, etc
-
-sudo nano /etc/X11/xorg.conf.d/50-synaptics.conf
-
-        Option "VertScrollDelta" "-222"
-        Option "HorizScrollDelta" "-222"
-        Option "TapButton1" "1"
-        Option "MaxTapTime" "80"
-
-        Option "Protocol" "event"
-        Option "SHMConfig" "on"
-
-sudo reboot
-```
-
-To test:
-```bash
-perl xSwipe.pl -d 0.25 -m 30
-```
-
-Add to autostart:
-```bash
-nano ~/.config/autostart/xswipe.desktop
-
-[Desktop Entry]
-Type=Application
-Path=/home/arlanthir/xSwipe/
-Exec=perl xSwipe.pl -n -d 0.25 -m 30
-Hidden=false
-X-GNOME-Autostart-enabled=true
-Name=xSwipe
-Comment=Listen to touchpad gestures
-```
-
-##### TODO alternative
-Test https://aur.archlinux.org/packages/xf86-input-mtrack-git/
-
-
-#### More tips in
-https://medium.com/@philpl/arch-linux-running-on-my-macbook-2ea525ebefe3#.h3deucjeu
-https://mchladek.me/post/arch-mbp/
-
-
-
 
 
 
