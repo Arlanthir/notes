@@ -1,4 +1,4 @@
-# Arch Linux MacBook Air (Early 2014)
+# Arch Linux MacBook Air (Early 2014, MacBookAir6,2)
 
 ## Installation guide (2018-02-03)
 
@@ -159,7 +159,6 @@ Set the root password:
 passwd
 ```
 
-
 #### Bootloader: GRUB-EFI (EFI, OSX)
 ```bash
 pacman -S grub-efi-x86_64
@@ -219,8 +218,6 @@ Enable bless in El Capitan:
 sudo bless --device /dev/disk0s4 --setBoot
 ```
 
-# OLD INSTRUCTIONS:
-
 ## Post-install
 
 Enable multilib repository:  
@@ -262,12 +259,16 @@ passwd <username>                                # setup password
 pacman -S sudo
 EDITOR="nano" visudo
 
-# Add:
-<USERNAME>        ALL=(ALL) ALL
-
 # Uncomment the line:
 Defaults env_keep += "HOME"
+
+# Add:
+<USERNAME>        ALL=(ALL) ALL
 ```
+
+### Touchpad
+Install from AUR: `xf86-input-mtrack-git`
+
 
 ### Printing
 ```bash
