@@ -336,7 +336,7 @@ sudo systemctl start org.cups.cupsd.service
 
 ```bash
 pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav   # GStreamer codecs
-pacman -S arc-gtk-theme arc-icon-theme   # Appearance
+pacman -S gnome-tweak-tool arc-gtk-theme arc-icon-theme   # Appearance
 pacman -S atom openssh  # Development
 ```
 
@@ -356,6 +356,11 @@ ttf-ms-fonts
 adobe-source-han-sans-otc-fonts
 ```
 
+### Settings 
+
+- Region & Language > Input Sources > Your desired keyboard
+- Details > Date & Time > Automatic Date & Time / Time Zone
+- Details > Users > Photo
 
 
 #### Alt-tab switch only between workspace apps
