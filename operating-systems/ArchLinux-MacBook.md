@@ -20,9 +20,9 @@ ping archlinux.org
 
 If down, enable wired connection
 ```bash
-ip link                                       # to find out <interface>
-systemctl enable dhcpcd@<interface>.service
-dhcpcd
+ip link                                        # to find out <interface>
+# systemctl enable dhcpcd@<interface>.service  # for permanent <interfaces>, not USB tethering
+dhcpcd <interface>
 ```
 Check if UEFI mode is on
 ```bash
