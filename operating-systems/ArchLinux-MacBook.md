@@ -271,7 +271,7 @@ Install from AUR: `xf86-input-mtrack-git`
 
 ### Wifi
 ```bash
-sudo pacman -S broadcom-wl-dkms linux-headers
+sudo pacman -S broadcom-wl-dkms linux-headers iw
 ```
 
 ### Printing
