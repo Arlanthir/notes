@@ -269,6 +269,10 @@ Defaults env_keep += "HOME"
 ### Touchpad
 Install from AUR: `xf86-input-mtrack-git`
 
+### Wifi
+```bash
+sudo pacman -S broadcom-wl-dkms linux-headers
+```
 
 ### Printing
 ```bash
@@ -317,8 +321,8 @@ blacklist btusb
 
 ### Macbook Air Tweaks
 
+
 #### Suggested AUR packages
-- broadcom-wl-dkms
 - bcwc-pcie-firmware
 - bcwc-pcie-dkms
 
