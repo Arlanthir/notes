@@ -468,10 +468,10 @@ echo 1 > sudo tee /sys/module/hid_apple/parameters/fnmode
 ```
 
 #### More tips in
-https://wiki.archlinux.org/index.php/mac
-https://wiki.archlinux.org/index.php/MacBookPro11,x
-https://medium.com/@philpl/arch-linux-running-on-my-macbook-2ea525ebefe3#.h3deucjeu
-https://mchladek.me/post/arch-mbp/
+- https://wiki.archlinux.org/index.php/mac
+- https://wiki.archlinux.org/index.php/MacBookPro11,x
+- https://medium.com/@philpl/arch-linux-running-on-my-macbook-2ea525ebefe3#.h3deucjeu
+- https://mchladek.me/post/arch-mbp/
 
 
 
