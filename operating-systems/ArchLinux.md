@@ -16,7 +16,7 @@ User-provided software, available in https://aur.archlinux.org/index.php
 
 ### Install packages manually
 
-1. Download the tarball
+1. Download the tarball  
   `curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/package_name.tar.gz`
 2. Extract it, go to the folder  
   `tar -xvf package_name.tar.gz -C dirname`  
@@ -116,16 +116,6 @@ mklabel msdos                             # create new partition table
 mkpart primary ext4 1MiB 100%
 set 1 boot on                             # if dual-booting, don't change boot flag
 quit
-```
-
-##### Partitioning using EFI, / + swap (Macbook)
-Remember to allocate 128MB in an HFS+ (af00) partition for a Linux Boot Loader
-```bash
-cgdisk /dev/sdx
-Linux boot loader 128 Mib
-swap 4200 Mib
-root Remaining Space
-Type codes: Ext4 is 8300 (the default), Linux swap is 8200
 ```
 
 Check partitions  
