@@ -330,15 +330,33 @@ sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 ```
 
-### Useful packages
-Pacman: `atom openssh gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav arc-gtk-theme arc-icon-theme`  
-AUR: `cower` + `google-chrome`  
-AUR Candidates (need test): `ttf-ms-fonts adobe-source-han-sans-otc-fonts`
+## Configure GNOME
 
-### GNOME Extensions and tweaks
-Visit URLs in the GNOME Web browser
+### Additional packages
 
+```bash
+pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav   # GStreamer codecs
+pacman -S arc-gtk-theme arc-icon-theme   # Appearance
+pacman -S atom openssh  # Development
+```
+
+GNOME extensions (visit the links in the GNOME Web Browser):  
 - https://extensions.gnome.org/extension/307/dash-to-dock/
+
+
+AUR packages:
+```bash
+cower
+google-chrome
+```
+
+AUR package candidates to test:
+```bash
+ttf-ms-fonts
+adobe-source-han-sans-otc-fonts
+```
+
+
 
 #### Alt-tab switch only between workspace apps
 ```bash
