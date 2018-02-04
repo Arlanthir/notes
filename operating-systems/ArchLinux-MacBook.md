@@ -91,24 +91,37 @@ Install:
 pacstrap -i /mnt base base-devel
 ```
 
-## Legacy text copied from generic Arch instructions
-
-
 Generate fstab:
 ```bash
-# genfstab -U /mnt >> /mnt/etc/fstab
-genfstab -L /mnt >> /mnt/etc/fstab     # Labels instead of UUIDs
+genfstab -U /mnt >> /mnt/etc/fstab
+# genfstab -L /mnt >> /mnt/etc/fstab     # Alternative: Labels instead of UUIDs
 ```
 
-Check the generated fstab (in particular remove `/mnt` from swapfile if needed):
+Check the generated fstab and fix it:
 ```bash
-cat /mnt/etc/fstab
+nano /mnt/etc/fstab
 ```
 
-Copy any other configuration files to the new system in `/mnt` (such as netctl profiles in `/etc/netctl`)  
-Then chroot to it:
+- Remove `/mnt` from swapfile if any
+- Add option discard to SSD drives
+
+
+Chroot to the new system:
 ```bash
 arch-chroot /mnt
+```
+
+#### Set time zone
+```bash
+tzselect
+# ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
+hwclock --systohc
+```
+
+#### Configure locale
+
+```bash
 nano /etc/locale.gen
 # Uncomment en_US.UTF-8 UTF-8, as well as other needed localizations
 locale-gen
@@ -118,33 +131,33 @@ Create `/etc/locale.conf`, where `LANG` refers to the first column of an uncomme
 ```bash
 nano /etc/locale.conf
 LANG=en_US.UTF-8
+```
 
+Setup console keymap and font (if needed):
+```bash
 nano /etc/vconsole.conf
 KEYMAP=pt-latin1
 #FONT=Lat2-Terminus16
 ```
 
-#### Update time
+#### Hostname
+
+Add your chosen computer name in `nano /etc/hostname`. Make a matching edit to `nano /etc/hosts`:
 ```bash
-tzselect
-# ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
-ln -s /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
-hwclock --systohc --utc
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	<myhostname>.localdomain	<myhostname>
 ```
 
-If using Windows, remember to change it to UTC hardware clock as well:
-```dos
-reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_QWORD /f
-```
-It may also be necessary to disable internet time update in Windows (at least timezone update).  
-Alternatively, you can use Arch in localtime as well (not recommended):
+#### Root password
+
+Set the root password:
 ```bash
-timedatectl set-local-rtc 1
+passwd
 ```
 
-### Install GRUB
 
-#### GRUB-EFI (EFI, OSX)
+#### Bootloader: GRUB-EFI (EFI, OSX)
 ```bash
 pacman -S grub-efi-x86_64
 nano /etc/default/grub
@@ -154,11 +167,19 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi="
 
 grub-mkconfig -o /boot/grub/grub.cfg
 grub-mkstandalone -o boot.efi -d /usr/lib/grub/x86_64-efi -O x86_64-efi --compress=xz /boot/grub/grub.cfg
-mkdir /mnt/usbdisk && mount /dev/sdy /mnt/usbdisk
+mkdir /mnt/usbdisk 
+fdisk -l # to check which /dev/sdyz is the USB disk
+mount /dev/sdyz /mnt/usbdisk
 cp boot.efi /mnt/usbdisk/
 ```
 
-Reboot to OSX, Erase the bootloader partition
+Reboot to OSX, Erase the bootloader partition:
+```bash
+exit
+umount -R /mnt
+reboot
+```
+
 ```bash
 cd /Volumes/Linux\ Bootloader
 mkdir System mach_kernel
@@ -195,28 +216,7 @@ Enable bless in El Capitan:
 sudo bless --device /dev/disk0s4 --setBoot
 ```
 
-
-### Network
-
-Add your chosen computer name in `nano /etc/hostname` and after each localhost entry in `nano /etc/hosts`
-
-```bash
-pacman -S iw wpa_supplicant dialog
-```
-Reconfigure Wireless:
-`wifi-menu`
-
-Set the root password:
-```bash
-passwd
-```
-
-Reboot:
-```bash
-exit
-umount -R /mnt
-reboot
-```
+# OLD INSTRUCTIONS:
 
 ## Post-install
 
