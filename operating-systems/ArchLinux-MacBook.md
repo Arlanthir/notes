@@ -45,6 +45,9 @@ fdisk -l /dev/sdx        # where sdx is your desired disk
 ```
 
 ##### Partitioning using EFI, / without swap (Macbook)
+
+**Note**: This partitioning + bootloader scheme seems outdated (yet it seems to work). Check wiki for newer alternatives.
+
 Remember to allocate 128 MiB in an HFS+ (af00) partition for a Linux Boot Loader.
 macOS likes to see a 128 MiB gap after partitions, so when you create the first partition after the last macOS partition, type in +128M when cgdisk asks for the first sector for the partition.
 
@@ -234,12 +237,8 @@ pacman -Sy
 ### Install Graphical Environment
 
 ```bash
-pacman -S xorg-server xorg-server-utils
-# Important optional packages
-pacman -S xf86-video-intel mesa-libgl lib32-mesa-libgl  # Intel drivers
-pacman -S nvidia nvidia-libgl lib32-nvidia-libgl        # Nvidia drivers
-pacman -S xf86-input-synaptics                          # If asked, choose evdev.
-
+pacman -S xorg-server
+pacman -S xf86-video-intel mesa lib32-mesa  # Intel drivers
 pacman -S gnome gnome-extra
 
 systemctl enable gdm.service
@@ -250,17 +249,6 @@ To check (later) that Direct Rendering is being used:
 ```bash
 sudo pacman -S mesa-demos
 glxinfo | grep direct
-```
-
-### Configure Synaptics touchpad
-```bash
-nano /usr/share/X11/xorg.conf.d/70-synaptics.conf
-# Add to touchpad catchall
-        Option "VertScrollDelta" "-222"
-        Option "HorizScrollDelta" "-222"
-        Option "TapButton1" "1"
-        Option "MaxTapTime" "75"
-        MatchDevicePath "/dev/input/event*"
 ```
 
 ### Add another user
@@ -298,34 +286,6 @@ Visit URLs in the GNOME Web browser
 
 - https://extensions.gnome.org/extension/307/dash-to-dock/
 
-#### Mouse scroll wheel speed (Introduces more problems than it fixes)
-Install AUR package `imwheel`
-
-`nano .imwheelrc`:
-
-```
-".*"
-None,      Up,   Button4, 3
-None,      Down, Button5, 3
-Control_L, Up,   Control_L|Button4
-Control_L, Down, Control_L|Button5
-Shift_L,   Up,   Shift_L|Button4
-Shift_L,   Down, Shift_L|Button5
-```
-
-Add to startup:
-
-`nano ~/.config/autostart/imwheel.desktop`:
-
-[Desktop Entry]
-Type=Application
-Exec=imwheel --kill --buttons 45
-Hidden=true
-X-GNOME-Autostart-enabled=true
-Name=imwheel
-Comment=Increase mouse scroll wheel speed
-
-
 #### Alt-tab switch only between workspace apps
 ```bash
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
@@ -346,9 +306,6 @@ sudo reboot
 ```
 
 ## Macbook Air
-
-### GRUB
-
 
 ### Disable Bluetooth
 ```bash
@@ -505,93 +462,11 @@ Reverse:
 echo 1 > sudo tee /sys/module/hid_apple/parameters/fnmode
 ```
 
-#### Enable 3-finger gestures
-
-##### xSwipe
-```bash
-sudo pacman -R xf86-input-synaptics
-# install AUR xf86-input-synaptics-xswipe-git perl-x11-guitest perl-smart-comments
-git clone https://github.com/iberianpig/xSwipe.git
-cd xSwipe/
-nano eventKey.cfg                                    # or nScroll/eventKey.cfg if natural scroll is wanted
-# configure it, in gnome there's a DOW instead of DOWN, etc
-
-sudo nano /etc/X11/xorg.conf.d/50-synaptics.conf
-
-        Option "VertScrollDelta" "-222"
-        Option "HorizScrollDelta" "-222"
-        Option "TapButton1" "1"
-        Option "MaxTapTime" "80"
-
-        Option "Protocol" "event"
-        Option "SHMConfig" "on"
-
-sudo reboot
-```
-
-To test:
-```bash
-perl xSwipe.pl -d 0.25 -m 30
-```
-
-Add to autostart:
-```bash
-nano ~/.config/autostart/xswipe.desktop
-
-[Desktop Entry]
-Type=Application
-Path=/home/arlanthir/xSwipe/
-Exec=perl xSwipe.pl -n -d 0.25 -m 30
-Hidden=false
-X-GNOME-Autostart-enabled=true
-Name=xSwipe
-Comment=Listen to touchpad gestures
-```
-
-##### TODO alternative
-Test https://aur.archlinux.org/packages/xf86-input-mtrack-git/
-
-
 #### More tips in
+https://wiki.archlinux.org/index.php/mac
+https://wiki.archlinux.org/index.php/MacBookPro11,x
 https://medium.com/@philpl/arch-linux-running-on-my-macbook-2ea525ebefe3#.h3deucjeu
 https://mchladek.me/post/arch-mbp/
 
 
 
-
-
-
-## VirtualBox
-Install Guest Additions:
-```bash
-pacman -S virtualbox-guest-utils      # (use arch)
-systemctl enable vboxservice.service
-```
-
-## VMWare - Virtual Machine
-
-Possible Key: `GA1T0-AXGDL-484GZ-4YWNX-PV0V8`
-
-https://wiki.archlinux.org/index.php/VMware/Installing_Arch_as_a_guest
-
-### Open VM Tools (open source)
-```bash
-sudo pacman -S open-vm-tools
-cat /proc/version > /etc/arch-release
-# (shared folders: AUR open-vm-tools-dkms)
-sudo systemctl enable vmware-vmblock-fuse.service
-# (shared folders: sudo systemctl enable dkms.service)
-```
-
-### VMWare Tools (official, closed source)
-Download from http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/
-
-```bash
-for x in {0..6}; do mkdir -p /etc/init.d/rc${x}.d; done
-pacman -S net-tools gtkmm xf86-input-vmmouse xf86-video-vmware mesa
-```
-
-Extract and install with
-```bash
-./vmware-install.pl   # Choose /etc/init.d/ for the rc0.d...rc6.d directory
-```
