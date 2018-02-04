@@ -281,46 +281,12 @@ sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 ```
 
-### Useful packages
-Pacman: `atom openssh gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav arc-gtk-theme arc-icon-theme`  
-AUR: `cower` + `google-chrome`  
-AUR Candidates (need test): `ttf-ms-fonts adobe-source-han-sans-otc-fonts`
-
-### GNOME Extensions and tweaks
-Visit URLs in the GNOME Web browser
-
-- https://extensions.gnome.org/extension/307/dash-to-dock/
-
-#### Alt-tab switch only between workspace apps
-```bash
-gsettings set org.gnome.shell.app-switcher current-workspace-only true
-```
-
-### Android Studio
-(package in AUR)  
-To enable creation of SD Cards (and therefore AVDs):
-```bash
-sudo pacman -S lib32-gcc-libs lib32-ncurses
-echo "export ANDROID_HOME=/opt/android-sdk" >> .bashrc
-```
-
-### Android MTP
-```bash
-sudo pacman -S libmtp gvfs-mtp gvfs-gphoto2
-sudo reboot
-```
-
-## Macbook Air
-
 ### Disable Bluetooth
 ```bash
 sudo nano /etc/modprobe.d/50-disabling.conf
 blacklist bluetooth
 blacklist btusb
 ```
-
-### Macbook Air Tweaks
-
 
 #### Suggested AUR packages
 - bcwc-pcie-firmware
