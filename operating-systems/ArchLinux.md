@@ -17,6 +17,7 @@ User-provided software, available in https://aur.archlinux.org/index.php
 ### Install packages manually
 
 1. Download the tarball
+  `curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/package_name.tar.gz`
 2. Extract it, go to the folder  
   `tar -xvf package_name.tar.gz -C dirname`  
   `cd dirname`
@@ -32,7 +33,7 @@ To install using root, use su (not recommended):
 ### List AUR packages
 `pacman -Qm`
 
-### Install packages automatically
+### Install packages automatically with cower (AUR)
 ```bash
 cd aur
 cower -s <name>           # search
