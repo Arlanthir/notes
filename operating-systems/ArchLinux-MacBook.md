@@ -371,10 +371,18 @@ sudo cpupower frequency-set -g powersave
 ```
 
 #### Monitor power usage
+TLP (do a new research to see if it's still recommended):
 ```bash
-sudo pacman -S tlp acpi_call powertop
+sudo pacman -S tlp acpi_call
 sudo systemctl enable tlp
 sudy systemctl start tlp
+sudo systemctl enable tlp-sleep
+sudy systemctl start tlp-sleep
+```
+
+Powertop:
+```bash
+sudo pacman -S powertop
 sudo powertop --calibrate # wait a long time
 sudo powertop # leave open for a long time
 sudo powertop --auto-tune
