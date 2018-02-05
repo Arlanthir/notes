@@ -358,24 +358,29 @@ adobe-source-han-sans-otc-fonts
 
 ### Settings 
 
+#### Settings application
 - Region & Language > Input Sources > Your desired keyboard
 - Details > Date & Time > Automatic Date & Time / Time Zone
 - Details > Users > Photo
 
 
-### Gnome tweak tool
+#### Gnome tweak tool
 - Appearance > Themes > Applications > Arc-Dark
 - Appearance > Themes > Icons > Arc
 - Desktop > Icons on Desktop
 - Top Bar
 - Windows > Titlebar Buttons
 
-### Dash-to-dock (right click on dock's Applications icon)
+#### Dash-to-dock (right click on dock's Applications icon)
 - Position and size > Icon size: 32
 - Launchers > Move the applications button at the beginning of the dock
 - Appearance > Shrink the dash
 - Appearance > Show windows counter indicators
 - Appearance > Customize opacity (70%)
+
+#### Other applications
+- atom: config.cson and keymap.cson
+- terminal: Profile Preferences > Colors > White on Black
 
 ### Templates
 ```bash
