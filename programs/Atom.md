@@ -73,6 +73,7 @@ Can be installed using the GUI or by running
 `apm install <package-name>`
 
 ```
+atom-typescript
 docblockr
 file-icons
 language-vue
