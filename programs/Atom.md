@@ -11,7 +11,6 @@ config.cson:
 ```cson
 "*":
   core:
-    allowPendingPaneItems: false
     projectHome: "/home/arlanthir/dev"
     telemetryConsent: "limited"
   editor:
@@ -24,6 +23,18 @@ config.cson:
     tabLength: 4
   "exception-reporting":
     userId: "eb62e58d-81ef-e59d-743b-9298cdb32e1f"
+  "lint-sass-vue":
+    noConfigDisable: true
+  "linter-eslint":
+    lintHtmlFiles: true
+  "linter-sass-lint":
+    noConfigDisable: true
+  "linter-tslint":
+    enableSemanticRules: true
+  "linter-ui-default":
+    panelHeight: 69
+  "project-manager":
+    alwaysOpenInSameWindow: true
   welcome:
     showOnStartup: false
 ```
