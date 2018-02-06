@@ -2,13 +2,13 @@
 
 ## Basics
 
-| Command                 | Action                               |
-|-------------------------|--------------------------------------|
-| `pacman -S <package>`   | Install package                      |
-| `pacman -R <package>`   | Remove package                       |
-| `pacman -Ss <query>`    | Search package                       |
-| `pacman -Syu`           | Update packages                      |
-| `pacman -Qo <file>`      | Check which package installed <file>  |
+| Command                 | Action                                     |
+|-------------------------|--------------------------------------------|
+| `pacman -S <package>`   | Install package                            |
+| `pacman -R <package>`   | Remove package                             |
+| `pacman -Ss <query>`    | Search package                             |
+| `pacman -Syu`           | Update packages                            |
+| `pacman -Qo <file>`     | Check which package installed &lt;file&gt; |
 
 ## Arch User Repository (AUR)
 
