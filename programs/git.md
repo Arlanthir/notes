@@ -124,6 +124,16 @@ git reset HEAD --hard
 git clean -fd
 ```
 
+## Worktrees
+
+Worktrees are branches from the same repository checked out to a different file system folder.
+
+```bash
+git worktree list                       # List current worktrees
+git worktree add ../<folder> <branch>   # Add new worktree
+```
+
+
 ## Instalar e configurar servidor Git por SSH
 ```bash
 sudo apt-get install openssh-server git
