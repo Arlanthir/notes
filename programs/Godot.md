@@ -96,12 +96,11 @@ func _exit_tree():
     pass
 
 func _process(delta):
-    # When set_process() is enabled, this function is called every frame.
+    # This function is called every frame.
     pass
 
-func _fixed_process(delta):
-    # When set_fixed_process() is enabled, this is called every physics
-    # frame.
+func _physics_process(delta):
+    # This is called every physics frame.
     pass
 
 func _paused():
