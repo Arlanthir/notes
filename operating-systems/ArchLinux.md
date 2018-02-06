@@ -43,7 +43,9 @@ makepkg -sri
 ```
 
 #### Update packages automatically
-`cower -duf --timeout=20`
+```bash
+cower -duf --timeout=20
+```
 
 ## Installation guide (2018-02-03)
 
