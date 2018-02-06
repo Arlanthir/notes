@@ -5,7 +5,7 @@ Godot is a 2D/3D Game Engine with a built-in editor. A lot of the editing is don
 
 ## Comprehensive Documentation
 
-http://docs.godotengine.org/en/stable/
+http://docs.godotengine.org/
 
 
 ## Scenes and Nodes
@@ -17,26 +17,6 @@ Each scene has a root node (e.g.: Node2D). Each node can have child nodes (Sprit
 You can instantiate scenes as parts of another scene. If you design a scene for an enemy, you can create multiple instances of it to have a lot of enemies on screen.
 
 Nodes can be part of a Group. This helps when you want to execute code in multiple Nodes, e.g., alerting all enemies when the player is discovered by one of them.
-
-## TileSets
-
-Create a TileSet:
-
-1. Turn on Project Settings > Display > Use 2d Pixel Snap
-2. Create a TileSet Scene
-3. Edit > Show Grid, Edit > Use Pixel Snap
-4. Add a Sprite for each tile (specify the Region Rect for each individual Sprite to load different tiles from the same image)
-5. Name each Sprite correctly and uniquely
-6. Add collision to relevant tiles with StaticBody2D and CollisionPolygon2D/CollisionShape2D
-7. Scene > Convert To > TileSet (.tres)
-
-Use a TileSet:
-
-1. Create a TileMap Node
-2. Load the TileSet
-3. Set the Cell Size to the correct value
-4. Lock the TileSet Node to avoid moving it unintentionally (lock icon in the toolbar)
-
 
 ## Physics
 
@@ -59,6 +39,27 @@ To disable rotation in a body, set its Mode to Character.
 ### Collision masks and layers
 
 You can set Player to Layer/Mask 1, Powerup to Layer/Mask 2 and Platform to Layers/Masks 1 + 2. The player and powerup will collide with platform but not with each other.
+
+
+## TileSets
+
+Create a TileSet:
+
+1. Turn on Project Settings > Display > Use 2d Pixel Snap
+2. Create a TileSet Scene
+3. Edit > Show Grid, Edit > Use Pixel Snap
+4. Add a Sprite for each tile (specify the Region Rect for each individual Sprite to load different tiles from the same image)
+5. Name each Sprite correctly and uniquely
+6. Add collision to relevant tiles with StaticBody2D and CollisionPolygon2D/CollisionShape2D
+7. Scene > Convert To > TileSet (.tres)
+
+Use a TileSet:
+
+1. Create a TileMap Node
+2. Load the TileSet
+3. Set the Cell Size to the correct value
+4. Lock the TileSet Node to avoid moving it unintentionally (lock icon in the toolbar)
+
 
 ## Scripts
 
