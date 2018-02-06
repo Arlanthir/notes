@@ -185,9 +185,6 @@ To add input actions, go to Project Settings > Input Map. E.g.: add an action ca
 To listen to it, do the following in a Script:
 
 ```gdscript
-func _ready():
-    set_process(true) # Turn on frame processing
-
 func _process(delta):
     if Input.is_action_pressed("ui_tap"):
         print("tap")
