@@ -129,6 +129,8 @@ func _my_handler()
 You can connect to children Nodes' signals by doing `get_node("...").connect(...)`.
 You can get other Nodes by doing `get_tree().get_root().get_node("...")`.
 
+`$<node_name>` is syntax sugar for `get_node(<node_name>)`.
+
 Be careful with handler function arguments, they must match the signal exactly or they won't be called.
 
 You can also use the visual editor to connect Nodes (in the Inspector > Node section), a plug icon will be displayed next to the Script icon.
