@@ -22,6 +22,8 @@ Nodes can be part of a Group. This helps when you want to execute code in multip
 
 Images are imported to the hidden `.import` folder. To change their import settings, click them in the `File System` tab, choose the `Import` tab (next to `Scene`), change settings and then click **Reimport**.
 
+In the **Preset...** button, you can define the current settings as the default settings for the same type of resources.
+
 
 ## Physics
 
