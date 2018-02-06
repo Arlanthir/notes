@@ -18,6 +18,11 @@ You can instantiate scenes as parts of another scene. If you design a scene for 
 
 Nodes can be part of a Group. This helps when you want to execute code in multiple Nodes, e.g., alerting all enemies when the player is discovered by one of them.
 
+## Images
+
+Images are imported to the hidden `.import` folder. To change their import settings, click them in the `File System` tab, choose the `Import` tab (next to `Scene`), change settings and then click **Reimport**.
+
+
 ## Physics
 
 Remember to change the Default Gravity in the project's settings (Physics or Physics 2d)
