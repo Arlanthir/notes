@@ -131,6 +131,7 @@ Worktrees are branches from the same repository checked out to a different file 
 ```bash
 git worktree list                       # List current worktrees
 git worktree add ../<folder> <branch>   # Add new worktree
+git worktree prune                      # Remove references to worktrees deleted from the file system
 ```
 
 
