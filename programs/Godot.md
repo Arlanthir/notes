@@ -81,6 +81,12 @@ A Script defines a class that extends the Node's base class.
 - Private class members start with underscore `_`.
 - Signals are in the past tense `something_happened`.
 
+### Loops
+```gdscript
+for i in range(3):
+    print(i) # 0 1 2
+```
+
 ### Common lifecycle hooks
 
 ```gdscript
