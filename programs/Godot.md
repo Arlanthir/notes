@@ -138,6 +138,11 @@ You can get other Nodes by doing `get_tree().get_root().get_node("...")`.
 
 `$<node_name>` is syntax sugar for `get_node(<node_name>)`.
 
+Because you can only get nodes after the `ready` callback, you can declare node vars before with the syntax sugar:
+```gdscript
+onready var child = $child_name
+```
+
 Be careful with handler function arguments, they must match the signal exactly or they won't be called.
 
 You can also use the visual editor to connect Nodes (in the Inspector > Node section), a plug icon will be displayed next to the Script icon.
