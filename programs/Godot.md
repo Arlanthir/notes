@@ -81,6 +81,14 @@ A Script defines a class that extends the Node's base class.
 - Private class members start with underscore `_`.
 - Signals are in the past tense `something_happened`.
 
+### Variables
+```gdscript
+var my_var = 2
+var my_str = str(my_var)
+
+print("Var as string: " + my_str)
+```
+
 ### Loops
 ```gdscript
 for i in range(3):
@@ -176,7 +184,7 @@ func _ready():
 Nodes:
 
 ```gdscript
-s = Sprite.new() # create a new sprite!
+var s = Sprite.new() # create a new sprite!
 add_child(s) # add it as a child of this node
 
 s.queue_free() # remove the node and delete it while nothing is happening
