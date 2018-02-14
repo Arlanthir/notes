@@ -31,6 +31,8 @@ Remember to change the Default Gravity in the project's settings (Physics or Phy
 
 - StaticBody: not affected by physics but affects others
 - KinematicBody: not affected by physics, but can be manipulated by code or animations (e.g. moving platforms)
+  - `move_and_collide` receives a movement vector (velocity multiplied by *delta*) and tries to move the body that amount of pixels, stopping if it collides
+  - `move_and_slide` receives a velocity (**not** multiplied by *delta*!) and moves the body that amount of pixels, sliding around obstacles
 - RigidBody: affected by gravity and physics
 
 Inside the body, you can have a Sprite to render and a CollisionShape to define its physics bounds.
