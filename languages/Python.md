@@ -17,9 +17,17 @@ print("Hello World")
 
 ## Packages
 
-Install a package manager: pip (in Arch: python-pip)
+Install a package manager: **pip** (in Arch: `sudo pacman -S python-pip`)
 
-`pip install --user <packagename>`
+Pip commands:
+```bash
+pip install --user <packagename>
+pip install --user --upgrade <packagename>
+pip uninstall <packagename>
+```
+
+### Useful packages:
+- `pycodestyle`: linter according to [pep8 styleguide](https://www.python.org/dev/peps/pep-0008/)
 
 ## Modules
 common.py:
