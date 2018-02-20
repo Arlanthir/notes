@@ -78,6 +78,7 @@ docblockr
 file-icons
 language-vue
 linter-eslint
+linter-flake8
 linter-sass-lint
 lint-sass-vue
 pigments
