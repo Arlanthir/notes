@@ -26,6 +26,8 @@ pip install --user --upgrade <packagename>
 pip uninstall <packagename>
 ```
 
+Since you're installing packages in your user directories, you might need to add `PATH="$HOME/.local/bin:$PATH"` in `~/.bash_profile` or `~/.bashrc`.
+
 ### Useful packages:
 - `pycodestyle`: linter according to [pep8 styleguide](https://www.python.org/dev/peps/pep-0008/)
 - `flake8`: wrapper for advanced linting with pycodestlyle (styleguide) and pyflakes (logic errors like unused imports)
