@@ -28,6 +28,7 @@ pip uninstall <packagename>
 
 ### Useful packages:
 - `pycodestyle`: linter according to [pep8 styleguide](https://www.python.org/dev/peps/pep-0008/)
+- `flake8`: wrapper for advanced linting with pycodestlyle (styleguide) and pyflakes (logic errors like unused imports)
 
 ## Modules
 common.py:
