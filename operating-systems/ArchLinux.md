@@ -293,7 +293,7 @@ pacman -S xorg-server
 
 # Graphics drivers:
 pacman -S xf86-video-intel mesa lib32-mesa         # Intel drivers
-pacman -S nvidia nvidia-libgl lib32-nvidia-libgl   # Nvidia drivers
+pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings   # Nvidia drivers
 
 pacman -S gnome gnome-extra
 
@@ -340,6 +340,7 @@ sudo systemctl start org.cups.cupsd.service
 pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav   # GStreamer codecs
 pacman -S gnome-tweak-tool arc-gtk-theme arc-icon-theme   # Appearance
 pacman -S atom openssh  # Development
+pacman -S ttf-liberation # Fonts
 ```
 
 GNOME extensions (visit the links in the GNOME Web Browser):  
