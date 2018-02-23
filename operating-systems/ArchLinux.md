@@ -337,6 +337,7 @@ sudo systemctl start org.cups.cupsd.service
 ### Additional packages
 
 ```bash
+pacman -S ntfs-3g # Essential
 pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav   # GStreamer codecs
 pacman -S gnome-tweak-tool arc-gtk-theme arc-icon-theme   # Appearance
 pacman -S atom openssh  # Development
