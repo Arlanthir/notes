@@ -181,6 +181,11 @@ nano /mnt/etc/fstab
 - Remove `/mnt`from swapfile if any
 - Add option `discard` to SSD drives
 
+Add optional NTFS drive (remember to install ntfs-3g and to create the mnt folder):
+```
+UUID=...    /mnt/data   ntfs-3g   exec,users,permissions,auto   0 0
+```
+
 Copy any other configuration files to the new system in `/mnt` (such as netctl profiles in `/etc/netctl`)  
 Then chroot to it:
 ```bash
