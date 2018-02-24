@@ -156,7 +156,7 @@ cd wp-content/themes/mytheme/languages/
 find ../ -name '*.php' -exec xgettext --from-code=UTF-8 --keyword=__ --keyword=_e -o en_US.po '{}' ';'
 ```
 
-To override plugin translations, place your files in `wp-content/languages/plugins'.
+To override plugin translations, place your files in `wp-content/languages/plugins`.
 
 Register a language for a child theme:
 ```php
