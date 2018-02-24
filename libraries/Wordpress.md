@@ -156,6 +156,16 @@ cd wp-content/themes/mytheme/languages/
 find ../ -name '*.php' -exec xgettext --from-code=UTF-8 --keyword=__ --keyword=_e -o en_US.po '{}' ';'
 ```
 
+To override plugin translations, place your files in `wp-content/languages/plugins'.
+
+Register a language for a child theme:
+```php
+function my_language_setup() {
+	load_child_theme_textdomain('theme-name', get_stylesheet_directory() . '/languages');
+}
+add_action('after_setup_theme', 'my_language_setup');
+```
+
 ## Child themes
 
 Instead of modifying a downloaded theme, it is advisable to create a child theme of that one. In it, you can
