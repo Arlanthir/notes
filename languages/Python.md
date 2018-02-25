@@ -118,6 +118,25 @@ fifteen_zeroes = [0 for i in range(15)]
 food = {'ham': 'yes', 'egg': 'yes', 'spam': 'no' }
 ```
 
+## Classes
+```python
+class MyClass:
+    """A simple example class"""
+    i = 12345  # class variable shared by all instances
+
+    def __init__(self, j):
+        self.j = j  # instance variable unique to each instance
+        self._private = 'something'  # convention for "private" variables
+        self.__mangled = 'other'  # will be converted to _MyClass__mangled to avoid name clashes
+
+    def f(self):
+        return 'hello world'
+
+
+x = MyClass()
+x.f()
+```
+
 ## Conditionals and Loops
 ```python
 if not stop:
