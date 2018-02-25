@@ -142,6 +142,9 @@ x.f()
 
 class DerivedClassName(BaseClassName, Base2, ...):  # inheritance
     pass
+
+    def __add__(self, other):  # override + operator, others: https://docs.python.org/3/library/operator.html
+        pass
 ```
 
 ## Conditionals and Loops
