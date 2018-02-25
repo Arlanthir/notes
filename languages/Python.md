@@ -139,6 +139,9 @@ class MyClass:
 
 x = MyClass()
 x.f()
+
+class DerivedClassName(BaseClassName, Base2, ...):  # inheritance
+    pass
 ```
 
 ## Conditionals and Loops
