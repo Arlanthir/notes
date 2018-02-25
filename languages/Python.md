@@ -123,6 +123,10 @@ food = {'ham': 'yes', 'egg': 'yes', 'spam': 'no' }
 class MyClass:
     """A simple example class"""
     i = 12345  # class variable shared by all instances
+    
+    @staticmethod  # optional, to also allow calling this method in the instance, e.g. x.stm()
+    def stm():     # static method, called with MyClass.stm()
+        return 'ola'
 
     def __init__(self, j):
         self.j = j  # instance variable unique to each instance
