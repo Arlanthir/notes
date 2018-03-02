@@ -11,7 +11,7 @@ Correct order of the setup:
 
 ## Restring
 
-One string at a time or all strings at once by blocking the tremolo with a wooden block.  
+One string at a time or all strings at once by blocking the tremolo with a wooden block (before even removing the old ones).  
 Remember to stretch the strings (by pulling them off the fretboard across the entire fretboard) and remove the wooden block before tuning.
 
 ## Remove rust from frets
