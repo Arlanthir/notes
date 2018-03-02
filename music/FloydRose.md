@@ -30,6 +30,8 @@ Another trick mentioned is using pencil eraser, might be worth it to try.
 4. Lock the locking nut screws.
 5. Retune with the fine tuners.
 
+When tuning to Drop C (D Drop C) or below, a string gauge of 10 or above is recommended.
+
 ## Truss Rod
 
 Truss rod adjustment is needed when you change to a different string gauge or whenever you feel the neck is bowing too much or too little.  
