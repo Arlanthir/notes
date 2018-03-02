@@ -25,6 +25,7 @@ Another trick mentioned is using pencil eraser, might be worth it to try.
 2. Unlock the screws in the locking nut.
 3. Tune each string in playing position (not laying on the table).
    Tuning order: Low E (1), High E (6), B (5), A (2), G (4), D (3).  
+   Remember to tune up to pitch instead of down, so make sure to drop a bit below tune before moving slowly up.  
    Repeat this until it's tuned.
 4. Lock the locking nut screws.
 5. Retune with the fine tuners.
