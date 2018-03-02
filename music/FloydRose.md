@@ -29,3 +29,8 @@ Another trick mentioned is using pencil eraser, might be worth it to try.
    Repeat this until it's tuned.
 4. Lock the locking nut screws.
 5. Retune with the fine tuners.
+
+## Truss Rod
+
+Truss rod adjustment is needed when you change to a different string gauge or whenever you feel the neck is bowing too much or too little.  
+Adjustments to the truss rod take about 10 minutes to have an effect, so don't check string buzzing immediately after adjusting.
