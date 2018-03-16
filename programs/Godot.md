@@ -221,7 +221,7 @@ func _process(delta):
 
 To create a HUD, add a CanvasLayer Node.
 
-To anchor a Control to somewhere on the screen, set its Control > Anchors. E.g.: set Left, Right = End, and Top, Bottom = Begin to anchor a Control to the top right corner of the screen.
+To anchor a Control to somewhere on the screen, click the Control and use the Layout menu that appears in the top toolbar.
 
 ## Parallax Background
 
