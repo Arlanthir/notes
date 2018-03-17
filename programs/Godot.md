@@ -29,6 +29,7 @@ In the **Preset...** button, you can define the current settings as the default 
 
 Remember to change the Default Gravity in the project's settings (Physics or Physics 2d)
 
+- Area: not affected by physics, doesn't affect others, but can detect collisions
 - StaticBody: not affected by physics but affects others
 - KinematicBody: not affected by physics, but can be manipulated by code or animations (e.g. moving platforms)
   - `move_and_collide` receives a movement vector (velocity multiplied by *delta*) and tries to move the body that amount of pixels, stopping if it collides
