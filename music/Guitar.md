@@ -26,6 +26,18 @@ D
 3 | | | | |3| |
 ```
 
+### E Chords
+
+```sql
+E
+   E A D G B e
+   o 2 2 1 o o
+  =============
+1 | | | |1| | |
+2 | |2|3| | | |
+3 | | | | | | |
+```
+
 ## Tuning without a tuner
 
 For both these methods you should first tune your 6th string (the thickest) to a reference note or a tuner if possible.
