@@ -2,6 +2,8 @@
 
 ## Chords
 
+Fingers are numbered 1-4, where 1 is the index finger and 4 is the pinky.
+
 ### A Chords
 
 ```sql
