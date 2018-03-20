@@ -1,5 +1,17 @@
 # Guitar
 
+## Chords
+
+```sql
+D
+   E A D G B e
+   x x o 2 3 2
+  =============
+1 | | | | | | |
+2 | | | |1| |2|
+3 | | | | |3| |
+```
+
 ## Tuning without a tuner
 
 For both these methods you should first tune your 6th string (the thickest) to a reference note or a tuner if possible.
