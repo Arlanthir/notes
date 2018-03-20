@@ -2,6 +2,20 @@
 
 ## Chords
 
+### A Chords
+
+```sql
+A
+   E A D G B e
+   x o 2 2 2 o
+  =============
+1 | | | | | | |
+2 | | |2|1|3| |
+3 | | | | | | |
+```
+
+### D Chords
+
 ```sql
 D
    E A D G B e
