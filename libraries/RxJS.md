@@ -17,7 +17,6 @@ let myData = new Observable<string>(observer => {
     observer.complete();
     // On error
     observer.error(error);
-    observer.complete();
 });
 ```
 
@@ -29,6 +28,8 @@ let subscription = myData.subscribe(data => {
 }, error => {
     console.error(error);
 }, () => {
+    // Called when Observable stream ends, not on error
+    // To include errors, use .finally() before .subscribe()
     console.log('completed');
 });
 ```
