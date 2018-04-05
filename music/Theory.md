@@ -8,7 +8,9 @@ A  B  C  D  E  F  G
 
 ## The Note Circle
 
-As taught by Justin Sandercoe from http://www.justinguitar.com.
+As taught by Justin Sandercoe from http://www.justinguitar.com.  
 Each step along the circle is a semitone, and a fret on the guitar.
 
 ![NoteCircle](NoteCircle.gif)
+
+Notice how B and E don't have sharps before the next note.
