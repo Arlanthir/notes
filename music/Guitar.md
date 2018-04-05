@@ -66,6 +66,32 @@ G
 3 2 | | | | 3
 ```
 
+## Scales
+
+Scales are alphabets of notes (letters) to create licks (words) to compose solos or improvise.
+
+### Minor Pentatonic
+```sql
+Root A
+  E A D G B e
+  ===========
+5 1 1 1 1 1 1
+6 | | | | | |
+7 | 3 3 3 | |
+8 4 | | | 4 4
+```
+
+### Major Pentatonic
+```sql
+Root A
+  E A D G B e
+  ===========
+4 | 1 1 1 | |
+5 2 | | | 2 2
+6 | | | 3 | |
+7 4 4 4 | 4 4
+```
+
 ## Tuning without a tuner
 
 For both these methods you should first tune your 6th string (the thickest) to a reference note or a tuner if possible.
