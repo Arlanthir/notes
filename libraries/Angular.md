@@ -83,3 +83,27 @@ And use `npm run lint` instead of `ng lint`.
 ## Add global styles or scripts
 
 Add the path to the files in the `apps[0].scripts` or `apps[0].styles` properties of `.angular-cli.json`.
+
+
+
+# Expert trivia
+
+## Global styles only when certain components are present
+
+With ViewEncapsulation.None, Angular will add the component's CSS to the &lt;head&gt; section and thus affect the entire page. However, when the component is destroyed the &lt;style&gt; tag will remain.
+
+To remove it when the component is destroyed, keep the default ViewEncapsulation and instead add the CSS in the component's HTML, surrounded by an &lt;svg&gt; tag, like so:
+
+```html
+<!-- Force landscape orientation when printing a page with this component -->
+<!-- SVG tag avoids Angular processing of style tag -->
+<svg>
+    <style>
+     @media print {
+	 @page {
+	     size: landscape;
+	 }
+     }
+    </style>
+</svg>
+```
