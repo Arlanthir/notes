@@ -78,6 +78,19 @@ G                G7
 3 2 | | | | 3    2 3 | | | | |
 ```
 
+
+### F Chords
+
+```sql
+Fmaj7
+  E A D G B e
+  x 3 3 2 1 o
+  ===========
+1 | | | | 1 |
+2 | | | 2 | |
+3 | 3 4 | | |
+```
+
 ## Scales
 
 Scales are alphabets of notes (letters) to create licks (words) to compose solos or improvise.
