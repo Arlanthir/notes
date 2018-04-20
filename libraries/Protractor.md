@@ -18,3 +18,10 @@ Enable Protected Mode must be set to the same value (enabled or disabled) for al
 2. Go to Tools -> Internet Options -> Security
 3. Set all zones (Internet, Local intranet, Trusted sites, Restricted sites) to the same protected mode,
    enabled or disabled should not matter.
+
+## Running
+
+```bash
+webdriver-manager start
+protractor conf.js
+```
