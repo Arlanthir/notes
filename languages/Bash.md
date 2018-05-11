@@ -19,6 +19,16 @@ echo "$myvar" # Will interpolate
 echo '$myvar' # Won't interpolate
 ```
 
+## Functions
+```bash
+prepend_hello() {
+    local myresult="Hello, $1"
+    echo $myresult
+}
+
+result=$(prepend_hello Person)
+```
+
 ## Shell execution
 
 ```bash
