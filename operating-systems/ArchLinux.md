@@ -183,8 +183,9 @@ nano /mnt/etc/fstab
 
 Add optional NTFS drive (remember to install ntfs-3g and to create the mnt folder):
 ```
-#UUID=...    /mnt/data   ntfs-3g   rw,exec,permissions,auto   0 0
+#UUID=...    /mnt/data   ntfs-3g   rw,exec,permissions,auto,x-gvfs-show   0 0
 UUID=...    /mnt/data   ntfs-3g   defaults,uid=1000,gid=1000,exec,x-gvfs-show   0 0
+defaults,uid=1000,gid=1000,dmask=000,fmask=000,exec,x-gvfs-show
 ```
 
 If mounting ntfs-3g drives with write permissions, make sure Windows fast startup is disabled, so Windows fully unmount disks.
