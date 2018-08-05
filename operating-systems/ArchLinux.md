@@ -306,6 +306,8 @@ systemctl enable gdm.service
 systemctl enable NetworkManager.service
 ```
 
+When using nvidia proprietary drivers, it may be needed to uncomment the line `#WaylandEnable=false` in `/etc/gdm/custom.conf`.
+
 To check (later) that Direct Rendering is being used:  
 ```bash
 sudo pacman -S mesa-demos
