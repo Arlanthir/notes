@@ -187,6 +187,8 @@ Add optional NTFS drive (remember to install ntfs-3g and to create the mnt folde
 UUID=...    /mnt/data   ntfs-3g   defaults,uid=1000,gid=1000,exec,x-gvfs-show   0 0
 ```
 
+If mounting ntfs-3g drives with write permissions, make sure Windows fast startup is disabled, so Windows fully unmount disks.
+
 Copy any other configuration files to the new system in `/mnt` (such as netctl profiles in `/etc/netctl`)  
 Then chroot to it:
 ```bash
