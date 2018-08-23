@@ -352,7 +352,7 @@ pacman -S ntfs-3g # Essential
 pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav   # GStreamer codecs
 pacman -S gnome-tweak-tool arc-gtk-theme arc-icon-theme   # Appearance
 pacman -S atom openssh  # Development
-pacman -S ttf-liberation # Fonts
+pacman -S ttf-liberation adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts # Fonts
 ```
 
 GNOME extensions (visit the links in the GNOME Web Browser):  
@@ -365,11 +365,6 @@ cower
 google-chrome
 ```
 
-AUR package candidates to test:
-```bash
-ttf-ms-fonts
-adobe-source-han-sans-otc-fonts
-```
 
 ### Settings 
 
