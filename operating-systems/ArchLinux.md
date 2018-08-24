@@ -416,6 +416,24 @@ sudo pacman -S libmtp gvfs-mtp gvfs-gphoto2
 sudo reboot
 ```
 
+### Equalizer
+```bash
+pacman -S pulseaudio-equalizer pavucontrol # Equalizer
+nano ~/.config/pulse/default.pa
+
+Add:
+### Load the integrated PulseAudio equalizer and D-Bus module
+load-module module-equalizer-sink
+load-module module-dbus-protocol
+```
+
+To run the GUI equalizer:
+```
+qpaeq
+```
+
+**Note**: If `qpaeq` has no effect, run `pavucontrol` and change "ALSA Playback on" to "FFT based equalizer on ..." while the media player is running.
+
 
 
 ## VirtualBox
