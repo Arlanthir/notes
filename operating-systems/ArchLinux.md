@@ -303,6 +303,7 @@ pacman -S xorg-server
 # Graphics drivers:
 pacman -S xf86-video-intel mesa lib32-mesa         # Intel drivers
 pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings   # Nvidia drivers
+pacman -S vulkan-icd-loader lib32-vulkan-icd-loader # Vulkan support
 
 pacman -S gnome gnome-extra
 
@@ -419,7 +420,13 @@ sudo reboot
 ### Equalizer
 ```bash
 pacman -S pulseaudio-equalizer pavucontrol # Equalizer
-nano ~/.config/pulse/default.pa
+pactl load-module module-equalizer-sink
+pactl load-module module-dbus-protocol
+```
+
+To persist:
+```
+sudo nano /etc/pulse/default.pa
 
 Add:
 ### Load the integrated PulseAudio equalizer and D-Bus module
