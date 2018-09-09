@@ -110,7 +110,7 @@ sudo nano /etc/transmission-daemon/settings.json
 "umask": 2,                        # decimal for 002. inverse of (rwx,rwx,r-x)
 
 sudo chgrp debian-transmission -R /mnt/usb/Downloads/     # Or another folder
-chmod -R 775 /mnt/usb/Downloads
+sudo chmod -R 775 /mnt/usb/Downloads
 sudo usermod -a -G debian-transmission pi # Add user pi to group debian-transmission
 sudo service transmission-daemon start
 ```
