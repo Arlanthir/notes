@@ -43,3 +43,11 @@ sed 's@hello@world@g' in.txt > out.txt        # Same as before but using a diffe
 |--------------|-----------------------------------------------------------|
 | `-b`         | Treat file as binary (useful for Windows line endings).   |
 | `-i`         | Replace in the same file.                                 |
+
+## ssh
+
+```bash
+ssh <user>@<host>        # Connects to host
+exit                     # Terminates connection
+nohup <command> &        # Executes command and doesn't stop it if the ssh connection is terminated
+```
