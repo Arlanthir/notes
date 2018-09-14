@@ -29,6 +29,15 @@ prepend_hello() {
 result=$(prepend_hello Person)
 ```
 
+## Conditionals
+```bash
+if [ ! $1 ] || [ ! $2 ]
+then
+    echo "Usage: program.sh <arg1> <arg2>"
+    exit
+fi
+```
+
 ## Shell execution
 
 ```bash
