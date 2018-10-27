@@ -15,6 +15,8 @@ One string at a time or all strings at once by blocking the tremolo with a woode
 Lubricate the nut with a graphite pencil.  
 Remember to stretch the strings (by pulling them off the fretboard across the entire fretboard) and remove the wooden block before tuning.
 
+I usually buy Nickel wound strings with gauges: 10 13 17 26 36 46.
+
 ## Remove rust from frets
 
 Use 0000 Steel wool or toothpaste. Make sure to cover the fretboard (except the frets) and the pickups (magnets will attract steel wool).
