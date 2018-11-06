@@ -117,6 +117,18 @@ Root A
 7 4 4 4 | 4 4
 ```
 
+## Tunings
+
+### Standard tuning
+
+EADGBE
+
+### Drop C tuning (D Drop C)
+
+Everything is one note lower, except the 6th string which is another note lower.
+
+CGCFAD
+
 ## Tuning without a tuner
 
 For both these methods you should first tune your 6th string (the thickest) to a reference note or a tuner if possible.
