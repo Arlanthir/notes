@@ -305,7 +305,7 @@ pacman -S xf86-video-intel mesa lib32-mesa         # Intel drivers
 pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings   # Nvidia drivers
 pacman -S vulkan-icd-loader lib32-vulkan-icd-loader # Vulkan support
 
-pacman -S gnome gnome-extra
+pacman -S gnome gnome-extra chrome-gnome-shell
 
 systemctl enable gdm.service
 systemctl enable NetworkManager.service
