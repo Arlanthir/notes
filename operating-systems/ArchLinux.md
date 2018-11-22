@@ -441,6 +441,14 @@ qpaeq
 
 **Note**: If `qpaeq` has no effect, run `pavucontrol` and change "ALSA Playback on" to "FFT based equalizer on ..." while the media player is running.
 
+## Troubleshooting
+
+Log of gnome-shell extensions:
+
+```bash
+journalctl /usr/bin/gnome-shell -f -o cat
+```
+
 
 
 ## VirtualBox
