@@ -211,7 +211,7 @@ To make Arch the default (and avoid pressing Alt/Option at boot):
 Enable bless in El Capitan:  
   1. Boot to Recovery OS by restarting your machine and holding down the Command and R keys at startup. (Or option and choosing "Recovery 10.xx")
   2. Launch Terminal from the Utilities menu.
-  3. Enter the following command: csrutil enable
+  3. Enter the following command: csrutil disable
   4. Reboot
 
 ```bash
