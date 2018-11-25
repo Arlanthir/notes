@@ -214,8 +214,9 @@ Enable bless in El Capitan:
   3. Enter the following command: csrutil disable
   4. Reboot
 
+Bless the Linux Bootloader partition:
 ```bash
-sudo bless --device /dev/disk0s4 --setBoot
+sudo bless --device /dev/disk0s3 --setBoot
 ```
 
 ## Post-install
