@@ -22,7 +22,7 @@ User-provided software, available in https://aur.archlinux.org/index.php
   `tar -xvf package_name.tar.gz -C dirname`  
   `cd dirname`
 3. Create package and install it  
-  `makepkg -sri`
+  `makepkg -sri` (install dependencies, remove dependencies after build, install after build)
 
 If makepkg complains about PGP keys (ex: `1EB2638FF56C0C53`):  
 `gpg --recv-keys --keyserver hkp://pgp.mit.edu 1EB2638FF56C0C53`
@@ -33,19 +33,15 @@ To install using root, use su (not recommended):
 ### List AUR packages
 `pacman -Qm`
 
-### Install packages automatically with cower (AUR)
+### Install packages automatically with yay (AUR)
 ```bash
-cd aur
-cower -s <name>           # search
-cower -d <name>           # download
-cd <name>
+git clone https://aur.archlinux.org/yay.git
+cd yay
 makepkg -sri
 ```
 
-#### Update packages automatically
-```bash
-cower -duf --timeout=20
-```
+`yay` supports the same operations as `pacman`
+
 
 ## Installation guide (2018-02-03)
 
