@@ -403,7 +403,7 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 
 ```bash
 pacman -S syncthing
-sudo systemctl --user enable --now syncthing.service
+systemctl --user enable --now syncthing.service
 ```
 
 ### Android Studio
