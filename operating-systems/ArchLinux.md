@@ -399,6 +399,13 @@ touch ~/Templates/Text\ Document.txt
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 ```
 
+### Syncthing
+
+```bash
+pacman -S syncthing
+sudo systemctl --user enable --now syncthing.service
+```
+
 ### Android Studio
 (package in AUR)  
 To enable creation of SD Cards (and therefore AVDs):
