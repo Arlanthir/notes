@@ -406,6 +406,8 @@ pacman -S syncthing
 systemctl --user enable --now syncthing.service
 ```
 
+Web interface is available at http://localhost:8384/
+
 ### Android Studio
 (package in AUR)  
 To enable creation of SD Cards (and therefore AVDs):
