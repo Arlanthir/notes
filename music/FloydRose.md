@@ -43,3 +43,8 @@ Adjustments to the truss rod take about 10 minutes to have an effect, so don't c
 ## String Action
 
 Loosen the strings before changing string action, retune them afterwards to check the final height.
+
+### Typical string action
+
+| Low E (1st string)  | 4/64'' | 1.6mm |
+| High E (6th string) | 3/64'' | 1.2mm |
