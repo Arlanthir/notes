@@ -224,7 +224,9 @@ folder/**            # Ignore everything in folder
 
 `.git/info/exclude`
 
-## Backup git
+## Backup and restore
+
+### Backup
 ```bash
 git bundle create projectname.bundle --all         # all branches
 git bundle create projectname.bundle master    # just master
@@ -232,10 +234,22 @@ To restore it:
 git clone projectname.bundle projectname
 ```
 
-## Recover popped stash (or unreachable commit)
+### Recover popped stash (or unreachable commit)
 ```bash
 git fsck --no-reflogs          # to list commits
 git show <hash>                # to see info
 git stash apply <hash>     # to apply stash
 gitk --all $( git fsck --no-reflog | awk '/dangling commit/ {print $3}' )                                   # GUI log version
+```
+
+## Changing history
+
+```
+git rebase -i --root      # Rebase interactive on the whole history
+# Change to e the commits that you want to edit
+# Save and close the editor
+# Edit the files
+git add --all
+git commit -m 'The new commit message'
+git rebase --continue
 ```
