@@ -107,7 +107,8 @@ git checkout <BRANCH> -- <FILE> # Sacar só determinado ficheiro
 git checkout -b <BRANCH> # Criar e mudar vista activa para branch
 git merge <BRANCH>   # Fazer merge de um branch para onde estamos
 git merge --strategy-option ours|theirs <BRANCH> # Merge e decidir quem ganha os conflitos
-git rebase <BRANCH>   # Aplicar commits de um branch nesta linha e fingir que foi aqui desde sempre. Não usar em commits remotos!!!
+git rebase <BRANCH>   # Aplicar commits deste branch sobre outro (muda a história deste)
+git rebase --onto master <branchA> <branchB>   # Aplicar commits desde <branchA> (exclusive) até <branchB> (inclusive) em cima de master
 git branch -a # Listar branches (all, -r para remote)
 
 git diff <branch1> <branch2> -- <FILE>  # Compare file between branches
