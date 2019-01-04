@@ -244,7 +244,7 @@ gitk --all $( git fsck --no-reflog | awk '/dangling commit/ {print $3}' )       
 
 ## Changing history
 
-```
+```bash
 git rebase -i --root      # Rebase interactive on the whole history
 # Change to e the commits that you want to edit
 # Save and close the editor
