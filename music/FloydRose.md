@@ -46,5 +46,7 @@ Loosen the strings before changing string action, retune them afterwards to chec
 
 ### Typical string action
 
+| String              | Inches | Mm    |
+| ------------------- | ------ | ----- |
 | Low E (1st string)  | 4/64'' | 1.6mm |
 | High E (6th string) | 3/64'' | 1.2mm |
