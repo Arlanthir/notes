@@ -27,7 +27,7 @@ Another trick mentioned is using pencil eraser, might be worth it to try.
 1. Adjust the fine tuners to the middle of each.
 2. Unlock the screws in the locking nut.
 3. Tune each string in playing position (not laying on the table).
-   Tuning order: Low E (1), High E (6), B (5), A (2), G (4), D (3).  
+   Tuning order: Low E (6), High E (1), B (2), A (5), G (3), D (4).  
    Remember to tune up to pitch instead of down, so make sure to drop a bit below tune before moving slowly up.  
    Repeat this until it's tuned.
 4. Lock the locking nut screws.
@@ -48,5 +48,5 @@ Loosen the strings before changing string action, retune them afterwards to chec
 
 | String              | Inches | Mm    |
 | ------------------- | ------ | ----- |
-| Low E (1st string)  | 4/64'' | 1.6mm |
-| High E (6th string) | 3/64'' | 1.2mm |
+| Low E (6th string)  | 4/64'' | 1.6mm |
+| High E (1st string) | 3/64'' | 1.2mm |
