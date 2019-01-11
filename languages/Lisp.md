@@ -61,7 +61,8 @@
 (delete <el> <list>)            ;; Remove el from list desctructively
 (append <l1> <l2>)              ;; Concatenate two lists
 (nconc <l1> <l2> ...)           ;; Concatenate lists (destructive)
-(mapcar <fn> <list>)            ;; Applies fn to all elements in list
+(mapc <fn> <list>)              ;; Applies fn to all elements in list and returns the original list
+(mapcar <fn> <list>)            ;; Applies fn to all elements in list and returns the list of results
 (reduce <fn> <list>)            ;; Applies fn to el1 and el2, then to the result and el3, etc, until there's only one result to return
 (member <el> <list>)            ;; Returns list after first occurrence of <el> (nil if <el> not present in list)
 ```
