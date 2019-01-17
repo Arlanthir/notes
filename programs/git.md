@@ -94,8 +94,7 @@ git push <remote> v1.0                         # Push tag to remote
 git push <remote> --tags                       # Push all tags to remote
 ```
 
-## TODO Stub!
-## Reset since last commit
+## Reset since last commit (STUB for reset)
 ```bash
 git reset HEAD --hard
 git clean -fd
