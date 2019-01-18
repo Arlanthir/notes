@@ -37,11 +37,18 @@ git rm --cached <file>           # Stage the removal of a file (does not delete 
 git commit -m 'Commit Message'   # Create a commit with a message
 git commit --amend               # Fix last commit
 git diff <commit1> <commit2>     # Compare two commits
-git diff <commit>^ <commit>      # Compare commit with its parent (^ means "parent of")
+git diff <commit>~ <commit>      # Compare commit with its parent (~ means "parent of")
 git blame <file>                 # Show git commit annotations in each line of a file
 git blame -L 40,60 <file>        # Limit analyzed lines
 ```
 
+## Referencing commits
+```bash
+HEAD                                 # The most recent commit in the current branch
+HEAD~ or HEAD~1 or HEAD^ or HEAD^1   # The commit's first parent
+HEAD~2                               # The commit's first parent's first parent
+HEAD^2                               # The commit's second parent (if from a merge)
+```
 
 ## Branches
 
@@ -95,10 +102,13 @@ git push <remote> v1.0                         # Push tag to remote
 git push <remote> --tags                       # Push all tags to remote
 ```
 
-## Reset since last commit (STUB for reset)
+## Reset
 ```bash
-git reset HEAD --hard
-git clean -fd
+git reset <commit>         # Reset state to <commit> but leave working tree untouched
+git reset <commit> --soft  # Reset state to <commit> but leave working tree changes staged
+git reset <commit> --hard  # Reset state and files to <commit>
+git clean -fd              # Delete files and folders not tracked or ignored
+git clean -fdx             # Delete files and folders not tracked (even those on .gitignore!)
 ```
 
 ## Worktrees
