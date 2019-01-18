@@ -7,6 +7,7 @@ git config --global user.email <EMAIL>
 # git config --global core.editor gedit
 git config --global core.editor "atom --wait"
 # git config --global color.ui auto    # Colorize git output
+# git config --unset core.editor # remove local config
 ```
 
 ## Initialize repository for a new project
