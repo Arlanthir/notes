@@ -8,7 +8,8 @@
 | `pacman -R <package>`   | Remove package                             |
 | `pacman -Ss <query>`    | Search package                             |
 | `pacman -Syu`           | Update packages                            |
-| `pacman -Qo <file>`     | Check which package installed &lt;file&gt; |
+| `pacman -Sc`            | Clear cache                                |
+| `pacman -Qo <file>`      | Check which package installed &lt;file&gt;  |
 
 ## Arch User Repository (AUR)
 
