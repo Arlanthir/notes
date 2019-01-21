@@ -34,21 +34,22 @@ my $inter = "String interpolation: $number";
 
 ### Operators
 
-| Operator              | Effect                                                                                  |
-| --------------------- | --------------------------------------------------------------------------------------- |
-| `m/<a>/<flags>`       | Match (returns true if the input matches `<a>`). Optional when using `/` as delimiter.  |
-| `s/<a>/<b>/<flags>`   | Substitute (returns input where `<a>` is replaced with `<b>`.                           |
+| Operator                  | Effect                                                                                  |
+| ------------------------- | --------------------------------------------------------------------------------------- |
+| `m/<a>/<modifiers>`       | Match (returns true if the input matches `<a>`). Optional when using `/` as delimiter.  |
+| `s/<a>/<b>/<modifiers>`   | Substitute (returns input where `<a>` is replaced with `<b>`.                           |
 
 **Note**: `/` is the usual delimiter, but any character can be used, as long as it doesn't appear in the regex. Suggestions: `,` or `:` or `?`.
 
 ### Modifiers
 
-| Modifier   | Effect                                                                      |
-| ---------- | --------------------------------------------------------------------------- |
-| `e`        | Substitution is a Perl expression (valid for `s//`)                         |
-| `g`        | Global (matches more than once)                                             |
-| `i`        | Case-insensitive                                                            |
-| `r`        | Read-only, don't update the variable with the substitution, return only     |
+| Modifier   | Effect                                                                                     |
+| ---------- | ------------------------------------------------------------------------------------------ |
+| `e`        | Substitution is a Perl expression (valid for `s//`)                                        |
+| `g`        | Global (matches more than once)                                                            |
+| `i`        | Case-insensitive                                                                           |
+| `m`        | Multi-line: makes ^ and $ match the beginning and end of each line (instead of all input)  |
+| `r`        | Read-only, don't update the variable with the substitution, return only                    |
 
 ### Examples
 ```perl
