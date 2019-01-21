@@ -1,5 +1,27 @@
 # Perl
 
+## Minimal working example
+
+hello.pl
+
+```perl
+#!/usr/bin/perl
+use strict;
+use warnings;
+print("Hello World\n");
+```
+
+## Variables
+```perl
+my $var = ... # Local variable
+our $var = ... # Global variable
+
+my $number = 2;
+my $concat = "String" . " " . "concatenation";
+my $inter = "String interpolation: $number";
+```
+
+
 ## Command line arguments
 
 | Flag     | Effect                                                                     |
@@ -21,13 +43,21 @@
 
 ### Modifiers
 
-| Modifier   | Effect                                              |
-| ---------- | --------------------------------------------------- |
-| `e`        | Substitution is a Perl expression (valid for `s//`) |
-| `g`        | Global (matches more than once)                     |
-| `i`        | Case-insensitive                                    |
+| Modifier   | Effect                                                                      |
+| ---------- | --------------------------------------------------------------------------- |
+| `e`        | Substitution is a Perl expression (valid for `s//`)                         |
+| `g`        | Global (matches more than once)                                             |
+| `i`        | Case-insensitive                                                            |
+| `r`        | Read-only, don't update the variable with the substitution, return only     |
 
 ### Examples
+```perl
+my $s = "Regular";
+$s =~ /gular/; # true
+$s !~ /gular/; # negated match, false
+```
+
+### CLI Examples
 
 ```bash
 # Replace every pattern for another
