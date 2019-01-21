@@ -30,9 +30,11 @@
 ### Examples
 
 ```bash
+# Replace every pattern for another
 echo 'hella warld' | perl -pe 's/a/o/g'
 hello world
 
+# Switch word order by capturing groups and evaluating substitution
 echo 'world hello' | perl -pe 's/(.+) (.+)/ $2 . " " . $1 /e'
 hello world
 ```
