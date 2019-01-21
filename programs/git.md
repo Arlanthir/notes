@@ -164,6 +164,8 @@ gitk --all $( git fsck --no-reflog | awk '/dangling commit/ {print $3}' )       
 
 ## Changing history
 
+### Manually
+
 ```bash
 git rebase -i --root      # Rebase interactive on the whole history
 # Change to e the commits that you want to edit
@@ -172,4 +174,10 @@ git rebase -i --root      # Rebase interactive on the whole history
 git add --all
 git commit -m 'The new commit message'
 git rebase --continue
+```
+
+### Changing each message automatically
+
+```bash
+git filter-branch --msg-filter '<program that reads old message from stdin and writes new message to stdout>'
 ```
