@@ -34,10 +34,10 @@ my $inter = "String interpolation: $number";
 
 ### Operators
 
-| Operator              | Effect                                                          |
-| --------------------- | --------------------------------------------------------------- |
-| `m/<a>/<flags>`       | Match (returns true if the input matches `<a>`).                |
-| `s/<a>/<b>/<flags>`   | Substitute (returns input where `<a>` is replaced with `<b>`.   |
+| Operator              | Effect                                                                                  |
+| --------------------- | --------------------------------------------------------------------------------------- |
+| `m/<a>/<flags>`       | Match (returns true if the input matches `<a>`). Optional when using `/` as delimiter.  |
+| `s/<a>/<b>/<flags>`   | Substitute (returns input where `<a>` is replaced with `<b>`.                           |
 
 **Note**: `/` is the usual delimiter, but any character can be used, as long as it doesn't appear in the regex. Suggestions: `,` or `:` or `?` or `#`.
 
