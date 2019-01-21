@@ -43,13 +43,13 @@ my $inter = "String interpolation: $number";
 
 ### Modifiers
 
-| Modifier   | Effect                                                                                     |
-| ---------- | ------------------------------------------------------------------------------------------ |
-| `e`        | Substitution is a Perl expression (valid for `s//`)                                        |
-| `g`        | Global (matches more than once)                                                            |
-| `i`        | Case-insensitive                                                                           |
-| `m`        | Multi-line: makes ^ and $ match the beginning and end of each line (instead of all input)  |
-| `r`        | Read-only, don't update the variable with the substitution, return only                    |
+| Modifier   | Effect                                                                                           |
+| ---------- | ------------------------------------------------------------------------------------------------ |
+| `e`        | Substitution is a Perl expression (valid for `s//`)                                              |
+| `g`        | Global (matches more than once)                                                                  |
+| `i`        | Case-insensitive                                                                                 |
+| `m`        | Multi-line: makes `^` and `$` match the beginning and end of each line (instead of all input)    |
+| `r`        | Read-only, don't update the variable with the substitution, return only                          |
 
 ### Examples
 ```perl
