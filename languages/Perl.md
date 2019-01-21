@@ -17,14 +17,22 @@
 | `m/<a>/<flags>`       | Match (returns true if the input matches `<a>`).                |
 | `s/<a>/<b>/<flags>`   | Substitute (returns input where `<a>` is replaced with `<b>`.   |
 
+**Note**: `/` is the usual delimiter, but any character can be used, as long as it doesn't appear in the regex. Suggestions: `,` or `:` or `?` or `#`.
+
 ### Modifiers
 
-| Modifier   | Effect                          |
-| ---------- | ------------------------------- |
-| `g`        | Global (matches more than once) |
-| `i`        | Case-insensitive                |
-
+| Modifier   | Effect                                              |
+| ---------- | --------------------------------------------------- |
+| `e`        | Substitution is a Perl expression (valid for `s//`) |
+| `g`        | Global (matches more than once)                     |
+| `i`        | Case-insensitive                                    |
 
 ### Examples
 
-`echo 'hella warld' | perl -pe 's/a/o/g'`
+```bash
+echo 'hella warld' | perl -pe 's/a/o/g'
+hello world
+
+echo 'world hello' | perl -pe 's/(.+) (.+)/ $2 . " " . $1 /e'
+hello world
+```
