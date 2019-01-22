@@ -87,6 +87,7 @@ git fetch <remote> <branch>   # Update specific branch from remote
 git fetch --all               # Fetch all tracking branches from remote
 git pull                      # Fetch + merge
 git pull <remote> <branch>    # Fetch + merge specific remote branch
+git pull --rebase             # Fetch + rebase
 git push                      # Send changes to remote
 git push <remote> <branch>    # Send changes to specific branch to remote
 git push <remote> <mybranch>:<serverbranch>
