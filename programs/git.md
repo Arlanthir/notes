@@ -48,6 +48,7 @@ HEAD                                 # The most recent commit in the current bra
 HEAD~ or HEAD~1 or HEAD^ or HEAD^1   # The commit's first parent
 HEAD~2                               # The commit's first parent's first parent
 HEAD^2                               # The commit's second parent (if from a merge)
+<branch1>..<branch2>                 # Commits in <branch2> that are not in <branch1>
 ```
 
 ## Branches
