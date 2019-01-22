@@ -66,6 +66,7 @@ git checkout -b <branch>                   # Create + checkout
 git merge <branch>                         # Merge branch to the current one
 git merge --strategy-option ours|theirs <branch>   # Merge while deciding who wins conflicts
 git rebase <branch>                        # Apply commits of this branch on top of another (changes this one's history)
+git rebase <branch1> <branch2>             # Apply commits of <branch2> branch on top of <branch1> (changes <branch2>'s history)
 git rebase --onto master <branchA> <branchB>   # Apply commits between <branchA> (exclusive) and <branchB> (inclusive) onto master
 git diff <branch1> <branch2> -- <FILE>     # Compare file between branches
 ```
