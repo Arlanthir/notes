@@ -49,6 +49,7 @@ HEAD~ or HEAD~1 or HEAD^ or HEAD^1   # The commit's first parent
 HEAD~2                               # The commit's first parent's first parent
 HEAD^2                               # The commit's second parent (if from a merge)
 <branch1>..<branch2>                 # Commits in <branch2> that are not in <branch1>
+git rev-list <ref-or-range>          # Outputs just the commit hashes (for scripting)
 ```
 
 ## Branches
