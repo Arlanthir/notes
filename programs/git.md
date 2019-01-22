@@ -93,7 +93,7 @@ git push <remote> <branch>    # Send changes to specific branch to remote
 git push <remote> <mybranch>:<serverbranch>
 git push --tags               # Send tags to remote
 git push --mirror             # Send everything to remote
-git push <remote> :<branch>   # Delete branch in remote
+git push <remote> :<branch>   # Delete branch/tag in remote
 ```
 
 
@@ -103,6 +103,7 @@ git tag                                        # List current tags
 git tag -a v1.0 -m 'Initial Public Release'    # Create annotated tag
 git tag v1.0                                   # Lightweight tag
 git tag v1.0 <commit_hash>                     # Tag past commit
+git tag -d v1.0                                # Delete tag
 git push <remote> v1.0                         # Push tag to remote
 git push <remote> --tags                       # Push all tags to remote
 ```
