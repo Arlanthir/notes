@@ -41,6 +41,7 @@ fi
 ## Shell execution
 
 ```bash
+echo "Current dir is $(pwd)"
 echo "Current dir is `pwd`"
 ```
 
