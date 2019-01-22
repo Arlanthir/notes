@@ -99,6 +99,7 @@ git push <remote> :<branch>   # Delete branch in remote
 
 ## Tags
 ```bash
+git tag                                        # List current tags
 git tag -a v1.0 -m 'Initial Public Release'    # Create annotated tag
 git tag v1.0                                   # Lightweight tag
 git tag v1.0 <commit_hash>                     # Tag past commit
