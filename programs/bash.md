@@ -51,3 +51,9 @@ ssh <user>@<host>        # Connects to host
 exit                     # Terminates connection
 nohup <command> &        # Executes command and doesn't stop it if the ssh connection is terminated
 ```
+
+## tail
+
+```bash
+tail -n <X>   # Output just the last X lines of input
+```
