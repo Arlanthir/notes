@@ -6,6 +6,6 @@ Used to add static methods to a class.
 
 ```kotlin
 companion object {
-    fun newInstance() = SignUpFormFragment()
+    fun newInstance() = MyClass() // Creates MyClass.newInstance(), equivalent to calling MyClass()
 }
 ```
