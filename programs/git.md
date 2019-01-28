@@ -187,3 +187,8 @@ git rebase --continue
 ```bash
 git filter-branch --msg-filter '<program that reads old message from stdin and writes new message to stdout>'
 ```
+
+### Garbage collection
+```bash
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
