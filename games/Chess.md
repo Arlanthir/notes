@@ -14,3 +14,4 @@ White king in black square, black king in white square.
 ♖♘♗♕♔♗♘♖ 2
 a b c d e f g h 1
 ```
+  
