@@ -63,7 +63,7 @@ Criss-crossing bishop and queen.
 
 ### Corner Mate
 
-![](http://www.fen-to-image.com/image/30/single/7k/5N1p/5N2/8/8/8/8/6RK)
+![](http://www.fen-to-image.com/image/30/single/7k/5N1p/8/8/8/8/8/6RK)
 
 
 
