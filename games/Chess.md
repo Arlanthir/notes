@@ -57,5 +57,8 @@ Criss-crossing bishop and queen.
 
 ![](http://www.fen-to-image.com/image/30/single/5k2/8/3B2Q1/8/8/8/8/7K)
 
+### Arabian Mate
+
+![](http://www.fen-to-image.com/image/30/single/7k/7R/5N2/8/8/8/8/7K)
 
 
