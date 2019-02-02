@@ -18,6 +18,11 @@ val myDouble: Double = 64.0
 val myString: String = "hello"
 var myString2: String
 val myString3 = "world"           // Type inference
+
+val s1 = "I'm $myInt years old"               // String variable interpolation
+val s2 = "I'm ${calculateAge()} years old"    // String function interpolation
+val s3 = """Multiline
+String"""
 ```
 
 ## Arrays
