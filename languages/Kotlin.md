@@ -38,7 +38,12 @@ val lambdaArray = Array(5, { i -> i * 2 })       // 0, 2, 4, 6, 8
 ```kotlin
 package com.company.app.package
 
-class MyClass(param1: Int, param2: String) {
+class MyClass(param1: Int, param2: String, val param3: Int) {
+  val myParam1 = param1
+  init {
+    println("Initializer block that prints ${param2} but doesn't save it")
+  }
+  // param3 is auto initialized by constructor
 }
 ```
 
