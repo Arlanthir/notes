@@ -20,6 +20,14 @@ var myString2: String
 val myString3 = "world"           // Type inference
 ```
 
+## Arrays
+```kotlin
+val myArray = arrayOf(4, 5, 7, 3, "Chike", false)
+val intArray = arrayOf<Int>(4, 5, 7, 3)
+val lambdaArray = Array(5, { i -> i * 2 })       // 0, 2, 4, 6, 8
+```
+
+
 ## Classes
 
 ```kotlin
