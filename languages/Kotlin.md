@@ -1,6 +1,22 @@
 # Kotlin
 
-## Companion object
+## Types
+
+### Nullable Types
+```kotlin
+val myInstance: MyClass? = returnMyClassOrNullSomehow()
+myInstance?.myMethod()
+```
+
+To assert your instance and cast it to a non-nullable type:
+```kotlin
+val myInstance: MyClass = returnMyClassOrNullSomehow()!!
+myInstance.myMethod()
+```
+
+## Classes
+
+### Companion object
 
 Used to add static methods to a class.
 
