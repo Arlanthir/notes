@@ -3,16 +3,21 @@
 ## Types
 
 ## Basic Types
+
+`val` is used to declare immutable values, and it's encouraged.  
+`var` is used to declare mutable variables, when you must assign a different value later
+
 ```kotlin
-val myString: String = "hello"    // Immutable, encouraged
-var myString2: String             // Mutable
-val myString3 = "world"           // Type inference
+val myBoolean = true
 val myByte: Byte = 0xf
 val myShort: Short = 16
 val myInt: Int = 32
 val myLong: Long = 64L
 val myFloat: Float = 32.0F
 val myDouble: Double = 64.0
+val myString: String = "hello"
+var myString2: String
+val myString3 = "world"           // Type inference
 ```
 
 ## Classes
