@@ -65,5 +65,15 @@ Criss-crossing bishop and queen.
 
 ![](http://www.fen-to-image.com/image/30/single/7k/5N1p/8/8/8/8/8/6RK)
 
+### Morphy's Mate
+
+![](http://www.fen-to-image.com/image/30/single/7k/7p/5B2/8/8/8/8/6RK)
+
+### Pillsbury's Mate
+
+![](http://www.fen-to-image.com/image/30/single/5rk1/5p1p/5B2/8/8/8/8/6RK)
+
+
+
 
 
