@@ -41,6 +41,13 @@ val myNum: Int = when (something){
   4 -> 6
   else -> 0
 }
+
+// Parameter is optional
+myNum = when {
+  shouldBeOne() -> 1
+  shouldBeTwo() -> 2
+  else -> 3
+}
 ```
 
 ## Classes
