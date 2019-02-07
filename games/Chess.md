@@ -121,4 +121,9 @@ Another way to checkmate with the queen while the king's pieces block its escape
 
 ![](http://www.fen-to-image.com/image/30/single/3r1r/4k3/R3Q3/8/8/8/8/6K1)
 
+### Epaulette Mate
+
+Unprotected queen checkmates an even more blocked king.
+
+![](http://www.fen-to-image.com/image/30/single/3rkr/8/4Q3/8/8/8/8/6K1)
 
