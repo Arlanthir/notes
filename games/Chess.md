@@ -8,6 +8,10 @@ White king in black square, black king in white square.
 
 ## Checkmate patterns
 
+References:
+- https://lichess.org/practice/
+- https://en.wikipedia.org/wiki/Checkmate_pattern
+
 ### Back-Rank Mate
 
 Use a rook or a queen to trap the king between the edge of the board and his friendly pieces.
@@ -107,6 +111,14 @@ Checkmate with a rook/queen protected along the diagonal.
 
 ### Dovetail Mate
 
-The king's pieces block his escape from a protected queen.
+The king's pieces block his escape from a protected queen. Sometimes called Cozio's Mate.
 
 ![](http://www.fen-to-image.com/image/30/single/1r6/pk6/2Q5/3P4/8/8/8/6K1)
+
+### Swallow's Tail Mate
+
+Another way to checkmate with the queen while the king's pieces block its escape. Also called Guéridon Mate.
+
+![](http://www.fen-to-image.com/image/30/single/3r1r/4k3/R3Q3/8/8/8/8/6K1)
+
+
