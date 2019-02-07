@@ -59,21 +59,33 @@ Criss-crossing bishop and queen.
 
 ### Arabian Mate
 
+The knight threatens the square that the rook doesn't, while protecting the rook itself.
+
 ![](http://www.fen-to-image.com/image/30/single/7k/7R/5N2/8/8/8/8/7K)
 
 ### Corner Mate
+
+The knight delivers mate while the rook prevents escape.
 
 ![](http://www.fen-to-image.com/image/30/single/7k/5N1p/8/8/8/8/8/6RK)
 
 ### Morphy's Mate
 
+The bishop delivers mate while the rook prevents escape.
+
 ![](http://www.fen-to-image.com/image/30/single/7k/7p/5B2/8/8/8/8/6RK)
 
 ### Pillsbury's Mate
 
+Variation of Morphy's Mate where the rook delivers the mate.
+
 ![](http://www.fen-to-image.com/image/30/single/5rk1/5p1p/5B2/8/8/8/8/6RK)
 
+### Damiano's Mate
 
+Often achieved by sacrificing a rook, checking the king with the queen, and delivering the final blow.
+
+![](http://www.fen-to-image.com/image/30/single/5rk1/6pQ/6P1/8/8/8/8/6K1)
 
 
 
