@@ -104,3 +104,9 @@ Checkmate with a rook protected by a bishop (helped by an enemy pawn).
 Checkmate with a rook/queen protected along the diagonal.
 
 ![](http://www.fen-to-image.com/image/30/single/6kR/6P1/5K2/8/8/8/8/8)
+
+### Dovetail Mate
+
+The king's pieces block his escape from a protected queen.
+
+![](http://www.fen-to-image.com/image/30/single/1r6/pk6/2Q5/3K4/8/8/8/8)
