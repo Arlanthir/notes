@@ -92,3 +92,9 @@ Often achieved by sacrificing a rook, checking the king with the queen, and deli
 Infiltrate with the queen and a pawn.
 
 ![](http://www.fen-to-image.com/image/30/single/6k1/5pQ1/5Pp1/8/8/8/8/6K1)
+
+### Opera Mate
+
+Checkmate with a rook protected by a bishop (helped by an enemy pawn).
+
+![](http://www.fen-to-image.com/image/30/single/3Rk3/5p2/8/6B1/8/8/8/6K1)
