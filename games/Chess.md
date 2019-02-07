@@ -109,4 +109,4 @@ Checkmate with a rook/queen protected along the diagonal.
 
 The king's pieces block his escape from a protected queen.
 
-![](http://www.fen-to-image.com/image/30/single/1r6/pk6/2Q5/3K4/8/8/8/8)
+![](http://www.fen-to-image.com/image/30/single/1r6/pk6/2Q5/3P4/8/8/8/6K1)
