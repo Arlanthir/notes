@@ -98,3 +98,9 @@ Infiltrate with the queen and a pawn.
 Checkmate with a rook protected by a bishop (helped by an enemy pawn).
 
 ![](http://www.fen-to-image.com/image/30/single/3Rk3/5p2/8/6B1/8/8/8/6K1)
+
+### Anderssen's Mate
+
+Checkmate with a rook protected by a pawn and the king in the diagonal.
+
+![](http://www.fen-to-image.com/image/30/single/6kR/6P1/5K2/8/8/8/8/8)
