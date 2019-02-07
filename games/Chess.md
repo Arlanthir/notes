@@ -101,6 +101,6 @@ Checkmate with a rook protected by a bishop (helped by an enemy pawn).
 
 ### Anderssen's Mate
 
-Checkmate with a rook protected by a pawn and the king in the diagonal.
+Checkmate with a rook/queen protected along the diagonal.
 
 ![](http://www.fen-to-image.com/image/30/single/6kR/6P1/5K2/8/8/8/8/8)
