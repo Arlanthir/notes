@@ -127,3 +127,8 @@ Unprotected queen checkmates an even more blocked king.
 
 ![](http://www.fen-to-image.com/image/30/single/3rkr/8/4Q3/8/8/8/8/6K1)
 
+### Pawn Mate
+
+Winning with a pawn near other pawns. Also called David and Goliath Mate.
+
+![](http://www.fen-to-image.com/image/30/single/8/7R/1pkp4/1Pp5/2P5/8/8/6K1)
