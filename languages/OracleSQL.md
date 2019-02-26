@@ -20,6 +20,15 @@ To display all the information, do:
 TO_CHAR(<date>, 'YYYY-MM-DD HH24:MI:SS')
 ```
 
+To truncate to just the date:
+```sql
+trunc(date)
+```
+
+```sql
+SELECT * FROM my_table WHERE trunc(my_date_column) = TO_DATE('01/01/2018', 'DD/MM/YYYY');
+```
+
 To filter records between two dates (inclusive):
 ```sql
 SELECT *
