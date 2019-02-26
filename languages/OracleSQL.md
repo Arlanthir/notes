@@ -35,3 +35,11 @@ SELECT *
 FROM my_table
 WHERE my_date BETWEEN TO_DATE('01/01/2018', 'DD/MM/YYYY') AND TO_DATE('31/12/2018', 'DD/MM/YYYY');
 ```
+
+# Joins
+
+```sql
+SELECT * from my_table mt
+LEFT JOIN other_table ot on mt.id = ot.mid;
+```
+
