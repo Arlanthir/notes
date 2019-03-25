@@ -72,6 +72,31 @@ add_filter('some_filter', 'my_filter');
 ?>
 ```
 
+Or:
+
+```php
+function edition_number_porfolio_where($where) {
+	global $wpdb;
+	global $keyword;
+	$where .= ' AND ' . $wpdb->posts . '.post_title LIKE \'%' . esc_sql(like_escape($keyword)) . '%\'';
+	return $where;
+}
+
+add_filter('posts_where', 'edition_number_porfolio_where');
+$keyword = 'my search';
+$posts = get_posts(array(
+	'posts_per_page' => -1,
+	'suppress_filters' => false, // important!
+	'post_type' => 'portfolio',
+	'post_status' => 'publish'
+));
+remove_filter('posts_where', 'edition_number_porfolio_where');
+
+print_r(array_map(function ($el) {
+	return $el->post_title;
+}, $posts));
+```
+
 
 ## Navigation Menus
 
