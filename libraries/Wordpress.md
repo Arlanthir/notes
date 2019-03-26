@@ -195,3 +195,32 @@ add_action('after_setup_theme', 'my_language_setup');
 
 Instead of modifying a downloaded theme, it is advisable to create a child theme of that one. In it, you can
 override functions by redeclaring them in your files (typically mirroring the structure of the original theme).
+
+## Find out which template file is rendering each page
+
+Add to `functions.php`:
+```php
+add_filter('template_include', 'var_template_include', 1000);
+function var_template_include($t) {
+	$GLOBALS['current_theme_template'] = basename($t);
+	return $t;
+}
+
+function get_current_template() {
+	if (!isset($GLOBALS['current_theme_template'])) {
+		return false;
+	}
+	return $GLOBALS['current_theme_template'];
+}
+
+/* Show template file that drew each page */
+function show_template() {
+    if( is_super_admin() ){
+		echo("<strong>Template file: </strong>");
+		echo(get_current_template());
+		global $template;
+		print_r($template);
+	}
+}
+add_action('wp_footer', 'show_template');
+```
