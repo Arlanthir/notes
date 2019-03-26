@@ -200,6 +200,7 @@ override functions by redeclaring them in your files (typically mirroring the st
 
 Add to `functions.php`:
 ```php
+/* Show template file that drew each page */
 add_filter('template_include', 'var_template_include', 1000);
 function var_template_include($t) {
 	$GLOBALS['current_theme_template'] = basename($t);
@@ -213,7 +214,6 @@ function get_current_template() {
 	return $GLOBALS['current_theme_template'];
 }
 
-/* Show template file that drew each page */
 function show_template() {
     if( is_super_admin() ){
 		echo("<strong>Template file: </strong>");
