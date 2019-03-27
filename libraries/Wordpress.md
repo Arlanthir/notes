@@ -173,7 +173,7 @@ add_action('wp_ajax_nopriv_my_request', 'ajax_my_request');
 
 ## Translations
 
-Install Poedit to manage translations.
+Install Poedit to manage translations. Open the plugin's `.po` file, set the language to the desired one and save it somewhere else with the language suffix (e.g. `plugin-name-pt_PT.po`). Edit the translations in the file and save it. The corresponding `.mo` should be created alongside the `.po`.
 
 Alternative to create .po file:
 ```bash
