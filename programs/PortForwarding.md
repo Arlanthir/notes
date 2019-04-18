@@ -12,4 +12,4 @@
 | VNC                     |                          | 5900                     |                  |
 | Syncthing               |                          | 8080                     |                  |
 | Transmission            | 51413-51414              | 51413-51414              |                  |
-| Transmission-daemon     | 9091                     | 9091                     |                  |
+| Transmission-daemon     |                          | 9091                     |                  |
