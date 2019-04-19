@@ -41,7 +41,10 @@ cd yay
 makepkg -sri
 ```
 
-`yay` supports the same operations as `pacman`
+`yay` supports the same operations as `pacman`  
+To only download the PKGBUILD of a package, do:
+
+`yay -G <package_name>`
 
 
 ## Installation guide (2018-02-03)
