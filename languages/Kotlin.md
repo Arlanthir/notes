@@ -55,13 +55,37 @@ myNum = when {
 ```kotlin
 package com.company.app.package
 
-class MyClass(param1: Int, param2: String, val param3: Int) {
+class MyClass(param1: Int, param2: String, val param3: Int): MySuperClass() {
   val myParam1 = param1
   init {
     println("Initializer block that prints ${param2} but doesn't save it")
   }
   // param3 is auto initialized by constructor
+  val lazyParam by lazy {
+    // Will be initialized the first time it is accessed
+    2
+  }
+  
+  override fun inParent(): Int {
+  }
+  
+  private fun privateFun() {
+  }
 }
+```
+
+### Object Expresions
+
+We can create variations of a class without subclassing it.
+
+```kotlin
+fadeIn.setAnimationListener(object : Animation.AnimationListener {
+    override fun onAnimationStart(animation: Animation) {
+        view.alpha = 1f
+    }
+    override fun onAnimationEnd(animation: Animation) {}
+    override fun onAnimationRepeat(animation: Animation) {}
+})
 ```
 
 ### Companion object
@@ -84,4 +108,10 @@ To assert your instance and cast it to a non-nullable type:
 ```kotlin
 val myInstance: MyClass = returnMyClassOrNullSomehow()!!
 myInstance.myMethod()
+
+// Or more elegantly:
+
+returnMyClassOrNullSomehow().let {
+  it.myMethod()
+}
 ```
