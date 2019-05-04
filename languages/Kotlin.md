@@ -98,7 +98,22 @@ companion object {
 }
 ```
 
-### Nullable Types
+## Enums
+```kotlin
+enum class State {
+  EXPANDED,
+  EXPANDING,
+  COLLAPSING,
+  COLLAPSED,
+  IDLE,
+  INIT
+}
+
+State.EXPANDED.name // name is available
+```
+
+
+## Nullable Types
 ```kotlin
 val myInstance: MyClass? = returnMyClassOrNullSomehow()
 myInstance?.myMethod()
