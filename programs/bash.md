@@ -1,5 +1,12 @@
 # Bash / Linux Command Line
 
+
+## head
+```bash
+head -n <X>   # Output the first X lines of input
+```
+
+
 ## find
 
 Search for files in disk (recursively).
@@ -29,6 +36,7 @@ find . -name '*.srt' -exec sh -c 'iconv -f ISO-8859-15 -t UTF-8 "$0" > "${0%.srt
 
 **Note**: Cygwin doesn't seem to like when `;` is escaped.
 
+
 ## sed
 
 Stream editor. Applies operations to each line in a file.
@@ -44,6 +52,7 @@ sed 's@hello@world@g' in.txt > out.txt        # Same as before but using a diffe
 | `-b`         | Treat file as binary (useful for Windows line endings).   |
 | `-i`         | Replace in the same file.                                 |
 
+
 ## ssh
 
 ```bash
@@ -51,6 +60,7 @@ ssh <user>@<host>        # Connects to host
 exit                     # Terminates connection
 nohup <command> &        # Executes command and doesn't stop it if the ssh connection is terminated
 ```
+
 
 ## tail
 
