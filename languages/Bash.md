@@ -78,6 +78,7 @@ done
 
 ## Shell execution
 
+It's possible to save output from another program/function:
 ```bash
 echo "Current dir is $(pwd)"
 echo "Current dir is `pwd`"
