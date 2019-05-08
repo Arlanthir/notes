@@ -1,6 +1,10 @@
 
 # Bash scripting
 
+- Scripts to run in a bash shell
+- Extension: `.sh`
+- **Warning**: don't edit a script file while running it
+
 ## Minimum working example
 
 example.sh
@@ -34,7 +38,7 @@ Booleans are represented by return types:
 `True` is represented by 0, `False` is represented by something else
 
 - The syntax `[<expression>]` converts a conditional expression to 0 (true) or 1 (false).
-- The `!` negates the boolean condition.
+- `!` negates the boolean condition.
 
 ### String operators
 
