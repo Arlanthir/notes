@@ -30,11 +30,34 @@ result=$(prepend_hello Person)
 ```
 
 ## Conditionals
+Booleans are represented by return types:  
+`True` is represented by 0, `False` is represented by something else
+
+- The syntax `[<expression>]` converts a conditional expression to 0 (true) or 1 (false).
+- `[ -z <variable> ]` tests if variable is empty
+- `[ <variable> = <something> ]` tests if variable is equal to something
+- `[ <variable> -eq <number> ]` tests if variable is equal to number
+- `[ <variable> -ne <number> ]` tests if variable is not equal to number
+- Other number operators: `-gt`, `-ge`, `-lt`, `-le`
+- The `!` negates the boolean condition.
+
 ```bash
-if [ ! $1 ] || [ ! $2 ]
+if [ ! $1 ] || [ ! $2 ] # The `!` negates the boolean condition
 then
     echo "Usage: program.sh <arg1> <arg2>"
     exit
+fi
+```
+
+But you can also use `if` with other programs that output `0` or `1`.
+
+```
+bash
+if some_other_program
+then
+    echo "true"
+else
+    echo "false"
 fi
 ```
 
@@ -53,6 +76,8 @@ done
 echo "Current dir is $(pwd)"
 echo "Current dir is `pwd`"
 ```
+
+Return code is saved in `$?` (always numeric)
 
 ## Regular expressions
 
