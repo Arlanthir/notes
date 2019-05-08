@@ -34,22 +34,28 @@ Booleans are represented by return types:
 `True` is represented by 0, `False` is represented by something else
 
 - The syntax `[<expression>]` converts a conditional expression to 0 (true) or 1 (false).
+- The `!` negates the boolean condition.
+
+### String operators
+
 - `[ -z <variable> ]` tests if variable is empty
-- `[ <variable> = <something> ]` tests if variable is equal to something
+- `[ <variable> = <string> ]` tests if variable is equal to string
+
+### Number operators
+
 - `[ <variable> -eq <number> ]` tests if variable is equal to number
 - `[ <variable> -ne <number> ]` tests if variable is not equal to number
 - Other number operators: `-gt`, `-ge`, `-lt`, `-le`
-- The `!` negates the boolean condition.
 
 ```bash
-if [ ! $1 ] || [ ! $2 ] # The `!` negates the boolean condition
+if [ -z $1 ] || [ -z $2 ]
 then
     echo "Usage: program.sh <arg1> <arg2>"
     exit
 fi
 ```
 
-But you can also use `if` with other programs that output `0` or `1`.
+You can also use `if` with other programs that output `0` or non-zero (`1`, `-1`, etc).
 
 ```
 bash
