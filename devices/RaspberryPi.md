@@ -24,6 +24,13 @@ sudo kill -USR1 $(pgrep ^dd$) # Monitor progress
 sudo sync
 ```
 
+## Change SSH port
+Edit `/etc/ssh/sshd_config`
+```
+bash
+Port 22   # Uncomment and choose another number
+```
+
 Default username/password: pi / raspberry
 
 ## Install a USB disk
