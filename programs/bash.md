@@ -1,6 +1,19 @@
 # Bash / Linux Command Line
 
 
+## grep
+Finds lines in input matching a given pattern
+
+```bash
+echo "ola
+adeus" | grep "ola"
+```
+
+| Argument                | Description                                              |
+|-------------------------|----------------------------------------------------------|
+| `-q`                    | Quiet, don't output the found line, just return 0 or 1.  |
+
+
 ## head
 ```bash
 head -n <X>   # Output the first X lines of input
