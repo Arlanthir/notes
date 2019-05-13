@@ -71,7 +71,15 @@ else
 fi
 ```
 
-## Iteration
+## Arrays
+```bash
+$myarray=( text1 text2 text3 )
+if printf '%s\n' ${myarray[*]} | grep -q -P '^mypattern$'; then # Finding an element in the array
+    # ...
+fi
+```
+
+### Iteration
 ```bash
 users=( user1 user2 user3 )
 
