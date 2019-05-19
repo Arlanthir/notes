@@ -67,10 +67,19 @@ class MyClass(param1: Int, param2: String, val param3: Int): MySuperClass() {
   }
   
   override fun inParent(): Int {
+    return 2
   }
   
   private fun privateFun() {
   }
+}
+```
+
+### Change value of `this` for a block
+```kotlin
+val myInstance = MyClass()
+myInstance.run {
+  inParent() // this is set as myInstance
 }
 ```
 
