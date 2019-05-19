@@ -125,7 +125,7 @@ val myInstance: MyClass = returnMyClassOrNullSomehow()!!
 myInstance.myMethod()
 
 // Or more elegantly:
-val myInstance: MyClass = returnMyClassOrNullSomehow()!!
+val myInstance: MyClass = returnMyClassOrNullSomehow()
 if (myInstance != null) {
   myInstance.myMethod()
 }
