@@ -116,7 +116,7 @@ State.EXPANDED.name // name is available
 ## Nullable Types
 ```kotlin
 val myInstance: MyClass? = returnMyClassOrNullSomehow()
-myInstance?.myMethod()
+myInstance?.myMethod() // Only calls myMethod if myInstance is not null
 ```
 
 To assert your instance and cast it to a non-nullable type:
@@ -125,8 +125,14 @@ val myInstance: MyClass = returnMyClassOrNullSomehow()!!
 myInstance.myMethod()
 
 // Or more elegantly:
+val myInstance: MyClass = returnMyClassOrNullSomehow()!!
+if (myInstance != null) {
+  myInstance.myMethod()
+}
 
-returnMyClassOrNullSomehow().let {
+// Or for mutable variables:
+var myInstance: MyClass? = returnMyClassOrNullSomehow()
+myInstance.let {
   it.myMethod()
 }
 ```
