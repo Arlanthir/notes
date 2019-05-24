@@ -27,6 +27,7 @@ my $inter = "String interpolation: $number";
 | Flag     | Effect                                                                     |
 | -------- | -------------------------------------------------------------------------- |
 | `-e`     | Execute the program given in a CLI argument instead of a file.             |
+| `-i`     | Read and write to the same file (specified as an argument)                 |
 | `-p`     | Print the output to `STDOUT`.                                              |
 | `-0777`  | Change the line separator to `undef`, interpret regex over the whole text. |
 
