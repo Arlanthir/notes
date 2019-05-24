@@ -69,4 +69,8 @@ hello world
 # Switch word order by capturing groups and evaluating substitution
 echo 'world hello' | perl -pe 's/(.+) (.+)/ $2 . " " . $1 /e'
 hello world
+
+# Replace initial block of text (before string START) in-place in file
+# Note: the separation and order of the flags are important
+perl -0777 -i -pe 's/^[\s\S]*?START//' file.txt \;
 ```
