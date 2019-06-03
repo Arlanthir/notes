@@ -32,6 +32,7 @@ find . \( -path ./a -o -path ./b\) -prune -o -print   # Exclude subfiles of ./a 
 find . -name "*.js" -exec echo {} \;          # Execute echo for each found .js file
 find . -name '*.txt' -exec sh -c 'mv "$0" "${0%.txt}.html"' {} \;  # Change extensions from .txt to .html
 find . -name '*.srt' -exec sh -c 'iconv -f ISO-8859-15 -t UTF-8 "$0" > "${0%.srt}.utf8.srt"' {} \; # Convert .srt files to utf8
+find . -regextype sed -regex '.*/patch-.*-[0-9]\{4\}.lisp' -print   # Find via regex
 ```
 
 | Argument                | Description                    |
