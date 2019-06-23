@@ -1,5 +1,9 @@
 # Guitar
 
+## Pickups
+
+Typically, the Bridge pickup is used more in Lead guitars, and the Neck pickup in Rhythm guitars.
+
 ## Chords
 
 Fingers are numbered 1-4, where 1 is the index finger and 4 is the pinky.
