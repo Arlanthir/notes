@@ -40,6 +40,23 @@ Booleans are represented by return types:
 - The syntax `[<expression>]` converts a conditional expression to 0 (true) or 1 (false).
 - `!` negates the boolean condition.
 
+### File operators
+
+- `[ -f <variable> ]` tests if file exists
+- `[ -d <variable> ]` tests if directory exists
+
+```bash
+if [ ! -f myfile.txt ]; then
+	echo ""
+	echo "ERROR: File myfile.txt not found."
+	exit -1
+fi
+
+if [ -d mydir ]; then
+	echo "Directory exists."
+fi
+```
+
 ### String operators
 
 - `[ -z <variable> ]` tests if variable is empty
