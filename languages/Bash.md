@@ -118,7 +118,7 @@ Return code is saved in `$?` (always numeric)
 ## Regular expressions
 
 ```bash
-sessionid_regex="\"session_id\":\"([0-9-]+)\""
+sessionid_regex="\"session_id\":\"([0-9-]+)\""   # It's relevant to have the regex be either a variable or an unquoted literal
 if [[ $token =~ $sessionid_regex ]]
 then
     sessionid="${BASH_REMATCH[1]}"
