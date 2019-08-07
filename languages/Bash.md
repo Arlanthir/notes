@@ -60,7 +60,9 @@ fi
 ### String operators
 
 - `[ -z <variable> ]` tests if variable is empty
-- `[ <variable> = <string> ]` tests if variable is equal to string
+- `[ <variable> == <string> ]` tests if variable is equal to string
+- `[ <variable> != <string> ]` tests if variable is different from string
+- `[[ <variable> == <regex> ]]` tests if variable matches a regex (note the double brackets)
 
 ### Number operators
 
