@@ -45,7 +45,7 @@ You should only screw/unscrew the truss rod in increments of about 2 hours on a 
 Adjustments to the truss rod take about 10 minutes to have an effect, so don't check string buzzing immediately after adjusting.
 
 To measure the neck relief, put a capo on the first fret, fret the last one and measure (with a feeler gauge) the height from the middle fret (around 8th) to the 6th string.  
-The recommended Fender/Squier neck relief is 0.010'', or 0.25mm.
+The recommended Fender/Squier neck relief is 0.010'', or 0.25mm. Generally, anything between 0.008'' (0.20mm, good starting point if unsure of playing style) to 0.012'' (0.30mm) is good.
 
 
 ## String Action
