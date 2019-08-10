@@ -38,12 +38,13 @@ When tuning to Drop C (D Drop C) or below, a string gauge of 10 or above is reco
 ## Truss Rod
 
 Truss rod adjustment is needed when you change to a different string gauge or whenever you feel the neck is bowing too much or too little.  
-Tightening the truss rod decreases neck relief.
+Tightening the truss rod decreases neck relief.  
+You should only screw/unscrew the truss rod in increments of about 2 hours on a clock (60º) between measurements.  
+Adjustments to the truss rod take about 10 minutes to have an effect, so don't check string buzzing immediately after adjusting.
 
 To measure the neck relief, put a capo on the first fret, fret the last one and measure (with a feeler gauge) the height from the middle fret (around 8th) to the 6th string.  
 The recommended Fender/Squier neck relief is 0.010'', or 0.25mm.
 
-Adjustments to the truss rod take about 10 minutes to have an effect, so don't check string buzzing immediately after adjusting.
 
 ## String Action
 
