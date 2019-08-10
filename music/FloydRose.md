@@ -9,6 +9,8 @@ Correct order of the setup:
 4. String Action
 5. Intonation
 
+Full setup videos: https://www.yourguitaracademy.com/courses/james-collins
+
 ## Restring
 
 One string at a time or all strings at once by blocking the tremolo with a wooden block (before even removing the old ones).  
