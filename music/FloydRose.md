@@ -75,11 +75,11 @@ Intonation is basically scale length compensation. To make sure the frets align 
 
 Intonation is the last thing to do on a setup because it is affected by all other processes but doesn't affect them.
 
-To check the intonation of each string:
+To check the intonation of each string (most accurate in playing position):
 - Tune it to pitch
 - Play it open
-- Play it on the 12th fret, should be in tune
-- If it was flat, reduce string length
-- If it was sharp, increase string length
+- Play it on the 12th fret (aim for the middle of the fret, with the same attack that you used in the open string pluck), should be in tune with the same note
+- If it was flat, reduce string length (loosen the screw)
+- If it was sharp, increase string length (tighten the screw)
 - Retune and retest
 
