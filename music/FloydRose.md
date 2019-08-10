@@ -52,9 +52,34 @@ The recommended Fender/Squier neck relief is 0.010'', or 0.25mm. Generally, anyt
 
 Loosen the strings before changing string action, retune them afterwards to check the final height.
 
+String action = string height at the 12th fret.
+
+When strings are too low and you bend a string, the other strings get under your finger.  
+When strings are too high and you bend a string, the other strings get over your finger.
+
+On Fender-style guitars, you have to measure the neck radius with a radius tool.  
+The Squier Showmaster (Stagemaster) should have a 12.6'' radius.  
+To check if the strings curvature matches the neck curvature, rest the radius tool on the strings with the correct side and verify that all are muted. If it doesn't match, you need to adjust individual string height.
+
 ### Typical string action
 
 | String              | Inches | Mm    |
 | ------------------- | ------ | ----- |
 | Low E (6th string)  | 4/64'' | 1.6mm |
 | High E (1st string) | 3/64'' | 1.2mm |
+
+
+## Intonation
+
+Intonation is basically scale length compensation. To make sure the frets align with the correct notes (not flat and not sharp), you shorten or lengthen the length of the string and therefore the scale.
+
+Intonation is the last thing to do on a setup because it is affected by all other processes but doesn't affect them.
+
+To check the intonation of each string:
+- Tune it to pitch
+- Play it open
+- Play it on the 12th fret, should be in tune
+- If it was flat, reduce string length
+- If it was sharp, increase string length
+- Retune and retest
+
