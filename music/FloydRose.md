@@ -16,7 +16,15 @@ Full setup videos: https://www.yourguitaracademy.com/courses/james-collins
 One string at a time or all strings at once by blocking the tremolo with a wooden block (before even removing the old ones).  
 Lubricate the nut with a graphite pencil.
 
-After passing the string through the peg hole, bend it upwards and start rolling it underneath, aim for two or three complete turns of the string around the peg.
+After passing the string through the peg hole:
+- Pull it fairly tout
+- Measure another two pegs (and a bit) after it with your finger (aim for three complete wraps of the string around the peg)
+  - For smaller pegs (like staggered pegs on a Stratocaster, go for two complete wraps: measure just a peg and a half worth of length)
+- Pull the string back until your measuring finger returns to the peg hole
+- Bend the string upwards to mark it with a kink
+- Pull it again just 0.5cm, to move the kink out of the hole (easier to cut afterwards)
+- Start rolling it underneath
+- Cut the string
 
 Remember to stretch the strings (by pulling them off the fretboard across the entire fretboard) and remove the wooden block before tuning.
 
