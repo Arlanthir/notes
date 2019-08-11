@@ -103,7 +103,7 @@ https://www.youtube.com/watch?v=uU8hO6Ews7s
 
 Start with the treble (thin) strings. They need more time to stretch.
 
-Put the string through the hole in the bridge and make a knot wrapping the bridge, looping the string two/three times onto itself.  
+Put the string through the hole in the bridge and make a knot wrapping the bridge, looping the string two/three times onto itself (treble strings) or only once for the bass strings.  
 The end of the string should be pulled to fit behind the bridge, pointing to the middle of the guitar (the D/G strings), optionally being held by the string next to it.
 
 After pulling the string through the hole in each peg, knot it as well. It may help to loop the string to the side contrary to what you want to wrap it afterwards.
