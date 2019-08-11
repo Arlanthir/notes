@@ -21,7 +21,7 @@ I usually buy Nickel wound strings with gauges: 10 13 17 26 36 46.
 
 ## Remove rust from frets
 
-Use 0000 Steel wool or toothpaste. Make sure to cover the fretboard (except the frets) and the pickups (magnets will attract steel wool).
+Use 0000 Steel wool or toothpaste. Make sure to cover the fretboard (except the frets) with tape or a cutout card, and also cover the pickups (magnets will attract steel wool).  
 Another trick mentioned is using pencil eraser, might be worth it to try.
 
 ## Tuning
