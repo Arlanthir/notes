@@ -98,7 +98,7 @@ To check the intonation of each string (most accurate in playing position):
 
 ### Restring
 
-https://www.youtube.com/watch?v=Yx1IG93sEs4
+https://www.youtube.com/watch?v=Yx1IG93sEs4  
 https://www.youtube.com/watch?v=uU8hO6Ews7s
 
 Start with the treble (thin) strings. They need more time to stretch.
