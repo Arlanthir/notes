@@ -1,6 +1,6 @@
-# Floyd Rose
+# Guitar Setup
 
-## Setup
+## Eletric
 
 Correct order of the setup:
 1. Restring
@@ -11,7 +11,7 @@ Correct order of the setup:
 
 Full setup videos: https://www.yourguitaracademy.com/courses/james-collins
 
-## Restring
+### Restring
 
 One string at a time or all strings at once by blocking the tremolo with a wooden block (before even removing the old ones).  
 Lubricate the nut with a graphite pencil.
@@ -30,12 +30,12 @@ Remember to stretch the strings (by pulling them off the fretboard across the en
 
 I usually buy Nickel wound strings with gauges: 10 13 17 26 36 46.
 
-## Remove rust from frets
+### Remove rust from frets
 
 Use 0000 Steel wool or toothpaste. Make sure to cover the fretboard (except the frets) with tape or a cutout card, and also cover the pickups (magnets will attract steel wool).  
 Another trick mentioned is using pencil eraser, might be worth it to try.
 
-## Tuning
+### Tuning
 
 1. Adjust the fine tuners to the middle of each.
 2. Unlock the screws in the locking nut.
@@ -48,7 +48,7 @@ Another trick mentioned is using pencil eraser, might be worth it to try.
 
 When tuning to Drop C (D Drop C) or below, a string gauge of 10 or above is recommended.
 
-## Truss Rod
+### Truss Rod
 
 Truss rod adjustment is needed when you change to a different string gauge or whenever you feel the neck is bowing too much or too little.  
 Tightening the truss rod decreases neck relief.  
@@ -59,7 +59,7 @@ To measure the neck relief, put a capo on the first fret, fret the last one and 
 The recommended Fender/Squier neck relief is 0.010'', or 0.25mm. Generally, anything between 0.008'' (0.20mm, good starting point if unsure of playing style) to 0.012'' (0.30mm) is good.
 
 
-## String Action
+### String Action
 
 Loosen the strings before changing string action, retune them afterwards to check the final height.
 
@@ -72,7 +72,7 @@ On Fender-style guitars, you have to measure the neck radius with a radius tool.
 The Squier Showmaster (Stagemaster) should have a 12.6'' radius.  
 To check if the strings curvature matches the neck curvature, rest the radius tool on the strings with the correct side and verify that all are muted. If it doesn't match, you need to adjust individual string height.
 
-### Typical string action
+#### Typical string action
 
 | String              | Inches | Mm    |
 | ------------------- | ------ | ----- |
@@ -80,7 +80,7 @@ To check if the strings curvature matches the neck curvature, rest the radius to
 | High E (1st string) | 3/64'' | 1.2mm |
 
 
-## Intonation
+### Intonation
 
 Intonation is basically scale length compensation. To make sure the frets align with the correct notes (not flat and not sharp), you shorten or lengthen the length of the string and therefore the scale.
 
@@ -93,4 +93,20 @@ To check the intonation of each string (most accurate in playing position):
 - If it was flat, reduce string length (loosen the screw)
 - If it was sharp, increase string length (tighten the screw)
 - Retune and retest
+
+## Classical
+
+### Restring
+
+https://www.youtube.com/watch?v=Yx1IG93sEs4
+https://www.youtube.com/watch?v=uU8hO6Ews7s
+
+Start with the treble (thin) strings. They need more time to stretch.
+
+Put the string through the hole in the bridge and make a knot wrapping the bridge, looping the string two/three times onto itself.  
+The end of the string should be pulled to fit behind the bridge, pointing to the middle of the guitar (the D/G strings), optionally being held by the string next to it.
+
+After pulling the string through the hole in each peg, knot it as well.
+
+When wrapping the string around the tuning peg, the outer strings (High E and Low E) should wrap towards the outside of the guitar. The inner 4 strings should wrap to the inside of the guitar.
 
