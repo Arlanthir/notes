@@ -14,7 +14,10 @@ Full setup videos: https://www.yourguitaracademy.com/courses/james-collins
 ## Restring
 
 One string at a time or all strings at once by blocking the tremolo with a wooden block (before even removing the old ones).  
-Lubricate the nut with a graphite pencil.  
+Lubricate the nut with a graphite pencil.
+
+After passing the string through the peg hole, bend it upwards and start rolling it underneath, aim for two or three complete turns of the string around the peg.
+
 Remember to stretch the strings (by pulling them off the fretboard across the entire fretboard) and remove the wooden block before tuning.
 
 I usually buy Nickel wound strings with gauges: 10 13 17 26 36 46.
