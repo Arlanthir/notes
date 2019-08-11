@@ -106,7 +106,7 @@ Start with the treble (thin) strings. They need more time to stretch.
 Put the string through the hole in the bridge and make a knot wrapping the bridge, looping the string two/three times onto itself.  
 The end of the string should be pulled to fit behind the bridge, pointing to the middle of the guitar (the D/G strings), optionally being held by the string next to it.
 
-After pulling the string through the hole in each peg, knot it as well.
+After pulling the string through the hole in each peg, knot it as well. It may help to loop the string to the side contrary to what you want to wrap it afterwards.
 
 When wrapping the string around the tuning peg, the outer strings (High E and Low E) should wrap towards the outside of the guitar. The inner 4 strings should wrap to the inside of the guitar.
 
