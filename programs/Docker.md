@@ -36,3 +36,10 @@ docker logs <name|id>                             # Show container log
 docker port <name|id> <container_port>            # Find which host port maps a container port
 ```
 
+### Stop a container
+
+```bash
+docker kill <name|id>
+```
+
+
