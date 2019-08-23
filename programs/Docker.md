@@ -16,15 +16,16 @@ docker search <software name>
 ### Start a container
 
 ```bash
-docker run <image>                               # Run in foreground
-docker run <image> <command>                     # Run an image and execute a command
-docker run -it <image>                           # Run an image in interactive mode (eg: shell)
-docker run -d <image>                            # Run in background (detached)
-docker run <image>:<version>                     # Run a specific version (default is 'latest')
-docker run --name <name> <image>                 # Choose a name for the container
-docker -p <host port>:<container port> <image>   # Configure port forwarding
-docker -p <container_port> <image>               # Expose container port in a random host port
-docker -v <host_dir>:<container_dir> <image>     # Configure directory mapping (file persistence, containers are stateless by default)
+docker run <image>                                   # Run in foreground
+docker run <image> <command>                         # Run an image and execute a command
+docker run -it <image>                               # Run an image in interactive mode (eg: shell)
+docker run -d <image>                                # Run in background (detached)
+docker run <image>:<version>                         # Run a specific version (default is 'latest')
+docker run --name <name> <image>                     # Choose a name for the container
+docker run -p <host port>:<container port> <image>   # Configure port forwarding
+docker run -p <container_port> <image>               # Expose container port in a random host port
+docker run -v <host_dir>:<container_dir> <image>     # Configure directory mapping (file persistence, containers are stateless by default)
+docker run -e NODE_ENV=production <image>            # Set environment variables
 ```
 
 ### See current containers
@@ -57,6 +58,8 @@ CMD ["nginx", "-g", "daemon off;"]  # The default command and arguments to run w
 **Good practice**: use particular versions (instead of latest) and update them manually periodically, to ensure compatibility with no surprises.
 
 **Cache**: Each copy compares the new files to the old ones. If they are different, the following lines are cache invalidated and run again. Otherwise, cached values will be used. For this reason, it's important to split each copy into the most correct line and be careful with their order.
+
+**ONBUILD prefix**: Any instructions prefixed with `ONBUILD` will only run when the image is being used as a base for another image.
 
 ### Build an image
 
