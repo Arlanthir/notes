@@ -50,6 +50,7 @@ docker kill <name|id>
 ```bash
 FROM nginx:alpine                   # Starting point
 COPY . /usr/share/nginx/html        # Copy local folder `.` to container folder.
+ADD app.tar.gz /src/app             # Like COPY, but also supports extracting *.tar.gz files and remote URLs
 RUN <command>                       # Runs a shell command
 EXPOSE 80 433 7000-8000             # Configure ports to be bound to
 CMD ["nginx", "-g", "daemon off;"]  # The default command and arguments to run when instantiated
@@ -60,6 +61,10 @@ CMD ["nginx", "-g", "daemon off;"]  # The default command and arguments to run w
 **Cache**: Each copy compares the new files to the old ones. If they are different, the following lines are cache invalidated and run again. Otherwise, cached values will be used. For this reason, it's important to split each copy into the most correct line and be careful with their order.
 
 **OnBuild prefix (DEPRECATED)**: Any instructions prefixed with `ONBUILD` will only run when the image is being used as a base for another image. Thus, NodeJS can provide an "OnBuild" image that will only copy the `/src/app`, `package.json` and run the `npm install` on your specific build.
+
+### .dockerignore
+
+Similar syntax to .gitignore, ignores files from being copied to the image. Useful for sensitive files or big unneeded files.
 
 ### Build an image
 
