@@ -42,4 +42,32 @@ docker port <name|id> <container_port>            # Find which host port maps a 
 docker kill <name|id>
 ```
 
+## Building images
+
+### Dockerfile
+
+```bash
+FROM nginx:alpine                   # Starting point
+COPY . /usr/share/nginx/html        # Copy local folder `.` to container folder.
+RUN <command>                       # Runs a shell command
+EXPOSE 80 433 7000-8000             # Configure ports to be bound to
+CMD ["nginx", "-g", "daemon off;"]  # The default command and arguments to run when instantiated
+```
+
+**Good practice**: use particular versions (instead of latest) and update them manually periodically, to ensure compatibility with no surprises.
+
+**Cache**: Each copy compares the new files to the old ones. If they are different, the following lines are cache invalidated and run again. Otherwise, cached values will be used. For this reason, it's important to split each copy into the most correct line and be careful with their order.
+
+### Build an image
+
+```bash
+docker build -t <name>:<version> .       # -t To tag with a friendly name and version (example: webserver-image:v1)
+```
+
+### List built images
+
+```bash
+docker images
+```
+
 
