@@ -89,7 +89,7 @@ Then if you build the image using `docker build -t golang-app .`, only the final
 Stages can be named:
 
 ```bash
-FROM FROM golang:1.6-alpine AS golangstage
+FROM golang:1.6-alpine AS golangstage
 # ...
 COPY --from=golangstage /app/main /app
 ```
@@ -97,7 +97,7 @@ COPY --from=golangstage /app/main /app
 And extended:
 
 ```bash
-FROM FROM alpine AS myalpine
+FROM alpine AS myalpine
 # ...
 FROM myalpine
 ```
