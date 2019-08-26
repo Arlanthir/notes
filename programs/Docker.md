@@ -95,6 +95,16 @@ docker export dataContainer > dataContainer.tar
 docker import dataContainer.tar
 ```
 
+## Labels
+```bash
+docker run -l mylabel=myvalue <image>       # Label the container with a mylabel label, with the value myvalue
+docker run --label-file=mylabels <image>    # Read labels from a file (each label in a line)
+docker ps --filter "label=user=scrapbook"
+docker images --filter "label=vendor=Katacoda"
+```
+
+**Good practice**: Labels subject to third-party tooling should use a reverse-DNS format (e.g. `com.katacoda.version`).
+
 ## Networks
 
 ```bash
@@ -107,14 +117,11 @@ docker network inspect <network>
 docker network disconnect <network> <container>
 ```
 
-## Labels
+## Load balancing
+
+Use `nginx-proxy` to balance the load on containers automatically.
+
 ```bash
-docker run -l mylabel=myvalue <image>       # Label the container with a mylabel label, with the value myvalue
-docker run --label-file=mylabels <image>    # Read labels from a file (each label in a line)
-docker ps --filter "label=user=scrapbook"
-docker images --filter "label=vendor=Katacoda"
+docker run -d -p 80:80 -e DEFAULT_HOST=proxy.example -v /var/run/docker.sock:/tmp/docker.sock:ro --name nginx jwilder/nginx-proxy
+docker run -d -p 80 -e VIRTUAL_HOST=proxy.example katacoda/docker-http-server # For each desired container to balance
 ```
-
-**Good practice**: Labels subject to third-party tooling should use a reverse-DNS format (e.g. `com.katacoda.version`).
-
-
