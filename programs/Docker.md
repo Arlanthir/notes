@@ -26,6 +26,7 @@ docker run -p <host port>:<container port> <image>   # Configure port forwarding
 docker run -p <container_port> <image>               # Expose container port in a random host port
 docker run -v <host_dir>:<container_dir> <image>     # Configure directory mapping (file persistence, containers are stateless by default)
 docker run -e NODE_ENV=production <image>            # Set environment variables
+docker run --link <other container>:<alias> <image>  # Create host <alias> in the new container, connecting to another
 ```
 
 ### See current containers
