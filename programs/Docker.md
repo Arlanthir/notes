@@ -64,11 +64,53 @@ CMD ["nginx", "-g", "daemon off;"]  # The default command and arguments to run w
 LABEL vendor=Katacoda \ com.katacoda.version=0.0.5 \ com.katacoda.build-date=2016-07-01T10:47:29Z    # Labels
 ```
 
+#### Multi-stage builds for production-ready images
+
+```bash
+# First Stage
+FROM golang:1.6-alpine
+
+RUN mkdir /app
+ADD . /app/
+WORKDIR /app
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
+
+# Second Stage
+FROM alpine
+EXPOSE 80
+CMD ["/app"]
+
+# Copy from first stage only the production-ready files
+COPY --from=0 /app/main /app
+```
+
+Then if you build the image using `docker build -t golang-app .`, only the final image will be tagged.
+
+Stages can be named:
+
+```bash
+FROM FROM golang:1.6-alpine AS golangstage
+# ...
+COPY --from=golangstage /app/main /app
+```
+
+And extended:
+
+```bash
+FROM FROM alpine AS myalpine
+# ...
+FROM myalpine
+```
+
+
+#### Notes on build
+
 **Good practice**: use particular versions (instead of latest) and update them manually periodically, to ensure compatibility with no surprises.
 
 **Cache**: Each copy compares the new files to the old ones. If they are different, the following lines are cache invalidated and run again. Otherwise, cached values will be used. For this reason, it's important to split each copy into the most correct line and be careful with their order.
 
 **OnBuild prefix (DEPRECATED)**: Any instructions prefixed with `ONBUILD` will only run when the image is being used as a base for another image. Thus, NodeJS can provide an "OnBuild" image that will only copy the `/src/app`, `package.json` and run the `npm install` on your specific build.
+
 
 ### .dockerignore
 
