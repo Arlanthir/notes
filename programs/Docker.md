@@ -171,3 +171,11 @@ docker-compose start    # (Re)starts all containers
 docker-compose rm       # Removes all stopped containers
 ```
 
+## Docker stats
+
+Monitor running containers.
+
+```bash
+docker stats                                   # Monitor resource usage of all containers
+docker stats <container1> <container2> <...>   # Monitor resource usage of some containers
+```
