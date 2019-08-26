@@ -88,4 +88,10 @@ docker export dataContainer > dataContainer.tar
 docker import dataContainer.tar
 ```
 
+## Networks
+
+```bash
+docker network create <network-name>
+docker run --net=<network-name> <image>   # Register a container in a network to communicate with others in that network
+```
 
