@@ -95,5 +95,8 @@ docker network create <network-name>
 docker run --net=<network-name> <image>       # Register a container in a network to communicate with others in that network
 docker network connect <network> <container>  # Connect an existing container to a network
 docker network connect --alias <alias> <network> <container>  # Connect an existing container to a network, assigning it an alias
+docker network ls
+docker network inspect <network>
+docker network disconnect <network> <container>
 ```
 
