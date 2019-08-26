@@ -78,4 +78,11 @@ docker build -t <name>:<version> .       # -t To tag with a friendly name and ve
 docker images
 ```
 
+## Data containers
+
+```bash
+docker create -v /config --name dataContainer busybox
+docker cp config.conf dataContainer:/config/
+```
+
 
