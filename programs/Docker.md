@@ -88,19 +88,24 @@ docker images
 
 ## Data containers
 
+Data containers are containers that only store data.
+
 ```bash
-docker create -v /config --name dataContainer busybox
-docker cp config.conf dataContainer:/config/
-docker export dataContainer > dataContainer.tar
-docker import dataContainer.tar
+docker create -v /config --name dataContainer busybox   # Create data container
+docker cp config.conf dataContainer:/config/            # Copy a file to the container
+docker export dataContainer > dataContainer.tar         # Backup the data container
+docker import dataContainer.tar                         # Restore the container
+
+# To use the data in another container:
+docker run --volumes-from dataContainer ubuntu ls /config   # Example to run ubuntu and list the files in the volume
 ```
 
 ## Labels
 ```bash
 docker run -l mylabel=myvalue <image>       # Label the container with a mylabel label, with the value myvalue
 docker run --label-file=mylabels <image>    # Read labels from a file (each label in a line)
-docker ps --filter "label=user=scrapbook"
-docker images --filter "label=vendor=Katacoda"
+docker ps --filter "label=user=scrapbook"        # Filter running containers by label
+docker images --filter "label=vendor=Katacoda"   # Filter images by label
 ```
 
 **Good practice**: Labels subject to third-party tooling should use a reverse-DNS format (e.g. `com.katacoda.version`).
@@ -112,9 +117,9 @@ docker network create <network-name>
 docker run --net=<network-name> <image>       # Register a container in a network to communicate with others in that network
 docker network connect <network> <container>  # Connect an existing container to a network
 docker network connect --alias <alias> <network> <container>  # Connect an existing container to a network, assigning it an alias
-docker network ls
-docker network inspect <network>
-docker network disconnect <network> <container>
+docker network ls                                 # List configured networks
+docker network inspect <network>                  # Get more details from a network (including connected containers)
+docker network disconnect <network> <container>   # Disconnect container from a network
 ```
 
 ## Load balancing
