@@ -44,6 +44,16 @@ docker logs <name|id>                             # Show container log
 docker port <name|id> <container_port>            # Find which host port maps a container port
 ```
 
+#### Format information
+
+Some commands accept [Go Template formatting](https://docs.docker.com/config/formatting/):
+
+```bash
+docker ps --format '{{.Names}} container is using {{.Image}} image'  # String interpolation
+docker ps --format 'table {{.Names}}\t{{.Image}}'                    # Draw a table
+docker ps --format='{{json .}}'                                      # To find out what can be printed
+```
+
 ### Stop a container
 
 ```bash
