@@ -151,6 +151,8 @@ redis:                     # Another container
     - /var/redis/data:/data
 ```
 
+The full documentation can be found at https://docs.docker.com/compose/compose-file/ .
+
 ### Running the containers
 
 ```bash
