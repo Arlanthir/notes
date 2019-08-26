@@ -83,6 +83,8 @@ docker images
 ```bash
 docker create -v /config --name dataContainer busybox
 docker cp config.conf dataContainer:/config/
+docker export dataContainer > dataContainer.tar
+docker import dataContainer.tar
 ```
 
 
