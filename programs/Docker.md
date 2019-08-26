@@ -154,9 +154,9 @@ redis:                     # Another container
 ### Running the containers
 
 ```bash
- docker-compose up -d              # Start all containers in detached mode
- docker-compose up <container>     # Start only one of the containers
- docker-compose up --scale web=2   # Scale up or down depending on container name
+ docker-compose up -d                       # Start all containers in detached mode
+ docker-compose up <container>              # Start only one of the containers
+ docker-compose up --scale <container>=3    # Scale up or down depending on container name
 ```
 
 ### Managing the running containers
