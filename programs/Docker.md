@@ -30,6 +30,7 @@ docker run --volumes-from <container> <image>        # Use the volumes mapping f
 docker run -e NODE_ENV=production <image>            # Set environment variables
 docker run --link <other container>:<alias> <image>  # Create host <alias> in the new container, connecting to another
 docker run --log-driver=syslog <image>               # Redirect logs to syslog
+docker run --log-driver=none <image>                 # Disables logging
 ```
 
 ### See current containers
