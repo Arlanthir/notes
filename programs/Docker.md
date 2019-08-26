@@ -101,6 +101,7 @@ docker run --volumes-from dataContainer ubuntu ls /config   # Example to run ubu
 ```
 
 ## Labels
+
 ```bash
 docker run -l mylabel=myvalue <image>       # Label the container with a mylabel label, with the value myvalue
 docker run --label-file=mylabels <image>    # Read labels from a file (each label in a line)
@@ -130,3 +131,41 @@ Use `nginx-proxy` to balance the load on containers automatically.
 docker run -d -p 80:80 -e DEFAULT_HOST=proxy.example -v /var/run/docker.sock:/tmp/docker.sock:ro --name nginx jwilder/nginx-proxy
 docker run -d -p 80 -e VIRTUAL_HOST=proxy.example katacoda/docker-http-server # For each desired container to balance
 ```
+
+## Docker Compose
+
+Manage starting, configuration, variables, links, of multiple containers (orchestration).  
+The configuration is stored in a `docker-compose.yml` file.
+
+```yml
+web:                       # Container name
+  build: .                 # docker build .
+  links:
+    - redis
+  ports:
+    - "3000"
+    - "8000"
+redis:                     # Another container
+  image: redis:alpine      # Based on an image (not built)
+  volumes:
+    - /var/redis/data:/data
+```
+
+### Running the containers
+
+```bash
+ docker-compose up -d              # Start all containers in detached mode
+ docker-compose up <container>     # Start only one of the containers
+ docker-compose up --scale web=2   # Scale up or down depending on container name
+```
+
+### Managing the running containers
+
+```bash
+docker-compose ps       # Lists running containers of this compose configuration
+docker-compose logs     # Merges all logs
+docker-compose stop     # Stops all containers
+docker-compose start    # (Re)starts all containers
+docker-compose rm       # Removes all stopped containers
+```
+
