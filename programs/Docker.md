@@ -61,6 +61,7 @@ ADD app.tar.gz /src/app             # Like COPY, but also supports extracting *.
 RUN <command>                       # Runs a shell command
 EXPOSE 80 433 7000-8000             # Configure ports to be bound to
 CMD ["nginx", "-g", "daemon off;"]  # The default command and arguments to run when instantiated
+LABEL vendor=Katacoda \ com.katacoda.version=0.0.5 \ com.katacoda.build-date=2016-07-01T10:47:29Z    # Labels
 ```
 
 **Good practice**: use particular versions (instead of latest) and update them manually periodically, to ensure compatibility with no surprises.
@@ -105,4 +106,15 @@ docker network ls
 docker network inspect <network>
 docker network disconnect <network> <container>
 ```
+
+## Labels
+```bash
+docker run -l mylabel=myvalue <image>       # Label the container with a mylabel label, with the value myvalue
+docker run --label-file=mylabels <image>    # Read labels from a file (each label in a line)
+docker ps --filter "label=user=scrapbook"
+docker images --filter "label=vendor=Katacoda"
+```
+
+**Good practice**: Labels subject to third-party tooling should use a reverse-DNS format (e.g. `com.katacoda.version`).
+
 
