@@ -198,7 +198,19 @@ function onReady(fn) {
 ## Promises
 
 Async code execution without passing callback function arguments.
+
 ```javascript
+function getDataFromServer() {
+    return new Promise(function(resolve, reject) {
+        // do async stuff
+        if (success) {
+            resolve(data);
+        } else {
+            reject(error);
+        }
+    });
+}
+
 getDataFromServer()
     .then(function(data) {...})
     .catch(function(error) {...});
