@@ -105,6 +105,11 @@ users=( user1 user2 user3 )
 for user in "${users[@]}"; do
     login $user & # each iteration will not wait for the previous (because of &)
 done
+
+
+for i in {1..5}; do
+    echo $i
+done
 ```
 
 ## Shell execution
