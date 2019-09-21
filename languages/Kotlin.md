@@ -48,6 +48,10 @@ myNum = when {
   shouldBeTwo() -> 2
   else -> 3
 }
+
+
+for (i in 0..10) {
+}
 ```
 
 ## Classes
