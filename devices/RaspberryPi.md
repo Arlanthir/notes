@@ -327,3 +327,12 @@ sudo update-rc.d /etc/init.d/nzbdrone defaults 98 # or sudo update-rc.d nzbdrone
 Access the interface in http://ip.address:8989
 
 
+## Increase boot timeout to allow `fsck`ing big disks
+
+Edit `/etc/systemd/system.conf` (using another PC with an external SD Card reader if necessary).
+
+Uncomment and change the value in the line:
+
+```bash
+#DefaultTimeoutStartSec=90s
+```
