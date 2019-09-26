@@ -221,6 +221,7 @@ docker-compose logs     # Merges all logs
 docker-compose stop     # Stops all containers
 docker-compose start    # (Re)starts all containers
 docker-compose rm       # Removes all stopped containers
+docker exec -it <container> /bin/bash    # Grab a shell of the container
 ```
 
 ## Docker stats
