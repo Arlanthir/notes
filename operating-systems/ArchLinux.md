@@ -356,15 +356,15 @@ pacman -S atom openssh  # Development
 pacman -S ttf-liberation adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts # Fonts
 ```
 
-GNOME extensions (visit the links in the GNOME Web Browser):  
-- https://extensions.gnome.org/extension/307/dash-to-dock/
-
-
 AUR packages:
 ```bash
-cower
+yay
+gnome-shell-extension-dash-to-dock
 google-chrome
 ```
+
+Other GNOME extensions (visit the links in the GNOME Web Browser):  
+- https://extensions.gnome.org/extension/307/dash-to-dock/
 
 
 ### Settings 
