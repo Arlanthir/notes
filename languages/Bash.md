@@ -110,6 +110,10 @@ done
 for i in {1..5}; do
     echo $i
 done
+
+for f in *.c; do
+    echo "Processing $f file..";
+done
 ```
 
 ## Shell execution
