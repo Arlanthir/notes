@@ -208,10 +208,10 @@ The full documentation can be found at https://docs.docker.com/compose/compose-f
 ### Running the containers
 
 ```bash
- docker-compose up -d                       # Start all containers in detached mode
- docker-compose up <container>              # Start only one of the containers
- docker-compose up --scale <container>=3    # Scale up or down depending on container name
- docker-compose -f <file1> -f <file2> up    # Run command on multiple containers
+ docker-compose up -d                         # Start all containers in detached mode
+ docker-compose up <container>                # Start only one of the containers
+ docker-compose up --scale <container>=3      # Scale up or down depending on container name
+ docker-compose -f <file1> -f <file2> up -d   # Run command on multiple containers
 ```
 
 ### Managing the running containers
