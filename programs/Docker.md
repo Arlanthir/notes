@@ -222,6 +222,8 @@ docker-compose logs     # Merges all logs
 docker-compose stop     # Stops all containers
 docker-compose start    # (Re)starts all containers
 docker-compose rm       # Removes all stopped containers
+docker-compose down     # Removes all containers
+docker-compose down -v  # Removes all containers and volumes (clearing the disks)
 docker exec -it <container> /bin/bash    # Grab a shell of the container
 ```
 
