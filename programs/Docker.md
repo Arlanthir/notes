@@ -60,6 +60,13 @@ docker ps --format='{{json .}}'                                      # To find o
 docker kill <name|id>
 ```
 
+### Volumes
+```bash
+docker volume ls           # List volumes
+docker volume prune        # Delete volumes not being used by any container
+docker volume rm <volume>  # Delete a specific volume
+```
+
 ## Building images
 
 ### Dockerfile
