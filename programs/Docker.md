@@ -233,7 +233,7 @@ docker-compose start    # (Re)starts all containers
 docker-compose rm       # Removes all stopped containers
 docker-compose down     # Removes all containers
 docker-compose down -v  # Removes all containers and volumes (clearing the disks)
-docker-compose rm -fsv <service>         # Removes specific container and its volumes
+docker-compose rm -fsv <service>         # Removes specific container and its ANONYMOUS volumes /!\
 docker exec -it <container> /bin/bash    # Grab a shell of the container
 ```
 
