@@ -207,7 +207,8 @@ The full documentation can be found at https://docs.docker.com/compose/compose-f
 
 ### Building/running the containers
 ```bash
- docker-compose build
+ docker-compose build                         # Build all the containers
+ docker-compose build --no-cache              # Build all from scratch 
  docker-compose -f <file1> -f <file2> build   # Build multiple containers
  docker-compose up -d                         # Start all containers in detached mode
  docker-compose up <container>                # Start only one of the containers
@@ -225,6 +226,7 @@ docker-compose start    # (Re)starts all containers
 docker-compose rm       # Removes all stopped containers
 docker-compose down     # Removes all containers
 docker-compose down -v  # Removes all containers and volumes (clearing the disks)
+docker-compose rm -fsv <service>         # Removes specific container and its volumes
 docker exec -it <container> /bin/bash    # Grab a shell of the container
 ```
 
