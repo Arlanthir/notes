@@ -205,9 +205,10 @@ redis:                     # Another container
 
 The full documentation can be found at https://docs.docker.com/compose/compose-file/ .
 
-### Running the containers
-
+### Building/running the containers
 ```bash
+ docker-compose build
+ docker-compose -f <file1> -f <file2> build   # Build multiple containers
  docker-compose up -d                         # Start all containers in detached mode
  docker-compose up <container>                # Start only one of the containers
  docker-compose up --scale <container>=3      # Scale up or down depending on container name
