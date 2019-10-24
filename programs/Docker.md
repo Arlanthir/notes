@@ -218,6 +218,7 @@ The full documentation can be found at https://docs.docker.com/compose/compose-f
  docker-compose build --no-cache              # Build all from scratch 
  docker-compose -f <file1> -f <file2> build   # Build multiple containers
  docker-compose up -d                         # Start all containers in detached mode
+ docker-compose up -d --build                 # (Re)build images and start containers
  docker-compose up <container>                # Start only one of the containers
  docker-compose up --scale <container>=3      # Scale up or down depending on container name
  docker-compose -f <file1> -f <file2> up -d   # Run command on multiple containers
