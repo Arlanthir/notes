@@ -9,7 +9,7 @@
 | `pacman -Ss <query>`    | Search package                             |
 | `pacman -Syu`           | Update packages                            |
 | `pacman -Sc`            | Clear cache                                |
-| `pacman -Qo <file>`      | Check which package installed &lt;file&gt;  |
+| `pacman -Qo <file>`     | Check which package installed &lt;file&gt; |
 
 ## Arch User Repository (AUR)
 
@@ -126,6 +126,17 @@ set 1 boot on                             # if dual-booting, don't change boot f
 quit
 ```
 
+##### Partitioning using GPT, / without swap
+```bash
+parted /dev/sdx
+mklabel gpt
+mkpart primary fat32 1MiB 261MiB
+set 1 esp on
+mkpart primary ext4 261MiB 100%
+quit
+mkfs.fat -F32 /dev/sdx1
+```
+
 Check partitions  
 ```bash
 lsblk /dev/sdx
@@ -165,7 +176,7 @@ nano /etc/pacman.d/mirrorlist
 
 Install:
 ```bash
-pacstrap -i /mnt base base-devel
+pacstrap -i /mnt base base-devel nano dhcpcd dosfstools e2fsprogs ntfs-3g
 ```
 
 Generate fstab:
@@ -264,6 +275,19 @@ passwd
 
 ### Bootloader: GRUB
 
+#### EFI
+```bash
+pacman -S grub efibootmgr os-prober
+# If intel:
+pacman -S intel-ucode
+# If amd:
+pacman -S amd-ucode
+mkdir /efi
+mount /dev/sdx1 /efi
+grub-install --target=i386-pc /dev/sdx
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 #### MBR
 ```bash
 pacman -S grub os-prober
@@ -271,9 +295,11 @@ grub-install --target=i386-pc /dev/sdx
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-#### OSX EFI
-See bottom notes.
-
+Enable dhcpcd if needed:
+```bash
+ip link                                       # to find out <interface>
+systemctl enable dhcpcd@<interface>.service
+```
 
 Reboot:
 ```bash
@@ -295,30 +321,6 @@ Include = /etc/pacman.d/mirrorlist
 pacman -Sy
 ```
 
-### Install Graphical Environment
-
-```bash
-pacman -S xorg-server
-
-# Graphics drivers:
-pacman -S xf86-video-intel mesa lib32-mesa         # Intel drivers
-pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings   # Nvidia drivers
-pacman -S vulkan-icd-loader lib32-vulkan-icd-loader # Vulkan support
-
-pacman -S gnome gnome-extra chrome-gnome-shell
-
-systemctl enable gdm.service
-systemctl enable NetworkManager.service
-```
-
-When using nvidia proprietary drivers, it may be needed to uncomment the line `#WaylandEnable=false` in `/etc/gdm/custom.conf`.
-
-To check (later) that Direct Rendering is being used:  
-```bash
-sudo pacman -S mesa-demos
-glxinfo | grep direct
-```
-
 ### Add another user
 ```bash
 useradd -m -G wheel -s /bin/bash <username>      # -m: creates home dir, wheel is the administrators group
@@ -330,26 +332,55 @@ passwd <username>                                # setup password
 pacman -S sudo
 EDITOR="nano" visudo
 
-# Add:
-<USERNAME>        ALL=(ALL) ALL
+# OLD: # Add:
+# OLD: <USERNAME>        ALL=(ALL) ALL
+
+# Instead, uncomment the line:
+%wheel ALL=(ALL) ALL
 
 # Uncomment the line:
 Defaults env_keep += "HOME"
 ```
 
-### Printing
+### Install Graphical Environment
+
+```bash
+pacman -S xorg-server
+
+# Graphics drivers:
+pacman -S xf86-video-intel mesa lib32-mesa         # Intel drivers
+pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings   # Nvidia drivers
+pacman -S vulkan-icd-loader lib32-vulkan-icd-loader # Vulkan support
+```
+
+To check (later) that Direct Rendering is being used:  
+```bash
+sudo pacman -S mesa-demos
+glxinfo | grep direct
+```
+
+#### GNOME
+
+```bash
+pacman -S gnome gnome-extra chrome-gnome-shell
+
+systemctl enable gdm.service
+systemctl enable NetworkManager.service
+```
+
+When using nvidia proprietary drivers, it may be needed to uncomment the line `#WaylandEnable=false` in `/etc/gdm/custom.conf`.
+
+##### Printing
+
 ```bash
 sudo pacman -S cups ghostscript gsfonts cups-pdf hplip system-config-printer
 sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 ```
 
-## Configure GNOME
-
-### Additional packages
+##### Additional packages
 
 ```bash
-pacman -S ntfs-3g # Essential
 pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav   # GStreamer codecs
 pacman -S gnome-tweak-tool arc-gtk-theme arc-icon-theme   # Appearance
 pacman -S atom openssh  # Development
@@ -358,49 +389,70 @@ pacman -S ttf-liberation adobe-source-han-sans-otc-fonts adobe-source-han-serif-
 
 AUR packages:
 ```bash
-yay
 gnome-shell-extension-dash-to-dock
-google-chrome
 ```
 
 Other GNOME extensions (visit the links in the GNOME Web Browser):  
 - https://extensions.gnome.org/extension/307/dash-to-dock/
 
 
-### Settings 
+##### Settings 
 
-#### Settings application
+###### Settings application
 - Region & Language > Input Sources > Your desired keyboard
 - Details > Date & Time > Automatic Date & Time / Time Zone
 - Details > Users > Photo
 
 
-#### Gnome tweak tool
+###### Gnome tweak tool
 - Appearance > Themes > Applications > Arc-Dark
 - Appearance > Themes > Icons > Arc
 - Desktop > Icons on Desktop
 - Top Bar
 - Windows > Titlebar Buttons
 
-#### Dash-to-dock (right click on dock's Applications icon)
+###### Dash-to-dock (right click on dock's Applications icon)
 - Position and size > Icon size: 32
 - Launchers > Move the applications button at the beginning of the dock
 - Appearance > Shrink the dash
 - Appearance > Show windows counter indicators
 - Appearance > Customize opacity (70%)
 
-#### Other applications
+###### Other applications
 - atom: config.cson and keymap.cson
 - terminal: Profile Preferences > Colors > White on Black
 
-### Templates
+###### Templates
 ```bash
 touch ~/Templates/Text\ Document.txt
 ```
 
-#### Alt-tab switch only between workspace apps
+###### Alt-tab switch only between workspace apps
 ```bash
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
+```
+
+
+#### KDE
+
+```bash
+pacman -S plasma-meta kde-applications-meta sddm sddm-kcm
+# Choose phonon-qt5-vlc and cronie if asked
+systemctl enable sddm
+localectl set-x11-keymap pt
+```
+
+##### Settings
+
+System settings > Input Devices > Layouts
+
+
+## Other programs
+
+### AUR packages
+```bash
+yay
+google-chrome
 ```
 
 ### Syncthing
