@@ -47,7 +47,7 @@ To only download the PKGBUILD of a package, do:
 `yay -G <package_name>`
 
 
-## Installation guide (2018-02-03)
+## Installation guide (2019-10-27)
 
 ### First steps
 
@@ -177,7 +177,7 @@ nano /etc/pacman.d/mirrorlist
 
 Install:
 ```bash
-pacstrap -i /mnt base base-devel nano dhcpcd dosfstools e2fsprogs ntfs-3g
+pacstrap -i /mnt base linux linux-firmware base-devel nano dhcpcd dosfstools e2fsprogs ntfs-3g
 ```
 
 Generate fstab:
@@ -211,7 +211,7 @@ arch-chroot /mnt
 #### Set time zone
 ```bash
 tzselect
-# ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
+# ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
 ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
 hwclock --systohc
 ```
@@ -285,7 +285,7 @@ pacman -S intel-ucode
 pacman -S amd-ucode
 mkdir /efi
 mount /dev/sdx1 /efi
-grub-install --target=i386-pc /dev/sdx
+grub-install --target=x86_64-efi --efi-directory=efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
