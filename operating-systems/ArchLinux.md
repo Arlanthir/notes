@@ -374,7 +374,7 @@ When using nvidia proprietary drivers, it may be needed to uncomment the line `#
 ##### Printing
 
 ```bash
-sudo pacman -S cups ghostscript gsfonts cups-pdf hplip system-config-printer
+sudo pacman -S cups cups-pdf ghostscript gsfonts hplip system-config-printer
 sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 ```
@@ -443,9 +443,24 @@ systemctl enable sddm
 localectl set-x11-keymap pt
 ```
 
+##### Printing
+
+```bash
+sudo pacman -S cups cups-pdf print-manager hplip system-config-printer
+sudo systemctl enable org.cups.cupsd.service
+```
+
 ##### Settings
 
-System settings > Input Devices > Layouts
+###### System Settings
+- Workspace Behavior > General Behavior > Double-click
+- Workspace Behavior > Screen Locking > Automatically (off)
+- Personalization > Account Details > User Manager > Photo
+- Personalization > Notifications > Do not disturb when screens are mirrored (off)
+- Personalization > Regional Settings > Formats
+- Hardware > Input Devices > Layouts
+- Hardware > Power Management > Energy Saving > Screen Energy Saving (60 min)
+- Hardware > Printers
 
 
 ## Other programs
