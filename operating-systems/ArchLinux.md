@@ -54,6 +54,7 @@ To only download the PKGBUILD of a package, do:
 Burn the ISO to a USB
 ```bash
 dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync
+# If EFI boot hangs, repeat the `dd` command a couple of times (this was actually in the wiki...)
 ```
 
 List available keyboard layouts
