@@ -476,6 +476,7 @@ openssh
 ```bash
 yay                 # (manual installation)
 google-chrome
+visual-studio-code-bin
 ```
 
 ### Syncthing
