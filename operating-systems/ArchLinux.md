@@ -470,6 +470,7 @@ sudo systemctl enable org.cups.cupsd.service
 ### Pacman packages
 ```bash
 openssh
+steam
 ```
 
 ### AUR packages
