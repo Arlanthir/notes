@@ -465,9 +465,14 @@ sudo systemctl enable org.cups.cupsd.service
 
 ## Other programs
 
+### Pacman packages
+```bash
+openssh
+```
+
 ### AUR packages
 ```bash
-yay
+yay                 # (manual installation)
 google-chrome
 ```
 
