@@ -462,6 +462,8 @@ sudo systemctl enable org.cups.cupsd.service
 - Hardware > Power Management > Energy Saving > Screen Energy Saving (60 min)
 - Hardware > Printers
 
+###### Chrome
+- Right click on title bar > Use system title bar and borders (off)
 
 ## Other programs
 
