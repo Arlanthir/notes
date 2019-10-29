@@ -470,6 +470,12 @@ sudo systemctl enable org.cups.cupsd.service
 - Settings > Edit Current Profile > Appearance > Edit > Blur background (on)
 - Settings > Edit Current Profile > Appearance > Edit > Background transparency (25%)
 
+###### Calendar Widgets
+
+1. Configure the Google Calendar account in KOrganizer
+2. Add the digital clock widget and configure it using the PIM plugin
+3. The events should now appear in the Calendar widget as well
+
 ## Other programs
 
 ### Pacman packages
