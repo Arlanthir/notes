@@ -20,6 +20,8 @@ docker tag jenkins/jenkins:2.200-alpine <host>:<port>/jenkins/jenkins:2.200-alpi
 docker push <host>:<port>/jenkins/jenkins:2.200-alpine                              # Upload an image to a private registry
 ```
 
+Typical ports for development registries are 5000 (HTTP) and 5001 (HTTPS).
+
 ## Running images
 
 ### Start a container
