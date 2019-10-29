@@ -465,6 +465,11 @@ sudo systemctl enable org.cups.cupsd.service
 ###### Chrome
 - Right click on title bar > Use system title bar and borders (off)
 
+###### Konsole
+
+- Settings > Edit Current Profile > Appearance > Edit > Blur background (on)
+- Settings > Edit Current Profile > Appearance > Edit > Background transparency (25%)
+
 ## Other programs
 
 ### Pacman packages
