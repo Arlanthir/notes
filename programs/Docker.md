@@ -60,6 +60,12 @@ docker ps --format='{{json .}}'                                      # To find o
 docker kill <name|id>
 ```
 
+### Remove build cache
+
+```bash
+docker builder prune
+```
+
 ### Volumes
 ```bash
 docker volume ls           # List volumes
