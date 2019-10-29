@@ -11,6 +11,12 @@ Browse and search via browser in https://hub.docker.com/ or use the following co
 docker search <software name>
 ```
 
+## Downloading images
+
+```bash
+docker pull jenkins/jenkins:2.200-alpine
+```
+
 ## Running images
 
 ### Start a container
