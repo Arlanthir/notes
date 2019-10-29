@@ -11,10 +11,13 @@ Browse and search via browser in https://hub.docker.com/ or use the following co
 docker search <software name>
 ```
 
-## Downloading images
+## Downloading/uploading images
 
 ```bash
-docker pull jenkins/jenkins:2.200-alpine
+docker pull jenkins/jenkins:2.200-alpine                                            # Download image from public hub
+docker login -u <username> -p <password> <host>:<port>                              # Login to a private registry
+docker tag jenkins/jenkins:2.200-alpine <host>:<port>/jenkins/jenkins:2.200-alpine  # Tag an image for a private registry
+docker push <host>:<port>/jenkins/jenkins:2.200-alpine                              # Upload an image to a private registry
 ```
 
 ## Running images
