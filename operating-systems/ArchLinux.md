@@ -480,6 +480,7 @@ sudo systemctl enable org.cups.cupsd.service
 
 ### Pacman packages
 ```bash
+kvantum-qt5
 openssh
 steam
 ```
