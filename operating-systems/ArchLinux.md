@@ -492,6 +492,11 @@ google-chrome
 visual-studio-code-bin
 ```
 
+### Kvantum themes:
+
+https://github.com/Akava-Design/Akava-Kv
+
+
 ### Syncthing
 
 ```bash
