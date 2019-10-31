@@ -450,6 +450,20 @@ sudo pacman -S cups cups-pdf print-manager hplip system-config-printer
 sudo systemctl enable org.cups.cupsd.service
 ```
 
+##### Additional Packages
+
+###### Pacman
+```bash
+materia-kde kvantum-theme-materia
+kvantum-qt5
+papirus-icon-theme
+```
+
+###### AUR
+```bash
+breeze-blurred-git
+```
+
 ##### Settings
 
 ###### System Settings
@@ -488,10 +502,7 @@ sudo systemctl enable org.cups.cupsd.service
 
 ### Pacman packages
 ```bash
-materia-kde kvantum-theme-materia
-kvantum-qt5
 openssh
-papirus-icon-theme
 steam
 ```
 
