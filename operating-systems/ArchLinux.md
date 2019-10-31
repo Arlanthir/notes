@@ -491,6 +491,17 @@ breeze-blurred-git
 - Hardware > Power Management > Energy Saving > Screen Energy Saving (60 min)
 - Hardware > Printers
 
+###### System tray
+
+Right click > Configure System Tray
+
+General > Extra Items:
+- Clipbard (off)
+- Instant Messaging (off)
+- Vaults (off)
+
+Entries > Volume Control > Hidden
+
 ###### Calendar Widgets
 
 1. Configure the Google Calendar account in KOrganizer
