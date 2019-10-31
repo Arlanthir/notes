@@ -453,6 +453,9 @@ sudo systemctl enable org.cups.cupsd.service
 ##### Settings
 
 ###### System Settings
+- Workspace Behavior > Desktop Effects > Blur > Blur > 10
+- Workspace Behavior > Desktop Effects > Blur > Noise > 6
+- Workspace Behavior > Desktop Effects > Translucency > Menus > 8
 - Workspace Behavior > General Behavior > Double-click
 - Workspace Behavior > Screen Locking > Automatically (off)
 - Personalization > Account Details > User Manager > Photo
@@ -462,6 +465,12 @@ sudo systemctl enable org.cups.cupsd.service
 - Hardware > Power Management > Energy Saving > Screen Energy Saving (60 min)
 - Hardware > Printers
 
+###### Calendar Widgets
+
+1. Configure the Google Calendar account in KOrganizer
+2. Add the digital clock widget and configure it using the PIM plugin
+3. The events should now appear in the Calendar widget as well
+
 ###### Chrome
 - Right click on title bar > Use system title bar and borders (off)
 
@@ -470,18 +479,19 @@ sudo systemctl enable org.cups.cupsd.service
 - Settings > Edit Current Profile > Appearance > Edit > Blur background (on)
 - Settings > Edit Current Profile > Appearance > Edit > Background transparency (25%)
 
-###### Calendar Widgets
+###### Kvantum Manager
 
-1. Configure the Google Calendar account in KOrganizer
-2. Add the digital clock widget and configure it using the PIM plugin
-3. The events should now appear in the Calendar widget as well
+- Configure Active Theme > Hacks > Transparent Dolphin view
+
 
 ## Other programs
 
 ### Pacman packages
 ```bash
+materia-kde kvantum-theme-materia
 kvantum-qt5
 openssh
+papirus-icon-theme
 steam
 ```
 
