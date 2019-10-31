@@ -473,7 +473,17 @@ breeze-blurred-git
 - Workspace Behavior > Desktop Effects > Translucency > Menus > 8
 - Workspace Behavior > General Behavior > Double-click
 - Workspace Behavior > Screen Locking > Automatically (off)
+- Workspace Behavior > Virtual Desktops > Configure as desired (1 Row or 2 Rows)
+- Workspace Behavior > Virtual Desktops > Navigation wraps around (off)
 - Window Management > Kwin Scripts > MinimizeAll (on)
+- Shortcuts > Global Shortcuts > KWin > Switch One Desktop Down > Ctrl + Alt + Down
+- Shortcuts > Global Shortcuts > KWin > Switch One Desktop to the Left > Ctrl + Alt + Left
+- Shortcuts > Global Shortcuts > KWin > Switch One Desktop to the Right > Ctrl + Alt + Right
+- Shortcuts > Global Shortcuts > KWin > Switch One Desktop Up > Ctrl + Alt + Up
+- Shortcuts > Global Shortcuts > KWin > Window One Desktop Down > Ctrl + Alt + Shift+ Down
+- Shortcuts > Global Shortcuts > KWin > Window One Desktop to the Left > Ctrl + Alt + Shift+ Left
+- Shortcuts > Global Shortcuts > KWin > Window One Desktop to the Right > Ctrl + Alt + Shift+ Right
+- Shortcuts > Global Shortcuts > KWin > Window One Desktop Up > Ctrl + Alt + Shift+ Up
 - Personalization > Account Details > User Manager > Photo
 - Personalization > Notifications > Do not disturb when screens are mirrored (off)
 - Personalization > Regional Settings > Formats
