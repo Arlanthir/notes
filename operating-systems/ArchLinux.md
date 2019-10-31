@@ -495,7 +495,32 @@ breeze-blurred-git
 
 ###### Kvantum Manager
 
-- Configure Active Theme > Hacks > Transparent Dolphin view
+Themes:
+
+https://github.com/Akava-Design/Akava-Kv
+
+- Kvantum Manager > Install/Update Theme > Select a Kvantum theme folder > Install this theme
+- Kvantum Manager > Change/Delete Theme > Akava-Kv > Use this theme
+- Kvantum Manager > Configure Active Theme > Hacks > Transparent Dolphin view
+
+- System Settings > Application Style > BreezeBlurred > Configure > Draw titlebar background gradient (off)
+- System Settings > Application Style > BreezeBlurred > Configure > Draw separator between titlebar and window (off)
+- System Settings > Application Style > BreezeBlurred > Configure > Opacity (40%)
+
+- System Settings > Workspace Behavior > Desktop Effects > Blur > Blur > 15
+- System Settings > Workspace Behavior > Desktop Effects > Blur > Noise > 7
+
+https://github.com/Akava-Design/Akava-Colors
+
+cp Akava.colors ~/.local/share/color-schemes/
+
+- System Settings > Appearance > Colors > Akava
+
+https://github.com/Akava-Design/Akava-Konsole
+
+cp Akava.colorscheme ~/.local/share/konsole
+
+- Konsole > Settings > Edit Current Profile > Appearance > Color scheme & font > Akava
 
 
 ## Other programs
@@ -512,10 +537,6 @@ yay                 # (manual installation)
 google-chrome
 visual-studio-code-bin
 ```
-
-### Kvantum themes:
-
-https://github.com/Akava-Design/Akava-Kv
 
 
 ### Syncthing
