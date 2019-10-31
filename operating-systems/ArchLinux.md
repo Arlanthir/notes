@@ -522,15 +522,21 @@ https://github.com/Akava-Design/Akava-Kv
 - System Settings > Workspace Behavior > Desktop Effects > Blur > Blur > 15
 - System Settings > Workspace Behavior > Desktop Effects > Blur > Noise > 7
 
+https://github.com/Akava-Design/Akava-Theme
+
+`cp -r Akava ~/.local/share/plasma/desktoptheme`
+
+- System Settings > Appearance > Plasma Style > Akava
+
 https://github.com/Akava-Design/Akava-Colors
 
-cp Akava.colors ~/.local/share/color-schemes/
+`cp Akava.colors ~/.local/share/color-schemes/`
 
 - System Settings > Appearance > Colors > Akava
 
 https://github.com/Akava-Design/Akava-Konsole
 
-cp Akava.colorscheme ~/.local/share/konsole
+`cp Akava.colorscheme ~/.local/share/konsole`
 
 - Konsole > Settings > Edit Current Profile > Appearance > Color scheme & font > Akava
 
