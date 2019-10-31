@@ -454,6 +454,7 @@ sudo systemctl enable org.cups.cupsd.service
 
 ###### Pacman
 ```bash
+latte-dock
 materia-kde kvantum-theme-materia
 kvantum-qt5
 papirus-icon-theme
@@ -472,6 +473,7 @@ breeze-blurred-git
 - Workspace Behavior > Desktop Effects > Translucency > Menus > 8
 - Workspace Behavior > General Behavior > Double-click
 - Workspace Behavior > Screen Locking > Automatically (off)
+- Window Management > Kwin Scripts > MinimizeAll (on)
 - Personalization > Account Details > User Manager > Photo
 - Personalization > Notifications > Do not disturb when screens are mirrored (off)
 - Personalization > Regional Settings > Formats
