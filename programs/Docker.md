@@ -18,6 +18,7 @@ docker pull jenkins/jenkins:2.200-alpine                                        
 docker login -u <username> -p <password> <host>:<port>                              # Login to a private registry
 docker tag jenkins/jenkins:2.200-alpine <host>:<port>/jenkins/jenkins:2.200-alpine  # Tag an image for a private registry
 docker push <host>:<port>/jenkins/jenkins:2.200-alpine                              # Upload an image to a private registry
+docker rmi jenkins/jenkins:2-200-alpine                                             # Delete downloaded image
 ```
 
 Typical ports for development registries are 5000 (HTTP) and 5001 (HTTPS).
