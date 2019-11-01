@@ -471,6 +471,7 @@ plasma5-applets-eventcalendar
 ##### Settings
 
 ###### System Settings
+- Appearance > Fonts > 8pt on everything
 - Workspace Behavior > Desktop Effects > Blur > Blur > 10
 - Workspace Behavior > Desktop Effects > Blur > Noise > 6
 - Workspace Behavior > Desktop Effects > Translucency > Menus > 8
