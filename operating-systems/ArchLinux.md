@@ -195,6 +195,8 @@ nano /mnt/etc/fstab
 
 Add optional NTFS drive (remember to install ntfs-3g and to create the mnt folder):
 ```
+lsblk -f                # print UUIDs
+
 #UUID=...    /mnt/data   ntfs-3g   rw,exec,permissions,auto,x-gvfs-show   0 0
 UUID=...    /mnt/data   ntfs-3g   defaults,uid=1000,gid=1000,exec,x-gvfs-show   0 0
 defaults,uid=1000,gid=1000,dmask=000,fmask=000,exec,x-gvfs-show
