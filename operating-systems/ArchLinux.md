@@ -463,6 +463,7 @@ papirus-icon-theme
 ###### AUR
 ```bash
 breeze-blurred-git
+plasma5-applets-eventcalendar
 ```
 
 ##### Settings
