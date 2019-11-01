@@ -478,6 +478,7 @@ plasma5-applets-eventcalendar
 - Workspace Behavior > Screen Locking > Automatically (off)
 - Workspace Behavior > Virtual Desktops > Configure as desired (1 Row or 2 Rows)
 - Workspace Behavior > Virtual Desktops > Navigation wraps around (off)
+- Window Management > Window Behavior > Advanced > Window placement > Centered
 - Window Management > Kwin Scripts > MinimizeAll (on)
 - Shortcuts > Global Shortcuts > KWin > Switch One Desktop Down > Ctrl + Alt + Down
 - Shortcuts > Global Shortcuts > KWin > Switch One Desktop to the Left > Ctrl + Alt + Left
