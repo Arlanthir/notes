@@ -582,6 +582,16 @@ systemctl --user enable --now syncthing.service
 
 Web interface is available at http://localhost:8384/
 
+
+### LibreOffice
+```bash
+sudo pacman -S libreoffice-fresh    # Or libreoffice-still for stable version
+```
+
+If using a dark theme:
+- Tools > Options > View > Icon style > Breeze (dark) 
+
+
 ### Android Studio
 (package in AUR)  
 To enable creation of SD Cards (and therefore AVDs):
