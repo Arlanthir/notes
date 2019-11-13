@@ -28,7 +28,8 @@ After passing the string through the peg hole:
 
 Remember to stretch the strings (by pulling them off the fretboard across the entire fretboard) and remove the wooden block before tuning.
 
-I usually buy Nickel wound strings with gauges: 10 13 17 26 36 46.
+For eletric, I usually buy Nickel wound strings with gauges: 10 13 17 26 36 46.
+For classical, D'addario pro-arté EJ45 normal tension (.028-.043) silverplated wound clear nylon. 
 
 ### Remove rust from frets
 
