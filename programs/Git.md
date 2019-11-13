@@ -34,7 +34,7 @@ git add <file>                   # Stage a file
 git add --all                    # Stage all modified files
 git reset -- <file>              # Unstage file
 git rm --cached <file>           # Stage the removal of a file (does not delete file from file system)
-git commit -am 'Commit Message'  # Stage all modified files and commit with a message
+git commit -am 'Commit Message'  # Stage all modified files (but not the new ones!) and commit with a message
 git commit -m 'Commit Message'   # Create a commit with a message
 git commit --amend               # Fix last commit
 git diff <commit1> <commit2>     # Compare two commits
