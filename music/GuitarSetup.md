@@ -13,7 +13,7 @@ Full setup videos: https://www.yourguitaracademy.com/courses/james-collins
 
 ### Restring
 
-One string at a time or all strings at once by blocking the tremolo with a wooden block (before even removing the old ones).  
+One string at a time or all strings at once by blocking the tremolo with a wooden block (or lego brick..!) (before even removing the old ones).  
 Lubricate the nut with a graphite pencil.
 
 After passing the string through the peg hole:
