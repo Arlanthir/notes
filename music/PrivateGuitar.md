@@ -14,9 +14,7 @@ A  B  C  D  E  F  G
 
 # Escala Pentatónica
 
-Não há "maior" nem "menor", mas a que aprendi está descrita muitas vezes como menor..?
-
-## Escala pentatónica em A (La)
+## Escala pentatónica (exemplo para A menor)
 
 ```sql
 e -------o-----o--------o-----o------
@@ -26,7 +24,8 @@ D ----o--------o-----o---------------
 A -------o-----o-----o---------------
 E -------o-----o--------o------------
    1  2  3  4  5  6  7  8  9 10 11
-               A (root)
+               A        C
+        (Minor root)  (Major root)
 ```
 
 ## Licks
