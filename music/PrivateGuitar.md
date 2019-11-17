@@ -32,6 +32,10 @@ E -------o-----o--------o------------
         (Minor root)  (Major root)
 ```
 
+### Dicas do Justin TV
+
+Utilizar o dedo 3 em vez do mindinho para string bending. O polegar poderá ter de subir na parte de cima do braço para ajudar.
+
 ### Licks
 ```sql
 e ----
