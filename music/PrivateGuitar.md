@@ -29,6 +29,15 @@ E -------o-----o--------o------------
                A (root)
 ```
 
+## Licks
+```sql
+G -7⤴-
+
+B -8--
+G -7⤴-
+```
+
+
 ## Power chords
 
 Normalmente dedo 1 + dedo 3, mas quando se pretende mais tarde fazer a abertura de 5 a 9 (por exemplo), convém ser o dedo 2 a abrir dois trastes.  
