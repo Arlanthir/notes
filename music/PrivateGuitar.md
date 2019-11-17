@@ -12,9 +12,13 @@ La Si Do Re Mi Fa Sol
 A  B  C  D  E  F  G
 ```
 
-# Escala Pentatónica
+![Notas no braço da guitarra](guitar_neck.gif)
 
-## Escala pentatónica (exemplo para A menor)
+
+
+## Escalas
+
+### Escala pentatónica (exemplo para A menor)
 
 ```sql
 e -------o-----o--------o-----o------
@@ -28,7 +32,7 @@ E -------o-----o--------o------------
         (Minor root)  (Major root)
 ```
 
-## Licks
+### Licks
 ```sql
 e ----
 B ----
