@@ -40,6 +40,7 @@ Utilizar o dedo 3 em vez do mindinho para string bending. O polegar poderá ter 
 
 - [B.B. King - Live at the Regal](https://open.spotify.com/album/7njGz7ZeDXL6cH3VnflcQ2)
 - [Stevie Ray Vaughan - Texas Flood](https://open.spotify.com/album/1AL5oXZRtTc8PyhcTwg4xQ)
+- [Eric Clapton, John Mayall & The Bluesbreakers - Bluesbreakers](https://open.spotify.com/album/4bSvzPMgzwvfqHAbcWG88o)
 
 ### Licks
 ```sql
