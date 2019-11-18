@@ -41,6 +41,7 @@ Utilizar o dedo 3 em vez do mindinho para string bending. O polegar poderá ter 
 - [B.B. King - Live at the Regal](https://open.spotify.com/album/7njGz7ZeDXL6cH3VnflcQ2)
 - [Stevie Ray Vaughan - Texas Flood](https://open.spotify.com/album/1AL5oXZRtTc8PyhcTwg4xQ)
 - [Eric Clapton, John Mayall & The Bluesbreakers - Bluesbreakers](https://open.spotify.com/album/4bSvzPMgzwvfqHAbcWG88o)
+- [Albert King - Born Under a Bad Sign](https://open.spotify.com/album/0Ez9S8Dhzr1fa6ZCkcIJiR)
 
 ### Licks
 ```sql
@@ -57,6 +58,41 @@ G -7⤴-
 D ----
 A ----
 E ----
+
+e -8⤴-8⤴-5   (second bend is just a curl, minimum bend; end with vibratto)
+B --------
+G --------
+D --------
+A --------
+E --------
+
+e --------
+B --------
+G -7⤴-5--- (end with vibratto)
+D --------
+A --------
+E --------
+
+e -------5---
+B ----5----8⤴
+G -7⤴--------
+D -----------
+A -----------
+E -----------
+
+e ----5-------------
+B -8⤴---8(p.o.)5--8⤴
+G ------------------
+D ------------------
+A ------------------
+E ------------------
+
+e -5-----------------------
+B ----8(p.o.)5-----5-------
+G --------------7----5⤴----  (curl)
+D -----------------------7-
+A -------------------------
+E -------------------------
 ```
 
 
