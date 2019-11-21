@@ -96,6 +96,8 @@ $myarray=( text1 text2 text3 )
 if printf '%s\n' ${myarray[*]} | grep -q -P '^mypattern$'; then # Finding an element in the array
     # ...
 fi
+
+$myarray=$(cat each_value_in_line.txt)   # Load values from text file
 ```
 
 ### Iteration
@@ -120,7 +122,7 @@ done
 
 It's possible to save output from another program/function:
 ```bash
-echo "Current dir is $(pwd)"
+echo "Current dir is $(pwd)"   # Preferred
 echo "Current dir is `pwd`"
 ```
 
