@@ -142,7 +142,9 @@ Boa backing track:
 (Cada letra representa downstroke + upstroke, excepto as 3 últimas)
 
 ```bash
-A A(9) A A(9) A A(9) A A(9), D D(9) D D(9) D D(9) D D(9)
-A A(9) A A(9) A A(9) A A(9), E E(11) E E(11), D D(9) D D(9)
+A A(9) A A(9) A A(9) A A(9), A A(9) A A(9) A A(9) A A(9)
+D D(9) D D(9) D D(9) D D(9)
+A A(9) A A(9) A A(9) A A(9)
+E E(11) E E(11), D D(9) D D(9)
 A A(9) A A(9), D↓↑ D#↓ E↑
 ```
