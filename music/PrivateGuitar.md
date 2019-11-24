@@ -46,6 +46,10 @@ Utilizar o dedo 3 em vez do mindinho para string bending. O polegar poderá ter 
 - [Eric Clapton, John Mayall & The Bluesbreakers - Bluesbreakers](https://open.spotify.com/album/4bSvzPMgzwvfqHAbcWG88o)
 - [Albert King - Born Under a Bad Sign](https://open.spotify.com/album/0Ez9S8Dhzr1fa6ZCkcIJiR)
 
+#### Backing tracks
+
+- [Blues Am](https://youtu.be/Z3euxRLOQec)
+
 ### Licks
 ```sql
 e ----
