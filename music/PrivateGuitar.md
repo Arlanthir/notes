@@ -48,6 +48,7 @@ Utilizar o dedo 3 em vez do mindinho para string bending. O polegar poderá ter 
 
 #### Backing tracks
 
+- [Blues Am](https://www.youtube.com/watch?v=9H2oY_85q8U)
 - [Blues Am](https://youtu.be/Z3euxRLOQec)
 
 ### Licks
