@@ -63,12 +63,14 @@ fi
 - `[ <variable> == <string> ]` tests if variable is equal to string
 - `[ <variable> != <string> ]` tests if variable is different from string
 - `[[ <variable> == <pattern> ]]` tests if variable matches a pattern (note the double brackets)
+- `${#<variable>}` string length
 
 ### Number operators
 
 - `[ <variable> -eq <number> ]` tests if variable is equal to number
 - `[ <variable> -ne <number> ]` tests if variable is not equal to number
 - Other number operators: `-gt`, `-ge`, `-lt`, `-le`
+- Arithmetic: `$(($num1+$num2))`
 
 ```bash
 if [ -z $1 ] || [ -z $2 ]
