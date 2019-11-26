@@ -64,6 +64,7 @@ fi
 - `[ <variable> != <string> ]` tests if variable is different from string
 - `[[ <variable> == <pattern> ]]` tests if variable matches a pattern (note the double brackets)
 - `${#<variable>}` string length
+- `${<variable>:<start>:<optional_finish>}` substring
 
 ### Number operators
 
