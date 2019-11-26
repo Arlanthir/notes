@@ -118,7 +118,10 @@ done
 for f in *.c; do
     echo "Processing $f file..";
 done
+```
 
+## Loops
+```bash
 while [ $x -le 5 ]
 do
     echo "Welcome $x times"
