@@ -118,6 +118,12 @@ done
 for f in *.c; do
     echo "Processing $f file..";
 done
+
+while [ $x -le 5 ]
+do
+    echo "Welcome $x times"
+    x=$(( $x + 1 ))             # break and continue are valid
+done
 ```
 
 ## Shell execution
