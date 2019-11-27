@@ -116,6 +116,11 @@ for i in {1..5}; do
     echo $i
 done
 
+# Or if you want to use variables:
+for i in $(seq 1 5); do
+    echo $i
+done
+
 for f in *.c; do
     echo "Processing $f file..";
 done
