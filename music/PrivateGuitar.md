@@ -45,6 +45,7 @@ Utilizar o dedo 3 em vez do mindinho para string bending. O polegar poderá ter 
 - [Stevie Ray Vaughan - Texas Flood](https://open.spotify.com/album/1AL5oXZRtTc8PyhcTwg4xQ)
 - [Eric Clapton, John Mayall & The Bluesbreakers - Bluesbreakers](https://open.spotify.com/album/4bSvzPMgzwvfqHAbcWG88o)
 - [Albert King - Born Under a Bad Sign](https://open.spotify.com/album/0Ez9S8Dhzr1fa6ZCkcIJiR)
+- [Jimmy Witherspoon & Robben Ford (Live at The Ash Grove, 1976)](https://open.spotify.com/album/6FUPH14VGpYg3DgAgzNC5b)
 
 #### Backing tracks
 
