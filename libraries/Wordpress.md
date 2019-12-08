@@ -37,7 +37,7 @@ Plugins can define entities, represented by **custom post types** and **taxonomi
 function register_my_menu() {
     // ...
 }
-add_action('after_setup_theme', 'register_my_menu');
+add_action('after_setup_theme', 'register_my_menu', /* priority */ 10, /* number of arguments */ 1);
 ```
 
 ### Filters
@@ -46,7 +46,7 @@ function my_filter($arg) {
     // ...
     return $arg;
 }
-add_filter('some_filter', 'my_filter', /* priority */ 1, /* number of arguments */ 1);
+add_filter('some_filter', 'my_filter', /* priority */ 10, /* number of arguments */ 1);
 ```
 
 ## Queries
