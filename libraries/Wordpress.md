@@ -46,7 +46,7 @@ function my_filter($arg) {
     // ...
     return $arg;
 }
-add_filter('some_filter', 'my_filter');
+add_filter('some_filter', 'my_filter', /* priority */ 1, /* number of arguments */ 1);
 ```
 
 ## Queries
