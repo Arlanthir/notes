@@ -146,6 +146,8 @@ To display the widgets:
 function themename_scripts() {
     wp_enqueue_style('themename-css', get_template_directory_uri() . '/css/style.css', array(), '20180101');
     wp_enqueue_script('themename-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '20180101', true);
+    // Pass arguments to script if needed (variable myVars.ajaxurl will be available)
+    wp_localize_script('themename-script', 'myVars', array('ajaxurl' => admin_url('admin-ajax.php')));
 }
 add_action('wp_enqueue_scripts', 'themename_scripts');
 ```
@@ -156,19 +158,23 @@ add_action('wp_enqueue_scripts', 'themename_scripts');
 jQuery.ajax({
     url: <?= admin_url("admin-ajax.php"); ?>,
     type: 'POST',
-    data: {action = 'my_request', ...},
+    data: {action: 'my_request', nonce: <?= wp_create_nonce("my_request_nonce"); ?>, ...},
     success: function(data, textStatus, jqXHR) {
+        //...
     }
 });
 ```
 
 ```php
 function ajax_my_request() {
+    if (!wp_verify_nonce($_REQUEST['nonce'], "my_request_nonce")) {
+        echo json_encode(array('status' => 'error', 'error' => 'Invalid nonce'));
+    }
     echo json_encode(array('status' => 'success'));
     exit;
 }
 add_action('wp_ajax_my_request', 'ajax_my_request');
-add_action('wp_ajax_nopriv_my_request', 'ajax_my_request');
+add_action('wp_ajax_nopriv_my_request', 'ajax_my_request'); // When logged out users call the service
 ```
 
 ## Translations
