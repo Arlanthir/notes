@@ -321,6 +321,27 @@ obj.toJSON = function() {
 }
 ```
 
+## AJAX Requests
+```javascript
+var req = new XMLHttpRequest();
+var url = 'https://www.mysite.com/service';
+var params = 'action=my_request&arg1=hello';
+req.open('POST', url);
+req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		
+req.onreadystatechange = function(e) {
+    if (req.readyState == 4) {
+        if (req.status == 200) {
+            console.log('Request success:', req.responseText);
+        } else {
+            console.log('Request error status:', req.status);
+        }
+    }
+};
+
+req.send(params);
+```
+
 ## RESTful APIs
 
 **RE**presentational **S**tate **T**ransfer APIs should use the HTTP methods and URIs
