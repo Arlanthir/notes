@@ -325,9 +325,19 @@ obj.toJSON = function() {
 ```javascript
 var req = new XMLHttpRequest();
 var url = 'https://www.mysite.com/service';
-var params = 'action=my_request&arg1=hello';
+var params = new FormData();
+params.append('action', 'ps_save_event');
+params.append('arg1', 'hello');
+
+// HTML file input, chosen by user
+params.append('userfile', fileInputElement.files[0]);
+
+// JavaScript file-like object
+var content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
+var blob = new Blob([content], { type: 'text/xml'});
+params.append('webmasterfile', blob);
+
 req.open('POST', url);
-req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 		
 req.onreadystatechange = function(e) {
     if (req.readyState == 4) {
