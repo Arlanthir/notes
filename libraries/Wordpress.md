@@ -155,20 +155,33 @@ add_action('wp_enqueue_scripts', 'themename_scripts');
 ## AJAX Requests
 
 ```javascript
-jQuery.ajax({
-    url: <?= admin_url("admin-ajax.php"); ?>,
-    type: 'POST',
-    data: {action: 'my_request', nonce: <?= wp_create_nonce("my_request_nonce"); ?>, ...},
-    success: function(data, textStatus, jqXHR) {
-        //...
+var req = new XMLHttpRequest();
+var url = '<?= admin_url('admin-ajax.php'); ?>';
+var params = 'action=my_request&nonce=<?= wp_create_nonce('my_request_nonce'); ?>';
+req.open('POST', url);
+req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		
+req.onreadystatechange = function(e) {
+    if (req.readyState == 4) {
+        if (req.status == 200) {
+            console.log('Request success:', req.responseText);
+        } else {
+            console.log('Request error status:', req.status);
+        }
     }
-});
+};
+
+req.send(params);
 ```
 
 ```php
 function ajax_my_request() {
-    if (!wp_verify_nonce($_REQUEST['nonce'], "my_request_nonce")) {
+    if (!wp_verify_nonce($_REQUEST['nonce'], 'my_request_nonce')) {
+        // wp_send_json_error('Invalid nonce', 401);   // Will output {success: false, data: 'Invalid nonce'}
+        // To customize further:
+        status_header(401);
         echo json_encode(array('status' => 'error', 'error' => 'Invalid nonce'));
+        exit;
     }
     echo json_encode(array('status' => 'success'));
     exit;
