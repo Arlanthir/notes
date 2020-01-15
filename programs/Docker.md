@@ -31,6 +31,7 @@ Typical ports for development registries are 5000 (HTTP) and 5001 (HTTPS).
 docker run <image>                                   # Run in foreground
 docker run <image> <command>                         # Run an image and execute a command
 docker run -it <image>                               # Run an image in interactive mode (eg: shell)
+docker run -it -u="root" <image> <command>           # Run an image in interactive mode, with a custom command and root user
 docker run -d <image>                                # Run in background (detached)
 docker run <image>:<version>                         # Run a specific version (default is 'latest')
 docker run --name <name> <image>                     # Choose a name for the container
