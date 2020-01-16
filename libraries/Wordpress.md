@@ -140,6 +140,10 @@ To display the widgets:
 <?php } ?>
 ```
 
+## Custom Post Types (TODO: expand)
+
+https://www.wpbeginner.com/wp-tutorials/how-to-create-custom-post-types-in-wordpress/
+
 ## Enqueue scripts and styles
 
 ```php
