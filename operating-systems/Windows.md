@@ -5,7 +5,7 @@
 Control Panel > Hardware and Sound > Power Options > Choose what the power buttons do > Change settings that are currently unavailable > Turn on fast startup.
 
 ## Startup shortcuts location
-Windows + run > `shell:startup`
+Windows + R > `shell:startup`
 
 ## Taskbar shortcuts location
 `%AppData%\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar`
