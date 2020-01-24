@@ -82,6 +82,7 @@ git remote -v                 # List remotes
 git remote add <name> <url>   # Add remote
 git remote add --mirror=push <name> <url>     # Add remote as mirror (push is always --mirror)
 git remote show <remote>      # List remote branches
+git remote set-url <remote> <url>             # Change remote URL
 git checkout -b <branch> <remote>/<branch>    # Import branch from remote (and track it, by default)
 git fetch                     # Update current branch from remote
 git fetch <remote> <branch>   # Update specific branch from remote
