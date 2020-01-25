@@ -36,6 +36,16 @@ HyperText Markup Language - Define webpages content
         <td>Table Cell in Table Row in Table</td>
     </tr>
 </table>
+
+<form action="form.php">
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" value="">
+    <label>
+        Description:
+        <input type="text" name="description" id="description" value="Default description">
+    </label>
+    <input type="submit" value="Submit">
+</form>
 ```
 
 ## Some HTML5 Semantic Tags
