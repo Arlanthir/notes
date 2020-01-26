@@ -148,6 +148,7 @@ https://www.wpbeginner.com/wp-tutorials/how-to-create-custom-post-types-in-wordp
 
 ```php
 function themename_scripts() {
+    // Note: Use get_stylesheet_directory_uri() for the path to the child theme instead
     wp_enqueue_style('themename-css', get_template_directory_uri() . '/css/style.css', array(), '20180101');
     wp_enqueue_script('themename-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '20180101', true);
     // Pass arguments to script if needed (variable myVars.ajaxurl will be available)
