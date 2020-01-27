@@ -152,17 +152,23 @@ function themename_scripts() {
     wp_enqueue_style('themename-css', get_template_directory_uri() . '/css/style.css', array(), '20180101');
     wp_enqueue_script('themename-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '20180101', true);
     // Pass arguments to script if needed (variable myVars.ajaxurl will be available)
-    wp_localize_script('themename-script', 'myVars', array('ajaxurl' => admin_url('admin-ajax.php')));
+    wp_localize_script('themename-script', 'localizedVars', array('ajaxUrl' => admin_url('admin-ajax.php')));
 }
 add_action('wp_enqueue_scripts', 'themename_scripts');
 ```
 
 ## AJAX Requests
 
+```php
+<form data-nonce="<?= wp_create_nonce('my_request_nonce'); ?>">
+</form>
+```
+
 ```javascript
 var req = new XMLHttpRequest();
-var url = '<?= admin_url('admin-ajax.php'); ?>';
-var params = 'action=my_request&nonce=<?= wp_create_nonce('my_request_nonce'); ?>';
+var url = localizedVars.ajaxUrl;
+var nonce = form.dataset.nonce;
+var params = 'action=my_request&nonce=' + nonce;
 req.open('POST', url);
 req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 		
