@@ -158,3 +158,18 @@ else
     exit -1
 fi
 ```
+
+## Error handling
+
+```bash
+#!/bin/bash
+set -Eeuo pipefail   # -E: inherit error handling to functions
+                     # -e: exit on error
+		     # -u: treat unset variables as errors
+		     # -o pipefail: consider error codes of piped commands
+trap cleanup ERR     # On error, execute the "cleanup" function and return ERR
+                     # (change to 0 for a graceful return code)
+```
+
+
+
