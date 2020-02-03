@@ -73,6 +73,15 @@ mv file1 file2        # Rename file1 to file2
 mv file1 otherdir     # Move file1 to otherdir
 ```
 
+## rm
+Delete files and/or directories.
+
+```bash
+rm file       # Delete file
+rm -f file    # Delete file and don't warn if it doesn't exist
+rm -rf dir    # Delete directory and all subfiles and subdirectories
+```
+
 ## sed
 
 Stream editor. Applies operations to each line in a file.
