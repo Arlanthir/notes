@@ -101,9 +101,10 @@ sed 's@hello@world@g' in.txt > out.txt        # Same as before but using a diffe
 ## ssh
 
 ```bash
-ssh <user>@<host>        # Connects to host
-exit                     # Terminates connection
-nohup <command> &        # Executes command and doesn't stop it if the ssh connection is terminated
+ssh <user>@<host>             # Connects to host using the default port (22)
+ssh <user>@<host> -p <port>   # Connects to host using a given port
+exit                          # Terminates connection
+nohup <command> &             # Executes command and doesn't stop it if the ssh connection is terminated
 ```
 
 
