@@ -50,6 +50,15 @@ find . -regextype sed -regex '.*/patch-.*-[0-9]\{4\}.lisp' -print   # Find via r
 
 **Note**: Cygwin doesn't seem to like when `;` is escaped.
 
+## mkdir
+
+Create directories
+
+```bash
+mkdir mydir             # Create directory mydir inside the current working dir
+mkdir -p parent/child   # Ensure all parent directories exist, output no error if child already exists
+```
+
 
 ## sed
 
