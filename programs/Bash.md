@@ -1,5 +1,12 @@
 # Bash / Linux Command Line
 
+## cp
+Copies files and/or directories.
+
+```bash
+cp file1 someotherdir/file2     # Copy file to a different location and name
+cp -r dir1/* dir2               # Copy all files and dirs in dir1 to dir2
+```
 
 ## grep
 Finds lines in input matching a given pattern
@@ -51,14 +58,20 @@ find . -regextype sed -regex '.*/patch-.*-[0-9]\{4\}.lisp' -print   # Find via r
 **Note**: Cygwin doesn't seem to like when `;` is escaped.
 
 ## mkdir
-
-Create directories
+Create directories.
 
 ```bash
 mkdir mydir             # Create directory mydir inside the current working dir
 mkdir -p parent/child   # Ensure all parent directories exist, output no error if child already exists
 ```
 
+## mv
+Move (or rename) files.
+
+```bash
+mv file1 file2        # Rename file1 to file2
+mv file1 otherdir     # Move file1 to otherdir
+```
 
 ## sed
 
