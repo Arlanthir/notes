@@ -81,7 +81,7 @@ $myArray[] = 1;
 $myArray = array(1, 8, 45);
 $myArray = array('one' => 'this', 'two' => 'that');
 $myArray['three'] = 'other';
-for ($myArray as $key => $val) {
+foreach ($myArray as $key => $val) {
 }
 echo count($myArray); // 3
 unset($myArray['one']);
