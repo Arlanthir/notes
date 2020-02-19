@@ -115,6 +115,12 @@ $sc = new SimpleClass("A class");
 ?>
 ```
 
+## Regex
+```php
+$found = preg_match("/[0-9]+/", "hello 123 world"); // Will return 1
+$found = preg_match("/^[0-9]+$/", "hello 123 world"); // Will return 0
+```
+
 ## Redirect to another page
 
 Before writing to out, do:
