@@ -439,7 +439,7 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 #### KDE
 
 ```bash
-pacman -S plasma-meta kde-applications-meta sddm sddm-kcm
+pacman -S plasma-meta kde-applications-meta sddm sddm-kcm noto-fonts-emoji
 # Choose phonon-qt5-vlc and cronie if asked
 systemctl enable sddm
 localectl set-x11-keymap pt
