@@ -2,7 +2,7 @@
 
 - Deckbuilding game
 - 2-4 players
-- 30min
+- 30 min
 
 ## Intro
 
