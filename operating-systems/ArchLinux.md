@@ -11,6 +11,8 @@
 | `pacman -Sc`            | Clear cache                                |
 | `pacman -Qo <file>`     | Check which package installed &lt;file&gt; |
 
+*Note*: When your system is very outdated and updating it results in corrupted packages error, update the keyring first: `sudo pacman -S archlinux-keyring`.
+
 ## Arch User Repository (AUR)
 
 User-provided software, available in https://aur.archlinux.org/index.php
