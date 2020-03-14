@@ -19,45 +19,45 @@ Earn victory points by:
 
 For each player:
 
-1. Grab a Player Sheet
-1. Select a set of matching Player Tokens (avatar) and place the larger one on the Player Sheet's flag
-1. Get a set of 3 Town Hall cards (Levels 1-3), place them next to the Player Sheet on a face up pile with the Level 1 card on top
-1. Get two random 1 VP Mission cards (blue back), and place them face up on the Player Sheet
-1. Deck: 6 Beer + 2 Gold + 2 Warrior. Shuffle and place it right of the Player Sheet's flag
+1. Grab a **Player Sheet**
+1. Select a set of matching **Player Tokens** (avatar) and place the larger one on the Player Sheet's **flag**
+1. Get a set of 3 **Town Hall** cards (Levels 1-3), place them next to the Player Sheet on a face up pile with the Level 1 card on top
+1. Get **two random 1 VP Mission cards** (blue back), and place them face up on the Player Sheet
+1. **Deck: 6 Beer + 2 Gold + 2 Warrior**. Shuffle and place it right of the Player Sheet's flag
 
 ### Board
 
-1. Smaller Player Tokens in the starting position of the victory points track
-1. Mission deck with the shuffled 1VP Missions on top of the shuffled 2-3VP Missions, face down on the board
-1. Separate the Unit Cards (red border) and place them face up in the Attack slots in the order:
+1. Smaller **Player Tokens** in the starting position of the **Victory Points track**
+1. **Mission deck** with the shuffled **1VP Missions on top** of the shuffled **2-3VP Missions**, face down on the board
+1. Separate the **Unit Cards** (red border) and place them face up in the Attack slots in the order:
    1. Elf Archer
    2. Bone Crusher
    3. Pigator
-1. Separate the Defense Cards (blue border) and place them face up in the Defense slots in the order:  
+1. Separate the **Defense Cards** (blue border) and place them face up in the Defense slots in the order:  
    1. Cannon
    1. Chicken Tower
    1. Sheep Cannon
-1. Separate the Building Cards (white border) and place them face up in the Building slots in the order:
+1. Separate the **Building Cards** (white border) and place them face up in the Building slots in the order:
    1. Brewery
    1. Gold Factory
    1. Drakkar
    1. Beer Container
    1. Gold Container
    1. Tavern
-1. Shuffle the Odin's Path cards (black border) and place them face-down in their deck slot.  
-   Reveal the first 5 on the Odin's Path track right of the deck.
-1. Shuffle the Divine cards (gold border).  
-   If < 3 players, remove the cards with the "3+" symbol on the top right (Beer Taxes, Gold Taxes).  
-   Take only (3 * nr.players) cards and return the rest to the box.  
+1. Shuffle the **Odin's Path** cards (black border) and place them face-down in their deck slot.  
+   Reveal the **first 5** on the Odin's Path track right of the deck.
+1. Shuffle the **Divine cards** (gold border).  
+   If < 3 players, remove the cards with the **"3+" symbol** on the top right (Beer Taxes, Gold Taxes).  
+   Take only **(3 * Nr. Players)** cards and return the rest to the box.  
    Place the deck face down in its slot.  
-   Reveal the top two cards on the available slots.  
-1. Reveal 4 random End-Game Bonus cards (orange border) in the remaining slots.  
+   Reveal the top **two cards** on the available slots.  
+1. Reveal **4 random End-Game Bonus** cards (orange border) in the remaining slots.  
    *(Suggestion for first game: Accomplisher, Builder, King Pig, Miner)*
 
 ### Start
 
 - The first player is the one that last drank a beer or the one with the longest beard
-- They receive the First Player Token (3d Hammer) and are the first one to play in the Player's Phase
+- They receive the **First Player Token** (3d Hammer) and are the first one to play in the Player's Phase
 
 ## Turn
 
@@ -75,21 +75,21 @@ Each player plays his phase, in clockwise order, starting by the player with the
 
 Available actions (in any order):
 
-- Exchange Resources (rules at the center of the board). They are not storable.
-- Return a building to the board (no reward)
-- Buy Units, Defenses, Odin's Path
+- **Exchange Resources** (rules at the center of the board). They are not storable.
+- **Return a building** to the board (no reward)
+- **Buy Units, Defenses, Odin's Path**
   - Use Beer and/or Gold according to the cost of the card (upper right corner)
-  - Place it in your Player Area, it will be discarded by the end of the turn
+  - Place it in your Player Area, it will be **discarded only by the end of the turn**
   - Odin's Path: cards on the left of the spot shift right. Reveal a new card to fill the leftmost spot.
-- Buy Buildings
+- **Buy Buildings**
   - Max total buildings dictated by Town Hall level
   - Max 3 of the same type
   - Place the new building in your Village Area
   - Place a Construction token on it (can't be used or attacked)
-- Upgrade the Town Hall
+- **Upgrade the Town Hall**
   - Place the new Level card on top of the pile
   - Place a Construction token on it (can't be used or attacked)
-- Attack
+- **Attack**
   - You can attack Draco once per turn and receive a (storable) Gold/Beer
   - You can attack any Undead in Odin's Path and receive its reward
   - You can attack another player (only one per turn but multiple Buildings)
@@ -113,11 +113,11 @@ Available actions (in any order):
     | 5           | 9              |
     | 6           | 11             |
     | 7           | 13             |
-- Switch a Mission (once per turn)
+- **Switch a Mission** (once per turn)
   - Pay 1 gold
   - Place the returned Mission to the bottom of the board's deck
   - Draw a new Mission from the top of the deck
-- Complete a Mission (once per turn)
+- **Complete a Mission** (once per turn)
   - Receive its rewards
   - Place it face down in the discarded missions slot
 
@@ -130,10 +130,10 @@ Available actions (in any order):
 
 ### 5. End of the turn
 
-- Discard played cards and hands
-- Remove Construction and Damage tokens
-- Discard rightmost Odin's Path card, shift others, and reveal leftmost
-- Pass the First Player Token to the left
+- **Discard** played cards and hands
+- Remove **Construction and Damage tokens**
+- Discard rightmost **Odin's Path** card, shift others, and reveal leftmost
+- Pass the **First Player Token** clockwise
 
 ### Divine Favor Cards
 
@@ -154,8 +154,8 @@ Available actions (in any order):
   | 2           | 40             |
   | 3           | 30             |
   | 4           | 30             |
-- The round is played until the end, additional points are counted
-- End-Game Bonus points are awarded (orange border cards) to each player that fulfilled the requirements, divided equally
+- The **round is played until the end**, additional points are counted
+- **End-Game Bonus** points are awarded (orange border cards) to each player that fulfilled the requirements, divided equally
   | Nr. Players | Victory Points |
   | ----------- | -------------- |
   | 1           | 6              |
