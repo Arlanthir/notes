@@ -55,7 +55,7 @@ Bureaucrat, Cellar, Festival, Library, Market, Remodel, Smithy, Throne Room, Vil
 - First game: random first player
 - Following games: first player is the one on the left of the winner of the previous game
 
-### Turn
+## Turn
 
 1. **A**: Action  
   Play (just) one Action card from your hand. Actions can give you more actions to follow up.  
@@ -79,13 +79,13 @@ Bureaucrat, Cellar, Festival, Library, Market, Remodel, Smithy, Throne Room, Vil
 
 Next player in clockwise order.
 
-### End
+## End
 
 - When the Province pile is empty **or** any other 3 Supply piles are empty.
 - The player with the most Victory Points (given by Estate, Duchy, Province, Gardens, ...) in their deck wins the game.
 - If players are tied, the one that took the fewest turns wins. If they're still tied, it's a draw between them.
 
-### Notes
+## Notes
 
 - Players can't go through their Discard pile
 - When an effect affects multiple players, it does so in turn order.
