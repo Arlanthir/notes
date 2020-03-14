@@ -90,20 +90,20 @@ Available actions (in any order):
   - Place the new Level card on top of the pile
   - Place a Construction token on it (can't be used or attacked)
 - **Attack**
-  - You can attack Draco once per turn and receive a (storable) Gold/Beer
-  - You can attack any Undead in Odin's Path and receive its reward
-  - You can attack another player (only one per turn but multiple Buildings)
+  - You can attack **Draco** once per turn and receive a (storable) Gold/Beer
+  - You can attack any **Undead** in Odin's Path and receive its reward
+  - You can attack **another player** (only one per turn but multiple Buildings)
   - You can't attack a player that has been attacked this turn (except if there's no more available players)
-  - Total of Units/Heroes Attack must be >= than the Building's Defense
-  - Defending player may use Defense cards
-    - The cards stay in the Building for the rest of the round (the building may be attacked again)
-    - The defender receives 1 VP for each Unit/Hero card repulsed
-    - If all Buildings are defended, the defender gains 1 bonus VP and places the Damage token in the Town Hall
-  - Each successful attack places a Damage token on the building, the building can't be attacked any more this turn
-  - Buildings may reward each successful attack (top left corner)
+  - Total of Units/Heroes Attack must be **>=** than the Building's Defense
+  - Defending player may use **Defense cards**
+    - The cards stay in the Building for the **rest of the round** (the building may be attacked again)
+    - The defender receives **1 VP** for each Unit/Hero card repulsed
+    - If all Buildings are defended, the defender gains **1 bonus VP** and places the **Damage token** in the Town Hall
+  - Each successful attack places a **Damage token** on the building, the building can't be attacked any more this turn
+  - Buildings may **reward** each successful attack (top left corner)
     - E.g. Attacking a Beer Container allows stealing a stored Beer. If attacking player has no Container to store it, it
       has to be used this turn.
-  - Receive Victory Points depending on the number of buildings damaged:
+  - Receive **Victory Points** depending on the number of buildings damaged:
     | Nr. Attacks | Victory Points |
     | ----------- | -------------- |
     | 1           | 1              |
