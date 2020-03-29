@@ -6,6 +6,10 @@ White king in black square, black king in white square.
 
 ![](http://www.fen-to-image.com/image/30/single/coords/rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR)
 
+Rows are called ranks. First rank is the nearest to the player.  
+Columns are called files.
+
+
 ## Checkmate patterns
 
 References:
