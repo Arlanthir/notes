@@ -16,6 +16,8 @@ Columns are called files.
 - Develop your pieces (not pawns) quickly and once per piece.
 - The f pawns are vulnerable because they are only guarded by the King.
 - Castle early, preferably on the kingside.
+- Keep the pawns protecting the King after castle in their initial positions. Never try to prevent a pin by advancing a pawn before it happens.
+- Use a minor piece (usually a Knight) in conjunction with the 3 pawns to protect a castle.
 - Develop pieces before initiating combinations (sequence of moves, often initiated by a sacrifice, which leaves the opponent few options and results in tangible gain).
 
 
