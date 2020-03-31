@@ -15,7 +15,7 @@ Columns are called files.
 - Knights before bishops. Knights need more steps and its more obvious where they are needed in the beginning of the game.
 - Develop your pieces (not pawns) quickly and once per piece.
 - The f pawns are vulnerable because they are only guarded by the King.
-
+- Castle early, preferably on the kingside.
 
 
 ## Checkmate patterns
