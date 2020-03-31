@@ -9,6 +9,14 @@ White king in black square, black king in white square.
 Rows are called ranks. First rank is the nearest to the player.  
 Columns are called files.
 
+## Opening principles
+
+- Seize the center of the board: your pieces will have more possible moves.
+- Knights before bishops. Knights need more steps and its more obvious where they are needed in the beginning of the game.
+- Develop your pieces (not pawns) quickly and once per piece.
+- The f pawns are vulnerable because they are only guarded by the King.
+
+
 
 ## Checkmate patterns
 
