@@ -16,6 +16,7 @@ Columns are called files.
 - Develop your pieces (not pawns) quickly and once per piece.
 - The f pawns are vulnerable because they are only guarded by the King.
 - Castle early, preferably on the kingside.
+- Develop pieces before initiating combinations (sequence of moves, often initiated by a sacrifice, which leaves the opponent few options and results in tangible gain).
 
 
 ## Checkmate patterns
