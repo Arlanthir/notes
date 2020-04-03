@@ -89,7 +89,8 @@ Copy files through SSH.
 scp ~/path/to/file.txt user@host:/where/to/put
 scp user@host:/where/to/put ~/path/to/file.txt
 # To change port, -P <port>
-# To transfer file with spaces: :"/some/path\\\\ with\\\\ spaces"
+# To transfer file with spaces: :"/some/path\\ with\\ spaces"
+# You can use wildcards in source path
 ```
 
 ## sed
@@ -112,7 +113,7 @@ sed 's@hello@world@g' in.txt > out.txt        # Same as before but using a diffe
 
 ```bash
 ssh <user>@<host>             # Connects to host using the default port (22)
-ssh <user>@<host> -p <port>   # Connects to host using a given port
+ssh -p <port> <user>@<host>   # Connects to host using a given port
 exit                          # Terminates connection
 nohup <command> &             # Executes command and doesn't stop it if the ssh connection is terminated
 ```
