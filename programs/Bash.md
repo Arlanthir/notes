@@ -88,7 +88,8 @@ Copy files through SSH.
 ```bash
 scp ~/path/to/file.txt user@host:/where/to/put
 scp user@host:/where/to/put ~/path/to/file.txt
-# To change port, -p <port>
+# To change port, -P <port>
+# To transfer file with spaces: :"/some/path\\\\ with\\\\ spaces"
 ```
 
 ## sed
