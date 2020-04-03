@@ -122,3 +122,9 @@ nohup <command> &             # Executes command and doesn't stop it if the ssh 
 ```bash
 tail -n <X>   # Output just the last X lines of input
 ```
+
+## tar
+```bash
+tar -cvzf file.tar.gz ./files/*
+tar -xvf file.tar.gz -C ./files
+```
