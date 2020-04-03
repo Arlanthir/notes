@@ -83,6 +83,14 @@ rm -f file    # Delete file and don't warn if it doesn't exist
 rm -rf dir    # Delete directory and all subfiles and subdirectories
 ```
 
+## scp
+Copy files through SSH.
+```bash
+scp ~/path/to/file.txt user@host:/where/to/put
+scp user@host:/where/to/put ~/path/to/file.txt
+# To change port, -p <port>
+```
+
 ## sed
 
 Stream editor. Applies operations to each line in a file.
