@@ -20,6 +20,11 @@ Columns are called files.
 - Use a minor piece (usually a Knight) in conjunction with the 3 pawns to protect a castle.
 - Develop pieces before initiating combinations (sequence of moves, often initiated by a sacrifice, which leaves the opponent few options and results in tangible gain).
 
+## Openings
+
+- [Colle System](https://en.m.wikipedia.org/wiki/Colle_System)  
+  Open with d4, stack attacks on e4 and unleash them all with a pawn push. The objective is to remove the black Knight guarding h7 and make a kingside attack.  
+  One interesting detail is White's knight on d2.
 
 ## Checkmate patterns
 
