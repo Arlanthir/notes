@@ -462,6 +462,7 @@ latte-dock
 materia-kde kvantum-theme-materia
 kvantum-qt5
 papirus-icon-theme
+kio-gdrive # Access Google Drive through Network section on Dolphin
 ```
 
 ###### AUR
