@@ -158,10 +158,12 @@ Similar syntax to .gitignore, ignores files from being copied to the image. Usef
 docker build -t <name>:<version> .       # -t To tag with a friendly name and version (example: webserver-image:v1)
 ```
 
-### List built images
+### Manage images
 
 ```bash
-docker images
+docker images           # List images
+docker rmi <image>      # Remove image
+docker image prune      # Prune unneeded images
 ```
 
 ## Data containers
