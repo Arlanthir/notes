@@ -30,7 +30,7 @@ After passing the string through the peg hole:
 
 Remember to stretch the strings (by pulling them off the fretboard across the entire fretboard) and remove the wooden block before tuning.
 
-For eletric, I usually buy D'Addario XL Nickel wound strings with gauges: 9 11 16 24 32 42 or 10 13 17 26 36 46.
+For eletric, I usually buy D'Addario XL Nickel wound strings with gauges: 9 11 16 24 32 42 (D'addario EXL120) or 10 13 17 26 36 46.
 For classical, D'addario pro-arté EJ45 normal tension (.028-.043) silverplated wound clear nylon. 
 
 ### Remove rust from frets
