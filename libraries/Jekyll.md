@@ -13,3 +13,9 @@ bundle update
 ```bash
 gem pristine --all
 ```
+
+## Debug
+
+```html
+{{ page | jsonify }}
+```
