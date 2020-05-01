@@ -5,7 +5,7 @@
 ```bash
 gem update --system
 gem update
-sudo bundle update
+bundle update
 ```
 
 ### Rebuild native extensions
