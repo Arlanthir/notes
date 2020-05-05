@@ -164,6 +164,7 @@ docker build -t <name>:<version> .       # -t To tag with a friendly name and ve
 docker images           # List images
 docker rmi <image>      # Remove image
 docker image prune      # Prune unneeded images
+docker system prune -a --volumes  # Prune images and volumes
 ```
 
 ## Data containers
