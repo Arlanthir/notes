@@ -18,6 +18,8 @@ Video: https://youtu.be/4CtqfHmssx8
 One string at a time or all strings at once by blocking the tremolo with a wooden block (or lego brick..!) (before even removing the old ones).  
 Lubricate the nut with a graphite pencil.
 
+Tip for the Floyd Rose bridge: cut just the ball end of the strings and leave the twisty part to offer better grip in the saddle blocks.
+
 After passing the string through the peg hole:
 - Pull it fairly tout
 - Measure another two pegs (and a bit) after it with your finger (aim for three complete wraps of the string around the peg)
