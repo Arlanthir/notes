@@ -20,16 +20,29 @@ A                Am
 3 | | | | | |    3 | | | | | |
 ```
 
+### A# / Bb Chords
+
+```sql
+Bb
+  E A D G B e
+  x 1 3 3 3 1
+  ===========
+1 | 1 | | | 1
+2 | | | | | |
+3 | | 2 3 4 |
+```
+
 ### B Chords
 
 ```sql
-B7
-  E A D G B e
-  x 2 1 2 o 2
-  ===========
-1 | | 1 | | |
-2 | 2 | 3 | 4
-3 | | | | | |
+B                Bm               B7
+  E A D G B e      E A D G B e      E A D G B e
+  x 2 4 4 4 2      x 2 4 4 3 2      x 2 1 2 o 2
+  ===========      ===========      ===========
+1 | | | | | |    1 | | | | | |    1 | | 1 | | |
+2 x 1 | | | 1    2 x 1 | | | 1    2 | 2 | 3 | 4
+3 | | | | | |    3 | | | | 2 |    3 | | | | | |
+4 | | 2 3 4 |    4 | | 3 4 | |
 ```
 
 ### C Chords
@@ -73,26 +86,59 @@ E                Em
 ### F Chords
 
 ```sql
-Fmaj7
-  E A D G B e
-  x 3 3 2 1 o
-  ===========
-1 | | | | 1 |
-2 | | | 2 | |
-3 | 3 4 | | |
+F                Fm               Fmaj7
+  E A D G B e      E A D G B e      E A D G B e
+  1 3 3 2 1 1      1 3 3 1 1 1      x 3 3 2 1 o
+  ===========      ===========      ===========
+1 1 | | | 1 1    1 1 | | 1 1 1    1 | | | | 1 |
+2 | | | 2 | |    2 | | | | | |    2 | | | 2 | |
+3 | 3 4 | | |    3 | 3 4 | | |    3 | 3 4 | | |
 ```
 
 ### G Chords
 
 ```sql
-G                G7
-  E A D G B e      E A D G B e
-  3 2 o o o 3      3 2 o o o 1
-  ===========      ===========
-1 | | | | | |    1 | | | | | 1
-2 | 1 | | | |    2 | 2 | | | |
-3 2 | | | | 3    2 3 | | | | |
+G                G                G7
+  E A D G B e      E A D G B e      E A D G B e
+  3 2 o o o 3      3 2 o o 3 1      3 2 o o o 1
+  ===========      ===========      ===========
+1 | | | | | |    1 | | | | | |    1 | | | | | 1
+2 | 1 | | | |    2 | 1 | | | |    2 | 2 | | | |
+3 2 | | | | 3    2 2 | | | 3 4    2 3 | | | | |
 ```
+
+
+### Power Chords
+
+The lowest note defines the chord, use always the same shape.
+
+```sql
+F                B (tip of index mutes the E string)
+  E A D G B e      E A D G B e
+  1 3 3 x x x      x 2 4 4 x x
+  ===========      ===========
+1 1 | | | | |    1 | | | | | |
+2 | | | | | |    2 x 1 | | | |
+3 | 3 4 | | |    3 | | | | | |
+                 4 | | 3 4 | |
+```
+
+### Octaves
+
+Power chords with muted string in the middle (use index or tip of 3rd finger to mute).
+
+```sql
+F                B
+  E A D G B e      E A D G B e
+  1 x 3 x x x      x 2 x 4 x x
+  ===========      ===========
+1 1 | | | | |    1 | | | | | |
+2 | | | | | |    2 x 1 | | | |
+3 | x 3 | | |    3 | | | | | |
+                 4 | | x 3 | |
+```
+
+
 
 
 ## Scales
