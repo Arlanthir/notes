@@ -19,6 +19,8 @@ Columns are called files.
 - Keep the pawns protecting the King after castle in their initial positions. Never try to prevent a pin by advancing a pawn before it happens.
 - Use a minor piece (usually a Knight) in conjunction with the 3 pawns to protect a castle.
 - Develop pieces before initiating combinations (sequence of moves, often initiated by a sacrifice, which leaves the opponent few options and results in tangible gain).
+- A bishop is best placed for attack controlling a diagonal that crosses the center, or pinning a Knight.
+- Defensively, a bishop in the second rank is fine.
 
 ## Openings
 
