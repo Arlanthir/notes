@@ -633,6 +633,29 @@ qpaeq
 
 **Note**: If `qpaeq` has no effect, run `pavucontrol` and change "ALSA Playback on" to "FFT based equalizer on ..." while the media player is running.
 
+## Dualshock 3 / SIXAXIS
+
+```
+pacman -Syu bluez bluez-plugins bluez-utils
+# If bluetooth icon is not present:
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+# end of optional
+bluetoothctl
+agent on
+default-agent
+power on
+discoverable on
+pairable on
+# Connect the dualshock 3 using an USB cable, press the Home button
+devices
+# Unplug the controller
+Should see a MAC Address, maybe an authorization request that you need to accept
+trust <mac>
+quit
+```
+
+
 ## Troubleshooting
 
 Log of gnome-shell extensions:
