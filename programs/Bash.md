@@ -87,6 +87,7 @@ rm -rf dir    # Delete directory and all subfiles and subdirectories
 Copy files through SSH.
 ```bash
 scp ~/path/to/file.txt user@host:/where/to/put
+scp -r ~/path/to/dir user@host:/where/to/put
 scp user@host:/where/to/put ~/path/to/file.txt
 # To change port, -P <port>
 # To transfer file with spaces: :"/some/path\\ with\\ spaces"
