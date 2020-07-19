@@ -10,6 +10,7 @@ These instructions are for a variant using a Raspberry Pi 3, for better performa
 - [Sota's variant](https://sudomod.com/forum/viewtopic.php?f=9&t=1615)
 - [Info on screens](https://www.sudomod.com/forum/viewtopic.php?f=8&t=15&hilit=gearbest&start=520)
 - [Screen performance](https://www.sudomod.com/forum/viewtopic.php?f=8&t=2850)
+- [Known screens](https://www.sudomod.com/wiki/index.php/GBZ_Screen)
 
 ## Other resources
 
