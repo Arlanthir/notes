@@ -74,16 +74,26 @@ dd bs=4M if=retropie-buster-4.6-rpi2_rpi3.img of=/dev/sdX conv=fsync
 
 Configure it with a keyboard and screen.
 
+- Make sure to run raspi-config in the Configuration Menu:
+  - Default locale
+  - Wifi Country
+  - Keyboard layout
+  - Interfacing options > SSH > Enable > Change Password > Reboot
+    - SSH hostname is `retropie`
+- Wifi
+
 Keys:
 
 - Hold any button to skip a particular button.
 - Hotkey Enable is the equivalent of the Home button, to enable EmulationStation shortcuts.
 
-`TODO keys`
-
 `TODO theme`
 
 `TODO resolution`
+
+Roms:
+
+
 
 ### Buttons
 
