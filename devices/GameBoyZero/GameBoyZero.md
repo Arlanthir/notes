@@ -89,6 +89,7 @@ Configure it with a keyboard and screen.
     - SSH hostname is `retropie`
 - Wifi
 - ES Themes: rxbrad/gbz35-dark (Change it afterwards in EmulationStation UI Settings)
+- Run Command Configuration > Disable Run Command Menu
 
 
 
