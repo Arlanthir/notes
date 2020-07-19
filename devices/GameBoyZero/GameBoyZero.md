@@ -27,10 +27,52 @@ These instructions are for a variant using a Raspberry Pi 3, for better performa
 | [Gearbest 3.5'' screen](https://www.gearbest.com/development-boards/pp_29447.html) | 17€ |
 | **Total**                               | **59€** |
 
-## Installing retropie
 
-1. Get [retropie](https://retropie.org.uk/)
-2. Flash retropie to an SD Card and configure it with a keyboard and screen
+## GearBest screen (new)
+
+RCA connector order (left to righ):
+
+1. Red (5V)
+2. Black (GND)
+3. White (Sound, do not use)
+4. Yellow (Video)
+
+- Red: Solder to pin 2 or 4
+- Black: Solder to pin 6, 9, 14, 20, 25, 30, 34 or 39
+- Yellow: Solder to PP24
+
+Remember to keep the black insolating rubber whenever possible, to shield the AV2 connection from VCC interference.
+Alternatively, redo the connections keeping AV2 and GND together and shielded, with VCC outside.
+
+If the screen displays poorly, try disabling the screen's voltage regulator from 12V to 5V, by shorting one of the pins of a chip:
+
+![Gearbest mod](gearbest-screen.jpg)
+
+
+## Housing
+
+1. Enlarge the screen area so the 3.5'' screen fits.
+2. Open space for the X and Y buttons.
+3. Cut away the battery frame so that the Raspberry Pi 3 fits.
+
+
+## Software
+
+### RetroPie
+
+https://retropie.org.uk/
+
+Extract retropie*.img.gz
+
+```bash
+# Discover which device is the SD card:
+lsblk -p`
+# (Unmount all partitions of the SD Card)
+# Flash the image:
+dd bs=4M if=retropie-buster-4.6-rpi2_rpi3.img of=/dev/sdX conv=fsync
+```
+
+Configure it with a keyboard and screen
 
 Keys:
 
@@ -40,26 +82,7 @@ Keys:
 
 `TODO resolution`
 
-## Housing
-
-1. Enlarge the screen area so the 3.5'' screen fits.
-2. Open space for the X and Y buttons.
-3. Cut away the battery frame so that the Raspberry Pi 3 fits.
-
-## Screen
-
-1. Solder the screen's yellow cable (AV2) to PP24 on RPi (Composite video)
-2. Solder the screen's red cable to RPi VCC
-3. Solder the screen's black cable to RPi GND
-
-Remember to keep the black insolating rubber whenever possible, to shield the AV2 connection from VCC interference.
-Alternatively, redo the connections keeping AV2 and GND together and shielded, with VCC out.
-
-If the screen displays poorly, try disabling the screen's voltage regulator from 12V to 5V, by shorting one of the pins of a chip:
-
-![Gearbest mod](gearbest-screen.jpg)
-
-## Buttons
+### Buttons
 
 1. Get [Adafruit's retrogame](https://github.com/adafruit/Adafruit-Retrogame) to translate GPIO buttons to keyboard events
 2. Copy retrogame to the retropie
