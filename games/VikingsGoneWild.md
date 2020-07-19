@@ -101,7 +101,7 @@ Available actions (in any order):
     - If all Buildings are defended, the defender gains **1 bonus VP** and places the **Damage token** in the Town Hall
   - Each successful attack places a **Damage token** on the building, the building can't be attacked any more this turn
   - Buildings may **reward** each successful attack (top left corner)
-    - E.g. Attacking a Beer Container allows stealing all stored Beer. If attacking player has no Container to store it, it
+    - E.g. Attacking a Beer Container allows stealing a stored Beer. If attacking player has no Container to store it, it
       has to be used this turn.
   - Receive **Victory Points** depending on the number of buildings damaged:
     | Nr. Attacks | Victory Points |
