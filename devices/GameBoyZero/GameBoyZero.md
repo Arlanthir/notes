@@ -58,6 +58,13 @@ If the screen displays poorly, try disabling the screen's voltage regulator from
 
 ## Software
 
+## Configuration
+
+Edit /boot/config.txt and uncomment/modify the following lines:
+```
+hdmi_force_hotplug=1
+```
+
 ### RetroPie
 
 https://retropie.org.uk/
@@ -81,17 +88,31 @@ Configure it with a keyboard and screen.
   - Interfacing options > SSH > Enable > Change Password > Reboot
     - SSH hostname is `retropie`
 - Wifi
+- ES Themes: rxbrad/gbz35-dark (Change it afterwards in EmulationStation UI Settings)
+
+
+
 
 Keys:
 
 - Hold any button to skip a particular button.
-- Hotkey Enable is the equivalent of the Home button, to enable EmulationStation shortcuts.
+- Hotkey Enable is the equivalent of the Home button, to enable EmulationStation shortcuts. Leave it undefined to use Select.
+  - Shorcuts:
+    - Hotkey+Start = exit emulator
+    - Hotkey+Right shoulder = save state
+    - Hotkey+Left shoulder = load saved state
+    - Hotkey+Left = decrease current saved state slot number
+    - Hotkey+Right = increase current saved state slot number
+    - Hotkey+X = quick menu (with access to most of these other items)
+    - Hotkey+B = reset game
 
 `TODO theme`
 
 `TODO resolution`
 
 Roms:
+
+- Add files in ~/RetroPie/roms/<CONSOLE>
 
 
 
