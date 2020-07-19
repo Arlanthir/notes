@@ -72,9 +72,12 @@ lsblk -p`
 dd bs=4M if=retropie-buster-4.6-rpi2_rpi3.img of=/dev/sdX conv=fsync
 ```
 
-Configure it with a keyboard and screen
+Configure it with a keyboard and screen.
 
 Keys:
+
+- Hold any button to skip a particular button.
+- Hotkey Enable is the equivalent of the Home button, to enable EmulationStation shortcuts.
 
 `TODO keys`
 
