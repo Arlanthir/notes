@@ -86,8 +86,8 @@ To check if the strings curvature matches the neck curvature, rest the radius to
 
 | String              | Inches | Mm    | Musifex Setup |
 | ------------------- | ------ | ----- | ------------- |
-| Low E (6th string)  | 4/64'' | 1.6mm | <3mm          |
-| High E (1st string) | 3/64'' | 1.2mm | <2mm          |
+| Low E (6th string)  | 4/64'' | 1.6mm | ~1.6mm        |
+| High E (1st string) | 3/64'' | 1.2mm | ~1.6mm        |
 
 
 ### Intonation
