@@ -1,12 +1,25 @@
 # Guitar
 
-## Pickups
+## Tips
 
-Typically, the Bridge pickup is used more in Lead guitars, and the Neck pickup in Rhythm guitars.
+- Fingers in the left hand are numbered 1-4, where 1 is the index finger and 4 is the pinky.
+- Help with fingers 1 and 2 when you do the bend with finger 3. Avoid bending with finger 4.
+- Typically, the Bridge pickup is used more in Lead guitars, and the Neck pickup in Rhythm guitars.
+
+## Notes
+
+Each fret represents a semitone. Two frets is a full tone.
+From B (Si) and E (Mi) to a higher note, you only move one semitone (1 fret).
+
+```sql
+La Si Do Re Mi Fa Sol
+A  B  C  D  E  F  G
+```
+
+![Notes in the guitar](guitar_neck.gif)
+
 
 ## Chords
-
-Fingers are numbered 1-4, where 1 is the index finger and 4 is the pinky.
 
 ### A Chords
 
@@ -147,27 +160,24 @@ F                B
 
 Scales are alphabets of notes (letters) to create licks (words) to compose solos or improvise.
 
-### Minor Pentatonic
+### Pentatonic (e.g. A minor)
+
 ```sql
-Root A
-  E A D G B e
-  ===========
-5 1 1 1 1 1 1
-6 | | | | | |
-7 | 3 3 3 | |
-8 4 | | | 4 4
+e -o-||-------o-----o--------o-----o-----o--------o---
+B ---||-o-----o-----o--------o----(1)------(4)----o---
+G -o-||----o--------o-----o----(1)-------o-----o------
+D -o-||----o--------o-----o--------o-----o-----o------
+A -o-||-------o-----o-----o--------o-----o--------o---
+E -o-||------(2)---(1)------(2)---(2)---(1)------(2)--
+   0    1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+                    A        C
+            (Minor root)  (Major root)
 ```
 
-### Major Pentatonic
-```sql
-Root A
-  E A D G B e
-  ===========
-4 | 1 1 1 | |
-5 2 | | | 2 2
-6 | | | 3 | |
-7 4 4 4 | 4 4
-```
+(Numbers in parentheses indicate which finger to play the note in the separate hand positions)
+
+![Pentatonic fretboard](pentatonic_fretboard.bmp)
+
 
 ## Tunings
 
