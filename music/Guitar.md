@@ -144,23 +144,35 @@ The guitar is an instrument where a fret always represents a semitone (no white 
 ### E shaped chords (rooted in 6th string)
 
 ```sql
-Major            Minor
-  E A D G B e      E A D G B e
-  ===========      ===========
-  1 | | | 1 1      1 | | 1 1 1
-  | | | 2 | |      | | | | | |
-  | 3 4 | | |      | 3 4 | | |
+Major            Minor            Augmented        Diminished
+  E A D G B e      E A D G B e      E A D G B e      E A D G B e
+  ===========      ===========      ===========      ===========
+  1 | | | 1 1      1 | | 1 1 1      | | | 1 | |
+  | | | 2 | |      | | | | | |      | | 2 | | |
+  | 3 4 | | |      | 3 4 | | |      | 3 | | | |
+                                    4 | | | | |
 ```
 
 ### A shaped chords (rooted in the 5th string)
 
 ```sql
-Major            Minor
-  E A D G B e      E A D G B e
-  ===========      ===========
-  x 1 | | | 1      x 1 | | | 1
-  | | | | | |      | | | | 2 |
-  | | 2 3 4 |      | | 3 4 | |
+Major            Minor            Augmented        Diminished
+  E A D G B e      E A D G B e      E A D G B e      E A D G B e
+  ===========      ===========      ===========      ===========
+  x 1 | | | 1      x 1 | | | 1      | | | 1 1 |      | | | 1 | |
+  | | | | | |      | | | | 2 |      | | 2 | | |      | 2 | | | |
+  | | 2 3 4 |      | | 3 4 | |      | 3 | | | |      | | 3 | 4 |
+```
+
+### D shaped chords (rooted in the 4th string)
+
+```sql
+Major            Minor            Augmented        Diminished
+  E A D G B e      E A D G B e      E A D G B e      E A D G B e
+  ===========      ===========      ===========      ===========
+  | | | | | |      | | | | | |      | | | | | |      | | 1 | 2 |
+  | | | | | |      | | | | | |      | | | | | |      | | | 3 | 4
+  | | | | | |      | | | | | |      | | | | | |      | | | | | |
 ```
 
 
