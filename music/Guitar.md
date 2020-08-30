@@ -21,6 +21,21 @@ A  B  C  D  E  F  G
 
 ## Chords
 
+Each chord is composed of three (or more) notes. We can play 3-note chords in all 6 strings by repeating the notes in other strings.
+
+- **Major** chords: Root note + Major third + Minor third  (happy chords)
+- **Minor** chords: Root note + Minor third + Major third  (sad chords)
+- **Augmented** chords: Root note + Major third + Major third
+- **Diminished** chords: Root note + Minor third + Minor third
+
+A **major third** is an interval of 2 tones.
+A **minor third** is an interval of 1.5 tones.
+
+![Chord Theory](chord_theory.jpg)
+
+![Chord Cheatsheet](chord_cheatsheet.jpg)
+
+
 ### A Chords
 
 ```sql
