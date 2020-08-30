@@ -137,6 +137,32 @@ G                G                G7
 3 2 | | | | 3    3 2 | | | 3 4    3 3 | | | | |
 ```
 
+## Chord Shapes
+
+The guitar is an instrument where a fret always represents a semitone (no white and black keys like the piano). To move a chord up or down the scale, you only need to move the position of the hand up and down the neck.
+
+### E shaped chords (rooted in 6th string)
+
+```sql
+Major            Minor
+  E A D G B e      E A D G B e
+  ===========      ===========
+  1 | | | 1 1      1 | | 1 1 1
+  | | | 2 | |      | | | | | |
+  | 3 4 | | |      | 3 4 | | |
+```
+
+### A shaped chords (rooted in the 5th string)
+
+```sql
+Major            Minor
+  E A D G B e      E A D G B e
+  ===========      ===========
+  x 1 | | | 1      x 1 | | | 1
+  | | | | | |      | | | | 2 |
+  | | 2 3 4 |      | | 3 4 | |
+```
+
 
 ### Power Chords
 
