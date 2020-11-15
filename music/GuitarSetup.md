@@ -104,6 +104,11 @@ To check the intonation of each string (most accurate in playing position):
 - If it was sharp, increase string length (tighten the screw)
 - Retune and retest
 
+
+### Gibson Stopbar Tailpiece
+
+With the strings loosened, adjust the tailpiece so that it is at the lowest possible point that the strings only make contact with the bridge saddles and not the bridge edge.
+
 ## Classical
 
 ### Restring
