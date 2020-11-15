@@ -107,7 +107,7 @@ To check the intonation of each string (most accurate in playing position):
 
 ### Gibson Stopbar Tailpiece
 
-With the strings loosened, adjust the tailpiece so that it is at the lowest possible point that the strings only make contact with the bridge saddles and not the bridge edge.
+With the strings loosened, adjust the tailpiece so that it is at the lowest possible point that the strings only make contact with the bridge saddles and not the bridge edge. Turn the screws with an ice cream stick (or similar wooden tool) and not with a metal screwdriver.
 
 ## Classical
 
