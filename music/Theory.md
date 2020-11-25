@@ -33,7 +33,7 @@ E.g. for C Major:
 
 Chords in the same notes of the scale are called Diatonic Chords. A good rule of thumb for chord progressions using those chords:
 - Start with the root note chord (I)
-- End with a IV or V chord
+- End with chord IV (Plagal Cadence) or V (Authentic Cadence)
 
 ## Time Signatures
 
