@@ -19,14 +19,29 @@ Notice how B and E don't have sharps before the next note.
 
 ### Major Scale
 
-To construct a major scale, choose a root note and the following notes: WWHWWWH (W: whole tone, H: semitone). Each note in a scale is given a number 1-7 and written as a roman numeral in order to symbolize major chords as uppercase and minor chords as lowercase.
+To construct a major scale:
+
+1. Choose a root note
+2. Produce the next notes with the recipe: WWHWWWH (W: whole tone, H: semitone)
+3. Each note in a scale is given a number 1-7
+4. The 2nd, 3rd and 6th notes are minor (m). The 7th is diminished (º). The rest are major.
+5. You can write them as roman numerals to symbolize major chords as uppercase and minor chords as lowercase.
 
 E.g. for C Major:
 
-| Note            | **C** | D  | E   | F  | G | A  | B                 |
-| --------------- | ----- | -- | --- | -- | - | -- | ----------------- |
-| Number in scale | 1     | 2  | 3   | 4  | 5 | 6  | 7                 |
-| Major/minor     | I     | ii | iii | IV | V | vi | viiº (diminished) |
+| Note            | **C** | Dm | Em  | F  | G | Am | Bº   |
+| --------------- | ----- | -- | --- | -- | - | -- | ---- |
+| Number in scale | 1     | 2  | 3   | 4  | 5 | 6  | 7    |
+| Major/minor     | I     | ii | iii | IV | V | vi | viiº |
+
+Each Major Scale relates to a Minor Scale 1.5 tones lower.
+
+So the relative scale for A Minor:
+
+| Note            | **Am** | Bº  | C   | Dm | Em | F  | G   |
+| --------------- | ------ | --- | --- | -- | -- | -- | --- |
+| Number in scale | 1      | 2   | 3   | 4  | 5  | 6  | 7   |
+| Major/minor     | i      | iiº | III | iv | v  | VI | VII |
 
 
 #### Diatonic chords
