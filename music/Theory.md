@@ -64,5 +64,7 @@ Time signatures define the essential rhythm of the song. The first beat of the b
 
 ### 12-Bar blues
 
-Composed by 12 bars of the following major chords in the key: I I I I IV IV I I V IV I I
+Composed by 12 bars of the following Major Chords in the key: I I I I IV IV I I V IV I I
+
+Because Major Chords are so bright, we can replace them with Dominant Seventh chords for a more Blues-y feel (add a flatted seventh note to the Major Chord).
 
