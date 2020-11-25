@@ -15,7 +15,7 @@ Each step along the circle is a semitone, and a fret on the guitar.
 
 Notice how B and E don't have sharps before the next note.
 
-## Scale
+## Scales
 
 ### Major Scale
 
@@ -58,3 +58,11 @@ Time signatures define the essential rhythm of the song. The first beat of the b
 - 3/4: Three beats per measure (waltz)
 - 2/4: Two beats per measure (march)
 - 6/8: Like waltz, but the 4th beat is not as strong as the first
+
+
+## Blues
+
+### 12-Bar blues
+
+Composed by 12 bars of the following major chords in the key: I I I I IV IV I I V IV I I
+
