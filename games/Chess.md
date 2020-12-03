@@ -21,6 +21,8 @@ Columns are called files.
 - Develop pieces before initiating combinations (sequence of moves, often initiated by a sacrifice, which leaves the opponent few options and results in tangible gain).
 - A bishop is best placed for attack controlling a diagonal that crosses the center, or pinning a Knight.
 - Defensively, a bishop in the second rank is fine.
+- When choosing a pawn to capture with, generally capture towards the center to open files for your rooks.
+- An early open Queen is generally bad, because of Knight developing with tempo on the F file and attacking the Queen.
 
 ## Openings
 
