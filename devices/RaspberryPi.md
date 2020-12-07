@@ -70,8 +70,9 @@ chmod +x retropie_setup.sh
 sudo ./retropie_setup.sh
 # Choose Basic Install
 
-# Other opt packages to consider: dosbox, kodi, lr-ppsspp/ppsspp
+# Other opt packages to consider: dosbox, kodi, lr-ppsspp/ppsspp, scraper
 ```
+
 ### Swap A/B in EmulationStation
 
 On retropie_setup: `Manage packages` > `Manage core packages` > `emulationstation` > `Configurations/Options` > `Swap A/B Buttons in ES`
@@ -79,7 +80,7 @@ On retropie_setup: `Manage packages` > `Manage core packages` > `emulationstatio
 ### Theme
 
 In the `RetroPie` "emulator", go to the themes sub-app and install the theme gallery.
-Good themes: `simple`, `simple-dark`
+Good themes: `simple`, `simple-dark`, `tronkyfran`, `retrorama`, `spaceoddity`
 
 ### Disable game loading / boot screen
 
@@ -99,6 +100,28 @@ Once successfully paired, exit the Bluetooth menu.
 
 Place ROMS in the appropriate folder inside /home/pi/RetroPie/roms.
 BIOS files (e.g. PlayStation) go in /home/pi/RetroPie/BIOS.
+
+### Using Steven's `scraper`
+
+Exit EmulationStation.
+
+`sudo ~/RetroPie-Setup/retropie_setup.sh.`
+
+Install `scraper` from opt packages.
+
+Manage Packages > Manage Optional Packages > scraper > Configuration / Options
+
+Relevant Options:
+
+- Thumbnails Only: Disabled
+- Arcade Source: ArcadeItalia
+- Console Source: ScreenScraper
+- ROM Names: theGamesDB
+- Use rom folder for gamelist & images: Enabled
+- Download Videos: Enabled
+
+
+
 
 ### Add SteamLink shortcut
 
