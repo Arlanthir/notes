@@ -70,16 +70,22 @@ chmod +x retropie_setup.sh
 sudo ./retropie_setup.sh
 # Choose Basic Install
 ```
+### Swap A/B in EmulationStation
+
+On retropie_setup: `Manage packages` > `Manage core packages` > `emulationstation` > `Configurations/Options` > `Swap A/B Buttons in ES`
 
 ### DualShock 3
 
-`Manage Packages` > `drivers` > `sixaxis` > `Install from source`
+On retropie_setup: `Manage Packages` > `drivers` > `sixaxis` > `Install from source`
 
 Exit RetroPie Setup and return to the EmulationStation Home Screen.
 
-While staying in the `RetroPie` section, select the `Bluetooth` item.  
-Select `Register and Connect to Bluetooth Device` and follow the on-screen prompts to pair your controller.
+Launch the `RetroPie` "emulator". Select `Bluetooth` > `Register and Connect to Bluetooth Device`.  
 Once successfully paired, exit the Bluetooth menu.
+
+### ROMS
+
+Place ROMS in the appropriate folder inside /home/pi/RetroPie/roms.
 
 
 
