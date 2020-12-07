@@ -96,6 +96,7 @@ Once successfully paired, exit the Bluetooth menu.
 ### ROMS
 
 Place ROMS in the appropriate folder inside /home/pi/RetroPie/roms.
+BIOS files (e.g. PlayStation) go in /home/pi/RetroPie/BIOS.
 
 ### Add SteamLink shortcut
 
