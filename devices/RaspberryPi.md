@@ -77,7 +77,12 @@ On retropie_setup: `Manage packages` > `Manage core packages` > `emulationstatio
 ### Theme
 
 In the `RetroPie` "emulator", go to the themes sub-app and install the theme gallery.
-Good themes:
+Good themes: `simple`, `simple-dark`
+
+### Disable game loading / boot screen
+
+Retropie settings > Run Command > Launch Menu
+
 
 ### DualShock 3
 
