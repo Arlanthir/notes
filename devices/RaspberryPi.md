@@ -70,7 +70,7 @@ chmod +x retropie_setup.sh
 sudo ./retropie_setup.sh
 # Choose Basic Install
 
-# Other opt packages to consider: dosbox, kodi, ppsspp
+# Other opt packages to consider: dosbox, kodi, lr-ppsspp/ppsspp
 ```
 ### Swap A/B in EmulationStation
 
