@@ -97,7 +97,30 @@ Once successfully paired, exit the Bluetooth menu.
 
 Place ROMS in the appropriate folder inside /home/pi/RetroPie/roms.
 
+### Add SteamLink shortcut
 
+Install via exp packages in retropie-setup, or:
+
+```
+mkdir ./RetroPie/roms/ports 
+nano ./RetroPie/roms/ports/Steam.sh
+
+#!/bin/bash
+steamlink
+```
+
+Add the following to `/etc/emulationstation/es_systems.cfg`
+```
+  <system>
+    <name>ports</name>
+    <fullname>Ports</fullname>
+    <path>/home/pi/RetroPie/roms/ports</path>
+    <extension>.sh .SH</extension>
+    <command>bash %ROM%</command>
+    <platform>pc</platform>
+    <theme>ports</theme>
+  </system>
+```
 
 ## Install transmission-daemon
 
