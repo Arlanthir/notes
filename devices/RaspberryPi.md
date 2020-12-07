@@ -19,9 +19,8 @@ umount /dev/sdb2
 
 sudo dd bs=4M if=2017-11-29-raspbian-stretch.img of=/dev/sdb status=progress conv=fsync
 
-sudo kill -USR1 $(pgrep ^dd$) # Monitor progress
-
-sudo sync
+# sudo kill -USR1 $(pgrep ^dd$) # Monitor progress
+# sudo sync # Ensure write before unplugging
 ```
 
 ## Change SSH port
@@ -32,6 +31,8 @@ Port 22   # Uncomment and choose another number
 ```
 
 Default username/password: pi / raspberry
+
+Make sure to change the password (and other configuration) in `sudo raspi-config`
 
 ## Install a USB disk
 
@@ -59,44 +60,28 @@ sudo mount /dev/sda1 /mnt/usb
 /dev/sda1    /mnt/usb    ntfs    defaults,permissions    0    0
 ```
 
-## Install Syncthing
-
-New:
-```bash
-sudo apt-get install syncthing
-sudo systemctl start syncthing@pi.service
-# Wait some time
-sudo systemctl stop syncthing@pi.service
-nano ~/.config/syncthing/config.xml
-
-<gui enabled="true" tls="false" debugging="false">
-        <address>0.0.0.0:8080</address>
-
-sudo systemctl start syncthing@pi.service
-# Access the web interface, change user/password
-# Restart
-sudo systemctl enable syncthing@pi.service
+## Install gaming machine
+```
+sudo apt-get install git lsb-release steamlink
+cd
+git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
+cd RetroPie-Setup
+chmod +x retropie_setup.sh
+sudo ./retropie_setup.sh
+# Choose Basic Install
 ```
 
+### DualShock 3
 
-Old:
+`Manage Packages` > `drivers` > `sixaxis` > `Install from source`
 
-1. Download the ARM version
-2. Copy the files to /home/pi/syncthing
-3. Run syncthing once to create the config.xml file in ~/.config/syncthing
-4. Exit the application
-5. Change in ~/.config/syncthing: `0.0.0.0:8080`
-6. `sudo cp Syncthing/etc/linux-systemd/system/syncthing@.service /lib/systemd/system`
-   - Or /etc/systemd/system, /run/systemd/system, /usb/lib/systemd/system?
-7. `sudo systemctl enable syncthing@<USER>.service`
-8. `sudo systemctl start syncthing@<USER>.service`
-9. `sudo systemctl status syncthing@<USER>.service`
+Exit RetroPie Setup and return to the EmulationStation Home Screen.
 
-Access the URL with a remote computer and change configs: user (example: admin) and pass.
+While staying in the `RetroPie` section, select the `Bluetooth` item.  
+Select `Register and Connect to Bluetooth Device` and follow the on-screen prompts to pair your controller.
+Once successfully paired, exit the Bluetooth menu.
 
-Use port forwarding on your router, port 8080 and possibly 22000
 
-Remember to setup different ports if using other clients in the same home network.
 
 ## Install transmission-daemon
 
@@ -174,6 +159,46 @@ Convert subtitles to UTF-8:
 ```bash
 iconv -f LATIN1 -t UTF-8 in.srt > out.srt
 ```
+
+
+## Install Syncthing
+
+New:
+```bash
+sudo apt-get install syncthing
+sudo systemctl start syncthing@pi.service
+# Wait some time
+sudo systemctl stop syncthing@pi.service
+nano ~/.config/syncthing/config.xml
+
+<gui enabled="true" tls="false" debugging="false">
+        <address>0.0.0.0:8080</address>
+
+sudo systemctl start syncthing@pi.service
+# Access the web interface, change user/password
+# Restart
+sudo systemctl enable syncthing@pi.service
+```
+
+
+Old:
+
+1. Download the ARM version
+2. Copy the files to /home/pi/syncthing
+3. Run syncthing once to create the config.xml file in ~/.config/syncthing
+4. Exit the application
+5. Change in ~/.config/syncthing: `0.0.0.0:8080`
+6. `sudo cp Syncthing/etc/linux-systemd/system/syncthing@.service /lib/systemd/system`
+   - Or /etc/systemd/system, /run/systemd/system, /usb/lib/systemd/system?
+7. `sudo systemctl enable syncthing@<USER>.service`
+8. `sudo systemctl start syncthing@<USER>.service`
+9. `sudo systemctl status syncthing@<USER>.service`
+
+Access the URL with a remote computer and change configs: user (example: admin) and pass.
+
+Use port forwarding on your router, port 8080 and possibly 22000
+
+Remember to setup different ports if using other clients in the same home network.
 
 
 ### Install Sonarr
