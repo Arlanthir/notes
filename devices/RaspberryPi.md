@@ -120,7 +120,7 @@ Relevant Options:
 - Use rom folder for gamelist & images: Enabled
 - Download Videos: Enabled
 
-
+Remember to enable videos and omxplayer in EmulationStation settings.
 
 
 ### Add SteamLink shortcut
