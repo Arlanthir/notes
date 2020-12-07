@@ -74,6 +74,11 @@ sudo ./retropie_setup.sh
 
 On retropie_setup: `Manage packages` > `Manage core packages` > `emulationstation` > `Configurations/Options` > `Swap A/B Buttons in ES`
 
+### Theme
+
+In the `RetroPie` "emulator", go to the themes sub-app and install the theme gallery.
+Good themes:
+
 ### DualShock 3
 
 On retropie_setup: `Manage Packages` > `drivers` > `sixaxis` > `Install from source`
