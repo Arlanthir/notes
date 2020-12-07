@@ -61,6 +61,9 @@ sudo mount /dev/sda1 /mnt/usb
 ```
 
 ## Install gaming machine
+
+It may be required to split 256MB to GPU Memory.
+
 ```
 sudo apt-get install git lsb-release steamlink
 cd
@@ -119,6 +122,7 @@ Relevant Options:
 - ROM Names: theGamesDB
 - Use rom folder for gamelist & images: Enabled
 - Download Videos: Enabled
+- Download Marquees: Enabled
 
 Remember to enable videos and omxplayer in EmulationStation settings.
 
