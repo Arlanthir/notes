@@ -120,7 +120,7 @@ Relevant Options:
 
 - Thumbnails Only: Disabled
 - Arcade Source: ArcadeItalia
-- Console Source: ScreenScraper
+- Console Source: theGamesDB (ScreenScraper is recommended but works poorly for me)
 - ROM Names: theGamesDB
 - Use rom folder for gamelist & images: Enabled
 - Download Videos: Enabled
@@ -128,6 +128,20 @@ Relevant Options:
 
 Remember to enable videos and omxplayer in EmulationStation settings.
 
+CLI version:
+
+- Register at https://screenscraper.fr/ and change country and language.
+- Optionally donate 10€ to get 5 additional scraper threads.
+
+```bash
+sudo apt-get install handbrake-cli
+
+cd /home/pi/RetroPie/roms/gamegear
+/opt/retropie/supplementary/scraper/scraper -append=true -console_src="gdb,ss" -download_marquees=true -download_videos=true -lang="en" -use_nointro_name=false -workers=4 -ss_user=<user> -ss_password=<pass>
+
+cd /home/pi/RetroPie/roms/arcade
+/opt/retropie/supplementary/scraper/scraper -append=true -mame=true -convert_videos=true -download_marquees=true -download_videos=true -lang="en" -use_nointro_name=false -workers=4
+```
 
 ### Add SteamLink shortcut
 
