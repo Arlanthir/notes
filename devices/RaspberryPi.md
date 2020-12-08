@@ -83,7 +83,7 @@ On retropie_setup: `Manage packages` > `Manage core packages` > `emulationstatio
 ### Theme
 
 In the `RetroPie` "emulator", go to the themes sub-app and install the theme gallery.
-Good themes: `simple`, `simple-dark`, `tronkyfran`, `retrorama`, `spaceoddity`
+Good themes: `simple`, `simple-dark`, `tronkyfran`, `retrorama`, `spaceoddity`, `magazinemadness`, `nostalgic`, `locomotion`, `cosmicrise`?
 
 ### Disable game loading / boot screen
 
@@ -98,6 +98,8 @@ Exit RetroPie Setup and return to the EmulationStation Home Screen.
 
 Launch the `RetroPie` "emulator". Select `Bluetooth` > `Register and Connect to Bluetooth Device`.  
 Once successfully paired, exit the Bluetooth menu.
+
+Using the RetroArch RGUI (Hotkey + X?) you can configure the Gamepad to use Analog stick to D-Pad in the emulators of your choosing.
 
 ### ROMS
 
