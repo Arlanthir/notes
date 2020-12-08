@@ -83,7 +83,7 @@ On retropie_setup: `Manage packages` > `Manage core packages` > `emulationstatio
 ### Theme
 
 In the `RetroPie` "emulator", go to the themes sub-app and install the theme gallery.
-Good themes: `simple`, `simple-dark`, `tronkyfran`, `retrorama`, `spaceoddity`, `magazinemadness`, `nostalgic`, `locomotion`, `cosmicrise`?
+Good themes: `nostalgic`, `tronkyfran`, `retrorama`, `spaceoddity`, `magazinemadness`, `CosmicRise`, `simple`, `simple-dark`
 
 ### Disable game loading / boot screen
 
