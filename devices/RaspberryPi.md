@@ -143,6 +143,14 @@ cd /home/pi/RetroPie/roms/arcade
 /opt/retropie/supplementary/scraper/scraper -append=true -mame=true -convert_videos=true -download_marquees=true -download_videos=true -lang="en" -use_nointro_name=false -workers=4
 ```
 
+To manually re-encode ArcadeItalia videos:
+
+```bash
+cd ~/RetroPie/roms/arcade/images
+mkdir converted
+for f in *.mp4;do HandBrakeCLI -E copy:aac -e x264 -B 64 -r 25 --gain -20.0 -X 320 -q 20 -i "$f" -o "./converted/$f";done
+```
+
 ### Add SteamLink shortcut
 
 Install via exp packages in retropie-setup, or:
