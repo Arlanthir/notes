@@ -187,6 +187,7 @@ sudo nano /etc/transmission-daemon/settings.json
 "encryption": 2,
 "peer-port": 51414,
 "port-forwarding-enabled": true,
+"ratio-limit-enabled": true,
 "rpc-authentication-required": true,
 "rpc-password": "CHOSEN PASSWORD",
 "rpc-port": 9091,
