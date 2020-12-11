@@ -99,7 +99,9 @@ Exit RetroPie Setup and return to the EmulationStation Home Screen.
 Launch the `RetroPie` "emulator". Select `Bluetooth` > `Register and Connect to Bluetooth Device`.  
 Once successfully paired, exit the Bluetooth menu.
 
-Using the RetroArch RGUI (Hotkey + X?) you can configure the Gamepad to use Analog stick to D-Pad in the emulators of your choosing. Save the Core Remap afterwards. To change it for a single game, save the Game Remap instead.
+Using the RetroArch RGUI (Hotkey + Y) you can configure the Gamepad to use Analog stick to D-Pad in the emulators of your choosing. Save the Core Remap afterwards. To change it for a single game, save the Game Remap instead.
+
+You can also configure the device to register as Dualshock in the PSX emulator, and enable rumble. Again, save the Core Remap file afterwards. Some PSX games stop getting input because they don't support Dualshock controllers, so select the Standard controller in those and save it as a Game Remap file.
 
 ### ROMS
 
