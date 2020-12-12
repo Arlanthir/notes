@@ -108,6 +108,30 @@ You can also configure the device to register as Dualshock in the PSX emulator, 
 Place ROMS in the appropriate folder inside /home/pi/RetroPie/roms.
 BIOS files (e.g. PlayStation) go in /home/pi/RetroPie/BIOS.
 
+#### Generating missing .cues
+
+https://nielsbuus.dk/pg/psx_cue_maker/
+
+Seems to always output something like:
+
+```
+FILE "<FILE>.img" BINARY
+  TRACK 01 MODE2/2352
+    INDEX 01 00:00:00
+```
+
+#### Converting between image types in Arch:
+
+```bash
+yay -S mame-tools ecm-tools ccd2cue
+
+ecm2bin <file.bin.ecm>                         # Decompresses CD image (.bin, .img)
+ccd2cue -o <file>.cue <file>.ccd                # Converts .ccd to .cue
+chdman createcd -i <game.cue> -o <game.chd>   # Converts .bin/.cue to .chd (smaller)
+# In a loop:
+for i in *.cue; do chdman createcd -i "$i" -o "${i%.*}.chd"; done
+```
+
 ### Using Steven's `scraper`
 
 Exit EmulationStation.
@@ -150,7 +174,7 @@ To manually re-encode ArcadeItalia videos:
 ```bash
 cd ~/RetroPie/roms/arcade/images
 mkdir converted
-for f in *.mp4;do HandBrakeCLI -E copy:aac -e x264 -B 64 -r 25 --gain -20.0 -X 320 -q 20 -i "$f" -o "./converted/$f";done
+for f in *.mp4; do HandBrakeCLI -E copy:aac -e x264 -B 64 -r 25 --gain -20.0 -X 320 -q 20 -i "$f" -o "./converted/$f"; done
 ```
 
 ### Add SteamLink shortcut
