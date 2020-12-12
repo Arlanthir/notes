@@ -133,6 +133,33 @@ chdman createcd -i <game.cue> -o <game.chd>   # Converts .bin/.cue to .chd (smal
 for i in *.cue; do chdman createcd -i "$i" -o "${i%.*}.chd"; done
 ```
 
+#### Multi-disc ROMs in one file
+
+For multi-disc games on .cue & .bin ROM pairs or .chds, you can create a .m3u playlist file to enable you to change discs using the RGUI. Replace the .cue or .chd extension for each disc of the game with an appropriate .CD1, .CD2, etc so that EmulationStation will list only the .m3u and not the individual discs.
+
+Example for Final Fantasy VII:
+
+Folder Structure:
+
+```bash
+Final Fantasy VII (USA) (Disc 1).CD1    # This is the renamed .cue or .chd file.
+Final Fantasy VII (USA) (Disc 2).CD2    # This is the renamed .cue or .chd file.
+Final Fantasy VII (USA) (Disc 3).CD3    # This is the renamed .cue or .chd file.
+Final Fantasy VII (USA).m3u
+```
+
+Final Fantasy VII (USA).m3u's Text Contents:
+
+```
+Final Fantasy VII (USA) (Disc 1).CD1
+Final Fantasy VII (USA) (Disc 2).CD2
+Final Fantasy VII (USA) (Disc 3).CD3
+```
+
+Then, in-game:
+
+`Quick Menu` > `Disk Control` > `Disk Cycle Tray Status`
+
 ### Using Steven's `scraper`
 
 Exit EmulationStation.
