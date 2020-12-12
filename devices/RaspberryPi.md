@@ -123,10 +123,11 @@ FILE "<FILE>.img" BINARY
 #### Converting between image types in Arch:
 
 ```bash
-yay -S mame-tools ecm-tools ccd2cue
+yay -S mame-tools ecm-tools ccd2cue mdf2iso
 
 ecm2bin <file.bin.ecm>                         # Decompresses CD image (.bin, .img)
-ccd2cue -o <file>.cue <file>.ccd                # Converts .ccd to .cue
+mdf2iso --cue <file.mdf>                       # Converts .mdf/.mds to .bin/.cue
+ccd2cue -o <file.cue> <file.ccd>                # Converts .ccd to .cue
 chdman createcd -i <game.cue> -o <game.chd>   # Converts .bin/.cue to .chd (smaller)
 # In a loop:
 for i in *.cue; do chdman createcd -i "$i" -o "${i%.*}.chd"; done
