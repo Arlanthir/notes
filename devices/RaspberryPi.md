@@ -94,6 +94,8 @@ Retropie settings > Run Command > Launch Menu
 
 On retropie_setup: `Manage Packages` > `drivers` > `sixaxis` > `Install from source`
 
+Go to Options and configure the controller timeout.
+
 Exit RetroPie Setup and return to the EmulationStation Home Screen.
 
 Launch the `RetroPie` "emulator". Select `Bluetooth` > `Register and Connect to Bluetooth Device`.  
