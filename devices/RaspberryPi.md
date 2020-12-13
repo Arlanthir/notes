@@ -105,6 +105,9 @@ Using the RetroArch RGUI (Hotkey + Y) you can configure the Gamepad to use Analo
 
 You can also configure the device to register as Dualshock in the PSX emulator, and enable rumble. Again, save the Core Remap file afterwards. Some PSX games stop getting input because they don't support Dualshock controllers, so select the Standard controller in those and save it as a Game Remap file.
 
+In the Core Options, outside the Quick Menu, Settings > Input > Analog Sensitivity: 1.1, Haptic Feedback/Vibration > Enable: ON. (Then Save)
+
+
 ### ROMS
 
 Place ROMS in the appropriate folder inside /home/pi/RetroPie/roms.
@@ -206,6 +209,14 @@ cd ~/RetroPie/roms/arcade/images
 mkdir converted
 for f in *.mp4; do HandBrakeCLI -E copy:aac -e x264 -B 64 -r 25 --gain -20.0 -X 320 -q 20 -i "$f" -o "./converted/$f"; done
 ```
+
+### PlayStation settings
+
+Quick Menu > Options > Enhanced Resolution (Slow) > ON (Try it)
+Quick Menu > Options > Enhanced Resolution (Speed Hack) > ON (Try it if slow)
+
+(Then save the game/core configutation)
+
 
 ### Add SteamLink shortcut
 
