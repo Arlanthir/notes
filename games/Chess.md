@@ -26,9 +26,25 @@ Columns are called files.
 
 ## Openings
 
-- [Colle System](https://en.m.wikipedia.org/wiki/Colle_System)  
-  Open with d4, stack attacks on e4 and unleash them all with a pawn push. The objective is to remove the black Knight guarding h7 and make a kingside attack.  
-  One interesting detail is White's knight on d2.
+### [Colle System](https://en.wikipedia.org/wiki/Colle_System)
+
+Open with d4, stack attacks on e4 and unleash them all with a pawn push. The objective is to remove the black Knight guarding h7 and make a kingside attack.
+
+One interesting detail is White's knight on d2.
+
+Moves:
+
+1. d4
+2. Nf3
+3. e3
+4. Bd3
+5. 0-0
+6. Re1
+7. c3
+8. Nbd2 (D)
+9. e4
+
+![](http://www.fen-to-image.com/image/30/single/coords/8/8/5n2/8/3P4/2PBPN2/PP1N1PPP/R1BQR1K1)
 
 ## Checkmate patterns
 
