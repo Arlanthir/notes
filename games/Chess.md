@@ -16,15 +16,37 @@ Columns are called files.
 - Develop your pieces (not pawns) quickly and once per piece.
 - The f pawns are vulnerable because they are only guarded by the King.
 - Castle early, preferably on the kingside.
-- Keep the pawns protecting the King after castle in their initial positions. Never try to prevent a pin by advancing a pawn before it happens.
+- Keep the pawns protecting the King after castle in their initial positions. Avoid trying to prevent a pin by advancing a pawn before it happens.
 - Use a minor piece (usually a Knight) in conjunction with the 3 pawns to protect a castle.
 - Develop pieces before initiating combinations (sequence of moves, often initiated by a sacrifice, which leaves the opponent few options and results in tangible gain).
 - A bishop is best placed for attack controlling a diagonal that crosses the center, or pinning a Knight.
 - Defensively, a bishop in the second rank is fine.
 - When choosing a pawn to capture with, generally capture towards the center to open files for your rooks.
-- An early open Queen is generally bad, because of Knight developing with tempo on the F file and attacking the Queen.
+- An early open Queen is generally bad, because of Knight developing with tempo on the f file and attacking the Queen.
 
 ## Openings
+
+### [Italian Game](https://en.wikipedia.org/wiki/Italian_Game)
+
+Family of openings where White develops a bishop to c4 in order to attack the vulnerable f7 pawn.
+
+Moves:
+
+1. e4 e5
+2. Nf3 Nc6
+3. Bc4 (D)
+
+![](http://www.fen-to-image.com/image/30/single/coords/r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R)
+
+#### [Giuoco Piano](https://en.wikipedia.org/wiki/Giuoco_Piano)
+
+Branch of the Italian Game where Black also develops a bishop in the same way.
+
+Moves:
+
+3. ... Bc5 (D)
+
+![](http://www.fen-to-image.com/image/30/single/coords/r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R)
 
 ### [Colle System](https://en.wikipedia.org/wiki/Colle_System)
 
