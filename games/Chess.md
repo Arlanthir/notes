@@ -48,6 +48,20 @@ Moves:
 
 ![](http://www.fen-to-image.com/image/30/single/coords/r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R)
 
+### [King's Gambit](https://en.wikipedia.org/wiki/King%27s_Gambit)
+
+White offers a pawn to induce Black into surrendering his share of the center.
+
+![](http://www.fen-to-image.com/image/30/single/coords/rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR)
+
+#### Accepted - King's Knight's Gambit
+
+![](http://www.fen-to-image.com/image/30/single/coords/rnbqkbnr/pppp1ppp/8/8/4Pp2/5N2/PPPP2PP/RNBQKB1R)
+
+#### Declined - Classical Defense
+
+![](http://www.fen-to-image.com/image/30/single/coords/rnbqk1nr/pppp1ppp/8/2b1p3/4PP2/8/PPPP2PP/RNBQKBNR)
+
 ### [Colle System](https://en.wikipedia.org/wiki/Colle_System)
 
 Open with d4, stack attacks on e4 and unleash them all with a pawn push. The objective is to remove the black Knight guarding h7 and make a kingside attack.
