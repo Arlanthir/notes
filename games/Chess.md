@@ -26,6 +26,18 @@ Columns are called files.
 
 ## Openings
 
+### [Ruy Lopez](https://en.wikipedia.org/wiki/Ruy_Lopez) / Spanish Game
+
+Opening where White develops a bishop attacking Black's knight.
+
+Moves:
+
+1. e4 e5
+2. Nf3 Nc6
+3. Bb5 (D)
+
+![](http://www.fen-to-image.com/image/30/single/coords/r1bqkbnr/pppp1ppp/2n5/1B2p3/31P3/5N2/PPPP1PPP/RNBQK2R)
+
 ### [Italian Game](https://en.wikipedia.org/wiki/Italian_Game)
 
 Family of openings where White develops a bishop to c4 in order to attack the vulnerable f7 pawn.
