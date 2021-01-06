@@ -193,7 +193,7 @@ Check the generated fstab and fix it:
 nano /mnt/etc/fstab
 ```
 - Remove `/mnt`from swapfile if any
-- Add option `discard` to SSD drives
+- Add option `discard` to non-NVMe SSD drives
 
 Add optional NTFS drive (remember to install ntfs-3g and to create the mnt folder):
 ```
