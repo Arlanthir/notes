@@ -158,7 +158,12 @@ swapon /dev/sdxY
 
 Mount root partition  
 ```bash
-mount /dev/sdxY /mnt      # Or /dev/nvme0n1pY
+mount /dev/sdxY /mnt    # Or /dev/nvme0n1pY
+```
+
+**If using EFISTUB**
+```bash
+mount /dev/sdx1 /mnt/boot   # Or /dev/nvme0n1p1
 ```
 
 Configure swap file if not using a partition
@@ -179,7 +184,7 @@ nano /etc/pacman.d/mirrorlist
 
 Install:
 ```bash
-pacstrap -i /mnt base linux linux-firmware base-devel nano dhcpcd dosfstools e2fsprogs ntfs-3g
+pacstrap /mnt base linux linux-firmware base-devel nano dhcpcd dosfstools e2fsprogs ntfs-3g
 ```
 
 Generate fstab:
@@ -277,6 +282,27 @@ Set the root password:
 passwd
 ```
 
+### Bootloader: EFISTUB
+
+Boots directly into Linux kernel, useful if Linux is the only OS in the disk and only has one kernel.
+
+```bash
+pacman -S efibootmgr
+# If intel:
+pacman -S intel-ucode
+# If amd:
+pacman -S amd-ucode
+# Troubleshooting: verify that /boot has initramfs-linux.img, intel-ucode.img and vmlinuz-linux
+# They should automatically be populated when /boot is mounted and pacman installs kernels (linux) or *-ucode
+
+# Find the PARTUUID of the / partition:
+lsblk -o NAME,MOUNTPOINT,PARTUUID
+
+efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux --unicode 'root=PARTUUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX rw initrd=\<intel or amd>-ucode.img initrd=\initramfs-linux.img' --verbose
+
+# To remove an entry inserted by mistake (e.g. Boot0000):
+efibootmgr -b 0000 -B
+```
 
 ### Bootloader: GRUB
 
