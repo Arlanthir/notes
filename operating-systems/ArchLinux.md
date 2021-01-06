@@ -101,7 +101,7 @@ timedatectl status
 Check disks
 ```bash
 lsblk                   # or: fdisk -l
-fdisk -l /dev/sdx       # where sdx is your desired disk
+fdisk -l /dev/sdx       # where sdx is your desired disk; nvme should appear as nvme0n1
 ```
 
 Check current partition table  
@@ -137,17 +137,17 @@ mkpart primary fat32 1MiB 261MiB
 set 1 esp on
 mkpart primary ext4 261MiB 100%
 quit
-mkfs.fat -F32 /dev/sdx1
+mkfs.fat -F32 /dev/sdx1   # Or /dev/nvme0n1p1
 ```
 
 Check partitions  
 ```bash
-lsblk /dev/sdx
+lsblk /dev/sdx    # Or /dev/nvme0n1
 ```
 
 Format ext4 partitions  
 ```bash
-mkfs.ext4 /dev/sdxY
+mkfs.ext4 /dev/sdxY   # Or Or /dev/nvme0n1pY
 ```
 
 Activate swap partition if any
@@ -158,7 +158,7 @@ swapon /dev/sdxY
 
 Mount root partition  
 ```bash
-mount /dev/sdxY /mnt
+mount /dev/sdxY /mnt      # Or /dev/nvme0n1pY
 ```
 
 Configure swap file if not using a partition
