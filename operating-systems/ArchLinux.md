@@ -525,6 +525,9 @@ pacman -S plasma-meta kde-applications-meta sddm sddm-kcm noto-fonts-emoji
 # Choose phonon-qt5-vlc and cronie if asked
 systemctl enable sddm
 localectl set-x11-keymap pt
+# If it doesn't work (login screen shows US keyboard layout)
+nano /usr/share/sddm/scripts/Xsetup
+setxkbmap pt
 ```
 
 ##### Printing
