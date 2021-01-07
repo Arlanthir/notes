@@ -160,10 +160,13 @@ Mount root partition
 ```bash
 mount /dev/sdxY /mnt    # Or /dev/nvme0n1pY
 ```
-
-**If using EFISTUB**
+Mount EFI partition
 ```bash
+# If using EFISTUB
 mount /dev/sdx1 /mnt/boot   # Or /dev/nvme0n1p1
+# If using GRUB
+mkdir /mnt/efi
+mount /dev/sdx1 /mnt/efi    # Or /dev/nvme0n1p1
 ```
 
 Configure swap file if not using a partition
@@ -313,10 +316,19 @@ pacman -S grub efibootmgr os-prober
 pacman -S intel-ucode
 # If amd:
 pacman -S amd-ucode
-mkdir /efi
-mount /dev/sdx1 /efi
+#mkdir /efi
+#mount /dev/sdx1 /efi
 grub-install --target=x86_64-efi --efi-directory=efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# If GRUB doesn't run, it may be because the motherboard (e.g. MSI) expects it to be installed in the "fallback" location.
+# Use instead:
+grub-install --target=x86_64-efi --efi-directory=efi --removable
+
+# Or fix a previous install:
+mv /efi/EFI/GRUB /efi/EFI/BOOT
+mv /efi/EFI/BOOT/grubx64.efi /efi/EFI/BOOT/BOOTX64.EFI
+
 ```
 
 #### MBR
