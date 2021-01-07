@@ -162,7 +162,7 @@ mount /dev/sdxY /mnt    # Or /dev/nvme0n1pY
 ```
 Mount EFI partition
 ```bash
-# If using EFISTUB
+# If using EFISTUB / systemd-boot
 mount /dev/sdx1 /mnt/boot   # Or /dev/nvme0n1p1
 # If using GRUB
 mkdir /mnt/efi
@@ -285,6 +285,44 @@ Set the root password:
 passwd
 ```
 
+### Bootloader: systemd-boot
+
+Manages UEFI boot entries.
+
+```bash
+bootctl install
+```
+
+Configure:
+
+/boot/loader/loader.conf:
+
+```
+default arch.conf
+timeout 0 # Hides the menu, hold a key while booting to override
+console-mode max
+```
+
+/boot/loader/entries/arch.conf
+
+(remember to change disk/partition and intel to amd if applicable)
+
+```
+title   Arch Linux
+linux   /vmlinuz-linux
+initrd  /intel-ucode.img
+initrd  /initramfs-linux.img
+#options root="LABEL=arch_os" rw
+options root="/dev/nvme0n1p2" rw
+```
+
+To update an existing installation: 
+
+```bash
+bootctl update
+```
+
+
 ### Bootloader: EFISTUB
 
 Boots directly into Linux kernel, useful if Linux is the only OS in the disk and only has one kernel.
@@ -305,6 +343,10 @@ efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "Arch Linux" --loader /
 
 # To remove an entry inserted by mistake (e.g. Boot0000):
 efibootmgr -b 0000 -B
+
+# If no entry shows, it may be because the motherboard (e.g. MSI) expects a bootloader to be installed in the "fallback" location.
+# You can sort of workaround it by creating a dummy file in <boot partition>/EFI/BOOT/BOOTX64.EFI
+
 ```
 
 ### Bootloader: GRUB
