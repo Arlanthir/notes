@@ -531,7 +531,7 @@ localectl set-x11-keymap pt
 
 ```bash
 sudo pacman -S cups cups-pdf print-manager hplip system-config-printer
-sudo systemctl enable org.cups.cupsd.service
+sudo systemctl enable cups.service
 ```
 
 ##### Additional Packages
