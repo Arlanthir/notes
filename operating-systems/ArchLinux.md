@@ -616,6 +616,7 @@ Background: 100%, Opacity: 30%
 Right click > Add Widgets
 
 - Application Launcher
+  - Right click > Configure Application Launcher > Icon > "distributor"
 
 Right click > Layouts > Configure > Preferences > Press Meta to activate Application Launcher
 
