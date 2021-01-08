@@ -43,13 +43,20 @@ cd yay
 makepkg -sri
 ```
 
-`yay` supports the same operations as `pacman`  
+`yay` supports the same operations as `pacman`
+
+Additionally, it allows full update of pacman and AUR packages with a single simple command:
+
+```
+yay
+```
+
 To only download the PKGBUILD of a package, do:
 
 `yay -G <package_name>`
 
 
-## Installation guide (2019-10-27)
+## Installation guide (2021-01-08)
 
 ### First steps
 
