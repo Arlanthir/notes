@@ -587,23 +587,22 @@ plasma5-applets-eventcalendar
 - Shortcuts > Global Shortcuts > KWin > Window One Desktop to the Left > Ctrl + Alt + Shift+ Left
 - Shortcuts > Global Shortcuts > KWin > Window One Desktop to the Right > Ctrl + Alt + Shift+ Right
 - Shortcuts > Global Shortcuts > KWin > Window One Desktop Up > Ctrl + Alt + Shift+ Up
-- Personalization > Account Details > User Manager > Photo
 - Personalization > Notifications > Do not disturb when screens are mirrored (off)
+- Personalization > Users > <user> > Photo
 - Personalization > Regional Settings > Formats
 - Hardware > Input Devices > Layouts
-- Hardware > Power Management > Energy Saving > Screen Energy Saving (60 min)
+- Hardware > Power Management > Energy Saving > Screen Energy Saving (40 min)
 - Hardware > Printers
 
 ###### System tray
 
 Right click > Configure System Tray
 
-General > Extra Items:
+Entries:
 - Clipbard (off)
 - Instant Messaging (off)
 - Vaults (off)
-
-Entries > Volume Control > Hidden
+- Volume Control (hidden)
 
 ###### Calendar Widgets
 
