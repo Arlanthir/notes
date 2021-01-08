@@ -594,6 +594,31 @@ plasma5-applets-eventcalendar
 - Hardware > Power Management > Energy Saving > Screen Energy Saving (40 min)
 - Hardware > Printers
 
+###### Panel
+
+Right click > Edit Panel
+
+- Screen Edge > Top
+- Height: 28
+- Remove Pager
+- Remove Icons-only Task Manager
+- Remove Application Launcher
+
+###### Latte Dock
+
+Right click > Dock Settings
+
+Remove Analog Clock
+
+Items: 48px, Zoom: 50%
+Background: 100%, Opacity: 30%
+
+Right click > Add Widgets
+
+- Application Launcher
+
+Right click > Layouts > Configure > Preferences > Press Meta to activate Application Launcher
+
 ###### System tray
 
 Right click > Configure System Tray
