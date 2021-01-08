@@ -187,7 +187,7 @@ nano /etc/pacman.d/mirrorlist
 
 Install:
 ```bash
-pacstrap /mnt base linux linux-firmware base-devel nano dhcpcd dosfstools e2fsprogs ntfs-3g
+pacstrap /mnt base linux linux-firmware base-devel git nano dhcpcd dosfstools e2fsprogs ntfs-3g
 ```
 
 Generate fstab:
@@ -312,8 +312,13 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
-#options root="LABEL=arch_os" rw
-options root="/dev/nvme0n1p2" rw
+#options root="LABEL=arch_os" rw quiet
+options root="/dev/nvme0n1p2" rw quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3
+```
+
+To check failed initializations (because of quiet option):
+```
+systemctl --failed
 ```
 
 To update an existing installation: 
