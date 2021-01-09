@@ -570,8 +570,6 @@ plasma5-applets-eventcalendar
 
 ###### System Settings
 - Appearance > Fonts > 8pt on everything
-- Workspace Behavior > Desktop Effects > Blur > Blur > 10
-- Workspace Behavior > Desktop Effects > Blur > Noise > 6
 - Workspace Behavior > Desktop Effects > Translucency > Menus > 8
 - Workspace Behavior > General Behavior > Double-click
 - Workspace Behavior > Screen Locking > Automatically (off)
@@ -604,6 +602,7 @@ Right click > Edit Panel
 - Remove Icons-only Task Manager
 - Remove Application Launcher
 - Remove Digital Clock
+- Add Global Menu
 - Add Spacer
 - Add Event Calendar
 
@@ -647,11 +646,6 @@ Entries:
 ###### Chrome
 - Right click on title bar > Use system title bar and borders (off)
 
-###### Konsole
-
-- Settings > Edit Current Profile > Appearance > Edit > Blur background (on)
-- Settings > Edit Current Profile > Appearance > Edit > Background transparency (25%)
-
 ###### Kvantum Manager
 
 Themes:
@@ -662,18 +656,25 @@ https://github.com/Akava-Design/Akava-Kv
 - Kvantum Manager > Change/Delete Theme > Akava-Kv > Use this theme
 - Kvantum Manager > Configure Active Theme > Hacks > Transparent Dolphin view
 
-- System Settings > Application Style > BreezeBlurred > Configure > Draw titlebar background gradient (off)
-- System Settings > Application Style > BreezeBlurred > Configure > Draw separator between titlebar and window (off)
-- System Settings > Application Style > BreezeBlurred > Configure > Opacity (40%)
+- System Settings > Application Style > Application Style > kvantum-dark
 
-- System Settings > Workspace Behavior > Desktop Effects > Blur > Blur > 15
-- System Settings > Workspace Behavior > Desktop Effects > Blur > Noise > 7
+- System Settings > Application Style > Window Decorations > BreezeBlurred > Configure
+  - General
+    - Draw titlebar background gradient (off)
+    - Configure > Draw separator between titlebar and window (off)
+    - Configure > Opacity (40%)
+  - Shadows: None
+
+- System Settings > Workspace Behavior > Desktop Effects > Blur > Blur > 10
+- System Settings > Workspace Behavior > Desktop Effects > Blur > Noise > 6
 
 https://github.com/Akava-Design/Akava-Theme
 
 `cp -r Akava ~/.local/share/plasma/desktoptheme`
 
 - System Settings > Appearance > Plasma Style > Akava
+
+**Note:** Breeze Dark seems to work better.
 
 https://github.com/Akava-Design/Akava-Colors
 
@@ -686,7 +687,8 @@ https://github.com/Akava-Design/Akava-Konsole
 `cp Akava.colorscheme ~/.local/share/konsole`
 
 - Konsole > Settings > Edit Current Profile > Appearance > Color scheme & font > Akava
-
+- Settings > Edit Current Profile > Appearance > Edit > Blur background (on)
+- Settings > Edit Current Profile > Appearance > Edit > Background transparency (25%)
 
 ## Other programs
 
