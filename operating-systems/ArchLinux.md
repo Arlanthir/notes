@@ -603,6 +603,14 @@ Right click > Edit Panel
 - Remove Pager
 - Remove Icons-only Task Manager
 - Remove Application Launcher
+- Remove Digital Clock
+- Add Spacer
+- Add Event Calendar
+
+Configure Event Calendar:
+- Time in bold
+- Enable Line 2, with 44% height
+- Google Calendar
 
 ###### Latte Dock
 
