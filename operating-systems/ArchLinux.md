@@ -570,27 +570,37 @@ plasma5-applets-eventcalendar
 
 ###### System Settings
 - Appearance > Fonts > 8pt on everything
-- Workspace Behavior > Desktop Effects > Translucency > Menus > 8
-- Workspace Behavior > General Behavior > Double-click
-- Workspace Behavior > Screen Locking > Automatically (off)
-- Workspace Behavior > Virtual Desktops > Configure as desired (1 Row or 2 Rows)
-- Workspace Behavior > Virtual Desktops > Navigation wraps around (off)
-- Window Management > Window Behavior > Advanced > Window placement > Centered
-- Window Management > Kwin Scripts > MinimizeAll (on)
-- Shortcuts > Global Shortcuts > KWin > Switch One Desktop Down > Ctrl + Alt + Down
-- Shortcuts > Global Shortcuts > KWin > Switch One Desktop to the Left > Ctrl + Alt + Left
-- Shortcuts > Global Shortcuts > KWin > Switch One Desktop to the Right > Ctrl + Alt + Right
-- Shortcuts > Global Shortcuts > KWin > Switch One Desktop Up > Ctrl + Alt + Up
-- Shortcuts > Global Shortcuts > KWin > Window One Desktop Down > Ctrl + Alt + Shift+ Down
-- Shortcuts > Global Shortcuts > KWin > Window One Desktop to the Left > Ctrl + Alt + Shift+ Left
-- Shortcuts > Global Shortcuts > KWin > Window One Desktop to the Right > Ctrl + Alt + Shift+ Right
-- Shortcuts > Global Shortcuts > KWin > Window One Desktop Up > Ctrl + Alt + Shift+ Up
-- Personalization > Notifications > Do not disturb when screens are mirrored (off)
-- Personalization > Users > <user> > Photo
-- Personalization > Regional Settings > Formats (Choose the same Region as the language and then override the Detailed Settings, otherwise some parts of the UI may be unwantedly translated)
-- Hardware > Input Devices > Layouts
-- Hardware > Power Management > Energy Saving > Screen Energy Saving (40 min)
-- Hardware > Printers
+- Workspace Behavior
+  - Desktop Effects > Translucency > Menus > 8
+  - General Behavior > Double-click
+  - Screen Locking > Automatically (off)
+  - Virtual Desktops
+    - Configure as desired (1 Row or 2 Rows)
+    - Navigation wraps around (off)
+- Window Management
+  - Window Behavior > Advanced > Window placement > Centered
+  - Kwin Scripts > MinimizeAll (on)
+- Shortcuts > Global Shortcuts > KWin
+  - Switch One Desktop Down > Ctrl + Alt + Down
+  - Switch One Desktop to the Left > Ctrl + Alt + Left
+  - Switch One Desktop to the Right > Ctrl + Alt + Right
+  - Switch One Desktop Up > Ctrl + Alt + Up
+  - Window One Desktop Down > Ctrl + Alt + Shift+ Down
+  - Window One Desktop to the Left > Ctrl + Alt + Shift+ Left
+  - Window One Desktop to the Right > Ctrl + Alt + Shift+ Right
+  - Window One Desktop Up > Ctrl + Alt + Shift+ Up
+- Startup and Shutdown > Login Screen (SDDM)
+  - Theme > Choose something and go back to Breeze
+  - Advanced > Automatically log in (if you want it)
+  - Splash Screen > None
+- Personalization
+  - Notifications > Do not disturb when screens are mirrored (off)
+  - Users > <user> > Photo
+  - Regional Settings > Formats (Choose the same Region as the language and then override the Detailed Settings, otherwise some parts of the UI may be unwantedly translated)
+- Hardware
+  - Input Devices > Layouts
+  - Power Management > Energy Saving > Screen Energy Saving (40 min)
+  - Printers
 
 ###### Panel
 
