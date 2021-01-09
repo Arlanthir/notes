@@ -803,6 +803,16 @@ trust <mac>
 quit
 ```
 
+## Wake on LAN (WoL)
+
+```bash
+sudo pacman -S ethtool
+ip link   # Discover name of interface (e.g. enp2s0)
+sudo ethtool enp2s0 | grep Wake   # d means disabled, g means magic packet (the required one)
+sudo ethtool -s enp2s0 wol g
+```
+
+
 
 ## Troubleshooting
 
