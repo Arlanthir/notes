@@ -656,6 +656,13 @@ Entries:
 ###### Chrome
 - Right click on title bar > Use system title bar and borders (off)
 
+```bash
+nano ~/.config/chrome-flags.conf
+
+--force-dark-mode
+--enable-features=WebUIDarkMode
+```
+
 ###### Kvantum Manager
 
 Themes:
