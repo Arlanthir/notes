@@ -810,6 +810,12 @@ sudo pacman -S ethtool
 ip link   # Discover name of interface (e.g. enp2s0)
 sudo ethtool enp2s0 | grep Wake   # d means disabled, g means magic packet (the required one)
 sudo ethtool -s enp2s0 wol g
+
+# Make persistent:
+sudo su
+cp /usr/lib/systemd/network/99-default.link /etc/systemd/network/50-wired.link
+echo WakeOnLan=magic >> /etc/systemd/network/50-wired.link
+exit
 ```
 
 
