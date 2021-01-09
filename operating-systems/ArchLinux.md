@@ -663,7 +663,7 @@ https://github.com/Akava-Design/Akava-Kv
     - Draw titlebar background gradient (off)
     - Configure > Draw separator between titlebar and window (off)
     - Configure > Opacity (40%)
-  - Shadows: None
+  - Shadows: Medium, 50%
 
 - System Settings > Workspace Behavior > Desktop Effects > Blur > Blur > 10
 - System Settings > Workspace Behavior > Desktop Effects > Blur > Noise > 6
