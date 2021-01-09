@@ -589,7 +589,7 @@ plasma5-applets-eventcalendar
 - Shortcuts > Global Shortcuts > KWin > Window One Desktop Up > Ctrl + Alt + Shift+ Up
 - Personalization > Notifications > Do not disturb when screens are mirrored (off)
 - Personalization > Users > <user> > Photo
-- Personalization > Regional Settings > Formats
+- Personalization > Regional Settings > Formats (Choose the same Region as the language and then override the Detailed Settings, otherwise some parts of the UI may be unwantedly translated)
 - Hardware > Input Devices > Layouts
 - Hardware > Power Management > Energy Saving > Screen Energy Saving (40 min)
 - Hardware > Printers
