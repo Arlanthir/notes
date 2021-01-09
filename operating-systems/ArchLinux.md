@@ -571,7 +571,11 @@ plasma5-applets-eventcalendar
 ###### System Settings
 - Appearance > Fonts > 8pt on everything
 - Workspace Behavior
-  - Desktop Effects > Translucency > Menus > 8
+  - Desktop Effects
+    - Translucency > Menus > 9
+    - Blur
+      - Blur > 10
+      - Noise > 6
   - General Behavior > Double-click
   - Screen Locking > Automatically (off)
   - Virtual Desktops
@@ -681,9 +685,6 @@ https://github.com/Akava-Design/Akava-Kv
     - Configure > Draw separator between titlebar and window (off)
     - Configure > Opacity (40%)
   - Shadows: Medium, 50%
-
-- System Settings > Workspace Behavior > Desktop Effects > Blur > Blur > 10
-- System Settings > Workspace Behavior > Desktop Effects > Blur > Noise > 6
 
 https://github.com/Akava-Design/Akava-Theme
 
