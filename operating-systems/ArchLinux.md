@@ -568,6 +568,8 @@ plasma5-applets-eventcalendar
 
 ##### Settings
 
+Konsole > Settings > Configure Konsole > Tab Bar / Splitters > Appearance > Position > Above
+
 ###### System Settings
 - Appearance > Fonts > 8pt on everything
 - Workspace Behavior
