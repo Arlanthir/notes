@@ -36,6 +36,26 @@ Make sure to change the password (and other configuration) in `sudo raspi-config
 
 ## Install a USB disk
 
+Newest:
+```bash
+sudo apt-get install ntfs-3g   # If NTFS
+
+lsblk -o NAME,MOUNTPOINT,UUID,PARTUUID  # Grab PARTUUID, e.g. 9712703b-01
+
+sudo mkdir /mnt/usb
+sudo mount /dev/disk/by-partuuid/<partuuid> /mnt/usb
+
+# Add to /etc/fstab:
+# For NTFS drives:
+PARTUUID=<partuuid>  /mnt/usb  ntfs  defaults,auto,users,rw,nofail,umask=000  0  0
+# For EXT4 drives:
+PARTUUID=<partuuid>  /mnt/usb  ext4  defaults,auto,users,rw,nofail  0  0
+
+# To reduce the timeout and allow faster boots when drive is not present, add flag:
+,x-systemd.device-timeout=10
+```
+
+
 New:
 ```bash
 sudo apt-get install ntfs-3g
