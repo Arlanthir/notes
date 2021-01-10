@@ -722,7 +722,7 @@ steam
 ```bash
 yay                 # (manual installation)
 google-chrome
-visual-studio-code-bin
+visual-studio-code-bin     # For Settings Sync to work, you may need pacman -S gnome-keyring
 ```
 
 
