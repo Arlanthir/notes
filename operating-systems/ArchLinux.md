@@ -249,7 +249,7 @@ timedatectl set-local-rtc 1
 
 ```bash
 nano /etc/locale.gen
-# Uncomment en_US.UTF-8 UTF-8, as well as other needed localizations
+# Uncomment en_US.UTF-8 UTF-8, as well as other needed localizations, such as pt_PT.UTF-8 UTF-8
 locale-gen
 ```
 
