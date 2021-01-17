@@ -475,6 +475,8 @@ sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 ```
 
+Remember to go to "Printer > Configure" (or Print Settings application, right-click on printer) and set (default) properties.
+
 ##### Additional packages
 
 ```bash
