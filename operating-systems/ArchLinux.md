@@ -728,6 +728,14 @@ visual-studio-code-bin     # For Settings Sync to work in KDE, you may need pacm
 tuxguitar
 ```
 
+### Reaper
+```
+sudo pacman -S realtime-privileges
+sudo gpasswd -a <USER> realtime
+yay -S reaper-bin
+# Logout and login
+```
+
 
 ### Syncthing
 
