@@ -730,10 +730,12 @@ tuxguitar
 
 ### Reaper
 ```
-sudo pacman -S realtime-privileges
+sudo pacman -S realtime-privileges audacity
 sudo gpasswd -a <USER> realtime
 yay -S reaper-bin
 # Logout and login
+# In audacity, check which "hw" device is the capturing one (e.g. hw:2)
+jackd -d alsa -d hw:2
 ```
 
 
