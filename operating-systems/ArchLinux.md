@@ -607,6 +607,7 @@ Konsole > Settings > Configure Konsole > Tab Bar / Splitters > Appearance > Posi
   - Regional Settings > Formats (Choose the same Region as the language and then override the Detailed Settings, otherwise some parts of the UI may be unwantedly translated)
 - Hardware
   - Input Devices > Layouts
+  - Audio > Applications > Notication Sounds -> Move slider somewhere and back to zero (initial zero is lying) # This will disable system sound events
   - Power Management > Energy Saving > Screen Energy Saving (40 min)
   - Printers
 
