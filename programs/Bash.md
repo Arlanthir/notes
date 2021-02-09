@@ -14,6 +14,7 @@ Copies files and/or directories.
 ```bash
 cp file1 someotherdir/file2     # Copy file to a different location and name
 cp -r dir1/* dir2               # Copy all files and dirs in dir1 to dir2
+cp --preserve=timestamps ...    # Don't update timestamps of files
 ```
 
 ## curl
