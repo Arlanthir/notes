@@ -134,9 +134,16 @@ sed 's@hello@world@g' in.txt > out.txt        # Same as before but using a diffe
 Creates and checks hashes of files.
 
 ```bash
-shasum <file>          # Use SHA-1
-shasum -a 256 <file>   # Use SHA-256
-shasum -a 512 <file>   # Use SHA-512
+shasum <file>                      # Use SHA-1
+shasum -a 256 <file>               # Use SHA-256
+shasum -a 512 <file>               # Use SHA-512
+shasum <file> | cut -d ' ' -f 1    # Ignore the filename from the output
+```
+
+Or alternatively:
+
+```bash
+sha256sum <file> | cut -d ' ' -f 1      # SHA-256 and ignore the filename from the output
 ```
 
 ## ssh
