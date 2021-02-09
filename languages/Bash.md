@@ -163,6 +163,7 @@ fi
 
 ```bash
 read myvar              # Reads user input to variable $myvar
+read -s myvar           # Reads silently (for passwords)
 echo "Hello $myvar"     # Printing using variable interpolation
 echo -n "Hello"         # Echo without newline
 echo                    # Echo just the newline
