@@ -28,6 +28,14 @@ curl -u user:pass <url>                      # With Basic Authentication
 curl -X DELETE <url>                         # Change HTTP method (alternative: --request)
 ```
 
+## date
+Format date/time and timestamps.
+
+```bash
+date +"%Y%m%d-%H%M%S"     # 20210209-183156
+date +"%s"                # Seconds since the epoch
+```
+
 ## grep
 Finds lines in input matching a given pattern
 
