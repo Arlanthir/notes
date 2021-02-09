@@ -1,11 +1,31 @@
 # Bash / Linux Command Line
 
+## Variables
+
+Define temporary variables for command execution
+
+```bash
+MYVAR=somevalue ./my-script.sh
+```
+
 ## cp
 Copies files and/or directories.
 
 ```bash
 cp file1 someotherdir/file2     # Copy file to a different location and name
 cp -r dir1/* dir2               # Copy all files and dirs in dir1 to dir2
+```
+
+## curl
+Sends HTTP requests.
+
+```bash
+curl -L http://google.com -o google.html     # -L follows redirects, -o outputs to file
+# -k skips certificate validation
+# -f returns error code when request fails
+# -# progress bar instead of statistics
+curl -u user:pass <url>                      # With Basic Authentication
+curl --request DELETE <url>                  # Change HTTP method
 ```
 
 ## grep
@@ -110,6 +130,15 @@ sed 's@hello@world@g' in.txt > out.txt        # Same as before but using a diffe
 | `-i`         | Replace in the same file.                                 |
 
 
+## shasum
+Creates and checks hashes of files.
+
+```bash
+shasum <file>          # Use SHA-1
+shasum -a 256 <file>   # Use SHA-256
+shasum -a 512 <file>   # Use SHA-512
+```
+
 ## ssh
 
 ```bash
@@ -131,4 +160,10 @@ tail -n <X>   # Output just the last X lines of input
 ```bash
 tar -cvzf file.tar.gz ./files/*
 tar -xvf file.tar.gz -C ./files
+```
+
+## zip
+```bash
+zip -qr files.zip files      # -q is quiet, -r is recursive
+zip -qrX files.zip files     # -X excludes extra headers, is still not entirely deterministic (access timestamp)
 ```
