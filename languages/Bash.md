@@ -159,6 +159,15 @@ else
 fi
 ```
 
+## Input / Output
+
+```bash
+read myvar              # Reads user input to variable $myvar
+echo "Hello $myvar"     # Printing using variable interpolation
+echo -n "Hello"         # Echo without newline
+echo                    # Echo just the newline
+```
+
 ## Error handling
 
 ```bash
