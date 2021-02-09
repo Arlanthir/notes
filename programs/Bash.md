@@ -25,7 +25,7 @@ curl -L http://google.com -o google.html     # -L follows redirects, -o outputs 
 # -f returns error code when request fails
 # -# progress bar instead of statistics
 curl -u user:pass <url>                      # With Basic Authentication
-curl --request DELETE <url>                  # Change HTTP method
+curl -X DELETE <url>                         # Change HTTP method (alternative: --request)
 ```
 
 ## grep
