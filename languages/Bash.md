@@ -177,8 +177,40 @@ set -Eeuo pipefail   # -E: inherit error handling to functions
                      # -e: exit on error
 		     # -u: treat unset variables as errors
 		     # -o pipefail: consider error codes of piped commands
-trap cleanup ERR     # On error, execute the "cleanup" function and return ERR
-                     # (change to 0 for a graceful return code)
+trap 'cleanup $? $LINENO' ERR     # On error, execute the "cleanup" function. Program will exit because of set -e
+
+cleanup() {
+    echo "Error $1 on line $2"
+}
+```
+
+### Catch errors without exiting
+
+```bash
+# Don't set -e
+
+trap 'cleanup $? $LINENO' ERR
+
+cleanup() {
+    echo "Error $1 on line $2"
+}
+```
+
+### Perform cleanup on errors or graceful exit
+
+```bash
+#!/bin/bash
+set -e
+
+trap 'cleanup $? $LINENO' EXIT
+
+cleanup() {
+  if [ "$1" != "0" ]; then          # TODO try $1 -neq 0
+      # error handling goes here
+      echo "Error $1 occurred on $2"
+  fi
+  # Other cleanup steps
+}
 ```
 
 ### Debugging /logging
