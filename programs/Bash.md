@@ -43,6 +43,8 @@ Finds lines in input matching a given pattern
 ```bash
 echo "ola
 adeus" | grep "ola"
+
+echo "adeus" | grep "ola" || [[ $? == 1 ]]     # Avoids failing script when set -e is present, ignoring grep return code 1 (no matches)
 ```
 
 | Argument                | Description                                              |
