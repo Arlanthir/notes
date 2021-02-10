@@ -181,5 +181,12 @@ trap cleanup ERR     # On error, execute the "cleanup" function and return ERR
                      # (change to 0 for a graceful return code)
 ```
 
+### Debugging /logging
+
+```bash
+#!/bin/bash
+set -x               # Prints each command before execution
+```
+
 
 
