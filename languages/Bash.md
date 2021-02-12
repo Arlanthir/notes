@@ -93,6 +93,15 @@ else
 fi
 ```
 
+## String manipulation
+
+```bash
+firstString="I love Suzi and Marry"
+secondString="Sara"
+echo "${firstString/Suzi/$secondString}"     # 'I love Sara and Marry'
+# To replace all occurrences: ${parameter//pattern/string}:
+```
+
 ## Arrays
 ```bash
 $myarray=( text1 text2 text3 )
