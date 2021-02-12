@@ -8,6 +8,12 @@ Define temporary variables for command execution
 MYVAR=somevalue ./my-script.sh
 ```
 
+## basename
+Extracts the filename from a path. See also: [dirname](#dirname).
+```bash
+basename /home/user/file.txt    # file.txt
+```
+
 ## cp
 Copies files and/or directories.
 
@@ -36,6 +42,12 @@ Format date/time and timestamps.
 ```bash
 date +"%Y%m%d-%H%M%S"     # 20210209-183156
 date +"%s"                # Seconds since the epoch
+```
+
+## dirname
+Extracts the directories from a path. See also: [basename](#basename).
+```bash
+dirname /home/user/file.txt    # /home/user
 ```
 
 ## grep
