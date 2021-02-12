@@ -25,6 +25,7 @@ curl -L http://google.com -o google.html     # -L follows redirects, -o outputs 
 # -k skips certificate validation
 # -f returns error code when request fails
 # -# progress bar instead of statistics
+# -sS will be silent (s) but still show errors (S)
 curl -u user:pass <url>                      # With Basic Authentication
 curl -X DELETE <url>                         # Change HTTP method (alternative: --request)
 ```
