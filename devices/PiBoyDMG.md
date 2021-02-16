@@ -4,6 +4,18 @@
 
 Recommended button mapping maps Z to left trigger and C to right trigger, while the back buttons are tasked with the left and right shoulder buttons.
 
+### PPSSPP
+
+Edit file `/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt` and add:
+
+```
+15000000010000000100000000010000,PiBoy DMG Controller,platform:Linux,a:b1,b:b0,x:b4,y:b3,back:b8,start:b9,leftstick:b10,leftshoulder:b7,rightshoulder:b6,dpup:b12,dpdown:b11,dpleft:b13,dpright:b14,leftx:a0,lefty:a1,lefttrigger:b2,righttrigger:b5,
+```
+
+Then plug in a keyboard, launch a PSP game, Press ESC, go to Settings and remap the controller (replace pad buttons but don't delete keyboard mappings).
+
+Relevant buttons: L, R (seem badly mapped) and pause (e.g. C), to be able to open the menu without a keyboard.
+
 ## Customize OSD (on-screen display)
 
 Edit file `/home/pi/osd/osd.cfg`
