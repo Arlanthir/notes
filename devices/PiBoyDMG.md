@@ -16,6 +16,12 @@ Then plug in a keyboard, launch a PSP game, Press ESC, go to Settings and remap 
 
 Relevant buttons: L, R (seem badly mapped) and pause (e.g. C), to be able to open the menu without a keyboard.
 
+## Fix sound
+
+If sound crackles and pops after enabling OMX Player, change Sound Settings > OMX Player Audio Device to ALSA.
+
+(Audio Card should be Default and Audio Device should be PCM, I think)
+
 ## Customize OSD (on-screen display)
 
 Edit file `/home/pi/osd/osd.cfg`
