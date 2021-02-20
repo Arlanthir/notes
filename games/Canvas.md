@@ -61,7 +61,8 @@ Game ends when all players have completed 3 paintings. (Players that complete th
 
 - Imaginary player Vincent starts with 4 Inspiration Tokens as well.
 - Vincent never completes paintings.
-- On his turn, shake and throw his Inspiration Tokens, the ones who fall face-up are spent to skip Art Cards.
+- You take the first turn.
+- On Vincent's turn, shake and throw his Inspiration Tokens, the ones which fall face-up are spent to skip Art Cards.
   Vincent takes the resulting Art Card (remove it from the game) and gains any Inspiration Tokens on it.
 - Remember Vincent still takes a turn when you complete a painting.
 
