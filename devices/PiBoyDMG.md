@@ -39,3 +39,21 @@ Navigate to the "Retropie" menu.
 Select the "Wifi" menu option.
 
 Select "Import wifi credentials from /boot/wifikeyfile.txt" from the menu.
+
+## Configure LEDs and Fan
+
+```
+nano /boot/osd.cfg
+redled
+10
+
+greenled
+10
+
+fanduty
+4
+60000 0
+61000 75
+70000 127
+75000 242
+```
