@@ -37,44 +37,44 @@ result=$(prepend_hello Person)
 Booleans are represented by return types:  
 `True` is represented by 0, `False` is represented by something else
 
-- The syntax `[<expression>]` converts a conditional expression to 0 (true) or 1 (false).
+- The syntax `[[<expression>]]` converts a conditional expression to 0 (true) or 1 (false).
 - `!` negates the boolean condition.
 
 ### File operators
 
-- `[ -f <variable> ]` tests if file exists
-- `[ -d <variable> ]` tests if directory exists
+- `[[ -f <variable> ]]` tests if file exists
+- `[[ -d <variable> ]]` tests if directory exists
 
 ```bash
-if [ ! -f myfile.txt ]; then
+if [[ ! -f myfile.txt ]]; then
 	echo ""
 	echo "ERROR: File myfile.txt not found."
 	exit -1
 fi
 
-if [ -d mydir ]; then
+if [[ -d mydir ]]; then
 	echo "Directory exists."
 fi
 ```
 
 ### String operators
 
-- `[ -z <variable> ]` tests if variable is empty
-- `[ <variable> == <string> ]` tests if variable is equal to string
-- `[ <variable> != <string> ]` tests if variable is different from string
-- `[[ <variable> == <pattern> ]]` tests if variable matches a pattern (note the double brackets)
+- `[[ -z <variable> ]]` tests if variable is empty
+- `[[ <variable> == <string> ]]` tests if variable is equal to string
+- `[[ <variable> != <string> ]]` tests if variable is different from string
+- `[[ <variable> == <pattern> ]]` tests if variable matches a pattern
 - `${#<variable>}` string length
 - `${<variable>:<start>:<optional_finish>}` substring
 
 ### Number operators
 
-- `[ <variable> -eq <number> ]` tests if variable is equal to number
-- `[ <variable> -ne <number> ]` tests if variable is not equal to number
+- `[[ <variable> -eq <number> ]]` tests if variable is equal to number
+- `[[ <variable> -ne <number> ]]` tests if variable is not equal to number
 - Other number operators: `-gt`, `-ge`, `-lt`, `-le`
 - Arithmetic: `$(($num1+$num2))`
 
 ```bash
-if [ -z $1 ] || [ -z $2 ]
+if [[ -z $1 ]] || [[ -z $2 ]]
 then
     echo "Usage: program.sh <arg1> <arg2>"
     exit
@@ -137,7 +137,7 @@ done
 
 ## Loops
 ```bash
-while [ $x -le 5 ]
+while [[ $x -le 5 ]]
 do
     echo "Welcome $x times"
     x=$(( $x + 1 ))             # break and continue are valid
@@ -214,7 +214,7 @@ set -e
 trap 'cleanup $? $LINENO' EXIT
 
 cleanup() {
-  if [ "$1" != "0" ]; then          # TODO try $1 -neq 0
+  if [[ "$1" != "0" ]]; then          # TODO try $1 -neq 0
       # error handling goes here
       echo "Error $1 occurred on $2"
   fi
