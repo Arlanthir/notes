@@ -797,14 +797,20 @@ qpaeq
 
 **Note**: If `qpaeq` has no effect, run `pavucontrol` and change "ALSA Playback on" to "FFT based equalizer on ..." while the media player is running.
 
-## Dualshock 3 / SIXAXIS
-
+## Bluetooth
 ```
-pacman -Syu bluez bluez-plugins bluez-utils
+sudo pacman -S bluez bluez-utils
 # If bluetooth icon is not present:
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
-# end of optional
+```
+
+### Dualshock 3 / SIXAXIS
+
+(After installing the bluetooth stack above)
+
+```
+sudo pacman -S bluez-plugins
 bluetoothctl
 agent on
 default-agent
