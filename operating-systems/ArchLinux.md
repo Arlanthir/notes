@@ -798,18 +798,105 @@ qpaeq
 **Note**: If `qpaeq` has no effect, run `pavucontrol` and change "ALSA Playback on" to "FFT based equalizer on ..." while the media player is running.
 
 ## Bluetooth
-```
+```bash
 sudo pacman -S bluez bluez-utils
 # If bluetooth icon is not present:
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 ```
 
+### Logitech MX Master 3 Mouse
+
+```bash
+yay -S logiops-git
+# Instructions: https://github.com/PixlOne/logiops/wiki/Configuration
+sudo nano /etc/logid.cfg
+
+devices: (
+{
+    name: "Wireless Mouse MX Master 3";
+    smartshift:
+    {
+        on: true;
+        threshold: 10;
+    };
+    hiresscroll:
+    {
+        hires: true;
+        invert: false;
+        target: false;
+    };
+    dpi: 1000;
+
+    buttons: (
+        {
+            cid: 0xc3;
+            action =
+            {
+                type: "Gestures";
+                gestures: (
+                    {
+                        direction: "Up";
+                        mode: "OnRelease";
+                        action =
+                        {
+                            type: "Keypress";
+                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_UP"];
+                        };
+                    },
+                    {
+                        direction: "Down";
+                        mode: "OnRelease";
+                        action =
+                        {
+                            type: "Keypress";
+                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_DOWN"];
+                        };
+                    },
+                    {
+                        direction: "Left";
+                        mode: "OnRelease";
+                        action =
+                        {
+                            type: "Keypress";
+                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFT"];
+                        };
+                    },
+                    {
+                        direction: "Right";
+                        mode: "OnRelease";
+                        action =
+                        {
+                            type: "Keypress";
+                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_RIGHT"];
+                        };
+                    },
+                    {
+                        direction: "None"
+                        mode: "OnRelease";
+                        action =
+                        {
+                            type: "Keypress";
+                            keys: ["KEY_LEFTCTRL", "KEY_F10"];
+                        };
+                    }
+                );
+            };
+        }
+    );
+}
+);
+
+
+sudo systemctl enable logid
+sudo systemctl start logid
+```
+
 ### Dualshock 3 / SIXAXIS
 
 (After installing the bluetooth stack above)
 
-```
+```bash
 sudo pacman -S bluez-plugins
 bluetoothctl
 agent on
