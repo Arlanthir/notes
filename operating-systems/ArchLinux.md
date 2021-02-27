@@ -826,7 +826,7 @@ devices: (
         invert: false;
         target: false;
     };
-    dpi: 1200;
+    dpi: 1000;
 
     buttons: (
         {
@@ -841,7 +841,7 @@ devices: (
                         action =
                         {
                             type: "Keypress";
-                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_UP"];
+                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_DOWN"];
                         };
                     },
                     {
@@ -850,7 +850,7 @@ devices: (
                         action =
                         {
                             type: "Keypress";
-                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_DOWN"];
+                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_UP"];
                         };
                     },
                     {
@@ -859,7 +859,7 @@ devices: (
                         action =
                         {
                             type: "Keypress";
-                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFT"];
+                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_RIGHT"];
                         };
                     },
                     {
@@ -868,7 +868,7 @@ devices: (
                         action =
                         {
                             type: "Keypress";
-                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_RIGHT"];
+                            keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFT"];
                         };
                     },
                     {
