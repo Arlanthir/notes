@@ -118,7 +118,9 @@ Go to Options and configure the controller timeout.
 
 Exit RetroPie Setup and return to the EmulationStation Home Screen.
 
-Launch the `RetroPie` "emulator". Select `Bluetooth` > `Register and Connect to Bluetooth Device`.  
+Plug the controller in using the cable.
+
+Launch the `RetroPie` "emulator". Select `Bluetooth` > `Register and Connect to Bluetooth Device` and follow the instructions.  
 Once successfully paired, exit the Bluetooth menu.
 
 Using the RetroArch RGUI (Hotkey + Y) you can configure the Gamepad to use Analog stick to D-Pad in the emulators of your choosing. Save the Core Remap afterwards. To change it for a single game, save the Game Remap instead.
