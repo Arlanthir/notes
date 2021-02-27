@@ -25,7 +25,7 @@ Button ids:
 Edit file `/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt` and add:
 
 ```
-15000000010000000100000000010000,PiBoy DMG Controller,platform:Linux,a:b1,b:b0,x:b4,y:b3,back:b8,start:b9,guide:b10,leftshoulder:b6,rightshoulder:b7,dpup:b12,dpdown:b11,dpleft:b13,dpright:b14,leftx:a0,lefty:a1,lefttrigger:b5,righttrigger:b2,
+15000000010000000100000000010000,PiBoy DMG Controller,platform:Linux,a:b1,b:b0,x:b4,y:b3,back:b8,start:b9,guide:b10,leftshoulder:b7,rightshoulder:b6,dpup:b12,dpdown:b11,dpleft:b13,dpright:b14,leftx:a0,lefty:a1,lefttrigger:b5,righttrigger:b2,
 ```
 
 Then launch a PSP game, go to Settings (Analog click) and remap the controller L and R (replace pad buttons but don't delete keyboard mappings). You can add Z and C as additional mappings too.
