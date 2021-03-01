@@ -41,21 +41,7 @@ If sound crackles and pops after enabling OMX Player, change Sound Settings > OM
 
 Edit file `/home/pi/osd/osd.cfg`
 
-## Configure Wifi
-
-Create file /boot/wifikeyfile.txt with contents (replacing the values between quotes):
-```
-ssid="wifi_name"
-psk="password"
-```
-
-Navigate to the "Retropie" menu.
-
-Select the "Wifi" menu option.
-
-Select "Import wifi credentials from /boot/wifikeyfile.txt" from the menu.
-
-## Configure LEDs and Fan
+### Configure LEDs and Fan
 
 ```
 nano /boot/osd.cfg
@@ -72,3 +58,36 @@ fanduty
 70000 127
 75000 200
 ```
+
+## Configure Wifi
+
+Create file /boot/wifikeyfile.txt with contents (replacing the values between quotes):
+```
+ssid="wifi_name"
+psk="password"
+```
+
+Navigate to the "Retropie" menu.
+
+Select the "Wifi" menu option.
+
+Select "Import wifi credentials from /boot/wifikeyfile.txt" from the menu.
+
+## Update firmware
+
+```
+# Convert loader.py from CRLF to LF
+# Then:
+chmod +x loader.py
+sudo pacman -S python-pip
+sudo pip install pyserial
+sudo ./loader.py /dev/ttyACM0
+```
+
+## Update OSD scripts
+
+1. Copy the update to /boot (contents should include payload folder and ask to overwrite config.txt, possibly others)
+2. Edit `cmdline.txt` to add the init section: `init=/bin/bash -c "mount -t proc proc /proc; mount -t sysfs sys /sys; mount /boot; source /boot/unattended"`
+3. Edit options in one-time-script.conf to setup wifi settings. Alternatively connect an ethernet cable.
+4. Turn on the PiBoy, it should reboot about 5 times and take about 10 minutes.
+
