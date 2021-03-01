@@ -62,7 +62,7 @@ fi
 - `[[ -z <variable> ]]` tests if variable is empty
 - `[[ <variable> == <string> ]]` tests if variable is equal to string
 - `[[ <variable> != <string> ]]` tests if variable is different from string
-- `[[ <variable> == <pattern> ]]` tests if variable matches a pattern
+- `[[ <variable> == <pattern> ]]` tests if variable matches a pattern (e.g. `[[ "Hello World" == *"World"* ]]`)
 - `${#<variable>}` string length
 - `${<variable>:<start>:<optional_finish>}` substring
 
