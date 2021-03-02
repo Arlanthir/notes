@@ -92,3 +92,7 @@ sudo ./loader.py /dev/ttyACM0
 4. Optionally connect to an HDMI screen to see output, or hold start while booting to see it in the PiBoy's screen.
 5. Turn on the PiBoy, it should reboot about 5 times and take about 10 minutes.
 
+## Bootloader mode
+
+Press the joystick in until it clicks and hold it down while turning the PiBoy on. Release the joystick button. The power LED should begin to flash red.
+
