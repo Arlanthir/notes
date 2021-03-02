@@ -89,5 +89,6 @@ sudo ./loader.py /dev/ttyACM0
 1. Copy the update to /boot (contents should include payload folder and ask to overwrite config.txt, possibly others)
 2. Edit `cmdline.txt` to add the init section: `init=/bin/bash -c "mount -t proc proc /proc; mount -t sysfs sys /sys; mount /boot; source /boot/unattended"`
 3. Edit options in one-time-script.conf to setup wifi settings. Alternatively connect an ethernet cable.
-4. Turn on the PiBoy, it should reboot about 5 times and take about 10 minutes.
+4. Optionally connect to an HDMI screen to see output, or hold start while booting to see it in the PiBoy's screen.
+5. Turn on the PiBoy, it should reboot about 5 times and take about 10 minutes.
 
