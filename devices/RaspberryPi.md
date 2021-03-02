@@ -34,6 +34,18 @@ Default username/password: pi / raspberry
 
 Make sure to change the password (and other configuration) in `sudo raspi-config`
 
+## Disable overscan
+
+If HDMI output doesn't match the edges of the screen:
+
+```bash
+sudo nano /boot/config.txt
+disable_overscan=1
+```
+
+Alternatively, change it in `sudo raspi-config`.
+
+
 ## Install a USB disk
 
 Newest:
