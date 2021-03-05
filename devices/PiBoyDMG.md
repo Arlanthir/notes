@@ -39,17 +39,53 @@ If sound crackles and pops after enabling OMX Player, change Sound Settings > OM
 
 ## Customize OSD (on-screen display)
 
-Edit file `/home/pi/osd/osd.cfg`
+Edit file `/boot/osd.cfg`
 
-### Configure LEDs and Fan
+### Configure LEDs, Fan and text/icons
 
 ```
-nano /boot/osd.cfg
+#classicaudio Use PCM instead of HDMI/HEADPHONE audio devices
+#classicaudio
+
+#loadwait sets an application to wait to open before closing the boot splash screen
+#loadwait
+#emulationstation
+
+#red LED maximum brightness
 redled
 10
 
+#green LED maximum brightness
 greenled
 10
+
+#volumeicon enables displaying the volume slider when changing volume. 0 disables display.  1 thru 100 sets transparency(alpha).
+volumeicon
+50
+
+#fanduty defines the number of temperature bands and fan power for each given temperature.  
+#fanduty defaults to full speed if underfined. 
+#temps are in millidegrees
+#duty/power is in tenths of a percent.  0 to 254 = 0% to 25.4% duty. Setting 255 will set 100% power.
+#on boot fan is set to 100% power until changed by osd or third party applications.
+#fanduty
+#6
+#45000 0
+#50000 75
+#55000 110
+#60000 147
+#65000 194
+#70000 242
+
+#alternative fanduty
+#fanduty
+#6
+#50000 0
+#55000 20
+#60000 35
+#65000 50
+#70000 70
+#75000 90
 
 fanduty
 4
@@ -57,6 +93,107 @@ fanduty
 65000 75
 70000 127
 75000 200
+
+#statistics data can be printed on the screen
+#load - shows combined processor load
+#alpha 0 to 100
+#x 0 to 639
+#y 0 to 479
+#size small, medium or large
+load
+50
+0
+5
+medium
+
+#temperature shows processor temp in degrees C
+#alpha 0 to 100
+#x 0 to 639
+#y 0 to 479
+#size small, medium or large
+temperature
+50
+80
+5
+medium
+
+#votlage shows estimated open circuit battery votlage
+#alpha 0 to 100
+#x 0 to 639
+#y 0 to 479
+#size small, medium or large
+voltage
+50
+140
+5
+medium
+
+#current shows battery current. Positive current is charging and negative current is discharging
+#alpha 0 to 100
+#x 0 to 639
+#y 0 to 479
+#size small, medium or large
+current
+50
+190
+5
+medium
+
+#cpu shows the current cpu usage percentage.  100% per core, eg 400% indicates all 4 cores are maxed.
+#alpha 0 to 100
+#x 0 to 639
+#y 0 to 479
+#size small, medium or large
+cpu
+50
+240
+5
+medium
+
+#icons
+#throttle - will display a throttling icon if temperature throttling.
+#alpha 0 to 100
+#x 0 to 639
+#y 0 to 479
+#size small, medium or large
+throttle
+50
+520
+5
+medium
+
+#bluetooth - will display a bluetooth icon(idle or active) if bluetooth is enabled
+#alpha 0 to 100
+#x 0 to 639
+#y 0 to 479
+#size small, medium or large
+bluetooth
+50
+550
+0
+medium
+
+#wifi - will display a wifi connection quality icon if wifi is enabled
+#alpha 0 to 100
+#x 0 to 639
+#y 0 to 479
+#size small, medium or large
+wifi
+50
+580
+0
+medium
+
+#battery - will display a battery meter
+#alpha 0 to 100
+#x 0 to 639
+#y 0 to 479
+#size small, medium or large
+battery
+50
+610
+0
+medium
 ```
 
 ## Configure Wifi
