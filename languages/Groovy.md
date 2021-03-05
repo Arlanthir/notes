@@ -87,7 +87,7 @@ int sum(int a, int b) {
 
 A closure in Groovy is an open, anonymous, block of code that can take arguments, return a value and be assigned to a variable.
 
-```
+```groovy
 def sum = { a, b -> a + b }
 ```
 
