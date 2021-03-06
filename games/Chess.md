@@ -70,9 +70,13 @@ Moves:
 
 #### [Accelerated Dragon](https://en.wikipedia.org/wiki/Sicilian_Defence,_Accelerated_Dragon)
 
+Good videos:
+- https://www.youtube.com/watch?v=LKvotDTj1Ls
+- https://www.youtube.com/watch?v=MONK6rQuido
+
 The Dragon Variation of the Sicilian Defense fianchettoes the kingside bishop to control the center from afar.
-Because it wastes a move playing d6, it allows White to castle queenside and unleash a kingside pawn storm.
-The **Accelerated** Dragon variation's objective is to save a tempo and threaten to play d5 immediately, disarming White's pawn storm by opening the center and sometimes forcing White to castle kingside due to tactics.
+Because it wastes a move playing **d6**, it allows White to castle queenside and unleash a kingside pawn storm.
+The **Accelerated** Dragon variation's objective is to save a *tempo* and threaten to play **d5** in one go, disarming White's pawn storm by opening up the center and sometimes forcing White to castle kingside due to tactics.
 
 2. Nf3 Nc6
 3. d4 cxd4
@@ -83,17 +87,29 @@ The **Accelerated** Dragon variation's objective is to save a tempo and threaten
 ##### Main line
 
 White continues development, paying special attention to black's threatened Ng4 (attacking the bishop).
-It usually also protects the other bishop, dropping it to b3 to avoid tactics.
+Other Black tactics include taking the **e4** pawn while attacking a **d2** queen with the knight, discovering the fianchetto'd bishop's attack on the knight.
+It usually also protects the other bishop, dropping it to **b3**.
 
 5. Nc3 Bg7
 6. Be3 Nf6
 7. Bc4 (D)
 
-![](http://www.fen-to-image.com/image/30/single/coords/r1bqkbnr/pp1ppp1p/2n3p1/8/3NP3/8/PPP2PPP/RNBQKB1R)
+![](http://www.fen-to-image.com/image/30/single/coords/r1bqk2r/pp1pppbp/2n2np1/8/2BNP3/2N1B3/PPP2PPP/R2QK2R)
+
+Usually:
+
+7. ... 0-0
+8. Bb3 (D)
+
+![](http://www.fen-to-image.com/image/30/single/coords/r1bq1rk1/pp1pppbp/2n2np1/8/3NP3/1BN1B3/PPP2PPP/R2QK2R)
+
+Note that **8.f3** (like in the Dragon variation) would not be a good choice because **8...Qb6** allow tactics that win a pawn or more.
+
+Now if Black plays **8...d6**, the position transposes to the normal Dragon variation, in which White plays **9.f3** and unleashes the pawn storm in the kingside, but if Black plays **8...a5** or **8...Qa5**, castling queenside becomes dangerous for White.
 
 ##### Maroczy Bind
 
-Because Black doesn't threaten the e pawn with 4. ... Nf6, White can freely occupy one more square in the center, cramping Black's position.
+Because Black doesn't threaten the e pawn with 4...Nf6, White can freely occupy one more square in the center, cramping Black's position.
 This translates into a more positional game.
 
 5. c4 (D)
