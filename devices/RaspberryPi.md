@@ -45,6 +45,15 @@ disable_overscan=1
 
 Alternatively, change it in `sudo raspi-config`.
 
+## Overclocking
+
+```bash
+sudo nano /boot/config.txt
+
+arm_freq=2000   # Up to 2147. Default is 1500.
+v3d_freq=750    # Default is 500.
+over_voltage=6
+```
 
 ## Install a USB disk
 
