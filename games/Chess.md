@@ -60,6 +60,46 @@ Moves:
 
 ![](http://www.fen-to-image.com/image/30/single/coords/r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R)
 
+### [Sicilian Defense](https://en.wikipedia.org/wiki/Sicilian_Defence)
+
+Moves:
+
+1. e4 c5 (D)
+
+![](http://www.fen-to-image.com/image/30/single/coords/rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR)
+
+#### [Accelerated Dragon](https://en.wikipedia.org/wiki/Sicilian_Defence,_Accelerated_Dragon)
+
+The Dragon Variation of the Sicilian Defense fianchettoes the kingside bishop to control the center from afar.
+Because it wastes a move playing d6, it allows White to castle queenside and unleash a kingside pawn storm.
+The **Accelerated** Dragon variation's objective is to save a tempo and threaten to play d5 immediately, disarming White's pawn storm by opening the center and sometimes forcing White to castle kingside due to tactics.
+
+2. Nf3 Nc6
+3. d4 cxd4
+4. Nxd4 g6 (D)
+
+![](http://www.fen-to-image.com/image/30/single/coords/r1bqkbnr/pp1ppp1p/2n3p1/8/3NP3/8/PPP2PPP/RNBQKB1R)
+
+##### Main line
+
+White continues development, paying special attention to black's threatened Ng4 (attacking the bishop).
+It usually also protects the other bishop, dropping it to b3 to avoid tactics.
+
+5. Nc3 Bg7
+6. Be3 Nf6
+7. Bc4 (D)
+
+![](http://www.fen-to-image.com/image/30/single/coords/r1bqkbnr/pp1ppp1p/2n3p1/8/3NP3/8/PPP2PPP/RNBQKB1R)
+
+##### Maroczy Bind
+
+Because Black doesn't threaten the e pawn with 4. ... Nf6, White can freely occupy one more square in the center, cramping Black's position.
+This translates into a more positional game.
+
+5. c4 (D)
+
+![](http://www.fen-to-image.com/image/30/single/coords/r1bqkbnr/pp1ppp1p/2n3p1/8/2PNP3/8/PP3PPP/RNBQKB1R)
+
 ### [King's Gambit](https://en.wikipedia.org/wiki/King%27s_Gambit)
 
 White offers a pawn to induce Black into surrendering his share of the center.
