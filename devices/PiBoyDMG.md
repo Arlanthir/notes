@@ -43,7 +43,7 @@ Edit file `/boot/osd.cfg`
 
 ### Configure LEDs, Fan and text/icons
 
-```
+```bash
 #classicaudio Use PCM instead of HDMI/HEADPHONE audio devices
 #classicaudio
 
@@ -196,10 +196,23 @@ battery
 medium
 ```
 
+## Overclock
+
+Recommended overclock settings:
+
+```bash
+sudo nano /boot/config.txt
+
+arm_freq=2000   # Up to 2147. Default is 1500.
+v3d_freq=750    # Default is 500.
+over_voltage=6
+```
+
 ## Configure Wifi
 
 Create file /boot/wifikeyfile.txt with contents (replacing the values between quotes):
-```
+
+```bash
 ssid="wifi_name"
 psk="password"
 ```
@@ -210,14 +223,18 @@ Select the "Wifi" menu option.
 
 Select "Import wifi credentials from /boot/wifikeyfile.txt" from the menu.
 
-## Update firmware
+## Update firmware (on Linux)
 
-```
-# Convert loader.py from CRLF to LF
-# Then:
+1. On your computer, download the firmware update, which should contain a `loader.py` file.
+2. Connect your PiBoy while it's off to your PC (using a USB cable).
+3. `cd` to the firmware update folder on your PC.
+4. Convert `loader.py` from CRLF to LF.
+5. Issue the commands:
+
+```bash
 chmod +x loader.py
-sudo pacman -S python-pip
-sudo pip install pyserial
+sudo pacman -S python-pip      # Example for Arch linux
+pip install --user pyserial
 sudo ./loader.py /dev/ttyACM0
 ```
 
