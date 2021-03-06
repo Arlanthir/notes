@@ -72,7 +72,7 @@ Moves:
 
 Good videos:
 - https://www.youtube.com/watch?v=LKvotDTj1Ls
-- https://www.youtube.com/watch?v=MONK6rQuido
+- https://www.youtube.com/watch?v=13Y4QR_-Upc
 
 The Dragon Variation of the Sicilian Defense fianchettoes the kingside bishop to control the center from afar.
 Because it wastes a move playing **d6**, it allows White to castle queenside and unleash a kingside pawn storm.
@@ -105,9 +105,14 @@ Usually:
 
 Note that **8.f3** (like in the Dragon variation) would not be a good choice because **8...Qb6** allow tactics that win a pawn or more.
 
-Now if Black plays **8...d6**, the position transposes to the normal Dragon variation, in which White plays **9.f3** and unleashes the pawn storm in the kingside, but if Black plays **8...a5** or **8...Qa5**, castling queenside becomes dangerous for White.
+**8.Qd2** is also not good because **8...Ng4** often results in an endgame where Black has a positional advantage.
 
-##### Maroczy Bind
+Now after **8.Bb3**, if Black plays **8...d6**, the position transposes to the normal Dragon variation, in which White plays **9.f3**, castles queenside and unleashes the pawn storm in the kingside, but if Black plays **8...a5** or **8...Qa5**, castling queenside becomes dangerous for White.
+
+##### Maróczy Bind
+
+Good video:
+- https://www.youtube.com/watch?v=MONK6rQuido
 
 Because Black doesn't threaten the e pawn with 4...Nf6, White can freely occupy one more square in the center, cramping Black's position.
 This translates into a more positional game.
@@ -115,6 +120,18 @@ This translates into a more positional game.
 5. c4 (D)
 
 ![](http://www.fen-to-image.com/image/30/single/coords/r1bqkbnr/pp1ppp1p/2n3p1/8/2PNP3/8/PP3PPP/RNBQKB1R)
+
+Often:
+
+5. ... Bg7
+6. Be3 Nf6
+7. Nc3 0-0
+8. Be2 d6
+
+
+![](http://www.fen-to-image.com/image/30/single/coords/r1bq1rk1/pp2ppbp/2np1np1/8/2PNP3/2N1B3/PP2BPPP/R2QK2R)
+
+
 
 ### [King's Gambit](https://en.wikipedia.org/wiki/King%27s_Gambit)
 
