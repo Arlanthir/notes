@@ -33,9 +33,11 @@ Then launch a PSP game, go to Settings (Analog click) and remap the controller L
 
 ## Fix sound
 
-If sound crackles and pops after enabling OMX Player, change Sound Settings > OMX Player Audio Device to ALSA.
+- If sound crackles and pops after enabling OMX Player, change Sound Settings > OMX Player Audio Device to ALSA.
+- In RetroPie 4.6-, EmulationStation Audio Card should be Default and Audio Device should be PCM.
+- In RetroPie 4.7.1+, EmulationStation Audio Card should be Sysdefault and Audio Device should be Headphones/HDMI.
+- EmulationStation sound level should always be 100%.
 
-(Audio Card should be Default and Audio Device should be PCM, I think)
 
 ## Customize OSD (on-screen display)
 
@@ -217,11 +219,9 @@ ssid="wifi_name"
 psk="password"
 ```
 
-Navigate to the "Retropie" menu.
-
-Select the "Wifi" menu option.
-
-Select "Import wifi credentials from /boot/wifikeyfile.txt" from the menu.
+1. Navigate to the "Retropie" menu.
+2. Select the "Wifi" menu option.
+3. Select "Import wifi credentials from /boot/wifikeyfile.txt" from the menu.
 
 ## Update firmware (on Linux)
 
