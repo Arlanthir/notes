@@ -61,12 +61,22 @@ def stringNoInterpolation = 'Hello'
 def stringWithInterpolation = "$stringNoInterpolation World!"
 ```
 
-## Functions
+## Methods
 
 ```groovy
 def hello() {
     println('Hello World!')
 }
+```
+
+A method can receive named arguments as a map:
+
+```groovy
+def foo(Map args) {
+    println "${args.name}: ${args.age}"
+}
+
+foo(name: 'Marie', age: 1)
 ```
 
 You can omit parentheses of function calls:
