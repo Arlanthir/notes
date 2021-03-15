@@ -53,7 +53,8 @@ endlocal
 ```
 
 ## Exiting on called program error
-```
+
+```cmd
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 ```
 
@@ -61,7 +62,7 @@ IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ### Xcopy
 
-```bat
+```cmd
 REM /e - Copy all subdirectories, even if empty
 REM /i - Don't ask if it's a file or folder
 REM /q - Hide text output
