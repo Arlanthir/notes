@@ -51,3 +51,20 @@ setlocal
 path=g:\programs\superapp;%path%
 endlocal
 ```
+
+## Exiting on called program error
+```
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
+```
+
+## Other programs
+
+### Xcopy
+
+```bat
+REM /e - Copy all subdirectories, even if empty
+REM /i - Don't ask if it's a file or folder
+REM /q - Hide text output
+REM /y - Always overwrite
+Xcopy /e /i /q /y <source> <dest>
+```
