@@ -22,6 +22,10 @@ echo %MYPATH:\=/%
 ## Conditionals
 
 ```cmd
+IF "%MYVAR%" == "something" (
+    echo "The same"
+)
+
 IF EXIST somefile (
     echo "File exists"
 ) ELSE (
