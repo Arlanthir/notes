@@ -74,7 +74,7 @@ dosomething --with this ^
 ## Other programs
 
 ### rmdir
-```
+```cmd
 REM /s - Recursive
 REM /q - Don't ask for confirmation
 rmdir /s /q <dir>
