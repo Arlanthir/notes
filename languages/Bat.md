@@ -64,6 +64,13 @@ IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ## Other programs
 
+### rmdir
+```
+REM /s - Recursive
+REM /q - Don't ask for confirmation
+rmdir /s /q <dir>
+```
+
 ### Xcopy
 
 ```cmd
