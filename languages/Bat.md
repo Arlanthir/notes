@@ -62,6 +62,15 @@ endlocal
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 ```
 
+## Multi-line commands
+
+You can use `^` to continue commands in the next line:
+
+```cmd
+dosomething --with this ^
+  --and this
+```
+
 ## Other programs
 
 ### rmdir
