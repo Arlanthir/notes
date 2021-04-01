@@ -713,6 +713,7 @@ https://github.com/Akava-Design/Akava-Konsole
 - Settings > Edit Current Profile > Appearance > Edit > Blur background (on)
 - Settings > Edit Current Profile > Appearance > Edit > Background transparency (25%)
 
+
 ## Other programs
 
 ### Pacman packages
@@ -910,6 +911,17 @@ devices
 Should see a MAC Address, maybe an authorization request that you need to accept
 trust <mac>
 quit
+```
+
+## Change DNS servers
+
+```bash
+sudo nano /etc/resolv.conf
+# Comment out the existing nameserver line and replace it with:
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+# The settings will probably be overwritten at reboot, add write-protection to the file if needed:
+sudo chattr +i /etc/resolv.conf
 ```
 
 ## Wake on LAN (WoL)
