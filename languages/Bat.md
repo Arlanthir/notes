@@ -73,6 +73,13 @@ dosomething --with this ^
 
 ## Other programs
 
+### del
+Delete file
+
+```cmd
+del <file>
+```
+
 ### rmdir
 ```cmd
 REM /s - Recursive
