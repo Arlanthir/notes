@@ -19,6 +19,19 @@ REM Will replace \ slashes with / slashes
 echo %MYPATH:\=/%
 ```
 
+### Arithmetics
+
+```cmd
+set /a i=3
+set /a i+=1
+set /a j=%i%-1
+```
+
+### Read user input
+```cmd
+set /p id="Enter ID: "
+```
+
 ## Conditionals
 
 ```cmd
@@ -31,6 +44,43 @@ IF EXIST somefile (
 ) ELSE (
     echo "File doesn't exist"
 )
+```
+
+## Lists and Arrays
+
+### Lists
+
+Useful for iteration
+
+```cmd
+set "APPLICATIONS=one two three"
+for %%a in (%APPLICATIONS%) do (
+    echo %%a
+)
+```
+
+### Arrays
+
+Useful for random access
+
+```cmd
+set a[0]=1
+set a[1]=2 
+set a[2]=3
+
+echo Accessing a specific index: %a[1]%
+REM You can guard it using IF DEFINED a[1]
+```
+
+Iterating over an array:
+
+```cmd
+setlocal EnableDelayedExpansion
+REM (start, step, end)
+for /l %%n in (0,1,2) do (
+   echo !a[%%n]!
+)
+endlocal
 ```
 
 ## Echoing each ommand
