@@ -121,6 +121,10 @@ dosomething --with this ^
   --and this
 ```
 
+## Escape characters
+
+https://www.robvanderwoude.com/escapechars.php
+
 ## Other programs
 
 ### del
