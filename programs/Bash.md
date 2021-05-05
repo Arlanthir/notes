@@ -54,6 +54,8 @@ dirname /home/user/file.txt    # /home/user
 Finds lines in input matching a given pattern
 
 ```bash
+grep "ola" <file>   # Finds lines containing "ola" in <file>
+
 echo "ola
 adeus" | grep "ola"
 
