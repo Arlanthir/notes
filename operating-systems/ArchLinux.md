@@ -720,6 +720,8 @@ https://github.com/Akava-Design/Akava-Konsole
 ```bash
 openssh
 steam
+gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav  # Video codecs
+lib32-gst-plugins-base lib32-gst-plugins-good # Wine video codecs
 ```
 
 ### AUR packages
@@ -728,6 +730,7 @@ yay                 # (manual installation)
 google-chrome
 visual-studio-code-bin     # For Settings Sync to work in KDE, you may need pacman -S gnome-keyring
 tuxguitar
+lib32-gst-plugins-bad li32-gst-plugins-ugly # Wine video codecs
 ```
 
 ### Reaper
