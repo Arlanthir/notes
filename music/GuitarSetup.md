@@ -109,6 +109,14 @@ To check the intonation of each string (most accurate in playing position):
 
 With the strings loosened, adjust the tailpiece so that it is at the lowest possible point that the strings only make contact with the bridge saddles and not the bridge edge. Turn the screws with an ice cream stick (or similar wooden tool) and not with a metal screwdriver.
 
+### Pickup height
+
+To measure pickup height, fret the highest note in the neck and measure from the top of the pickup polepiece to the 6th and the 1st strings each. The distance should be lower in the treble side (because string is weaker). Symptoms of being too close is smoothless sustain or even warping of the sound.
+
+Recommended measures:
+- Standard Single-Coil 1.6mm - 2.4mm
+- Humbuckers 1.6mm - 2.4mm
+
 ## Classical
 
 ### Restring
