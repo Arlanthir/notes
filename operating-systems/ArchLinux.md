@@ -441,6 +441,16 @@ EDITOR="nano" visudo
 Defaults env_keep += "HOME"
 ```
 
+### Add user to group
+```bash
+groups                          # Check your groups
+groups <user>                   # Check user's groups
+sudo groupadd <group>           # Create new group
+sudo gpasswd -a <user> <group>  # Add user to group (needs relogin to take effect)
+sudo gpasswd -d <user> <group>  # Remove user from group
+sudo groupdel <group>           # Delete a group
+```
+
 ### Install Graphical Environment
 
 ```bash
