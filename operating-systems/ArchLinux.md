@@ -946,6 +946,13 @@ exit
 
 ## Troubleshooting
 
+View logs:
+```bash
+dmesg           # Kernel ring buffer logs
+journalctl -b   # Boot log
+journalctl -k   # Kernel log
+```
+
 Log of gnome-shell extensions:
 
 ```bash
