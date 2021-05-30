@@ -85,6 +85,7 @@ If not, enable wired connection
 ```bash
 ip link                                       # to find out <interface>
 systemctl enable dhcpcd@<interface>.service
+# Or try: dhcpcd.service (the above seems to have timeout errors, and disable ethernet hotplug)
 dhcpcd
 ```
 
@@ -396,6 +397,7 @@ Enable dhcpcd if needed:
 ```bash
 ip link                                       # to find out <interface>
 systemctl enable dhcpcd@<interface>.service
+# Or try: dhcpcd.service (the above seems to have timeout errors, and disable ethernet hotplug)
 ```
 
 Reboot:
