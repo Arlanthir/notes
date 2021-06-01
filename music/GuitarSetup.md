@@ -68,6 +68,11 @@ Sweetwater tips:
 To measure the neck relief, put a capo on the first fret, fret the last one and measure (with a feeler gauge) the height from the middle fret (around 8th) to the 6th string.  
 The recommended Fender/Squier neck relief is 0.010'', or 0.25mm. Generally, anything between 0.008'' (0.20mm, good starting point if unsure of playing style) to 0.012'' (0.30mm) is good.
 
+### Bridge Angle
+
+Strat floating: about 3mm
+
+Strat fixed: flush with the neck
 
 ### String Action
 
