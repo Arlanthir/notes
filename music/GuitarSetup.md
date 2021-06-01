@@ -1,6 +1,6 @@
 # Guitar Setup
 
-## Eletric
+## Electric
 
 Correct order of the setup:
 1. Restring
