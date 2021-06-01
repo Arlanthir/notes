@@ -84,10 +84,10 @@ To check if the strings curvature matches the neck curvature, rest the radius to
 
 #### Typical string action
 
-| String              | Inches | Mm    | Musifex Setup |
-| ------------------- | ------ | ----- | ------------- |
-| Low E (6th string)  | 4/64'' | 1.6mm | ~1.6mm        |
-| High E (1st string) | 3/64'' | 1.2mm | ~1.6mm        |
+| String              | Inches | Mm    | Musifex Setup | Fender (new) |
+| ------------------- | ------ | ----- | ------------- | ------------ |
+| Low E (6th string)  | 4/64'' | 1.6mm | ~1.6mm        | 2mm          |
+| High E (1st string) | 3/64'' | 1.2mm | ~1.6mm        | 2mm          |
 
 
 ### Intonation
@@ -116,6 +116,9 @@ To measure pickup height, fret the highest note in the neck and measure from the
 Recommended measures:
 - Standard Single-Coil 1.6mm - 2.4mm
 - Humbuckers 1.6mm - 2.4mm
+
+Fender Strat came new with about 2.5-4mm.
+Amount of pickups over the pickguard: 1mm (neck), 2mm, 3.5mm
 
 ## Classical
 
