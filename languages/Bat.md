@@ -83,7 +83,7 @@ for /l %%n in (0,1,2) do (
 endlocal
 ```
 
-## Echoing each ommand
+## Echoing each command
 
 ```cmd
 REM Will output each instruction to stdout before executing it
