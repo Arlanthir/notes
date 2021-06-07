@@ -128,10 +128,11 @@ https://www.robvanderwoude.com/escapechars.php
 ## Other programs
 
 ### del
-Delete file
+Delete file(s)
 
 ```cmd
 del <file>
+del /S *.o   REM Delete all files with .o extension recursively
 ```
 
 ### rmdir
