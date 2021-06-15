@@ -125,6 +125,39 @@ dosomething --with this ^
 
 https://www.robvanderwoude.com/escapechars.php
 
+## `CALL` vs `START`
+
+For exe files, the differences are nearly unimportant. But to start an exe you don't even need `CALL`.
+
+When starting another batch it's a big difference, as `CALL` will start it in the same window and the called batch has access to the same variable context.
+It can also change variables which affects the caller.
+
+`START` will create a new cmd.exe for the called batch and without `/b` it will open a new window. As it's a new context, variables can't be shared.
+
+### Differences
+
+Using `start /wait <prog>`
+- Changes of environment variables are lost when the <prog> ends
+- The caller waits until the <prog> is finished
+
+Using `call <prog>`
+- For exe it can be ommited, because it's equal to just starting <prog>
+- For an exe-prog the caller batch waits or starts the exe asynchronous, but the behaviour depends on the exe itself.
+- For batch files, the caller batch continues, when the called <batch-file> finishes, WITHOUT call the control will not return to the caller batch
+
+### Addendum
+Using `CALL` can change the parameters (for batch and exe files), but only when they contain carets or percent signs.
+
+```cmd
+call myProg param1 param^^2 "param^3" %%path%%
+```
+
+Will be expanded to (from within an batch file)
+
+```cmd
+myProg param1 param2 param^^3 <content of path>
+```
+
 ## Other programs
 
 ### del
