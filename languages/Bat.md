@@ -160,6 +160,12 @@ myProg param1 param2 param^^3 <content of path>
 
 ## Other programs
 
+### Saving output of programs in a variable
+
+```cmd
+for /f %%i in ('application arg0 arg1') do set MY_VAR=%%i
+```
+
 ### del
 Delete file(s)
 
