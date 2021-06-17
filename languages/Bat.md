@@ -15,7 +15,20 @@ set MYVAR=ola
 echo %MYVAR%
 REM Will interpolate
 echo "%MYVAR%"
-REM Will replace \ slashes with / slashes
+```
+
+### String operations
+```cmd
+REM Substring (first 5 chars)
+SET NEW_VAR=%OLD_VAR:~0,5%
+REM String after the first 2 chars
+SET NEW_VAR=%OLD_VAR:~2%
+REM Skip 7 characters and then extract the next 5
+SET NEW_VAR=%OLD_VAR:~7,5%
+REM Last 5 chars
+SET NEW_VAR=%OLD_VAR:~-5%
+
+REM Replace \ slashes with / slashes
 echo %MYPATH:\=/%
 ```
 
@@ -141,7 +154,7 @@ Using `start /wait <prog>`
 - The caller waits until the <prog> is finished
 
 Using `call <prog>`
-- For exe it can be ommited, because it's equal to just starting <prog>
+- For exe it can be ommited, because it's equal to just starting `<prog>`
 - For an exe-prog the caller batch waits or starts the exe asynchronous, but the behaviour depends on the exe itself.
 - For batch files, the caller batch continues, when the called <batch-file> finishes, WITHOUT call the control will not return to the caller batch
 
@@ -163,7 +176,9 @@ myProg param1 param2 param^^3 <content of path>
 ### Saving output of programs in a variable
 
 ```cmd
-for /f %%i in ('application arg0 arg1') do set MY_VAR=%%i
+REM "delims=" allows spaces in the output
+REM Pipes must be escaped to ^|
+for /f "delims=" %%i in ('application arg0 arg1') do set MY_VAR=%%i
 ```
 
 ### del
