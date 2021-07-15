@@ -45,6 +45,11 @@ set /a j=%i%-1
 set /p id="Enter ID: "
 ```
 
+### Reading from file
+```cmd
+set /p version=< somefile
+```
+
 ## Conditionals
 
 ```cmd
