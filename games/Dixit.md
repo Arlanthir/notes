@@ -40,7 +40,7 @@ O primeiro jogador a lembrar-se de uma boa frase para uma das suas cartas começ
 
 - Usam-se os coelhos para marcar os pontos.
 - Cada jogador recebe uma carta nova.
-  - **3 jogadores**: Cada jogador recebe 2 cartas em vez de 1.
+  - **3 jogadores**: Cada jogador (exceto narrador) recebe 2 cartas em vez de 1.
 - Próximo narrador é o jogador à esquerda.
 
 ## End
