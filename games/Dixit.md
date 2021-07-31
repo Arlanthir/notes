@@ -19,6 +19,8 @@ O primeiro jogador a lembrar-se de uma boa frase para uma das suas cartas começ
 
 ## Turn
 
+### Frase e votação
+
 - O narrador joga uma carta virada para baixo e diz uma frase sobre a sua carta.
 - Cada um dos outros jogadores joga uma carta virada para baixo que possa aplicar-se à frase dita.
   - **3 jogadores**: Cada jogador joga 2 cartas em vez de 1.
@@ -27,14 +29,19 @@ O primeiro jogador a lembrar-se de uma boa frase para uma das suas cartas começ
   - **>=7 jogadores**: Cada jogador tem 2 votos em vez de 1.
 - Todos os jogadores revelam os votos.
 
+### Pontuação
+
 - Se toda a gente acertou ou ninguém acertou: 2 votos a todos menos ao narrador.
 - Se alguém acertou: narrador ganha 3 pontos, quem acertou ganha 1.
   - **>=7 jogadores**: Quem acertou só usando 1 voto, ganha +1 ponto.
 - Cada jogador ganha 1 ponto por cada voto na sua carta (máximo 3).
 
+### Seguinte
+
 - Usam-se os coelhos para marcar os pontos.
 - Cada jogador recebe uma carta nova.
   - **3 jogadores**: Cada jogador recebe 2 cartas em vez de 1.
+- Próximo narrador é o jogador à esquerda.
 
 ## End
 
