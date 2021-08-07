@@ -255,11 +255,24 @@ for f in *.mp4; do HandBrakeCLI -E copy:aac -e x264 -B 64 -r 25 --gain -20.0 -X 
 
 ### PlayStation settings
 
+```
 Quick Menu > Options > Enhanced Resolution (Slow) > ON (Try it)
 Quick Menu > Options > Enhanced Resolution (Speed Hack) > ON (Try it if slow)
+```
 
 (Then save the game/core configutation)
 
+### Reduce screen size for smaller consoles
+
+(Example for Game Boy Advance)
+
+```
+Quick Menu > Back > Settings > Video > Scaling:
+Integer Scale > On
+Aspect Ratio > Custom
+Custom Aspect Ratio (Width)  720 (3x)
+Custom Aspect Ratio (Width)  480 (3x)
+```
 
 ### Add SteamLink shortcut
 
