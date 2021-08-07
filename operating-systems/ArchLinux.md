@@ -2,14 +2,15 @@
 
 ## Basics
 
-| Command                 | Action                                     |
-|-------------------------|--------------------------------------------|
-| `pacman -S <package>`   | Install package                            |
-| `pacman -R <package>`   | Remove package                             |
-| `pacman -Ss <query>`    | Search package                             |
-| `pacman -Syu`           | Update packages                            |
-| `pacman -Sc`            | Clear cache                                |
-| `pacman -Qo <file>`     | Check which package installed &lt;file&gt; |
+| Command                 | Action                                      |
+| ----------------------- | ------------------------------------------- |
+| `pacman -S <package>`   | Install package                             |
+| `pacman -R <package>`   | Remove package                              |
+| `pacman -Ss <query>`    | Search package                              |
+| `pacman -Syu`           | Update packages                             |
+| `pacman -Sc`            | Clear cache                                 |
+| `pacman -Ql <package>`  | List all files installed by &lt;package&gt; |
+| `pacman -Qo <file>`     | Check which package installed &lt;file&gt;  |
 
 *Note*: When your system is very outdated and updating it results in corrupted packages error, update the keyring first: `sudo pacman -S archlinux-keyring`.
 
