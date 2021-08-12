@@ -191,7 +191,9 @@ Delete file(s)
 
 ```cmd
 del <file>
-del /S *.o   REM Delete all files with .o extension recursively
+REM /s - Recursive
+REM /q - Don't ask for confirmation
+del /s /q *.o
 ```
 
 ### rmdir
