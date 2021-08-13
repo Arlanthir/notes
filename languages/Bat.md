@@ -203,6 +203,15 @@ REM /q - Don't ask for confirmation
 rmdir /s /q <dir>
 ```
 
+### taskkill
+Terminate programs.
+
+```cmd
+taskkill /IM <program.exe>
+REM Or forcefully:
+taskkill /F /IM <program.exe>
+```
+    
 ### Xcopy
 
 ```cmd
