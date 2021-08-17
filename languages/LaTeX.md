@@ -16,7 +16,14 @@ sudo pacman -S texlive-most
 paper.tex:
 
 ```tex
-
+\documentclass{article}
+\title{Hello World}
+\author{Jane Doe}
+\date{September 1994}
+\begin{document}
+   \maketitle
+   Oh hi there!
+\end{document}
 ```
 
 Compile:
