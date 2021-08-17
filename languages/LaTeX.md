@@ -21,8 +21,8 @@ paper.tex:
 \author{Jane Doe}
 \date{September 1994}
 \begin{document}
-   \maketitle
-   Oh hi there!
+    \maketitle
+    Oh hi there!
 \end{document}
 ```
 
