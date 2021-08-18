@@ -11,6 +11,10 @@ For Arch:
 sudo pacman -S texlive-most
 ```
 
+For Mac:
+
+http://www.tug.org/mactex/
+
 ## Minimal Working Example
 
 paper.tex:
