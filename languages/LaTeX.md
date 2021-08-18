@@ -13,7 +13,7 @@ sudo pacman -S texlive-most
 
 For Mac:
 
-http://www.tug.org/mactex/
+http://www.tug.org/mactex/ and reboot.
 
 ## Minimal Working Example
 
