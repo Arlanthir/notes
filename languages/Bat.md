@@ -53,6 +53,10 @@ set /p version=< somefile
 ## Conditionals
 
 ```cmd
+IF MY_NUM EQU 2 (
+    echo It's two
+)
+
 IF "%MYVAR%" == "something" (
     echo "The same"
 )
@@ -99,6 +103,14 @@ for /l %%n in (0,1,2) do (
    echo !a[%%n]!
 )
 endlocal
+```
+
+### Iterating over files
+
+```cmd
+for %%f in (*.zip) do (
+    echo %%f
+)
 ```
 
 ## Echoing each command
