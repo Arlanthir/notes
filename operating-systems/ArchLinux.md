@@ -917,6 +917,16 @@ sudo systemctl start logid
 
 ```bash
 sudo pacman -S bluez-plugins
+```
+
+- Reboot
+- Connect the dualshock 3 using an USB cable, press the Home button
+- Should see an authorization request, click Trust and Authorize
+- Unplug the controller and press the Home button
+
+If the request doesn't appear, try:
+
+```bash
 bluetoothctl
 agent on
 default-agent
