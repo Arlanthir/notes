@@ -101,7 +101,7 @@
 ## Hash Tables
 ```lisp
 (make-hash-table)                              ;; Create hash table
-(make-hash-table :test #'string.=)             ;; Specify compare function for keys
+(make-hash-table :test #'equal)                ;; Specify compare function for keys
 (make-hash-table :size xxx :rehash-size yyy)   ;; Specify sizes and rehash sizes
 (gethash <key> <hashtable>)                    ;; Return hash table entry
 (remhash <key> <hashtable>)                    ;; Remove hash table entry
