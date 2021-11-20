@@ -118,7 +118,9 @@ const app = Vue.createApp({
 });
 ```
 
-<img src="https://vuejs.org/images/lifecycle.png" width="500">
+<!-- <img src="https://vuejs.org/images/lifecycle.png" width="500"> -->
+<img src="https://v3.vuejs.org/images/lifecycle.svg" width="500">
+
 
 ## Directives
 
