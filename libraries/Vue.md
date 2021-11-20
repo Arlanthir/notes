@@ -1,13 +1,18 @@
 # Vue
 
-## Vue instance
+*Note: This document is a work in progress, some syntax may be left over from Vue2.*
+
+## Vue application
 ```javascript
-var vm = new Vue({
-    el: '#app',
-    data: {
-        message: 'Hello Vue!'
+const app = Vue.createApp({
+    data() {
+        return {
+            message: 'Hello Vue!'
+        }
     }
 });
+
+app.mount('#app');
 ```
 
 ```html
@@ -35,7 +40,7 @@ Exceptions:
 ## Methods
 Callable from templates, never cache
 ```javascript
-var vm = new Vue({
+const app = Vue.createApp({
     ...
     methods: {
         reverseMessage: function() {
@@ -51,7 +56,7 @@ var vm = new Vue({
 ## Computed properties
 Readable from templates, use caching mechanisms
 ```javascript
-var vm = new Vue({
+const app = Vue.createApp({
     ...
     computed: {
         reversedMessage: function() {
@@ -63,7 +68,7 @@ var vm = new Vue({
 
 You can also define properties with getters and setters
 ```javascript
-var vm = new Vue({
+const app = Vue.createApp({
     computed: {
         fullName: {
             get: function() {
@@ -82,7 +87,7 @@ var vm = new Vue({
 ## Watched properties
 Functions get called whenever watched property changes.
 ```javascript
-var vm = new Vue({
+const app = Vue.createApp({
     ...
     watch: {
         firstName: function(val) {
@@ -100,7 +105,7 @@ myInstance.$el       // The HTML element
 
 ### Lifecycle hooks
 ```javascript
-var vm = new Vue({
+const app = Vue.createApp({
     ...
     beforeCreate: function() {},
     created: function() {},
@@ -274,9 +279,6 @@ You can also use modifiers:
 
 #### Keyboard event modifiers
 ```html
-<input v-on:keyup.13="submit">
-
-<!-- Equivalent to -->
 <input v-on:keyup.enter="submit">
 ```
 
@@ -290,15 +292,11 @@ Available key names:
 - down
 - left
 - right
-
-Add custom key names:
-```javascript
-Vue.config.keyCodes.f1 = 112;
-```
+- <letters> (like `a`, handles both `a` and `A`)
 
 Listen for modifier keys:
 ```html
-<input @keyup.alt.67="clear"> <!-- Alt+c -->
+<input @keyup.alt.c="clear"> <!-- Alt+c -->
 <div @click.ctrl="doSomething">Do something</div>
 ```
 
@@ -375,7 +373,7 @@ Transform output before rendering on screen. Works in template interpolations an
 {{ message | capitalize }}
 
 // Registered by:
-new Vue({
+const app = Vue.createApp({
     // ...
     filters: {
         capitalize: function(value) {
@@ -393,7 +391,7 @@ new Vue({
 Must be registered before the Vue instance call.
 
 ```javascript
-Vue.component('todo-item', {
+app.component('todo-item', {
     props: ['todo'],            // Allows <todo-item v-bind:todo="This is a todo">
     template: '<li>This is a todo: {{todo}}</li>',
     data: function() {
@@ -413,7 +411,7 @@ Vue.component('todo-item', {
 
 ### Props validation
 ```javascript
-Vue.component('example', {
+app.component('example', {
     props: {
         // basic type check (`null` means accept any type)
         propA: Number,
@@ -475,7 +473,7 @@ Child components can define `slot`s for parent components to add content.
 #### Single slot
 
 ```javascript
-Vue.component('my-component', {
+app.component('my-component', {
     template: '<div>Hello <slot></slot>!</div>'
 });
 ```
@@ -487,7 +485,7 @@ Vue.component('my-component', {
 #### Named slots
 
 ```javascript
-Vue.component('my-component', {
+app.component('my-component', {
     template: '<div><slot name="first"></slot> <slot name="second"></slot>!</div>'
 });
 ```
@@ -502,7 +500,7 @@ Vue.component('my-component', {
 #### Scoped slots
 
 ```javascript
-Vue.component('my-component', {
+app.component('my-component', {
     template: '<div class="child"><slot text="hello from child"></slot></div>'
 });
 ```
@@ -521,7 +519,7 @@ Vue.component('my-component', {
 ### Dynamic components (simple routing)
 
 ```javascript
-var vm = new Vue({
+const app = Vue.createApp({
     data: {
         currentView: 'home'
     }
@@ -549,7 +547,7 @@ var myComponent = this.$refs.comp;
 
 ```javascript
 // Register a global custom directive called v-focus
-Vue.directive('focus', {
+app.directive('focus', {
     // When the bound element is inserted into the DOM...
     inserted: function (el) {
         // Focus the element
