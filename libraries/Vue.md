@@ -635,51 +635,28 @@ p {
 </style>
 ```
 
-# Build tools: vue-cli with Webpack and vue-loader
+# Build tools / Scaffolding
+
+## Vite
 ```bash
-npm install -g vue-cli
-vue init <template-name> <project-name> # Interesting templates: webpack, webpack-simple
+npm init vite@latest
 cd <project-name>
 npm install
-npm run dev          # Development version with Node.js server
-npm run build        # Production version in folder /dist
+npm run dev        # Run development version
+npm run build      # Build production version
 ```
 
-## Manual setup
+## Vue CLI
 ```bash
-npm install --save-dev vue-loader vue-template-compiler
-# ES2015 transpiler:
-npm install --save-dev babel-core babel-loader babel-preset-es2015
+npm install -g @vue/cli
+vue create <project-name>
+cd <project-name>
+npm run serve       # Run development version
+npm run lint        # Lint code
+npm run build       # Build production version
+npm run test:unit   # Run unit tests
 ```
 
-webpack.config.js:
-```javascript
-module: {
-    rules: [{
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-            loaders: {
-                // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-                // the "scss" and "sass" values for the lang attribute to the right configs here.
-                // other preprocessors should work out of the box, no loader config like this necessary.
-                'scss': 'vue-style-loader!css-loader!sass-loader',
-                'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-            }
-            // other vue-loader options go here
-        }
-    }]
-}
-```
-
-.babelrc:
-```javascript
-{
-    "presets": [
-        ["es2015", { "modules": false }]
-    ]
-}
-```
 
 # Vue-router
 
