@@ -124,13 +124,20 @@ const app = Vue.createApp({
 
 ## Directives
 
-### Attribute binding
+### Binding
+
+`v-bind:` or its syntax sugar `:` offer one-way data binding.
+
+For two-way data binding, check `v-model:`.
+
+
+#### Attribute binding
 ```html
 <div v-bind:title="message">
 <div :title="message">        <!-- Equivalent to previous -->
 ```
 
-### Classes
+#### Classes
 ```html
 <div v-bind:class="{ active: isActive }">           <!-- Object with true/false values -->
 
@@ -139,7 +146,7 @@ const app = Vue.createApp({
 <div v-bind:class="[{ active: isActive }, errorClass]">  <!-- Mixed -->
 ```
 
-### Styles
+#### Styles
 ```html
 <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
 
