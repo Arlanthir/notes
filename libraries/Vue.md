@@ -465,8 +465,31 @@ To listen to a native event with the same name as a custom event:
 ```
 
 #### Support `v-model`
-`v-model` is syntactic sugar for `v-bind:value` and `v-on:input`.  
-To support it, a custom component just has to register prop `value` and emit  event `input` with new values.
+
+`<input v-model="searchText" />` is syntax sugar for `<input :value="searchText" @input="searchText = $event.target.value" />`.
+
+On components, it's syntax sugar for `<my-component :model-value="searchText" @update:model-value="searchText = $event"></my-component>`.
+
+To support it, a custom component just has to register prop `modelValue` and emit event `update:modelValue` with new values.
+
+```vue
+<script setup lang="ts">
+const props = withDefaults(defineProps<{
+        modelValue?: number
+    }>(), {
+        modelValue: 0
+    }
+);
+
+const emit = defineEmits<{
+  (e: 'update:modelValue', value: number): void
+}>();
+</script>
+
+<template>
+    <button @click="$emit('update:modelValue', 20)">Change to 20</button>
+</template>
+```
 
 ### Component-component interaction (naive)
 ```javascript
