@@ -33,7 +33,7 @@ O primeiro jogador tira alguns dados à sorte do saco e rola-os:
 | 3            | 7     |
 | 4            | 9     |
 
-O primeiro jogador joga agora o seu turno. Depois continua no sentido dos ponteiros do relógio. O último jogador joga dois turnos seguidos e a ordem inverte, até acabar novamente no primeiro.
+O primeiro jogador joga agora o seu turno. Depois continua no sentido dos ponteiros do relógio. O último jogador joga dois turnos seguidos e a ordem inverte, até acabar novamente no primeiro. (**Solo**: O jogador joga dois turnos seguidos.)
 
 Em cada turno, o jogador pode fazer até 2 ações (em qualquer ordem, e pode escolher não fazer uma delas, ou nenhuma):
 
