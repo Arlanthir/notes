@@ -51,7 +51,7 @@ O primeiro jogador da próxima ronda é o que foi segundo desta.
 
 ## End
 
-- **Solo**: A soma dos dados é a pontuação objetivo, para ganhar é necessário fazer mais do que essa pontuação.
+- **Solo**: A soma dos dados na Tabela de Rondas é a pontuação objetivo, para ganhar é necessário fazer mais do que essa pontuação.
 - Virar a Tabela de Rondas para marcar a pontuação de cada jogador.
 - Somar para cada jogador:
   - Pontos dos Objetivos Públicos (podem ser múltiplas vezes por carta)
