@@ -57,6 +57,27 @@ Do any of the following, as many times as you like, in any order:
 
 Game ends when a player reaches 0 Authority (life points). The other one is the winner.
 
+## Hydra: 2 vs 2
+
+- Players in the same team share Authority (75 for each team) and play their Turn at the same time.
+- They don't share Deck, Hand, etc.
+- Your ships don't trigger your teammate's Ally Abilities.
+- Starting team draws 3 cards each.
+
+## Command Decks
+
+Command Decks offer asymmetrical gameplay.
+
+You can play a Command Deck vs another Command Deck or against 2 regular Players in Hydra Mode.
+
+Each Command Deck has:
+
+- Its own starting Authority and Hand size.
+- A permanent Gambit, active during the whole game.
+- A Scrappable Gambit, usable once.
+- A powerful card to add to the Trade Deck before starting the game.
+- Its own Personal Deck of 12 cards.
+
 
 ## Solo / Co-op Variant
 
