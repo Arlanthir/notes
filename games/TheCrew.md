@@ -35,6 +35,7 @@ Os jogadores trabalham em conjunto para garantir que determinado jogador ganha d
 - Isso significa que aquele jogador tem de ganhar aquela carta numa vaza.
 - Quando a tarefa é cumprida, vira-se a carta de tarefa para baixo.
 - As tarefas podem ter ordem associada (fichas quadradas indicadas pela missão).
+  - Tarefas consecutivas cumpridas na mesma vaza contam na ordem certa.
 - A missão tem sucesso quando todas as tarefas são cumpridas.
 - A missão falha quando uma das tarefas é falhada (ex: um jogador ganha a carta que devia ser para outro).
 
