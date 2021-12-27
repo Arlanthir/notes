@@ -22,7 +22,7 @@ Os jogadores trabalham em conjunto para garantir que determinado jogador ganha d
 1. O comandante joga a primeira carta.
 
 
-## Round
+## Round (Missão)
 
 - A jogada prossegue no sentido dos ponteiros do relógio.
 - É obrigatório assistir aos naipes (se possível).
@@ -37,6 +37,23 @@ Os jogadores trabalham em conjunto para garantir que determinado jogador ganha d
 - As tarefas podem ter ordem associada (fichas quadradas indicadas pela missão).
 - A missão tem sucesso quando todas as tarefas são cumpridas.
 - A missão falha quando uma das tarefas é falhada (ex: um jogador ganha a carta que devia ser para outro).
+
+#### Decisão de comando
+
+Nas missões com o ícone de comandante e "Viradas para baixo", as tarefas só são reveladas depois do seguinte:
+
+1. Jogadores vêem a sua mão.
+2. Jogadores dizem se podem cumprir "todas as tarefas" ou não.
+3. Comandante escolhe um para cumprir as tarefas todas.
+4. As tarefas são reveladas.
+
+#### Distribuição pelo comandante
+
+Nas missões com o ícone de comandante e três setas vermelhas:
+
+- As tarefas revelam-se e atribuem-se uma a uma.
+- Para cada tarefa, cada jogador diz se consegue ou não fazê-la, e o comandante escolhe quem a faz. Só depois revela a próxima.
+- As tarefas devem ser distribuídas equitativamente, nenhum jogador pode ter mais 2 tarefas do que outro.
 
 ### Comunicação
 
@@ -62,14 +79,20 @@ Algumas missões têm comunicação limitada:
 - Ícone com número ao lado
   Só se pode comunicar a partir dessa vaza (imediatamente antes dela já dá, mas nas vazas anteriores não).
 
-### Dificuldade
+## Dificuldade
 
 - Sinal de emergência  
-  Pode ser usado no início do jogo se os jogadores decidirem. Serve para escolher um lado (esquerda/direita) e cada jogador
+  Pode ser usado no início da missão se os jogadores decidirem. Serve para escolher um lado (esquerda/direita) e cada jogador
   passa uma das suas cartas para o próximo jogador nessa direção.
-
-## End
-
+- 3 jogadores
+  Jogo fica mais fácil com 3 do que com 4 ou 5. Para dificultar, remover todas as cartas verdes (grandes e pequenas) e o 1 de foguetes.
 
 
 ## Notes
+
+Ver manual para modo 2 jogadores.
+
+Regra especial 5 jogadores:
+
+A partir da missão 25, o ícone da missão tem uma borda dourada para lembrar da regra especial para 5 jogadores.
+Depois da distribuição das tarefas, pode passar-se uma tarefa de um jogador para o outro (sem comentar as cartas que se tem na mão).
