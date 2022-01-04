@@ -3,6 +3,35 @@
 *Note: This document is a work in progress, some syntax may be left over from Vue2.*
 
 ## Vue application
+
+App.vue (Single File Component syntax, with Composition API):
+
+```typescript
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const message = ref('Hello Vue!');
+</script>
+
+<template>
+    {{ message }}
+</template>
+
+<style scoped lang="scss">
+</style>
+```
+
+main.ts:
+
+```typescript
+import { createApp } from 'vue'
+import App from './App.vue'
+
+createApp(App).mount('#app');
+```
+
+Or (classic syntax):
+
 ```javascript
 const app = Vue.createApp({
     data() {
@@ -21,14 +50,6 @@ app.mount('#app');
 
 ## Properties
 Vue automatically re-renders the HTML when a `data` property changes.
-
-Data must be a **plain JavaScript object** (recursively).
-
-To mark a data property as immutable and gain a performance boost (specially memory-wise), use `Object.freeze(...)`.
-To modify a frozen object, copy it:
-```javascript
-let newFrozenObject = Object.freeze(Object.assign({}, oldFrozenObject, changedFields));
-```
 
 Exceptions:  
 - `object.index = value;`
