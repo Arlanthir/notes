@@ -43,9 +43,9 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
-    li {
-        color: #333;
-    }
+li {
+    color: #333;
+}
 </style>
 ```
 
