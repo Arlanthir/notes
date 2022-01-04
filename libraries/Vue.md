@@ -4,7 +4,7 @@
 
 App.vue (Single File Component syntax, with Composition API):
 
-```typescript
+```vue
 <script setup lang="ts">
 import { ref } from 'vue';
 
