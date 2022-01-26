@@ -61,6 +61,8 @@ The main branch is called `master`.
 git branch                                 # List local branches (-r = remote, -a = all)
 git branch <branch>                        # Create branch
 git branch -d <branch>                     # Delete branch
+git branch <branch> -u <remote_branch>     # Change tracking reference
+git branch -d <branch>                     # Delete branch
 git checkout <branch>                      # Change current files to the branch version
 git checkout <branch> -- <file>            # Checkout a single file only
 git checkout -b <branch>                   # Create + checkout
@@ -92,6 +94,7 @@ git pull <remote> <branch>    # Fetch + merge specific remote branch
 git pull --rebase             # Fetch + rebase
 git push                      # Send changes to remote
 git push <remote> <branch>    # Send changes to specific branch to remote
+git push <remote> -u <track>  # Send changes and track the remote branch
 git push <remote> <mybranch>:<serverbranch>
 git push --tags               # Send tags to remote
 git push --mirror             # Send everything to remote
