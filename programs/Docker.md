@@ -46,6 +46,7 @@ docker run --log-driver=syslog <image>               # Redirect logs to syslog
 docker run --log-driver=none <image>                 # Disables logging
 docker run --restart=always <image>                  # Restart the image if it fails
 docker run --restart=on-failure:3 <image>            # Attempt to restart the image 3 times if it fails
+docker run --platform linux/amd64 <image>            # Run emulating another platform (for instance on Apple M1)
 ```
 
 ### See current containers
