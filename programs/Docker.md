@@ -157,7 +157,8 @@ Similar syntax to .gitignore, ignores files from being copied to the image. Usef
 
 ```bash
 docker build .
-docker build -t <name>:<version> .       # -t To tag with a friendly name and version (example: webserver-image:v1)
+docker build -t <name>:<version> .               # -t To tag with a friendly name and version (example: webserver-image:v1)
+docker build -t <name>:<tag1> -t <name>:<tag2>   # To tag with multiple tags
 ```
 
 ### Manage images
