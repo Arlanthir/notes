@@ -63,9 +63,11 @@ Available actions (cost 1 click unless stated otherwise):
 - Install an **Asset** or **Agenda**
   - (Optionally trash any cards in the root of the server)
   - Play it facedown in the root of an empty remote server (to the right of HQ).
+  - You can only have one installed copy of any card with a ⧫ before the name.
 - Install an **Upgrade**
   - (Optionally trash any cards in the root of the server)
   - Play it facedown in the root of any server.
+  - You can only have one installed copy of any card with a ⧫ before the name.
 - Install **ICE**
   - (Optionally trash any ICE already in the server)
   - Pay 1 credit for each ICE already on the server.
@@ -102,7 +104,9 @@ Available actions (cost 1 click unless stated otherwise):
 - Install a **Program**, **Resource** or **Hardware**:
   - Pay the top left cost in credits.
   - Place the card in the appropriate section (Resources on the bottom, then Harware and Programs on top)
-  - If it's a program, check if you have available memory or if you have to trash existing program(s). 
+  - If it's a program, check if you have available memory or if you have to trash existing program(s).
+  - You can only have one installed copy of any card with a ⧫ before the name.
+  - You can only have one installed Console.
 - Run any server
   - The Corp can **Rez** any **ICE** you approach.
   - After you pass any ICE you can **Jack Out** before approaching the next.
@@ -147,14 +151,13 @@ Your deck:
 - Can include cards from other factions as long as the total influence of those cards (bottom right vertical dots) is <= than your influence limit.
 - Must have at least as many cards as the the minimum deck size of the identity.
 - May have at most 3 copies of the same card.
-- The Corp deck must include a number of Agenda points depending on the deck size:
-
-| Deck size | Agenda points |
-| --------- | ------------- |
-| 30-34     | 14-15         |
-| 35-39     | 16-17         |
-| 40-44     | 18-19         |
-| 45-49     | 20-21         |
-| 50-54     | 22-23         |
+- The Corp deck must include a number of Agenda points depending on the deck size:  
+  | Deck size | Agenda points |
+  | --------- | ------------- |
+  | 30-34     | 14-15         |
+  | 35-39     | 16-17         |
+  | 40-44     | 18-19         |
+  | 45-49     | 20-21         |
+  | 50-54     | 22-23         |
 
 Starter decks cards have solid dots near the portal set symbol in the bottom, stating how many copies of them you should include in the starter deck. Extended starter decks cards have plus symbols instead of dots.
