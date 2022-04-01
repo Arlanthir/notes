@@ -149,6 +149,8 @@ Each Identity has a faction (color), a minimum deck size (number in the left) an
 Your deck:
 - Can include any number of cards from the faction of your identity.
 - Can include cards from other factions as long as the total influence of those cards (bottom right vertical dots) is <= than your influence limit.
+  - If the influence cost is empty, you can include it in any deck without spending influence.
+  - If the influence cost is missing, you can only include it in a deck of the same faction.
 - Must have at least as many cards as the the minimum deck size of the identity.
 - May have at most 3 copies of the same card.
 - The Corp deck must include a number of Agenda points depending on the deck size:  
