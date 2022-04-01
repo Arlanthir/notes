@@ -137,3 +137,24 @@ The game ends in the following cases:
 - One of the players scores 7 Agenda points (and wins).
 - The Corp tries to draw from R&D and has no cards (and loses).
 - The Runner **flatlines** (is dealt more damage than cards in hand, and loses).
+
+# Deckbuilding
+
+Each Identity has a faction (color), a minimum deck size (number in the left) and an influence limit (number in the right):
+
+Your deck:
+- Can include any number of cards from the faction of your identity.
+- Can include cards from other factions as long as the total influence of those cards (bottom right vertical dots) is <= than your influence limit.
+- Must have at least as many cards as the the minimum deck size of the identity.
+- May have at most 3 copies of the same card.
+- The Corp deck must include a number of Agenda points depending on the deck size:
+
+| Deck size | Agenda points |
+| --------- | ------------- |
+| 30-34     | 14-15         |
+| 35-39     | 16-17         |
+| 40-44     | 18-19         |
+| 45-49     | 20-21         |
+| 50-54     | 22-23         |
+
+Starter decks cards have solid dots near the portal set symbol in the bottom, stating how many copies of them you should include in the starter deck. Extended starter decks cards have plus symbols instead of dots.
