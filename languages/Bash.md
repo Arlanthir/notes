@@ -60,6 +60,7 @@ fi
 ### String operators
 
 - `[[ -z <variable> ]]` tests if variable is empty
+- `[[ -n <variable> ]]` tests if variable is not empty
 - `[[ <variable> == <string> ]]` tests if variable is equal to string
 - `[[ <variable> != <string> ]]` tests if variable is different from string
 - `[[ <variable> == <pattern> ]]` tests if variable matches a pattern (e.g. `[[ "Hello World" == *"World"* ]]`)
