@@ -16,7 +16,7 @@ The Runner only has **access** (see) the Agenda cards in any place (board, deck,
 The Corp always has 3 central servers:
 - HQ (hand, maximum 5 hand size)
 - R&D (deck)
-- Archives (discard pile, cards are trashed facedown or faceup depending on how they were in the board)
+- Archives (discard pile, cards are trashed facedown or faceup depending on if its known information for the Runner)
 
 The Corp can also create any number of other (**remote**) servers by placing cards (Agendas, Assets or ICE) to the side of the central servers.
 
@@ -37,6 +37,7 @@ The Corp can also create any number of other (**remote**) servers by placing car
 - Place your **Identity** card in the middle of the board. It may give you a special ability and represents your **Grip** (hand). It also gives you a **memory** limit.
 - Place your deck (**Stack**) to the left of the Identity.
 - The (empty) discard pile (**Heap**) is to the left of the Stack.
+  - (Runner cards are always trashed faceup.)
 - Gain 5 credits.
 
 ## Turn
