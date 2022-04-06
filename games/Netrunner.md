@@ -134,6 +134,7 @@ Some cards deal damage to the Runner.
 
 - Net/Meat Damage: The Runner trashes that many cards at random from their hand.
   - If they can't, they lose the game.
+- Bran Damage: As above, but maximum hand size is reduced by the number of damage dealt.
 
 ## End
 
