@@ -1,3 +1,3 @@
 # Notes
 
-A personal collection of notes about development.
+A personal collection of notes.
