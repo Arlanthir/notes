@@ -34,6 +34,7 @@ De seguida, adiciona os azulejos que tirou a apenas uma linha da parte esquerda 
 - Se a linha à esquerda não estiver vazia, só se pode continuar a mesma cor.
 - Azulejos que não couberem na linha descem para as sobras.
 
+Repetir até não haver azulejos na mesa (expositores + centro).
 
 ### Revestimento da parede e pontuação
 
