@@ -1,7 +1,7 @@
 # Sagrada
 
 - Placement Game
-- 1-4 Players
+- 1-4 Players (BGG: best 2)
 - 30-45 min
 
 ## Intro
