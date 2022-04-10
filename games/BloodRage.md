@@ -1,7 +1,7 @@
 # Blood Rage
 
 - Drafting and world domination game
-- 2-4 players
+- 2-5 players (with expansion); (BGG: 3-5)
 - 60-90 min
 
 ## Intro
