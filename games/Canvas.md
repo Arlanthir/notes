@@ -1,7 +1,7 @@
 # Canvas
 
 - Layering Puzzle
-- 1-5 players
+- 1-5 players (BGG: best 4)
 - 30 min
 
 ## Intro
