@@ -1,7 +1,7 @@
 # Citadels
 
 - City building
-- 2-7 players
+- 2-7 players (BGG: 4-6)
 - 30-60 min
 
 ## Intro
