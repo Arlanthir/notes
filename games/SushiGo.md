@@ -1,7 +1,7 @@
 # Sushi Go!
 
 - Jogo de cartas com mãos rotativas
-- 2-5 jogadores
+- 2-5 jogadores (BGG: 3-5)
 - 15 min
 
 ## Intro
