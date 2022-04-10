@@ -1,7 +1,7 @@
 # Dixit
 
 - Jogo de interpretação de arte abstrata
-- 3-12 Jogadores
+- 3-12 Jogadores (BGG: 5-8)
 - 30 min
 
 ## Intro
