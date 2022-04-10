@@ -1,7 +1,7 @@
 # Vikings Gone Wild
 
 - Deckbuilding game
-- 2-4 players
+- 2-4 players (BGG: best 3)
 - 45-90 min
 
 ## Intro
