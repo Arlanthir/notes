@@ -2,7 +2,7 @@
 
 - Jogo de cartas (vazas)
 - Cooperativo
-- 2-5 players
+- 2-5 players (BGG: 3-5, best 4)
 - 5-20 min
 
 ## Intro
@@ -92,6 +92,8 @@ Algumas missões têm comunicação limitada:
 ## Notes
 
 Ver manual para modo 2 jogadores.
+
+Para 3 jogadores, usar a regra recomendada na secção acima.
 
 Regra especial 5 jogadores:
 
