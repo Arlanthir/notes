@@ -30,6 +30,7 @@ Cada jogador tenta colecionar sushis em múltiplos.
 - Revelam-se simultaneamente.
   - Quem tem Wasabi na mesa e joga um Nigiri coloca-o por cima do Wasabi (vale 3x pontos).
 - Passam as restantes para o jogador da esquerda.
+  - **Variante**: A segunda ronda é na direção inversa.
 
 ## Pontuação da Ronda
 
@@ -58,6 +59,6 @@ Jogam-se 3 rondas no total.
 No fim das 3 rondas, pontuam-se os **pudins**:
 
 - O jogador com mais pudins ganha 6 pontos (dividir se empatados, arredondado para baixo).
-- **3+ jogadores**: O jogador com menos pudins perde 6 pontos (dividor se empatados, arredondado para baixo).
+- **3+ jogadores**: O jogador com menos pudins perde 6 pontos (dividir se empatados, arredondado para baixo).
 
 Quem tiver mais pontos ganha. Em caso de empate, ganha quem tiver mais pudins.
