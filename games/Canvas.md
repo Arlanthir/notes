@@ -12,17 +12,17 @@ You will paint your paintings layer by layer until you produce 3 entire painting
 
 ## Setup
 
-1. Place (up to) 4 Scoring Cards on top of the mat (board).  
-  Recommended scenarios:
-  - **First time**: Variety, Repetition, Emphasis, Composition
-  - **Balanced** (2 cards with elements, 2 cards without): Consistency, Emphasis, Hierarchy, Proportion
-  - **No elements**: Composition, Consistency, Proportion, Symmetry
-  - **Simplified - Chill**: only 3 random scoring cards
-  - **Simplified - Synergy**: Proximity, Space, Variety
-  - **Simplified - Family**: Composition, Variety
-  - **Complex - All Elements**: Emphasis, Hierarchy, Repetition, Style
-  - **Complex - Bonus**: Hierarchy, Movement, Proportion, Style
-  - **Complex - Spatial**: Movement, Proximity, Space, Symmetry
+1. Place (up to) 4 random Scoring Cards on top of the mat (board).  
+   Recommended scenarios:
+   - **First time**: Variety, Repetition, Emphasis, Composition
+   - **Balanced** (2 cards with elements, 2 cards without): Consistency, Emphasis, Hierarchy, Proportion
+   - **No elements**: Composition, Consistency, Proportion, Symmetry
+   - **Simplified - Chill**: only 3 random scoring cards
+   - **Simplified - Synergy**: Proximity, Space, Variety
+   - **Simplified - Family**: Composition, Variety
+   - **Complex - All Elements**: Emphasis, Hierarchy, Repetition, Style
+   - **Complex - Bonus**: Hierarchy, Movement, Proportion, Style
+   - **Complex - Spatial**: Movement, Proximity, Space, Symmetry
 2. Place the Ribbon Tokens next to the matching icons on the mat.
 3. Shuffle the transparent Art Cards and place them inside the deck box, on the deck space. Draw 5 and place them on the spaces on the left.
 4. Each player takes 3 sleeved Background Cards.
