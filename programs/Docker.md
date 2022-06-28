@@ -159,7 +159,7 @@ Similar syntax to .gitignore, ignores files from being copied to the image. Usef
 docker build .
 docker build -t <name>:<version> .               # -t To tag with a friendly name and version (example: webserver-image:v1)
 docker build -t <name>:<tag1> -t <name>:<tag2>   # To tag with multiple tags
-docker build --platform linux/amd64              # Build for another platform
+docker build --platform linux/amd64 .            # Build for another platform
 ```
 
 ### Manage images
