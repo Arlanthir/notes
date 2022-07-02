@@ -626,6 +626,8 @@ Konsole > Settings > Configure Konsole > Tab Bar / Splitters > Appearance > Posi
   - Power Management > Energy Saving > Screen Energy Saving (40 min)
   - Printers
 
+TODO: Keyboard repeat delay to 200ms.
+
 ###### Panel
 
 Right click > Edit Panel
