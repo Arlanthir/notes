@@ -74,4 +74,4 @@ Use the IV chord in the second beat: I IV I I IV IV I I V IV I I
 
 #### Turnaround
 
-Finish with other chords than the first: I I I I IV IV I I V IV I V
+Finish with other chords than the I (typically the V, to create more tension and resolve it immediately ): I I I I IV IV I I V IV I V
