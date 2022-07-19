@@ -68,3 +68,10 @@ Composed by 12 bars of the following Major Chords in the key: I I I I IV IV I I 
 
 Because Major Chords are so bright, we can replace them with Dominant Seventh chords for a more Blues-y feel (add a flatted seventh note to the Major Chord).
 
+#### Quickchange
+
+Use the IV chord in the second beat: I IV I I IV IV I I V IV I I
+
+#### Turnaround
+
+Finish with other chords than the first: I I I I IV IV I I V IV I V
