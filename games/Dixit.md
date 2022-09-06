@@ -31,8 +31,8 @@ O primeiro jogador a lembrar-se de uma boa frase para uma das suas cartas começ
 
 ### Pontuação
 
-- Se toda a gente acertou ou ninguém acertou: 2 votos a todos menos ao narrador.
-- Se alguém acertou: narrador ganha 3 pontos, quem acertou ganha 1.
+- Se toda a gente acertou ou ninguém acertou: 2 pontos a todos menos ao narrador.
+- Se alguém acertou: narrador ganha 3 pontos, assim como quem acertou.
   - **7+ jogadores**: Quem acertou só usando 1 voto, ganha +1 ponto.
 - Cada jogador ganha 1 ponto por cada voto na sua carta (máximo 3).
 
