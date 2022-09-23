@@ -116,6 +116,7 @@ fifteen_zeroes = [0 for i in range(15)]
 ## Dictionaries
 ```python
 food = {'ham': 'yes', 'egg': 'yes', 'spam': 'no' }
+print(food['ham'])
 ```
 
 ## Classes
