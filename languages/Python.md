@@ -117,6 +117,10 @@ fifteen_zeroes = [0 for i in range(15)]
 ```python
 food = {'ham': 'yes', 'egg': 'yes', 'spam': 'no' }
 print(food['ham'])
+
+empty = {}
+'ham' in food # Test if key exists
+food.get('otherfood', 'no') # Get with default value
 ```
 
 ## Classes
