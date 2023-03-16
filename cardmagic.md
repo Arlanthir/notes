@@ -37,3 +37,20 @@
 4. The top cards are retained.
 
 Optionally run some cards before injogging to put that number of cards on top of the previous top card. E.g. run 1 card before injogging to place a single card on top, preparing a later double lift.
+
+### Elmsley count
+
+Way of counting cards to make them appear more than the number they really are.
+
+1. Take (e.g.) 4 cards in the left hand.
+2. Push the top card with the thumb, grab the bottom 3 with the right hand, while counting "one".
+3. Take the 3 cards and slide them on top of the left one.
+4. Grab the previously drawn card with the right fingers to the bottom of the pack.
+5. Slide off the top card with the left thumb while counting "two".
+6. Count off the remaining 3 cards normally without grabbing the previous one.
+
+## Practice routine
+
+1. Overhand shuffle
+2. Double lift
+3. Elmsley count
