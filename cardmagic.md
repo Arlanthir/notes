@@ -7,6 +7,7 @@
 - **Injog**: While running cards, move the right hand closer to the body so the drawn card is shifted towards you.
 - **Outjog**: Same as injog, but the card protrudes away from you.
 - **Riffle shuffle**: The usual gamers' shuffle that riffles two halves of the deck together.
+- **Pinky break**: Hold the left pinky between top and bottom pack to keep the position and later do a sleight (like a cut, etc).
 
 ## Sleights
 
@@ -38,6 +39,21 @@
 
 Optionally run some cards before injogging to put that number of cards on top of the previous top card. E.g. run 1 card before injogging to place a single card on top, preparing a later double lift.
 
+#### Overhand false shuffle
+
+1. Begin the overhand shuffle.
+2. Run 5 cards.
+3. Drop the rest of the pack on top, outjogged.
+4. Grab the bottom pack, run 5 cards.
+5. Drop the rest of the pack on top.
+
+The deck remains in the original position.
+
+### Riffle shuffle
+
+- To retain the top cards during a riffle shuffle, make sure the hand with the top half of the deck finishes last.
+- To retain the bottom cards during a riffle shuffle, make sure you start with the hand that has the bottom half of the deck.
+
 ### Elmsley count
 
 Way of counting cards to make them appear more than the number they really are.
@@ -48,6 +64,21 @@ Way of counting cards to make them appear more than the number they really are.
 4. Grab the previously drawn card with the right fingers to the bottom of the pack.
 5. Slide off the top card with the left thumb while counting "two".
 6. Count off the remaining 3 cards normally without grabbing the previous one.
+
+### Double lift
+
+Lifting the top two cards while appearing to just be showing the top card.
+
+Usually has two phases:
+
+1. The *get-ready*: usually catching a pinky break on the top two cards.
+2. The *turnover*: the actual turn of the top two cards.
+
+## Flourishes
+
+### Springing the cards
+
+
 
 ## Practice routine
 
