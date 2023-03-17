@@ -69,9 +69,33 @@ Way of counting cards to make them appear more than the number they really are.
 
 While holding the deck facedown but with the left hand on top, use the ring finger to slide the facecard backwards so you can bottom deal the second to last (and so on).
 
-### Peek
+### Glimpse
 
-#### 
+Peek at a card that should be hidden (typically the bottom one).
+
+#### Bottom glimpse: Deck hand-off
+
+- Give the deck to a spectator to shuffle.
+- Often the spectator will shuffle in a way that you can see the bottom card.
+- Otherwise, extend the hand to grab it high (at eye level) and tilted so you can peek at the bottom card.
+
+#### Bottom glimpse: Point
+
+- Deal a few of the top cards to the right hand.
+- Point with the left index finger while turning the bottom card towards you and say something like "these cards are shuffled and in a random order".
+
+#### Cut bottom glimpse
+
+- A spectator chooses a card.
+- Cut the deck, instruct the spectator to replace the card on top of the deck in the left hand.
+- While instructing, point with the right hand, peeking at the bottom card in that pack.
+- Put the right pack on top of the chosen card.
+
+#### Top card glimpse
+
+- Turn the deck face up.
+- Deal some cards to the right hand, showing that they are shuffled.
+- Use the left fingers to glimpse at the top card (the lowest in the left hand).
 
 ### Double lift
 
