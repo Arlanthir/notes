@@ -65,6 +65,14 @@ Way of counting cards to make them appear more than the number they really are.
 5. Slide off the top card with the left thumb while counting "two".
 6. Count off the remaining 3 cards normally without grabbing the previous one.
 
+### Glide
+
+While holding the deck facedown but with the left hand on top, use the ring finger to slide the facecard backwards so you can bottom deal the second to last (and so on).
+
+### Peek
+
+#### 
+
 ### Double lift
 
 Lifting the top two cards while appearing to just be showing the top card.
@@ -73,6 +81,8 @@ Usually has two phases:
 
 1. The *get-ready*: usually catching a pinky break on the top two cards.
 2. The *turnover*: the actual turn of the top two cards.
+
+
 
 ## Flourishes
 
