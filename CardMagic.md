@@ -106,12 +106,33 @@ Usually has two phases:
 1. The *get-ready*: usually catching a pinky break on the top two cards.
 2. The *turnover*: the actual turn of the top two cards.
 
+### Palm vanish
 
+1. Cup your hand over a card.
+2. Hold it with the palm, keeping the fingers close together so the card is not visible.
+3. Lift the hand, taking the hidden card with it.
+
+### Backpalm vanish
+
+1. Hold the card with the pinky and the index finger, like a spiderman move.
+2. Use the middle and ring finger to rotate the card, holding it with the other two fingers.
+3. Hide it by holding just a tiny bit with the fingers.
+
+Mask the sleight by moving your hand while you do it.
+
+Video: https://www.youtube.com/watch?v=QyqdJnXpvz0
 
 ## Flourishes
 
 ### Springing the cards
 
+1. Square the deck.
+2. Hold the deck in the right hand, with the thumb on the bottom left corner and the middle finger on the top right corner.
+3. The fingers should be barely touching the last card.
+4. Place the first finger touching the middle finger.
+5. Squeeze the deck while relaxing the thumb and let cards shoot out.
+
+Video: https://www.youtube.com/watch?v=U-GvSSBLVhg
 
 
 ## Practice routine
