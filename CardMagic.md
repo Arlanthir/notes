@@ -124,10 +124,13 @@ Usually has two phases:
 
 ## Power of fours
 
-1. Fan the deck face up while saying they're all shuffled
-2. Peek at the fourth card
-3. Ask the spectator to cut anywhere
-4. Say that by looking at the fourth card of one of the packs, you'll know what the fourth card in the other pack will be.
-5. Name the first peeked card and flip the fourth card of the top pack.
-6. Put the bottom pack on top. The trick is now reset and you know which card is in fourth position.
+1. Fan the deck face up while saying they're all in a random order.
+2. Peek at the fourth card.
+3. Riffle shuffle maintaining top stock.
+4. Ask the spectator to cut anywhere.
+5. Say that by looking at the fourth card of one of the packs, you'll know what the fourth card in the other pack will be.
+6. Name the first peeked card and flip the fourth card of the top pack.
+7. Put the bottom pack on top. The trick is now reset and you know which card is in fourth position.
+
+Video: https://www.youtube.com/watch?v=jzjhcfVvWRA
 
