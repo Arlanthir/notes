@@ -131,6 +131,8 @@ Video: https://www.youtube.com/watch?v=QyqdJnXpvz0
 3. The fingers should be barely touching the last card.
 4. Place the first finger touching the middle finger.
 5. Squeeze the deck while relaxing the thumb and let cards shoot out.
+6. The left hand should use the pinky and thumb to trap the cards inside roughly squared.
+7. Hand distance should increase and then decrease again.
 
 Video: https://www.youtube.com/watch?v=U-GvSSBLVhg
 
