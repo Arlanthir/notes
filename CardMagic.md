@@ -124,6 +124,13 @@ Video: https://www.youtube.com/watch?v=QyqdJnXpvz0
 3. Last resort, but avoid: glimpse now the bottom card of the pack in the right hand by pointing to the left pack while saying the instruction to replace the card.
 4. Complete the cut, putting the key card on top of the chosen card.
 
+#### Sliding key card
+
+1. Glimpse the bottom card.
+2. Fan out cards for free choice and free replacement.
+3. While spectator looks at card, slide the key card below onto the right hand.
+4. After replacement, grab right pack and key card with right hand and place on top of chosen card.
+
 ## Flourishes
 
 ### Springing the cards
