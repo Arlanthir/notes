@@ -84,13 +84,6 @@ Peek at a card that should be hidden (typically the bottom one).
 - Deal a few of the top cards to the right hand.
 - Point with the left index finger while turning the bottom card towards you and say something like "these cards are shuffled and in a random order".
 
-#### Cut bottom glimpse
-
-- A spectator chooses a card.
-- Cut the deck, instruct the spectator to replace the card on top of the deck in the left hand.
-- While instructing, point with the right hand, peeking at the bottom card in that pack.
-- Put the right pack on top of the chosen card.
-
 #### Top card glimpse
 
 - Turn the deck face up.
@@ -121,6 +114,15 @@ Usually has two phases:
 Mask the sleight by moving your hand while you do it.
 
 Video: https://www.youtube.com/watch?v=QyqdJnXpvz0
+
+### Key card
+
+#### Key undercut
+
+1. Glimpse the bottom card.
+2. Cut the deck while instructing the spectator to replace the card on top.
+3. Last resort, but avoid: glimpse now the bottom card of the pack in the right hand by pointing to the left pack while saying the instruction to replace the card.
+4. Complete the cut, putting the key card on top of the chosen card.
 
 ## Flourishes
 
