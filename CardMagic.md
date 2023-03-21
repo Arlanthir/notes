@@ -204,6 +204,22 @@ Video: https://www.youtube.com/watch?v=LsPap-P06jI
 Video: https://www.youtube.com/watch?v=jzjhcfVvWRA
 
 
+## Decisions
+
+1. Ask the spectator to shuffle.
+2. Look at the cards. Check the value of the first card and suit of the second and take out a "prediction card" facedown on the table that is the combination of the two. If impossible, change the first cards to make it possible (e.g. by hesitating on a prediction or asking for more shuffling).
+3. Shuffle retaining top two.
+4. Ask spectator to deal some cards from the top and stop when they want (between 10 and 20 or so).
+5. Ask them to deal from that pile into two different piles (alternating).
+6. Ask them to take one pile and deal some cards from it.
+7. Reverse it by counting it.
+8. Deal the same number of cards from the other pile on top of the previous.
+9. Eliminate pairs of cards from the edges of the pile. You can spread them and take from one edge while the spectator takes from the other.
+10. The two center cards determine the number and suit of the prediction.
+
+Video: https://www.youtube.com/watch?v=hXrmygSTowo
+
+
 ## Biddle trick
 
 1. Force a card or use a key card.
