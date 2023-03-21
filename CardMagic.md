@@ -177,6 +177,20 @@ Video: https://www.youtube.com/watch?v=U-GvSSBLVhg
 
 # Tricks
 
+## Water and Oil
+
+1. Choose 3 red cards and 3 black cards.
+2. Spread them on your hands facing the audience. The black cards should be on the right.
+3. While turning them facedown, use your left thumb and right middle finger to switch the middle two cards and separate them into two piles, grabbed by each hand.
+4. You will now put cards (alternating from each pile) to the middle, starting with the right pile.
+5. You explain that you're putting a black card, then a red, a black, then a red, etc.
+6. You can show cards 1, 3, 4, 6 while moving them.
+7. You explain that black ink is thicker and thus heavier. By waving the cards, the black cards will fall to the bottom.
+8. You show that the top three cards are red and the bottom three are black.
+
+Video: https://www.youtube.com/watch?v=LsPap-P06jI
+
+
 ## Power of fours
 
 1. Fan the deck face up while saying they're all in a random order.
@@ -188,6 +202,7 @@ Video: https://www.youtube.com/watch?v=U-GvSSBLVhg
 7. Put the bottom pack on top. The trick is now reset and you know which card is in fourth position.
 
 Video: https://www.youtube.com/watch?v=jzjhcfVvWRA
+
 
 ## Biddle trick
 
