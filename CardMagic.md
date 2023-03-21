@@ -196,12 +196,11 @@ Video: https://www.youtube.com/watch?v=jzjhcfVvWRA
 3. Place the cards on top of the deck and hold only the top portion.
 4. Show each card one by one, moving them to the left hand.
 5. The spectator should reply mentally to each one whether that's their card.
-6. On the second, catch a break.
-7. On the third, grab the second back to the bottom of the pack, similar to Elmsley count.
-8. Place the top portion back on the deck.
-9. Elmsley count the 4 cards as 5 (facedown).
-10. Tell them to hold on to the 5 cards.
-11. Their card is still inside the deck, faceup.
+6. On the third, grab the second back to the bottom of the pack, similar to Elmsley count.
+7. Place the top portion back on the deck.
+8. Elmsley count the 4 cards as 5 (facedown).
+9. Tell them to hold on to the 5 cards.
+10. Their card is still inside the deck, faceup.
 
 Video: https://www.youtube.com/watch?v=cTPG1HsvQ2E
 
