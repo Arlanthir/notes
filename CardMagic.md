@@ -131,6 +131,29 @@ Video: https://www.youtube.com/watch?v=QyqdJnXpvz0
 3. While spectator looks at card, slide the key card below onto the right hand.
 4. After replacement, grab right pack and key card with right hand and place on top of chosen card.
 
+### Backslip force
+
+1. Hold the deck in the left hand, face to the palm.
+2. Use right hand to riffle, spectator says stop.
+3. Take away the top portion of the deck, but applying pressure with the left fingers to transfer the top card from the right to the left.
+4. Spectator takes top card of the left pack (your forced card).
+
+Dave Williamson addition: 
+
+1. Instead of immediately transfering the card, spread the top of the right pack.
+2. Point with the right thumb, gaining a reason to pivot the left hand, explaining that they could have stopped somewhere else.
+3. While moving the thumb over the cards they could have picked, transfer the card to the left using the left fingers.
+
+Video: https://youtu.be/Ar_c5kdHKew?t=680
+
+### Backslip control
+
+1. Open the deck bookwise so the spectator can replace their previously chosen card on top of the left pack.
+2. Backslip the card from the top right onto the top left.
+3. Insert that card into the middle of the right pack "so it's completely lost".
+4. Give that pack to the spectator to shuffle while you false shuffle the left pack.
+5. Reassemble the deck with your pack on top. The chosen card is now on top.
+
 ## Flourishes
 
 ### Springing the cards
