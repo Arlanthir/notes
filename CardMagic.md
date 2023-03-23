@@ -1,5 +1,12 @@
 # Card Magic
 
+## Rules
+
+1. The _patter_, story and personality of each performance is what makes it enjoyable and memorable.
+2. Never announce your intention until all preliminary actions which make it possible are completed.
+3. Never repeat a trick without replicating it by a different method.
+
+
 ## Important terms
 
 - **Overhand shuffle**: Shuffling by grabbing bottom portion of deck with right hand, progressively putting cards from the top of the right pile to the left.
@@ -7,7 +14,8 @@
 - **Injog**: While running cards, move the right hand closer to the body so the drawn card is shifted towards you.
 - **Outjog**: Same as injog, but the card protrudes away from you.
 - **Riffle shuffle**: The usual gamers' shuffle that riffles two halves of the deck together.
-- **Pinky break**: Hold the left pinky between top and bottom pack to keep the position and later do a sleight (like a cut, etc).
+- **Pinky break**: Hold the left pinky between top and bottom packets to keep the position and later do a sleight (like a cut, etc).. You should then square the deck and switch the pinky break from being between packets to just pressed against the gap.
+
 
 ## Sleights
 
@@ -154,6 +162,28 @@ Video: https://youtu.be/Ar_c5kdHKew?t=680
 4. Give that pack to the spectator to shuffle while you false shuffle the left pack.
 5. Reassemble the deck with your pack on top. The chosen card is now on top.
 
+### Overhand lift shuffle
+
+Maintains top stock without seeming that only half of the deck gets shuffled.
+
+1. Start the shuffle by dropping the top packet (**A**) onto the left hand.
+2. As you drop the next packet (**B**) on top of **A**, grab **A** again with the right ring finger and the inside of the right thumb.
+3. Keep shuffling as usual until only packet **A** remains in your right hand.
+4. Drop packet **A** on top of the rest.
+
+### Lift shuffle force
+
+1. Start the Overhand lift shuffle and ask a spectator to tell you when to stop.
+2. When they yell stop, drop packet **A** on top of the deck.
+3. The previous top card is on top.
+
+## Spread and break control
+
+1. Spread the cards to receive a card to be replaced.
+2. When closing the spread after the replacement, catch a break above the replaced card while the spread covers it.
+3. Square the deck and pivot it into an overhand lift shuffle, controlling packet **A** as usual.
+
+
 ## Flourishes
 
 ### Springing the cards
@@ -174,6 +204,7 @@ Video: https://www.youtube.com/watch?v=U-GvSSBLVhg
 1. Overhand shuffle
 2. Double lift
 3. Elmsley count
+
 
 # Tricks
 
