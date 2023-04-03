@@ -268,7 +268,7 @@ Video: https://www.youtube.com/watch?v=cTPG1HsvQ2E
 
 Alternative:
 
-Don't use a keycard, control the card to second from the bottom (e.g. control to the top and then keep top and bottom cards while overhand shuffling).
+Don't use a key card, control the card to second from the bottom (e.g. control to the top and then keep top and bottom cards while overhand shuffling).
 You can then make the 5 card selection facedown, which adds to the effect.
 
 Video: https://www.youtube.com/watch?v=F8pePRJs4wo
