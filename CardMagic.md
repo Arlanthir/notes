@@ -264,8 +264,13 @@ Video: https://www.youtube.com/watch?v=hXrmygSTowo
 9. Tell them to hold on to the 5 cards.
 10. Their card is still inside the deck, faceup.
 
-Video: https://www.youtube.com/watch?v=cTPG1HsvQ2E
+Alternative:
 
+Don't use a keycard, control the card to second from the bottom (e.g. control to the top and then keep top and bottom cards while overhand shuffling).
+You can then make the 5 card selection facedown, which adds to the effect.
+
+Video: https://www.youtube.com/watch?v=cTPG1HsvQ2E
+https://www.youtube.com/watch?v=F8pePRJs4wo
 
 
 
