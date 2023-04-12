@@ -19,6 +19,7 @@ echo "ola"
 ```bash
 myvar=3
 echo $myvar
+echo ${myvar} # Safer interpolation
 echo "$myvar" # Will interpolate
 echo '$myvar' # Won't interpolate
 ```
