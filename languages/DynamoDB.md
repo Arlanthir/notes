@@ -11,11 +11,11 @@
 
 ## When to use
 
-DynamoDB reimagines databases in a world where storage is cheaper and performance needs increase.
+DynamoDB reimagines databases in a world where storage is cheaper and there is increased need of performance.
 
 It optimizes the operations on a single record (in detriment of *joins*) and relaxes the relational constraints (consistency).
 
-More useful for:
+Most useful for:
 
 1. Hyper-scale applications
 2. Hyper-ephemeral compute (serverless / lambdas)
