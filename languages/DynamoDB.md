@@ -34,6 +34,6 @@ More useful for:
 - **Secondary index**: Optional reorganization of the data to enable more access patterns.
   - **Local**: Same **partition key** as the original data, different **sort key**. Can use *strong consistency* or *eventual consistency*. Must be created with the table.
   - **Global**: Any attribute as **partition key** and **sort key**. More flexible and frequently used. Can only use *eventual consistency*. Can be created or deleted after table creation.
-  - **Item collection**: Group of items that share the same partition key.
+- **Item collection**: Group of items that share the same partition key.
 
 
