@@ -46,6 +46,10 @@ Most useful for:
 
 DynamoDB has 3 nodes for each partition. The write operations always write to the primary node, which replicates it synchronously to a secondary node and asynchronously to another secondary node (not always the same one). Read operations can be eventually consistent (and thus directed to any node) or strongly consistent (directed to the primary node, at the cost of more billable throughput).
 
+### Overloading keys
+
+Typically, tables will have multiple entities. Therefore, partition and sort key names will frequently be the generic `PK` and `SK`. The values for the keys can be prefixed with the entity abbreviation, to help disambiguate and prevent collisions (e.g. `USER#a1b2c3`).
+
 ## API
 
 ### Query
