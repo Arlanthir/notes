@@ -23,7 +23,7 @@ More useful for:
 ## Concepts
 
 - **Table**: A collection of data items using multiple data entities (as opposed to single entity relational tables).
-- **Item**: A single record (equivalent to a *row* in relational tables).
+- **Item**: A single record (equivalent to a *row* in relational tables). Max 400KB per item.
 - **Attribute**: A single piece of data within an item. The equivalent of a column in a relational row. Not all pieces of data need Attributes.
   - **Scalar**: `string`, `number`, `binary`, `boolean`, `null`.
   - **Complex**: Groups of arbitrary nested attributes. `list` and `map`.
@@ -34,6 +34,24 @@ More useful for:
 - **Secondary index**: Optional reorganization of the data to enable more access patterns.
   - **Local**: Same **partition key** as the original data, different **sort key**. Can use *strong consistency* or *eventual consistency*. Must be created with the table.
   - **Global**: Any attribute as **partition key** and **sort key**. More flexible and frequently used. Can only use *eventual consistency*. Can be created or deleted after table creation.
-- **Item collection**: Group of items that share the same partition key.
+- **Item collection**: Group of items that share the same partition key. Max 10GB per collection.
 
+### Advanced concepts
 
+- **Streams**: Allows creating an event-driven log of DB writes that can be processed in a Lambda.
+- **TTL**: Allows specifying a `number` attribute as a Unix timestamp after which the item will be automatically deleted (usually within 48h of being expired, so double-checking is needed).
+- **Partition**: The database *shard* where data is stored. Items with the same partition key (item collections) are guaranteed to be stored in the same partition.
+
+### Replication and consistency
+
+DynamoDB has 3 nodes for each partition. The write operations always write to the primary node, which replicates it synchronously to a secondary node and asynchronously to another secondary node (not always the same one). Read operations can be eventually consistent (and thus directed to any node) or strongly consistent (directed to the primary node, at the cost of more billable throughput).
+
+## API
+
+### Query
+
+Max 1MB before filter expressions.
+
+### Scan
+
+Max 1MB before filter expressions.
