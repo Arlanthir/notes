@@ -49,6 +49,7 @@ DynamoDB has 3 nodes for each partition. The write operations always write to th
 ### Overloading keys
 
 Typically, tables will have multiple entities. Therefore, partition and sort key names will frequently be the generic `PK` and `SK`. The values for the keys can be prefixed with the entity abbreviation, to help disambiguate and prevent collisions (e.g. `USER#a1b2c3`).
+A table can therefore store Organization entities mapped to `PK:ORG#a1b2c3 SK:ORG#a1b2c3` (notice the repeating value as both PK and SK) and their users mapped to `PK:ORG#a1b2c3 SK:USER#d1e2f3`.
 
 ## Creating tables
 
