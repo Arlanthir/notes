@@ -22,17 +22,18 @@ More useful for:
 
 ## Concepts
 
-- **Table**: a collection of data items using multiple data entities (as opposed to single entity relational tables).
-- **Item**: a single record (equivalent to a *row* in relational tables).
-- **Attribute**: a single piece of data within an item. The equivalent of a column in a relational row. Not all pieces of data need Attributes.
+- **Table**: A collection of data items using multiple data entities (as opposed to single entity relational tables).
+- **Item**: A single record (equivalent to a *row* in relational tables).
+- **Attribute**: A single piece of data within an item. The equivalent of a column in a relational row. Not all pieces of data need Attributes.
   - **Scalar**: `string`, `number`, `binary`, `boolean`, `null`.
-  - **Complex**: groups of arbitrary nested attributes. `list` and `map`.
-  - **Set**: multiple unique values. Sets of `string`, `number` and `binary`.
-- **Primary key**: mandatory unique key for each item.
-  - **Simple**: a single element, called a **partition key**. Enables operations on individual items.
-  - **Composite**: two elements: **partition key** and **sort key**. Enables "fetch many" access patterns and helps managing relations between items.
-- **Secondary index**: optional reorganization of the data to enable more access patterns.
-  - **Local**: Same **partition key** as the original data, different **sort key**.
-  - **Global**: Any attribute as **partition key** and **sort key**. More flexible and frequently used.
+  - **Complex**: Groups of arbitrary nested attributes. `list` and `map`.
+  - **Set**: Multiple unique values. Sets of `string`, `number` and `binary`.
+- **Primary key**: Mandatory unique key for each item.
+  - **Simple**: A single element, called a **partition key**. Enables operations on individual items.
+  - **Composite**: Two elements: **partition key** and **sort key**. Enables "fetch many" access patterns and helps managing relations between items.
+- **Secondary index**: Optional reorganization of the data to enable more access patterns.
+  - **Local**: Same **partition key** as the original data, different **sort key**. Can use *strong consistency* or *eventual consistency*. Must be created with the table.
+  - **Global**: Any attribute as **partition key** and **sort key**. More flexible and frequently used. Can only use *eventual consistency*. Can be created or deleted after table creation.
+  - **Item collection**: Group of items that share the same partition key.
 
 
