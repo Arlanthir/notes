@@ -9,6 +9,29 @@
 - Authentication/permissions via IAM (AWS Identity and Access Management)
   - Automatically managed when accessed via other AWS applications (e.g. EC2 virtual machines or ECS containers)
 
+## Local configuration
+
+To follow the examples and try out DynamoDB on your machine, it is recommended that you use [LocalStack](https://github.com/localstack/localstack).
+
+Make sure to install the awslocal wrapper: `pip3 install awscli-local`.
+
+Verify that it's running with `localstack status services` (should display all the available services). The running port should be 4566.
+
+You can also install [Dynobase](https://dynobase.dev/) to see an interactive visual representation of the DynamoDB state: `brew install --cask dynobase`. The free trial is about one week.
+
+If you do, remember to configure the following settings:
+
+- Offline settings > DynamoDB Local Port: `4566`
+- Offline settings > DynamoDB Local Regions: `eu-central-1,localhost,local`
+
+You may have to set your default Local region to `eu-central-1` as well:
+
+Add to `~/.aws/config`:
+```
+[profile Local]
+region=eu-central-1
+```
+
 ## When to use
 
 DynamoDB reimagines databases in a world where storage is cheaper and there is increased need of performance.
