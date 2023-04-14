@@ -48,8 +48,8 @@ Most useful for:
 - **Table**: A collection of data items using multiple data entities (as opposed to single entity relational tables).
 - **Item**: A single record (equivalent to a *row* in relational tables). Max 400KB per item.
 - **Attribute**: A single piece of data within an item. The equivalent of a column in a relational row. Not all pieces of data need Attributes.
-  - **Scalar**: `string` (S), `number` (N), `binary`, `boolean`, `null`.
-  - **Document**: Groups of arbitrary nested attributes. `list` and `map`.
+  - **Scalar**: `string` (S), `number` (N), `binary` (B), `boolean` (BOOL), `null` (NULL).
+  - **Document**: Groups of arbitrary nested attributes. `list` (L) and `map` (M).
   - **Set**: Multiple unique values. Sets of `string`, `number` and `binary`.
 - **Primary key**: Mandatory unique key for each item.
   - **Simple**: A single element, called a **partition key** ("hash"). Enables operations on individual items.
