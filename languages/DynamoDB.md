@@ -171,6 +171,8 @@ To save round trip requests, sequential item-based operations can be grouped in 
 
 #### PutItem
 
+Without DocumentClient:
+
 ```typescript
 import { DynamoDBClient, PutItemCommand } from '@aws-sdk/client-dynamodb'
 
@@ -197,6 +199,36 @@ try {
 }
 ```
 
+With DocumentClient (note the lack of `S` or `N` typing in the properties' values):
+
+```typescript
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
+import { DynamoDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb'
+
+const ddbClient = new DynamoDBClient({
+  region: 'eu-central-1',
+  endpoint: 'http://localhost:4566',
+})
+
+const ddbDocClient = DynamoDBDocumentClient.from(ddbClient)
+
+const command = new PutCommand({
+  TableName: 'MoviesAndActors',
+  Item: {
+    Actor: 'Tom Hanks',
+    Movie: 'Toy Story',
+    Role: 'Woody',
+    Year: '1995',
+    Genre: 'Drama',
+  },
+})
+
+try {
+  await ddbDocClient.send(command)
+} catch (e) {
+  console.log(`DynamoDB Error: ${e}`)
+}
+```
 
 ### Query
 
