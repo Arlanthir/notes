@@ -218,7 +218,7 @@ const command = new PutCommand({
     Actor: 'Tom Hanks',
     Movie: 'Toy Story',
     Role: 'Woody',
-    Year: '1995',
+    Year: 1995,
     Genre: 'Drama',
   },
 })
