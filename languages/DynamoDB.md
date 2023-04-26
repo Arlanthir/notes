@@ -99,18 +99,6 @@ awslocal dynamodb create-table \
     --region eu-central-1
 ```
 
-To delete the above table:
-
-```bash
-awslocal dynamodb delete-table --table-name MoviesAndActors --region eu-central-1
-```
-
-To list all tables:
-
-```bash
-awslocal dynamodb list-tables --region eu-central-1
-```
-
 The equivalent JSON payload would be:
 
 ```javascript
@@ -156,6 +144,19 @@ The equivalent JSON payload would be:
     }
   ]
 }
+```
+
+
+To delete the above table:
+
+```bash
+awslocal dynamodb delete-table --table-name MoviesAndActors --region eu-central-1
+```
+
+To list all tables:
+
+```bash
+awslocal dynamodb list-tables --region eu-central-1
 ```
 
 ## API
