@@ -176,6 +176,35 @@ Operations:
 
 To save round trip requests, sequential item-based operations can be grouped in **batch actions** (can individually fail) and **transaction actions** (one fail rolls back the entire state).
 
+### GetItem
+
+```typescript
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
+import { DynamoDBDocumentClient, GetCommand } from '@aws-sdk/lib-dynamodb'
+
+const ddbClient = new DynamoDBClient({
+  region: 'eu-central-1',
+  endpoint: 'http://localhost:4566',
+})
+
+const ddbDocClient = DynamoDBDocumentClient.from(ddbClient)
+
+const command = new GetCommand({
+  TableName: 'MoviesAndActors',
+  Key: {
+    Actor: 'Tom Hanks',
+    Movie: 'Toy Story',
+  },
+})
+
+try {
+  const role = await ddbDocClient.send(command)
+  // item is in role.Item, if found
+} catch (e) {
+  console.log(`DynamoDB Error: ${e}`)
+}
+```
+
 #### PutItem
 
 Without DocumentClient:
