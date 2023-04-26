@@ -176,7 +176,7 @@ Operations:
 
 To save round trip requests, sequential item-based operations can be grouped in **batch actions** (can individually fail) and **transaction actions** (one fail rolls back the entire state).
 
-### GetItem
+#### GetItem
 
 ```typescript
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
