@@ -105,6 +105,12 @@ To delete the above table:
 awslocal dynamodb delete-table --table-name MoviesAndActors --region eu-central-1
 ```
 
+To list all tables:
+
+```bash
+awslocal dynamodb list-tables --region eu-central-1
+```
+
 The equivalent JSON payload would be:
 
 ```javascript
