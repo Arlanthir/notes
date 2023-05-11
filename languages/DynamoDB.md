@@ -178,6 +178,19 @@ To save round trip requests, sequential item-based operations can be grouped in 
 
 #### GetItem
 
+```bash
+awslocal dynamodb get-item --table-name MoviesAndActors --key '{
+  "Actor": {
+    "S": "Tom Hanks"
+  },
+  "Movie": {
+    "S": "Toy Story"
+  }
+}' --region eu-central-1
+```
+
+In TypeScript:
+
 ```typescript
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
 import { DynamoDBDocumentClient, GetCommand } from '@aws-sdk/lib-dynamodb'
