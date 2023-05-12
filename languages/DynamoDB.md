@@ -307,7 +307,7 @@ const command = new QueryCommand({
   TableName: 'MoviesAndActors',
   KeyConditionExpression: '#actor = :actor',
   ExpressionAttributeNames: {
-    '#pageId': 'Actor',
+    '#actor': 'Actor',
   },
   ExpressionAttributeValues: {
     ':actor': 'Tom Hanks',
