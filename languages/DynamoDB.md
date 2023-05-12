@@ -300,6 +300,27 @@ items = client.query(
 )
 ```
 
+In TypeScript:
+
+```typescript
+const command = new QueryCommand({
+  TableName: 'MoviesAndActors',
+  KeyConditionExpression: '#actor = :actor',
+  ExpressionAttributeNames: {
+    '#pageId': 'Actor',
+  },
+  ExpressionAttributeValues: {
+    ':actor': 'Tom Hanks',
+  },
+})
+
+try {
+  await ddbDocClient.send(command)
+} catch (e) {
+  console.log(`DynamoDB Error: ${e}`)
+}
+```
+
 We can further specify conditions over the SK to return a partial collection, provided the items are contiguous (i.e. `>=`, `<=`, `begins_with`, `between` are valid, but not `ends_with`). Example for movies with names beginning with letters between A and M:
 
 ```python
