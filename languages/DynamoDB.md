@@ -287,21 +287,6 @@ Can be used to fetch all related objects in one-to-many or many-to-many relation
 
 Example query to get all movies (SK) in which an actor (PK) participates:
 
-```python
-items = client.query(
-  TableName='MoviesAndActors',
-  KeyConditionExpression='#actor = :actor',
-  ExpressionAttributeNames={
-    '#actor': 'Actor'
-  },
-  ExpressionAttributeValues={
-    ':actor': { 'S': 'Tom Hanks' }
-  }
-)
-```
-
-In TypeScript:
-
 ```typescript
 const command = new QueryCommand({
   TableName: 'MoviesAndActors',
@@ -323,36 +308,48 @@ try {
 
 We can further specify conditions over the SK to return a partial collection, provided the items are contiguous (i.e. `>=`, `<=`, `begins_with`, `between` are valid, but not `ends_with`). Example for movies with names beginning with letters between A and M:
 
-```python
-items = client.query(
-  TableName='MoviesAndActors',
-  KeyConditionExpression='#actor = :actor AND #movie BETWEEN :a AND :m',
-  ExpressionAttributeNames={
+```typescript
+const command = new QueryCommand({
+  TableName: 'MoviesAndActors',
+  KeyConditionExpression: '#actor = :actor AND #movie BETWEEN :a AND :m',
+  ExpressionAttributeNames: {
     '#actor': 'Actor',
-    '#movie': 'Movie'
+    '#movie': 'Movie',
   },
-  ExpressionAttributeValues={
-    ':actor': { 'S': 'Tom Hanks' },
-    ':a': { 'S': 'A' },
-    ':m': { 'S': 'M' }
-  }
-)
+  ExpressionAttributeValues: {
+    ':actor': 'Tom Hanks',
+    ':a': 'A',
+    ':m': 'M',
+  },
+})
+
+try {
+  await ddbDocClient.send(command)
+} catch (e) {
+  console.log(`DynamoDB Error: ${e}`)
+}
 ```
 
-To query all actors of a given movie, we would have to create a global secondary index with the PK and SK flipped, and we could then do:
+To query all actors of a given movie, we would have to use the global secondary index (with the PK and SK flipped):
 
-```python
-items = client.query(
-  TableName='MoviesAndActors',
-  IndexName='MoviesIndex',
-  KeyConditionExpression='#movie = :movie',
-  ExpressionAttributeNames={
-    '#movie': 'Movie'
+```typescript
+const command = new QueryCommand({
+  TableName: 'MoviesAndActors',
+  IndexName: 'MoviesIndex',
+  KeyConditionExpression: '#movie = :movie',
+  ExpressionAttributeNames: {
+    '#movie': 'Movie',
   },
-  ExpressionAttributeValues={
-    ':movie': { 'S': 'Toy Story' }
-  }
-)
+  ExpressionAttributeValues: {
+    ':movie': 'Toy Story',
+  },
+})
+
+try {
+  await ddbDocClient.send(command)
+} catch (e) {
+  console.log(`DynamoDB Error: ${e}`)
+}
 ```
 
 
