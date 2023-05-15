@@ -279,6 +279,31 @@ try {
 }
 ```
 
+#### UpdateItem
+
+```
+const command = new UpdateCommand({
+  TableName: 'MoviesAndActors',
+  Key: {
+    Actor: 'Tom Hanks',
+    Movie: 'Toy Story',
+  },
+  UpdateExpression: 'SET #r = :v',
+  ExpressionAttributeNames: {
+    '#r': Role,
+  },
+  ExpressionAttributeValues: {
+    ':v': 'Sheriff Woody Pride',
+  },
+})
+
+try {
+  await ddbDocClient.send(command)
+} catch (e) {
+  console.log(`DynamoDB Error: ${e}`)
+}
+```
+
 ### Query
 
 Used to operate on item collections (same partition key). Available on main table and secondary indexes. Max 1MB before filter expressions, the rest will be paginated.
