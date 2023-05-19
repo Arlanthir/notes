@@ -281,7 +281,7 @@ try {
 
 #### UpdateItem
 
-```
+```typescript
 const command = new UpdateCommand({
   TableName: 'MoviesAndActors',
   Key: {
@@ -290,7 +290,7 @@ const command = new UpdateCommand({
   },
   UpdateExpression: 'SET #r = :v',
   ExpressionAttributeNames: {
-    '#r': Role,
+    '#r': 'Role',
   },
   ExpressionAttributeValues: {
     ':v': 'Sheriff Woody Pride',
