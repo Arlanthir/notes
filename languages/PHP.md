@@ -194,6 +194,32 @@ if (!mail($to, $subject, $message, $headers)) {
 
 To transfer attachments, use content-type multipart/mixed and boundaries.
 
+### Easier way including PHPMailer
+
+https://github.com/PHPMailer/PHPMailer
+
+```php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once('./PHPMailer/Exception.php');
+require_once('./PHPMailer/PHPMailer.php');
+
+try {
+    $email = new PHPMailer();
+    $email->CharSet = 'utf-8'; // If you're having encoding problems
+    $email->SetFrom('you@example.com', 'Your Name'); // Name is optional
+    $email->isHTML(true); // Optional
+    $email->Subject = 'Message Subject';
+    $email->Body = 'Message Body';
+    $email->AddAddress('destinationaddress@example.com');
+    $email->AddAttachment('path_of_file.pdf' , 'NameOfFile.pdf');
+    $email->Send();
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$email->ErrorInfo}";
+}
+```
+
 ## Incomplete Class objects in $_SESSION
 ```php
 <?php
