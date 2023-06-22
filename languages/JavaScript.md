@@ -414,3 +414,18 @@ Should be in the form:
 ```html
 <a href="javascript:(function(){alert('hello');})();">Hello</a>
 ```
+
+## Avoid CORS errors
+
+On Chrome:
+
+```bash
+# Linux:
+google-chrome --disable-web-security
+
+# Windows:
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=%LOCALAPPDATA%\Google\chromeTemp
+
+# macOS:
+open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+```
