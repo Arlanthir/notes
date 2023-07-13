@@ -160,6 +160,11 @@ docker build .
 docker build -t <name>:<version> .               # -t To tag with a friendly name and version (example: webserver-image:v1)
 docker build -t <name>:<tag1> -t <name>:<tag2>   # To tag with multiple tags
 docker build --platform linux/amd64 .            # Build for another platform
+
+# Alternative to build for another platform:
+
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+docker build .
 ```
 
 ### Manage images
