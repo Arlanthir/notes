@@ -12,7 +12,7 @@
 | `pacman -Qi <package>`  | Show info (e.g. dependencies of &lt;package&gt; and what installed it) |
 | `pacman -Ql <package>`  | List all files installed by &lt;package&gt;                            |
 | `pacman -Qo <file>`     | Check which package installed &lt;file&gt;                             |
-| `sudo pacman -Qtdq \| sudo pacman -R -` | Remove all unused (orphan) packages                |
+| `sudo pacman -Qtdq \| sudo pacman -R -` | Remove all unused (orphan) packages                    |
 
 *Note*: When your system is very outdated and updating it results in corrupted packages error, update the keyring first: `sudo pacman -S archlinux-keyring`.
 
