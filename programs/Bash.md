@@ -104,6 +104,14 @@ find . -type d -empty -delete                 # Delete empty subdirectories
 
 **Note**: Cygwin doesn't seem to like when `;` is escaped.
 
+## ln
+Create links in filesystem.
+
+```bash
+ln -s realfile newlinkname    # Create a symbolic link (shortcut) from newlinkname to realfile
+ln realfile newlinkname       # Create a hard link (copy without spending more space) from newlinkname to realfile
+```
+
 ## mkdir
 Create directories.
 
