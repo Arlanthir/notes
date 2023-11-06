@@ -13,10 +13,11 @@ The goal of cybersecurity is to protect the **confidentiality**, **integrity** a
 - Produces value (e.g. server, protected by maintaining its availability).
 - Provides access to value (e.g. password, protected by maintaining its confidentiality).
 
-**Threats**:
+About threats:
 - **Vulnerability**: weakness that makes an asset susceptible to attack or failure.
-- **Attack**: intentional action to reduce the value of an asset.
-- **Failure**: unintentional action that can reduce the value of an asset.
+- **Threats**:
+  - **Attack**: intentional action to reduce the value of an asset.
+  - **Failure**: unintentional action that can reduce the value of an asset.
 
 ## Tools
 
