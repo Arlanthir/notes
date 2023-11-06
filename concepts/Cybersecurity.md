@@ -4,7 +4,7 @@
 
 The goal of cybersecurity is to protect the **confidentiality**, **integrity** and **availability** of *assets*.
 
-- **Confidentiality**: Information is only available to those who should have access (e.g. by encription).
+- **Confidentiality**: Information is only available to those who should have access (e.g. by encryption).
 - **Integrity**: Data is known to be correct and trusted (e.g. by hashes).
 - **Availability**: Information is available for use by legitimate users when it is needed (e.g. by redundancy).
 
