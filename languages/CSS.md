@@ -75,6 +75,12 @@ user-select: none;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 ```
 
+## Transitions
+
+- Recommendation: elements entering should have `ease-out` timing, elements leaving should have `ease-in` timing.
+- Properties with discrete animation types (e.g. `display`, `visibility`) are not supported in transitions and require animations.
+- Proposed property `transition-behavior: allow-discrete` is already available in Chrome.
+
 ## Resetting/Normalizing initial style across different browsers
 http://necolas.github.io/normalize.css/
 
