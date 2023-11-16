@@ -25,11 +25,13 @@ The goal of cybersecurity is to protect the **confidentiality**, **integrity** a
 - Produces value (e.g. server, protected by maintaining its availability).
 - Provides access to value (e.g. password, protected by maintaining its confidentiality).
 
-About threats:
+#### Threats
+
 - **Vulnerability**: weakness that makes an asset susceptible to attack or failure.
 - **Threats**:
   - **Attack**: intentional action to reduce the value of an asset.
   - **Failure**: unintentional action that can reduce the value of an asset.
+- **Exploit**: Code written to take advantage of a vulnerability.
 
 Threat actors:
 1. Script kiddies: Low skill, simple attacks, motivated by revenge or fame.
@@ -40,18 +42,23 @@ Threat actors:
 
 ## Identifying vulnerabilities
 
-CVE: Common Vulnerabilities and Exposure
+**CVE**: Common Vulnerabilities and Exposure
 
-System to identify and standardized names for publicly known cybersecurity vulnerabilities (e.g. log4j = [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-44228)).
+System to identify and standardize names for publicly known cybersecurity vulnerabilities (e.g. log4j = [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-44228)).
 
 CVE feeds the National Vulnerability Database (NVD) of NIST (National Institute of Standards and Technology), e.g.: https://nvd.nist.gov/vuln/detail/CVE-2021-44228
 
-CVSS: Common Vulnerability Scoring System
+**CVSS**: Common Vulnerability Scoring System
 
-Quantifies the severity of a vulnerability between 1-10.
+Quantifies the severity of a vulnerability between 0-10.
 
+Organizations need to analyze the CVSS in their own context (i.e. a CVSS of 10 may not be critical to your company because the affected applications are not public).
 
-## [OWASP Top 10 (2021)](https://owasp.org/www-project-top-ten/)
+**CWE**: Common Weakness Enumeration
+
+Standardizes weaknesses, e.g. [CWE-89 SQL Injection](https://cwe.mitre.org/data/definitions/89.html).
+
+### [OWASP Top 10 (2021)](https://owasp.org/www-project-top-ten/)
 
 The top 10 most common vulnerabilities in web applications. New list comes out every three years, give or take.
 
@@ -66,9 +73,25 @@ The top 10 most common vulnerabilities in web applications. New list comes out e
 9. Security Logging and Monitoring Failures
 10. Server-Side Request Forgery (SSRF)
 
+#### [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+
+Specific for APIs
+
+1. Broken Object Level Authorization
+  Change ID of a request and access a resource you shouldn't have access to.
+2. Broken Authentication
+3. Broken Object Property Level Authorization
+4. Unrestricted Resource Consumption
+5. Broken Function Level Authorization
+6. Unrestricted Access to Sensitive Business Flows
+7. Server Side Request Forgery
+8. Security Misconfiguration
+9. Improper Inventory Management
+10. Unsafe Consumption of APIs
+
 [OWASP Cheat Sheets](https://cheatsheetseries.owasp.org/index.html)
 
-## [SANS Top 25](https://www.sans.org/top25-software-errors/)
+### [SANS Top 25](https://www.sans.org/top25-software-errors/)
 
 Focuses on all types of applications, not just web apps.
 Has other vulnerabilities like Out-of-bounds writes/reads, race conditions, etc.
@@ -77,6 +100,11 @@ OWASP gives more credence to **risk**, SANS gives more credence to **prevalence*
 
 ## Tools
 
+- [Fiddler](https://www.telerik.com/fiddler): Proxy tool to intercept and change requests.
+- [Charles Proxy](https://www.charlesproxy.com/): Proxy tool to intercept and change requests.
+- [HTTP Toolkit](https://httptoolkit.com/): Proxy tool to intercept and change requests.
+- [Burp Suite](https://portswigger.net/burp): Proxy tool with security testing capabilities.
 - [ZAP](https://www.zaproxy.org/): Zed Attack Proxy, formerly OWASP ZAP. Security testing tool.
 - [OWASP WebGoat](https://owasp.org/www-project-webgoat/): Deliberately insecure web application for education.
-- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/): Deliberately insecure web application for education with more training features.
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/): Deliberately insecure web application for education with more training features and CTF challenges.
+
