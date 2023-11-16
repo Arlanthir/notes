@@ -77,17 +77,17 @@ The top 10 most common vulnerabilities in web applications. New list comes out e
 
 Specific for APIs
 
-1. Broken Object Level Authorization
-  Change ID of a request and access a resource you shouldn't have access to.
-2. Broken Authentication
-3. Broken Object Property Level Authorization
-4. Unrestricted Resource Consumption
-5. Broken Function Level Authorization
-6. Unrestricted Access to Sensitive Business Flows
-7. Server Side Request Forgery
-8. Security Misconfiguration
-9. Improper Inventory Management
-10. Unsafe Consumption of APIs
+1. Broken Object Level Authorization  
+   Change ID of a request and access a resource you shouldn't have access to.
+3. Broken Authentication
+4. Broken Object Property Level Authorization
+5. Unrestricted Resource Consumption
+6. Broken Function Level Authorization
+7. Unrestricted Access to Sensitive Business Flows
+8. Server Side Request Forgery
+9. Security Misconfiguration
+10. Improper Inventory Management
+11. Unsafe Consumption of APIs
 
 [OWASP Cheat Sheets](https://cheatsheetseries.owasp.org/index.html)
 
