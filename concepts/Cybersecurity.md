@@ -143,7 +143,7 @@ Attackers can target a dependency of the software, effectively getting the organ
 - **Provenance**: origin of a software component.
 - **Pedrigree**: individuals and organizations involved in the development of the software.
 - **CAPEC**: Common Attack Pattern Enumeration and Classification, catalog of common attack patterns.
-CAPEC-437 relates to the supply chain.
+  CAPEC-437 relates to the supply chain.
 - **CNCF**: Cloud Native Computing Foundation offers a listing of possible supply chain compromise types.
 
 ### Mitigation
