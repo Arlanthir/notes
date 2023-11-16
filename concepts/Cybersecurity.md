@@ -4,9 +4,21 @@
 
 The goal of cybersecurity is to protect the **confidentiality**, **integrity** and **availability** of *assets*.
 
+### Important concepts
+
 - **Confidentiality**: Information is only available to those who should have access (e.g. by encryption).
 - **Integrity**: Data is known to be correct and trusted (e.g. by hashes).
 - **Availability**: Information is available for use by legitimate users when it is needed (e.g. by redundancy).
+- **Authentication**: Determining the identity of a user (who the user is).
+- **Authorization**: Applying access control to a user (what the user can do).
+- **Accounting** (Audit): Measuring activity.
+- **Non-repudiation**: Preventing a subject from denying previous activity.
+- **Least privilege**: Each subject should have only the minimum necessary rights needed to perform their task.
+- **Separation of duties**: For any given task, more than one individual needs to be involved.
+- **Defense in depth**: Each layer has its own defense mechanisms.
+- **Fail safe**: When system fails, it should fail to a safe state (emergency exit open when there is a power failure).
+- **Fail secure**: The default state is locked (lock closed when there is a power failure).
+- **Single point of failure**: A part of the system that stops the entire system when it fails.
 
 **Asset** is anything that either:
 - Holds value (e.g. data, protected by maintaining its integrity).
@@ -19,13 +31,31 @@ About threats:
   - **Attack**: intentional action to reduce the value of an asset.
   - **Failure**: unintentional action that can reduce the value of an asset.
 
-## OWASP Top 10 (2021)
+Threat actors:
+1. Script kiddies: Low skill, simple attacks, motivated by revenge or fame.
+2. Hacktivists: Moderate to high skill, looking to make an example of an organization, motivated by activism.
+3. Hackers: High skill, looking to understand how things work.
+4. Cyber criminals: High skill, looking for financial exploits (e.g. ransomware).
+5. Advanced persistent threat: Very high skill, backed by states, looking to weaken a political adversary, motivated by national interest.
 
-https://owasp.org/www-project-top-ten/
+## Identifying vulnerabilities
 
-The top 10 most common vulnerabilities in web apps. New list comes out every three years, give or take.
+CVE: Common Vulnerabilities and Exposure
 
-1. Broken Access Control
+System to identify and standardized names for publicly known cybersecurity vulnerabilities (e.g. log4j = [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-44228)).
+
+CVE feeds the National Vulnerability Database (NVD) of NIST (National Institute of Standards and Technology), e.g.: https://nvd.nist.gov/vuln/detail/CVE-2021-44228
+
+CVSS: Common Vulnerability Scoring System
+
+Quantifies the severity of a vulnerability between 1-10.
+
+
+## [OWASP Top 10 (2021)](https://owasp.org/www-project-top-ten/)
+
+The top 10 most common vulnerabilities in web applications. New list comes out every three years, give or take.
+
+1. Broken Access Control (Authorization)
 2. Cryptographic Failures
 3. Injection
 4. Insecure Design
@@ -36,7 +66,17 @@ The top 10 most common vulnerabilities in web apps. New list comes out every thr
 9. Security Logging and Monitoring Failures
 10. Server-Side Request Forgery (SSRF)
 
+[OWASP Cheat Sheets](https://cheatsheetseries.owasp.org/index.html)
+
+## [SANS Top 25](https://www.sans.org/top25-software-errors/)
+
+Focuses on all types of applications, not just web apps.
+Has other vulnerabilities like Out-of-bounds writes/reads, race conditions, etc.
+
+OWASP gives more credence to **risk**, SANS gives more credence to **prevalence** of each weakness.
 
 ## Tools
 
+- [ZAP](https://www.zaproxy.org/): Zed Attack Proxy, formerly OWASP ZAP. Security testing tool.
 - [OWASP WebGoat](https://owasp.org/www-project-webgoat/): Deliberately insecure web application for education.
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/): Deliberately insecure web application for education with more training features.
