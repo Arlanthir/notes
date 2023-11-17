@@ -57,7 +57,7 @@ Generally protected by encryption.
 
 System to identify and standardize names for publicly known cybersecurity vulnerabilities (e.g. log4j = [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-44228)).
 
-CVE feeds the National Vulnerability Database (NVD) of NIST (National Institute of Standards and Technology), e.g.: https://nvd.nist.gov/vuln/detail/CVE-2021-44228
+CVE feeds the United States National Vulnerability Database (NVD) of NIST (National Institute of Standards and Technology), e.g.: https://nvd.nist.gov/vuln/detail/CVE-2021-44228
 
 **CVSS**: Common Vulnerability Scoring System
 
@@ -490,8 +490,258 @@ Usually represented as JWTs, but are format-independent.
 
 ### OpenID
 
-Standardized SSO by non-profit OpenID Foundation.
+Standardized decentralized SSO by non-profit OpenID Foundation.
 
+Google is an OpenID Identity provider.
+
+OpenID Connect is an authentication layer built on top of OAuth 2.0.
+
+## Risk Rating and Threat Modeling
+
+### Risk Rating
+
+Risk is the potential for loss, damage or destruction of assets as a result of a threat exploiting a vulnerability.
+
+Risk rating: identify mitigations, impact and priority for found risks.
+
+Methodologies:
+- [NIST 800-30: Guide for Conducting Risk Assessments](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf)
+- Government of Canada - Harmonized TRA Methodology
+- Mozilla:
+  - Risk Assessment Summary
+  - Rapid Risk Assessment (RRA)
+ 
+OWASP Risk Rating: `Risk = Likelihood * Impact`, range 0-9
+
+Likelihood:
+- Threat agent: Skill, motivation, opportunity, size
+- Vulnerability: Ease of discovery, ease of exploit, awareness, detection
+
+Impact:
+- Technical: data, system
+- Business: company operating the system
+
+Sometimes it might not be worth it to mitigate the risk, when it costs more than the cost of the risk.
+
+### Threat Modeling
+
+Identify risks/hazards that are technical and even implementation specific. Can be reused for other projects or as input to other security techniques (e.g. pen testing).
+
+Hazard is a potential source of harm/danger. A threat is a specific type of hazard involving an abuser potentially harming an asset.
+
+Processes:
+- Manual
+  - Favorable in quality and customization
+  - Just need a whiteboard and experts on the product and security
+  - Not scalable
+- Tool
+  - Scalable
+  - No consensus on the tool
+  - "Check the box" mentality, writing the artifact just for the sake of writing it
+
+Types of models:
+- Operational Critical Threat Asset and Vulnerability Evaluation (OCTAVE)
+- Process for Attack Simulation and Threat Analysis (PASTA): Business impact
+- STRIDE: Technical impact
+
+STRIDE:
+- Spoofing (lack of Authentication)
+- Tampering (lack of Integrity, i.e. hashing)
+- Repudiation (lack of Non-repudiation, i.e. signatures and notarization)
+- Information disclosure (lack of Confidentiality, i.e. encryption)
+- Denial of service (lack of Availability)
+- Elevation of privileges (lack of Authorization)
+
+Example of applying STRIDE manually:
+- Identify Who, What, Why, How, Impact and Countermeasures, keeping STRIDE in mind.
+
+With a tool:
+- Decompose the application: scope, components, actors, data flows
+  - Scope: workflow diagram and architecture diagram
+- Diagram: components, data stores, data flows and trust boundaries
+- Identify and analyze threats (STRIDE)
+  - Automatically found by the tool analyzing the diagram
+
+## Encryption and Hashing
+
+### Encryption
+
+Symmetry:
+- Symmetric: single key
+  - AES
+  - Blowfish
+  - 3DES
+- Asymmetric: private and public key, generated together, allows encryption/decryption and signing
+  - RSA
+
+Primary advantage of symmetric cryptography is speed. Due to this, a hybrid approach is often used, with asymmetric key algorithms to generate and verify digital signatures and establishing keys. Symmetric key for encryption.
+
+Using the public key for encryption means that only the server with the private key can decrypt the information.
+
+Using the private key for encryption guarantees the integrity of the information (as well as non-repudiation), as written by the server. An example of this is hashing the document to a size-limited fingerprint and encrypting that fingerprint with the private key. Anyone can use the public key to decrypt the signature and compare it to the hash of the document.
+
+You can use two pairs of keys to sign with private key A and encrypt with private key B to send encrypted signed information to B. This method can be used to share a symmetric key for faster encryption communication between A and B.
+
+Encryption creates randomness which cannot be compressed as well as the original data. For efficiency you should compress data first and then encrypt.
+
+### Hashing
+
+One-way method of obtaining a (quasi-)unique small digest of an arbitrarily large plaintext.
+
+Salt: random data of fixed length, concatenated to the input before hashing. Ideally unique for each input. Used to protect against brute-force style attacks.
+
+Algorithms:
+- MD5 (no longer secure, but used for checksums)
+- SHA-1 (no longer secure)
+- SHA-2
+- SHA-3 (the latest iteration)
+
+Hash attacks:
+- Collision attack: when two different inputs have the same hash result.
+  - Knowing that fair message `m` hashes to X.
+  - Trying to find malicious message `m'` that also hashes to X.
+  - Very difficult.
+- Birthday attacks: finding any two collisions
+  - Changing whitespace/padding of fair message `m` until it hashes to Y.
+  - Changing whitespace/padding of malicious message `m'` until it hashes to Y.
+  - Request Bob to sign fair message `m` with the changes included.
+  - Presenting it as proof that Bob signed message `m'`.
+  - Easier than finding a collision with the specific hash.
+  - Mitigation: the output of the hash function should be long enough to make the attack computationally infeasible.
+- Brute force: trying all the password variations with the hope of guessing correctly.
+- Dictionary: trying the most likely passwords.
+- Rainbow table: precomputed table to reverse hash functions.
+
+### Public Key Infrastructure (PKI)
+
+A digital certificate binds an entity's Distinguished Name (DN) with a public key associated with its corresponding private key.
+
+Certificate Authorities (CAs) are entities that issue digital certificates (e.g. Let's Encrypt, Verisign). CAs are the foundation of PKI.
+
+PKI is an ecosystem with a hierarchy of CAs (Root CA, Policy CA, Issuing CA) that are trusted to issue digital certificates.
+
+One way to attack the PKI is by a Man-in-the-middle attack.
+
+### Password management
+
+Password management should:
+- Follow guidelines on length, complexity, rotation by NIST 800-63b, Section 5.1.1.
+- Implement Multi-Factor Authentication (MFA).
+- Limit failed login attemps.
+- Use advanced authentication methods (e.g. biometrics).
+- Transmit passwords over secure channels.
+- Store passwords securely using hashing (not encrypted, which can be reversed), with unique salts.
+- Never log passwords.
+- Not use default passwords.
+- Check passwords against the [top 10k most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-10000.txt).
+
+Evaluate passwords in [kaspersky password checker](https://password.kaspersky.com/).
+
+## Frameworks and processes
+
+### Health Insurance Portability and Accountability Act (HIPAA)
+
+Title II: Preventing Healthcare Fraud and Abuse; Administrative Simplification; Medical Liability Reform
+- Protects the flow of healthcare information (PHI).
+
+Rule 1: Privacy Rule (all PHI)
+Rule 3: Security Rule (Specific for Electronic PHI)
+
+4 tiers of violation with associated fines ($100 to $50k)
+
+HITECH Act: Health Information Technology for Economic and Clininal Health
+- Created to promote and expand the adoption of Electronic Health Records (EHRs)
+- Joined to HIPAA in the HIPAA Omnibus Final Rule (2013)
+
+### Payment Card Industry Data Security Standard (PCI DSS)
+
+Mandated by card brands and administered by the Payment Card Industry Security Standards Council. Created to increase controls around cardholder data to reduce credit card fraud.
+
+Three components:
+- Qualified Security Assessor (QSA): certified person can audit merchants for PCI DSS compliance.
+- Report on Compliance (ROC): form to be filled by level 1 merchants undergoing audit.
+- Self-Assessment Questionnaire (SAQ): documents to fill in and send yearly to the merchant's bank.
+
+Validation of compliance is performed annually, either by a QSA or by an internal Security Assessor, creating a ROC (large volumes of transactions) or SAQ (smaller volumes).
+
+Twelve requirements organized in six control objectives:
+1. Build and maintain a secure network and systems
+2. Protect cardholder data
+3. Maintain a vulnerability management program
+4. Implement strong access control measures
+5. Regularly monitor and test networks
+6. Maintain an information security policy
+
+### DevOps
+
+Concepts:
+- Continuous Integration (CI): Push software more frequently (i.e. merging, building, testing).
+- Continuous Delivery (CD): Perform all integration tasks to make a production-ready package.
+- Continuous Deployment (CD): Automatically deploy the production-ready package.
+
+DevOps is the breaking down the barrier between:
+- Development: writing production-ready code.
+- Operations: delivering and maintaining the code deployed in a production environment.
+
+### DevSecOps
+
+DevOps + Security
+- Threat modeling
+- Static/dynamic/interactive security testing (SAST, DAST, IAST)
+- Secure code review
+- Pen testing
+- Compliance validation
+- Configuration validation
+- Logging and monitoring
+- Intrusion detection
+- Incident response
+- Replanning and updating threat model
+
+Automated tests:
+- Unit tests
+- Integration tests
+- System/end-to-end tests
+- Manual validation (exploratory testing)
+
+### Use, abuse and misuse cases
+
+- Use case: list of actions/steps defining the interaction between actor and system to achieve a goal.
+  - E.g. user authenticating via username/password.
+- Misuse case: something that should not happen and the threats hence identified.
+- Abuse case: interaction between actor(s) and system that harm the system, one of the actors, or one of the stakeholders.
+  - E.g. hacker brute-forcing the username/password authentication.
+
+## Security scanning and testing
+
+- False positive: a finding that turns out to not be a viable finding.
+- False negative: a vulnerability not detected by a scanning tool/technique.
+
+Types of tests/tools:
+- **Static Application Security Testing** (SAST): analyses the source code.
+  - Taint analysis: identify variables "tainted" with user input that go to vulnerable functions ("sinks") without sanitization.
+  - Lexical analysis: converts source code into tokens to make it easier to manipulate.
+  - Control flow analysis: checks opening/closing connections.
+  - Data flow analysis: checks inputs/outputs.
+  - Detects errors early in the lifecycle, which reduces the cost of fixing.
+- **Dynamic Application Security Testing** (DAST): runs the application and tries to attack it.
+  - Not as technology dependent as SAST.
+  - Can't locate the offending lines of code.
+- **Interactive Application Security Testing** (IAST): assesses applications via software instrumentation (monitoring agents).
+- **Runtime Application Self-Protection** (RASP): monitors the runtime environment and alerts or blocks attacks as they happen.
+- **Web Application Firewall** (WAF): analyzes HTTP traffic and reports/blocks common attacks such as XSS or Injection.
+  - Transparent bridge: inspects only the configured traffic, no need to change the network configuration.
+  - Reverse proxy: accepts traffic and proxies it to the back-end server.
+  - Just blocks, does not resolve the underlying code issue.
+- **Penetration testing** (Pen testing): trying to attack the system and finding vulnerabilities.
+  - White box: provides information to the tester.
+  - Grey box: provides just essential information to the tester.
+  - Black box: provides no information to the tester.
+  - Internal: a team belonging to the company.
+  - External: an external party which is hired to test the system.
+    - Findings need to be secured, as they are now definitely known by a third party.
+- **Software Composition Analysis** (SCA): analysing dependencies.
+  - Cross-check with NVD (National Vulnerability Database).
+- **Fuzz testing** (fuzzing): provide random unexpected inputs to identify flaws/crashes.
 
 ## Tools
 
@@ -499,8 +749,9 @@ Standardized SSO by non-profit OpenID Foundation.
 - [Charles Proxy](https://www.charlesproxy.com/): Proxy tool to intercept and change requests.
 - [HTTP Toolkit](https://httptoolkit.com/): Proxy tool to intercept and change requests.
 - [Burp Suite](https://portswigger.net/burp): Proxy tool with security testing capabilities.
-- [ZAP](https://www.zaproxy.org/): Zed Attack Proxy, formerly OWASP ZAP. Security testing tool.
+- [ZAP](https://www.zaproxy.org/): Zed Attack Proxy, formerly OWASP ZAP. Security testing tool (DAST).
 - [OWASP WebGoat](https://owasp.org/www-project-webgoat/): Deliberately insecure web application for education.
 - [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/): Deliberately insecure web application for education with more training features and CTF challenges.
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/): analyze Content Security Policies.
+- [kaspersky password checker](https://password.kaspersky.com/).
 
