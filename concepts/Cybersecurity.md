@@ -342,6 +342,15 @@ Mitigation:
 - Container-specific monitoring tools
 - Scan container images for known vulnerabilities
 
+## Defenses and tools
+
+[Zed Attack Proxy](https://www.zaproxy.org/): dynamic scanner, allows automated scanning for vulnerabilities of a live site.
+1. Crawling / spidering: finding all pages of the site.
+2. Include pages in Contexts to setup authentication and other settings.
+3. Active scan: try a number of automated attacks.
+
+
+
 ## Tools
 
 - [Fiddler](https://www.telerik.com/fiddler): Proxy tool to intercept and change requests.
