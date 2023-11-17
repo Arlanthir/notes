@@ -753,5 +753,5 @@ Types of tests/tools:
 - [OWASP WebGoat](https://owasp.org/www-project-webgoat/): Deliberately insecure web application for education.
 - [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/): Deliberately insecure web application for education with more training features and CTF challenges.
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/): analyze Content Security Policies.
-- [kaspersky password checker](https://password.kaspersky.com/).
+- [kaspersky password checker](https://password.kaspersky.com/): evaluate passwords.
 
