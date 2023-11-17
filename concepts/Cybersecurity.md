@@ -27,10 +27,10 @@ The goal of cybersecurity is to protect the **confidentiality**, **integrity** a
 
 #### Threats
 
-- **Vulnerability**: weakness that makes an asset susceptible to attack or failure.
+- **Vulnerability**: Weakness that makes an asset susceptible to attack or failure.
 - **Threats**:
-  - **Attack**: intentional action to reduce the value of an asset.
-  - **Failure**: unintentional action that can reduce the value of an asset.
+  - **Attack**: Intentional action to reduce the value of an asset.
+  - **Failure**: Unintentional action that can reduce the value of an asset.
 - **Exploit**: Code written to take advantage of a vulnerability.
 
 Threat actors:
@@ -223,7 +223,7 @@ Customer is responsible for:
 
 ### Security issues in the cloud
 
-- Data breaches/loss: Misconfigured S3 bucket.
+- Data breaches/loss: e.g. misconfigured S3 bucket.
 - Lack of control: CSP handles security controls that the customer cannot manage.
 - Compliance and regulatory issues: CSPs may not meet specific industry or regional compliance requirements.
 - Shared resources: concerns about data isolation.
@@ -237,12 +237,6 @@ Customer is responsible for:
 AWS Well-Architected Framework has 6 pillars, including Security.
 
 Fundamentals of the Security pillar:
-- Identity and Access Management (IAM).
-- Detective control: monitoring and logging (CloudTrail, Config and others).
-- Infrastructure protection: safeguard the underlying infrastructure (Virtual Private Cloud, security groups, and others).
-- Data protection: encryption of data at rest and in transit (Key Management Service).
-- Incident response: procedures and plans to respond to incidents (roles and responsibilities).
-- Application security: secure coding practices and testing methodologies.
 
 #### Identity and Access Management
 
@@ -257,9 +251,9 @@ Fundamentals of the Security pillar:
 
 **Policy**: JSON file with:
 - Version: IAM policy language version.
-- Statement: Array of statements, each with:
+- Statement: array of statements, each with:
   - Effect: `"Allow"` or `"Deny"`.
-  - Action: Specifies the service and action, e.g. `"s3.GetObject"`.
+  - Action: specifies the service and action, e.g. `"s3.GetObject"`.
   - Resource: Amazon Resource Name (ARN) of the resource to which the permission applies, e.g. `"arn:aws:s3:::example-bucket/*"`.
 
 #### Detection
@@ -267,18 +261,86 @@ Fundamentals of the Security pillar:
 Monitoring and auditing:
 
 - CloudWatch: unified view of AWS resources and applications. Has Alarms to notify when certain thresholds are breached (CPU, network, storage).
-- CloudWatch Logs: Collects and stores log files from AWS resources, including EC2, Lambda functions, and more.
-- CloudTrail: Log of AWS API calls, including information about who made the call and when.
-- Config: Track and record changes to resources.
-- VPC Flow Logs: monitor network traffic in the VPC.
+- CloudWatch Logs: collects and stores log files from AWS resources, including EC2, Lambda functions, and more.
+- CloudTrail: log of AWS API calls, including information about who made the call and when.
+- Config: track and record changes to resources.
+- VPC Flow logs: monitor network traffic in the VPC.
 - GuardDuty: export active findings to CloudWatch Events.
 
-#### Protection
+#### Infrastructure protection
 
 - Web Application Firewall (WAF).
 - Regions and Availability Zones for fault-tolerance and high availability.
-- Local Zones: Extensions of Regions to provide select services for low-latency applications.
+- Local Zones: extensions of Regions to provide select services for low-latency applications.
 - Outposts: on-premises.
+- Layered networks (not using a single VPC) so that compromising a part of the network does not compromise the full network.
+
+#### Data protection
+
+- Data classification: sensitivity levels
+- Data encryption
+
+Encryption offered:
+- Key Management Service (KMS): Storing encryption keys to secure data at rest.
+- Simple Storage Service (S3): Built-in encryption for stored files in buckets.
+- Relational Database Service (RDS): Supports encryption via KMS.
+- Elastic Block Store (EBS): Container volumes. Supports encryption via KMS.
+
+Data protection in transit:
+- PrivateLink: Secure private network connections.
+- CertificateManager (ACM): SSL/TLS certificates.
+- Virtual Private Cloud (VPC): Create private networks.
+- Network Load Balancer (NLB) and Application Load Balancer (ALB) can establish secure connections to backend instances.
+- Direct Connect and VPN: Secure connections between on-premises and VPCs.
+- CloudFront: Content Delivery Network (CDN) with SSL/TLS support.
+- Transit Gateway: Interconnect thousands of VPCs and VPNs.
+
+#### Incident response
+
+Besides the audit tools mentioned before:
+- Security Hub: Aggregates security findings from services.
+- Systems Manager: Manage and configure resources, including automation for patching and compliance.
+- Incident Manager: Collaboration tools, automated response actions and tracking progress.
+- Detective: Analyze and identify root cause of security findings.
+
+#### Application security
+
+AppSec stages:
+1. Start with threat modeling.
+2. Implement automated testing.
+3. Perform penetration testing.
+4. Conduct manual code reviews.
+5. Centralize services for packages/dependencies.
+6. Deploy programatically.
+7. Assess security properties regularly.
+8. Embed security ownership in teams.
+
+Services:
+- CodeGuru: automate code reviews.
+- CodeArtifact: centralized control of packages/dependencies.
+- CloudFormation: deploy software and maintain consistency.
+- CodePipeline and CodeBuild: automated and secure software deployment.
+
+#### Container security
+
+Issues:
+- Container sprawl: containers are easy to create and scale. As the number increases, so does the difficulty to manage and patch.
+- Image vulnerabilities: containers can be built from vulnerable images.
+- Shared kernel: vulnerabilities in kernel can affect multiple containers.
+- Orchestration complexity: platforms like Kubernetes introduce additional complexities and opportunity for misconfiguration.
+- Microservices communication: more communication channels to secure.
+- Short lifecycle: rapid pace of change makes it difficult to maintain consistent security policies.
+- Monitoring and visibility: traditional tools may not be well-suited to containers.
+- Insider threats: inside access to host may compromise all containers.
+- Resource constraints: strong security measures may degrade performance or scalability.
+
+Mitigation:
+- Keep containers updated.
+- Principle of least privilege when defining permissions
+- Use secure container registries
+- Network segmentation
+- Container-specific monitoring tools
+- Scan container images for known vulnerabilities
 
 ## Tools
 
