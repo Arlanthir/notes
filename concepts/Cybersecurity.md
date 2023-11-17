@@ -251,10 +251,34 @@ Fundamentals of the Security pillar:
   Each account has a unique ID and is billed separately from other accounts.
 - **User**: individual entity within an AWS account with specific credentials.  
   Each user can have different IAM **policies** that allow interaction with AWS resources.
-- **Group**: collection of IAM users. Allow applying the same set of permissions to multiple users.
+- **Group**: collection of IAM users. Allows applying the same set of permissions to multiple users.
 - **Role**: similar to users but without permanent credentials.
-  Temporary access for trusted entities, users from other accounts, applications, etc.
+  Temporary access for trusted entities, like users from other accounts, or applications.
 
+**Policy**: JSON file with:
+- Version: IAM policy language version.
+- Statement: Array of statements, each with:
+  - Effect: `"Allow"` or `"Deny"`.
+  - Action: Specifies the service and action, e.g. `"s3.GetObject"`.
+  - Resource: Amazon Resource Name (ARN) of the resource to which the permission applies, e.g. `"arn:aws:s3:::example-bucket/*"`.
+
+#### Detection
+
+Monitoring and auditing:
+
+- CloudWatch: unified view of AWS resources and applications. Has Alarms to notify when certain thresholds are breached (CPU, network, storage).
+- CloudWatch Logs: Collects and stores log files from AWS resources, including EC2, Lambda functions, and more.
+- CloudTrail: Log of AWS API calls, including information about who made the call and when.
+- Config: Track and record changes to resources.
+- VPC Flow Logs: monitor network traffic in the VPC.
+- GuardDuty: export active findings to CloudWatch Events.
+
+#### Protection
+
+- Web Application Firewall (WAF).
+- Regions and Availability Zones for fault-tolerance and high availability.
+- Local Zones: Extensions of Regions to provide select services for low-latency applications.
+- Outposts: on-premises.
 
 ## Tools
 
