@@ -349,6 +349,148 @@ Mitigation:
 2. Include pages in Contexts to setup authentication and other settings.
 3. Active scan: try a number of automated attacks.
 
+### Cross-site scripting (XSS)
+
+Attackers inject a script in a website.
+- Reflected: The attacker discovers a URL param that injects a script, creates malicious links to send to users.
+- Persistent: The attacker saves an embedded script in a vulnerable website (e.g. through forum attachments).
+
+### Content security policy (CSP)
+
+HTTP header that controls security policies. Can mitigate XSS.
+
+- A policy should include `default-src` policy directive to fallback for other resource types without policies.
+- A policy should include a `script-src` (or `default-src`) directive to prevent inline scripts and `eval()` .
+- A policy should include a `style-src` (or `default-src`) directive to prevent inline styles.
+
+List of 1.0 directives:
+- `connect-src`: URLs that can be contacted (e.g. through fetch / XMLHttpRequest)
+- `font-src`: From where fonts can be loaded.
+- `img-src`: From where images can be loaded.
+- `media-src`: From where video, audio and text tracks can be loaded.
+- `object-src`: From where plugins can be loaded.
+- `script-src`: From where scripts can be loaded.
+- `style-src`:  From where styles can be loaded.
+- `default-src`: Fallback for when a more specific directive is not defined.
+- `frame-src`: (Deprecated) From where frames can be loaded.
+- `report-uri`: Specifies a URL to which the browser sends reports about policy violation.
+- `sandbox`: Sandbox policy to apply to the protected resource.
+
+Additions in CSP 2.0:
+- `form-action`: Allowed HTML form action destinations.
+- `frame-ancestors`: Allowed sources of frame, iframe, object, embed and applet.
+- `plugin-types`: Restricts which type of resources can be embedded.
+- `base-uri`: Restricts URLs that can specify the document base URL.
+- `child-src`: Governs the creation of nested browsing and Worker execution contexts.
+
+E.g.:
+```
+Content-Security-Policy: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';
+```
+
+CSPs can also be defined using [<meta> tags](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
+
+You can analyze CSPs with [CSP Evaluator](https://csp-evaluator.withgoogle.com/).
+
+### Security Models
+
+Access Control Models:
+- Access Control List: List of permissions attached to an object that define which users or systems have access and can do each operation.
+- Bell-LaPadula: Formal state transition model with security labels ("Top Secret" to "Public").
+- Role-based Access Control (RBAC): Roles group permissions and can be attributed to users.
+- Access-based Access Control: Boolean logic rules to determine if access is granted.
+
+Integrity model:
+- Biba Integrity Model: Users can only create content to be read by their integrity level and below. Users can only read content at their integrity level of above.
+- Clark-Wilson Model: Uses access control tiples of subject/program/object. Programs are transactions.
+
+Information flow model:
+- Brewer-Nash model (Chinese wall)
+- Data flow diagrams
+- Use case models
+- Assurance models
+
+### [Security Knowledge Framework](https://www.securityknowledgeframework.org/) (SKF)
+
+Developed by OWASP, web-application that uses the OWASP Application Security Verification Standard and contains code examples and information to help developers. You can host it and change the code examples for your organization.
+
+Also includes Labs with practical lessons on different attacks.
+
+- Pre-development: detect threats and provide development patterns.
+- Post-development: checklists to evaluate security.
+
+### Secure code review
+
+Code should be reviewed with Subject Matter Experts (SMEs).
+- Pre-commit: insecure code is not merged, slows down integrations.
+- Post-commit: insecure code is merged, faster delivery but higher risk.
+- Audit: can be triggered by a security event and should review the entire area of concern, not just a single commit.
+
+## Session management
+
+There are both:
+- Pre-authenticated session (e.g. maintaining preferred language of anonymous user).
+- Post-authenticated session (e.g. managing access controls).
+
+The ID/token of a post-authentication session is temporarily equivalent to the strongest authentication method used by the application (e.g. replaces user/name password and OTP for the duration of the session).
+
+Federateed identity: a single token is trusted accross multiple systems or organizations (SSO).
+
+### JSON Web Token
+
+Open standard that defines a digitally-signed compact way for securely transmitting information as a JSON object.
+
+- Authorization: The JWT includes the routes, services or resources that are permitted with it.
+- Information exchange: The JWT is signed and hashed, assuring identity of the sender and integrity of the information.
+
+JWTs are created by the server but saved locally in the client and resent in every request (e.g. in the Authorization header).
+
+JWTs consist of three parts:
+- Header: type (JWT) and hashing algorithm (e.g. SHA256).
+- Payload: Claims, i.e., the statements about the user entity.
+- Signature: Header and payload signed with the server private key, using the header algorithm.
+
+Example:
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
+
+which decoded is:
+
+```
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "iat": 1516239022
+}
+HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), serverSecret)
+```
+
+Claims can be:
+- Registered: predefined recommended interoperable claims, such as `iss` (issuer) and  `exp` (expiration time).
+- Public: Defined in IANA JSON Web Token Registry or with a collision resistant namespace.
+- Private: Custom claims to share information between parties that agree on them.
+
+### OAuth
+
+Used for access delegation, i.e. Google can permit users to share account information with third parties without sharing their password.
+
+Access includes allowed scopes and denied scopes (granular access to resources).
+
+Tokens:
+- Access token: short-lived, can't be revoked.
+- Refresh token: long-lived, used to get new access tokens, revokable.
+
+Usually represented as JWTs, but are format-independent.
+
+### OpenID
+
+Standardized SSO by non-profit OpenID Foundation.
 
 
 ## Tools
@@ -360,4 +502,5 @@ Mitigation:
 - [ZAP](https://www.zaproxy.org/): Zed Attack Proxy, formerly OWASP ZAP. Security testing tool.
 - [OWASP WebGoat](https://owasp.org/www-project-webgoat/): Deliberately insecure web application for education.
 - [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/): Deliberately insecure web application for education with more training features and CTF challenges.
+- [CSP Evaluator](https://csp-evaluator.withgoogle.com/): analyze Content Security Policies.
 
