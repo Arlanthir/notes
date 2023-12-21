@@ -275,10 +275,11 @@ Video: https://www.youtube.com/watch?v=F8pePRJs4wo
 
 # Trick database
 
-| Trick        | Explanation                               |
-| ------------ | ----------------------------------------- |
-| Biddle trick | [Alex Pandrea](https://www.youtube.com/watch?v=cTPG1HsvQ2E) [Sean Devine](https://www.youtube.com/watch?v=F8pePRJs4wo) |
-| [Coincidencia Total by Juan Tamariz](https://www.youtube.com/watch?v=3N1In1-QtNY) | [Magicurzay](https://www.youtube.com/watch?v=YTK9BPG-9IY) |
+| Trick        | Explanation                               | Difficulty (1-5) |
+| ------------ | ----------------------------------------- | ---------------- |
+| Biddle trick | [Alex Pandrea](https://www.youtube.com/watch?v=cTPG1HsvQ2E) [Sean Devine](https://www.youtube.com/watch?v=F8pePRJs4wo) | 2 |
+| Chameleon Sandwich | [Doug Conn](https://www.youtube.com/watch?v=JDK0sq_4A4M) | 3 |
+| [Coincidencia Total by Juan Tamariz](https://www.youtube.com/watch?v=3N1In1-QtNY) | [Magicurzay](https://www.youtube.com/watch?v=YTK9BPG-9IY) | 4 |
 
 
 
