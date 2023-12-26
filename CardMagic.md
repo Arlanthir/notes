@@ -61,6 +61,7 @@ The deck remains in the original position.
 
 - To retain the top cards during a riffle shuffle, make sure the hand with the top half of the deck finishes last.
 - To retain the bottom cards during a riffle shuffle, make sure you start with the hand that has the bottom half of the deck.
+- A good subtlety as convincer that the deck is shuffled: cut the deck to the left and retain top by finishing the left, then repeat by cutting the top portion to the right and retaining it (this will appear as if you don't always finish with the same side).
 
 ### Elmsley count
 
@@ -95,7 +96,7 @@ Peek at a card that should be hidden (typically the bottom one).
 #### Top card glimpse
 
 - Turn the deck face up.
-- Deal some cards to the right hand, showing that they are shuffled.
+- Deal some cards to the right hand, showing and saying that they are shuffled.
 - Use the left fingers to glimpse at the top card (the lowest in the left hand).
 
 ### Double lift
@@ -183,6 +184,19 @@ Maintains top stock without seeming that only half of the deck gets shuffled.
 2. When closing the spread after the replacement, catch a break above the replaced card while the spread covers it.
 3. Square the deck and pivot it into an overhand lift shuffle, controlling packet **A** as usual.
 
+## Forces
+
+### Delayed cut force
+
+1. Instruct the spectator to cut the deck anywhere.
+2. Finish the cut in a cross so it's noticeable where the deck was cut.
+3. Spend some time explaining the trick you will do afterwards.
+4. Instruct the spectator to turn over the top card of the bottom portion, reinforcing that it's the card they cut to (in fact, it isn't, it is the card that was initially on top of the deck).
+
+### Backslip force (see the [shuffle section]((#backslip-force)))
+
+### Lift shuffle force (see the [shuffle section](#lift-shuffle-force))
+
 
 ## Flourishes
 
@@ -250,7 +264,6 @@ Video: https://www.youtube.com/watch?v=jzjhcfVvWRA
 
 Video: https://www.youtube.com/watch?v=hXrmygSTowo
 
-
 ## Biddle trick
 
 1. Force a card or use a key card.
@@ -272,6 +285,15 @@ Don't use a key card, control the card to second from the bottom (e.g. control t
 You can then make the 5 card selection facedown, which adds to the effect.
 
 Video: https://www.youtube.com/watch?v=F8pePRJs4wo
+
+## Truth Detector (inspired by Lie Detector of Card College Light)
+
+1. Force a card, e.g.: Glimpse the top card by spreading the deck with the "deck is shuffled line" and use a delayed cut to force the top card.
+2. Explain that the voice betrays the sincerity of a person, and by hearing alone you can detect whether someone is lying. Thus you want to conduct an experiment to detect when they are truthful.
+3. The spectator is to select another 4 cards and hold them alongside their card.
+4. You turn your back to the spectator.
+5. The spectator names every card they're holding saying "My card is the &lt;name of the card&gt;".
+6. After some theatrics you identify their card saying that their voice was more solid when they said that name.
 
 # Trick database
 
