@@ -193,7 +193,7 @@ Maintains top stock without seeming that only half of the deck gets shuffled.
 3. Spend some time explaining the trick you will do afterwards.
 4. Instruct the spectator to turn over the top card of the bottom portion, reinforcing that it's the card they cut to (in fact, it isn't, it is the card that was initially on top of the deck).
 
-### Backslip force (see the [shuffle section]((#backslip-force)))
+### Backslip force (see the [shuffle section](#backslip-force))
 
 ### Lift shuffle force (see the [shuffle section](#lift-shuffle-force))
 
