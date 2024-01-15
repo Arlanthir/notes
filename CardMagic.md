@@ -178,6 +178,15 @@ Maintains top stock without seeming that only half of the deck gets shuffled.
 2. When they yell stop, drop packet **A** on top of the deck.
 3. The previous top card is on top.
 
+## Ed Marlo Convincing Control (selection to bottom)
+
+1. Spread the cards for spectator to touch one.
+2. While returning spread to dealing position, outjog the card above the selection instead of the selection.
+3. Still during the movement, pull the selection with the right fingers and open it like a book.
+4. Close the deck so the selection is not on the bottom of the deck and there is a fake outjogged card.
+
+Video: https://www.youtube.com/watch?v=nHQZojNUsVs
+
 ## Spread and break control
 
 1. Spread the cards to receive a card to be replaced.
