@@ -182,7 +182,7 @@ Maintains top stock without seeming that only half of the deck gets shuffled.
 
 1. Spread the cards for spectator to touch one.
 2. While returning spread to dealing position, outjog the card above the selection instead of the selection.
-3. Still during the movement, pull the selection with the right fingers and open it like a book.
+3. Still during the movement, cull the selection with the right fingers and open it like a book.
 4. Close the deck so the selection is not on the bottom of the deck and there is a fake outjogged card.
 
 Video: https://www.youtube.com/watch?v=nHQZojNUsVs
