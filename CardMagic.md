@@ -1,44 +1,45 @@
 # Card Magic
 
-## Rules
+# Rules
 
 1. The _patter_, story and personality of each performance is what makes it enjoyable and memorable.
 2. Never announce your intention until all preliminary actions which make it possible are completed.
 3. Never repeat a trick without replicating it by a different method.
+4. Think of the sleights as your safety net in case the misdirection goes wrong.
 
 
-## Important terms
+# Important terms
 
-- **Overhand shuffle**: Shuffling by grabbing bottom portion of deck with right hand, progressively putting cards from the top of the right pile to the left.
 - **Run**: While performing an overhand shuffle, take cards one by one from the right pile to the top of the left pile using the left thumb.
 - **Injog**: While running cards, move the right hand closer to the body so the drawn card is shifted towards you.
 - **Outjog**: Same as injog, but the card protrudes away from you.
-- **Riffle shuffle**: The usual gamers' shuffle that riffles two halves of the deck together.
 - **Pinky break**: Hold the left pinky between top and bottom packets to keep the position and later do a sleight (like a cut, etc).. You should then square the deck and switch the pinky break from being between packets to just pressed against the gap.
 
 
-## Sleights
+# Shuffles
 
-### Overhand shuffle
+## Overhand shuffle
 
-#### Control the top card
+Shuffling by grabbing bottom portion of deck with right hand, progressively putting cards from the top of the right pile to the left.
+
+### Control the top card
 
 1. Use left thumb to grab onto top card while right hand takes the rest of deck.
 2. Overhand shuffle as normal. Card is now on the bottom.
 3. Overhand shuffle while running the last few cards until only the one remains.
 
-#### Control the bottom card
+### Control the bottom card
 
 1. Apply pressure with the left fingers to keep bottom card while grabbing the portion to really shuffle.
 2. Overhand shuffle as usual. Bottom card remains.
 
-#### Retain top and bottom
+### Retain top and bottom
 
 1. Apply pressure with left thumb and fingers so the top and bottom cards remain and the rest of the deck is overhand shuffled.
 2. The previous top card is now second from the bottom. The bottom card is retained.
 3. Overhand shuffle while running the last few cards until only the one remains. Top and bottom cards are now in the original position.
 
-#### Undercut
+### Undercut (retain top stock)
 
 1. While overhanding shuffling, injog the first card.
 2. Shuffle the other cards as normal, injogging some cards to distract from the first injog.
@@ -47,7 +48,7 @@
 
 Optionally run some cards before injogging to put that number of cards on top of the previous top card. E.g. run 1 card before injogging to place a single card on top, preparing a later double lift.
 
-#### Overhand false shuffle
+### Overhand false shuffle
 
 1. Begin the overhand shuffle.
 2. Run 5 cards.
@@ -57,13 +58,55 @@ Optionally run some cards before injogging to put that number of cards on top of
 
 The deck remains in the original position.
 
-### Riffle shuffle
+### Overhand lift shuffle
+
+Maintains top stock without seeming that only half of the deck gets shuffled.
+
+1. Start the shuffle by dropping the top packet (**A**) onto the left hand.
+2. As you drop the next packet (**B**) on top of **A**, grab **A** again with the right ring finger and the inside of the right thumb.
+3. Keep shuffling as usual until only packet **A** remains in your right hand.
+4. Drop packet **A** on top of the rest.
+
+[Associated force](#lift-shuffle-force)
+
+## Riffle shuffle
+
+Cut the deck in two packs, riffle the two packs together so they interlace.
 
 - To retain the top cards during a riffle shuffle, make sure the hand with the top half of the deck finishes last.
 - To retain the bottom cards during a riffle shuffle, make sure you start with the hand that has the bottom half of the deck.
 - A good subtlety as convincer that the deck is shuffled: cut the deck to the left and retain top by finishing the left, then repeat by cutting the top portion to the right and retaining it (this will appear as if you don't always finish with the same side).
 
-### Elmsley count
+
+# Controls
+
+## Backslip control (selection to top)
+
+1. Open the deck bookwise so the spectator can replace their previously chosen card on top of the left pack.
+2. Take away the top portion of the deck, but applying pressure with the left fingers to transfer the top card from the right to the left (**backslip**).
+3. Insert that card into the middle of the right pack "so it's completely lost".
+4. Give that pack to the spectator to shuffle while you false shuffle the left pack.
+5. Reassemble the deck with your pack on top. The chosen card is now on top.
+
+## Ed Marlo Convincing Control (selection to bottom)
+
+1. Spread the cards for spectator to touch one.
+2. Lift the cards to show them the selected card.
+3. While returning spread to dealing position, outjog the card above the selection instead of the selection.
+4. Still during the movement, cull the selection with the right fingers to the bottom of the right pack and open it like a book.
+5. Close the deck so the selection is now on the bottom of the deck and there is a fake outjogged card.
+
+Video: https://www.youtube.com/watch?v=nHQZojNUsVs
+
+## Spread and break control (selection to top)
+
+1. Spread the cards to receive a card to be replaced.
+2. When closing the spread after the replacement, catch a break above the replaced card while the spread covers it.
+3. Square the deck and pivot it into an overhand lift shuffle, controlling packet **A** as usual.
+
+# False counts
+
+## Elmsley count
 
 Way of counting cards to make them appear more than the number they really are.
 
@@ -74,71 +117,67 @@ Way of counting cards to make them appear more than the number they really are.
 5. Slide off the top card with the left thumb while counting "two".
 6. Count off the remaining 3 cards normally without grabbing the previous one.
 
-### Glide
+
+# False deals
+
+## Glide
 
 While holding the deck facedown but with the left hand on top, use the ring finger to slide the facecard backwards so you can bottom deal the second to last (and so on).
 
-### Glimpse
+
+# Glimpses
 
 Peek at a card that should be hidden (typically the bottom one).
 
-#### Bottom glimpse: Deck hand-off
+## Bottom glimpse: Deck hand-off
 
 - Give the deck to a spectator to shuffle.
 - Often the spectator will shuffle in a way that you can see the bottom card.
 - Otherwise, extend the hand to grab it high (at eye level) and tilted so you can peek at the bottom card.
 
-#### Bottom glimpse: Point
+## Bottom glimpse: Point
 
 - Deal a few of the top cards to the right hand.
 - Point with the left index finger while turning the bottom card towards you and say something like "these cards are shuffled and in a random order".
 
-#### Top card glimpse
+## Top card glimpse
 
 - Turn the deck face up.
 - Deal some cards to the right hand, showing and saying that they are shuffled.
 - Use the left fingers to glimpse at the top card (the lowest in the left hand).
 
-### Double lift
+## Previous trick glimpse (any card)
 
-Lifting the top two cards while appearing to just be showing the top card.
+- Do a trick where you finish by spreading the deck (e.g. to show the only face down card) or dealing cards face up
+- During that reveal, take the opportunity to glimpse a card in any position of the deck
 
-Usually has two phases:
+# Key card
 
-1. The *get-ready*: usually catching a pinky break on the top two cards.
-2. The *turnover*: the actual turn of the top two cards.
+Uses a known/glimpsed card (cut to the top or bottom of the spectator card) to identify a free selection by the spectator.
 
-### Palm vanish
-
-1. Cup your hand over a card.
-2. Hold it with the palm, keeping the fingers close together so the card is not visible.
-3. Lift the hand, taking the hidden card with it.
-
-### Backpalm vanish
-
-1. Hold the card with the pinky and the index finger, like a spiderman move.
-2. Use the middle and ring finger to rotate the card, holding it with the other two fingers.
-3. Hide it by holding just a tiny bit with the fingers.
-
-Mask the sleight by moving your hand while you do it.
-
-Video: https://www.youtube.com/watch?v=QyqdJnXpvz0
-
-### Key card
-
-#### Key undercut
+## Key undercut
 
 1. Glimpse the bottom card.
 2. Cut the deck while instructing the spectator to replace the card on top.
 3. Last resort, but avoid: glimpse now the bottom card of the pack in the right hand by pointing to the left pack while saying the instruction to replace the card.
 4. Complete the cut, putting the key card on top of the chosen card.
 
-#### Sliding key card
+## Sliding key card
 
 1. Glimpse the bottom card.
 2. Fan out cards for free choice and free replacement.
 3. While spectator looks at card, slide the key card below onto the right hand.
 4. After replacement, grab right pack and key card with right hand and place on top of chosen card.
+
+
+# Forces
+
+### Cross-cut force
+
+1. Instruct the spectator to cut the deck anywhere.
+2. Finish the cut in a cross so it's noticeable where the deck was cut.
+3. Spend some time explaining the trick you will do afterwards.
+4. Instruct the spectator to turn over the top card of the bottom portion, reinforcing that it's the card they cut to (in fact, it isn't, it is the card that was initially on top of the deck).
 
 ### Backslip force
 
@@ -155,61 +194,45 @@ Dave Williamson addition:
 
 Video: https://youtu.be/Ar_c5kdHKew?t=680
 
-### Backslip control
-
-1. Open the deck bookwise so the spectator can replace their previously chosen card on top of the left pack.
-2. Backslip the card from the top right onto the top left.
-3. Insert that card into the middle of the right pack "so it's completely lost".
-4. Give that pack to the spectator to shuffle while you false shuffle the left pack.
-5. Reassemble the deck with your pack on top. The chosen card is now on top.
-
-### Overhand lift shuffle
-
-Maintains top stock without seeming that only half of the deck gets shuffled.
-
-1. Start the shuffle by dropping the top packet (**A**) onto the left hand.
-2. As you drop the next packet (**B**) on top of **A**, grab **A** again with the right ring finger and the inside of the right thumb.
-3. Keep shuffling as usual until only packet **A** remains in your right hand.
-4. Drop packet **A** on top of the rest.
-
 ### Lift shuffle force
 
 1. Start the Overhand lift shuffle and ask a spectator to tell you when to stop.
 2. When they yell stop, drop packet **A** on top of the deck.
 3. The previous top card is on top.
 
-## Ed Marlo Convincing Control (selection to bottom)
 
-1. Spread the cards for spectator to touch one.
-2. While returning spread to dealing position, outjog the card above the selection instead of the selection.
-3. Still during the movement, cull the selection with the right fingers and open it like a book.
-4. Close the deck so the selection is not on the bottom of the deck and there is a fake outjogged card.
+# Double lifts
 
-Video: https://www.youtube.com/watch?v=nHQZojNUsVs
+Lifting the top two cards while appearing to just be showing the top card.
 
-## Spread and break control
+Usually has two phases:
 
-1. Spread the cards to receive a card to be replaced.
-2. When closing the spread after the replacement, catch a break above the replaced card while the spread covers it.
-3. Square the deck and pivot it into an overhand lift shuffle, controlling packet **A** as usual.
-
-## Forces
-
-### Delayed cut force
-
-1. Instruct the spectator to cut the deck anywhere.
-2. Finish the cut in a cross so it's noticeable where the deck was cut.
-3. Spend some time explaining the trick you will do afterwards.
-4. Instruct the spectator to turn over the top card of the bottom portion, reinforcing that it's the card they cut to (in fact, it isn't, it is the card that was initially on top of the deck).
-
-### Backslip force (see the [shuffle section](#backslip-force))
-
-### Lift shuffle force (see the [shuffle section](#lift-shuffle-force))
+1. The *get-ready*: usually catching a pinky break on the top two cards.
+2. The *turnover*: the actual turn of the top two cards.
 
 
-## Flourishes
+# Vanishes
 
-### Springing the cards
+## Palm vanish
+
+1. Cup your hand over a card.
+2. Hold it with the palm, keeping the fingers close together so the card is not visible.
+3. Lift the hand, taking the hidden card with it.
+
+## Backpalm vanish
+
+1. Hold the card with the pinky and the index finger, like a spiderman move.
+2. Use the middle and ring finger to rotate the card, holding it with the other two fingers.
+3. Hide it by holding just a tiny bit with the fingers.
+
+Mask the sleight by moving your hand while you do it.
+
+Video: https://www.youtube.com/watch?v=QyqdJnXpvz0
+
+
+# Flourishes
+
+## Springing the cards
 
 1. Square the deck.
 2. Hold the deck in the right hand, with the thumb on the bottom left corner and the middle finger on the top right corner.
@@ -222,7 +245,9 @@ Video: https://www.youtube.com/watch?v=nHQZojNUsVs
 Video: https://www.youtube.com/watch?v=U-GvSSBLVhg
 
 
-## Practice routine
+# Practice routines
+
+## First practice routine
 
 1. Overhand shuffle
 2. Double lift
@@ -297,7 +322,7 @@ Video: https://www.youtube.com/watch?v=F8pePRJs4wo
 
 ## Truth Detector (inspired by Lie Detector of Card College Light)
 
-1. Force a card, e.g.: Glimpse the top card by spreading the deck with the "deck is shuffled line" and use a delayed cut to force the top card.
+1. Force a card, e.g.: Glimpse the top card by spreading the deck with the "deck is shuffled line" and use a cross-cut to force the top card.
 2. Explain that the voice betrays the sincerity of a person, and by hearing alone you can detect whether someone is lying. Thus you want to conduct an experiment to detect when they are truthful.
 3. The spectator is to select another 4 cards and hold them alongside their card.
 4. You turn your back to the spectator.
@@ -308,7 +333,7 @@ Video: https://www.youtube.com/watch?v=F8pePRJs4wo
 
 | Trick        | Explanation                               | Difficulty (1-5) |
 | ------------ | ----------------------------------------- | ---------------- |
-| Biddle trick | [Alex Pandrea](https://www.youtube.com/watch?v=cTPG1HsvQ2E) [Sean Devine](https://www.youtube.com/watch?v=F8pePRJs4wo) | 2 |
+| Biddle trick | [Alex Pandrea](https://www.youtube.com/watch?v=cTPG1HsvQ2E), [Sean Devine](https://www.youtube.com/watch?v=F8pePRJs4wo) | 2 |
 | Chameleon Sandwich | [Doug Conn](https://www.youtube.com/watch?v=JDK0sq_4A4M) | 3 |
 | [Coincidencia Total by Juan Tamariz](https://www.youtube.com/watch?v=3N1In1-QtNY) | [Magicurzay](https://www.youtube.com/watch?v=YTK9BPG-9IY) | 4 |
 
