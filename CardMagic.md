@@ -77,6 +77,20 @@ Cut the deck in two packs, riffle the two packs together so they interlace.
 - To retain the bottom cards during a riffle shuffle, make sure you start with the hand that has the bottom half of the deck.
 - A good subtlety as convincer that the deck is shuffled: cut the deck to the left and retain top by finishing the left, then repeat by cutting the top portion to the right and retaining it (this will appear as if you don't always finish with the same side).
 
+## Cut And Turn Over (CATO)
+
+Discovered by Bob Hummer, it's a method of retaining face up and face down cards seamlessly.
+
+1. Choose the portion of the deck you want to be face up.
+2. Give the other pack to the spectator.
+3. Both of you shuffle your pack.
+4. Both of you cut a portion of your pack, turn it face-up and give it to the other.
+5. Both of you take the other's face-up portion and shuffle it into your face-down portion.
+6. Remark how this chaotic shuffle not only mixes the order of the cards but also whether they are face up or face down.
+6. Repeat as many times as wanted. If at any point the spectator rotates their pack, make sure to rotate yours as well.
+7. In your last shuffle, subtly rotate your pack (easy to do after an Overhand Shuffle, just let the cards in the left hand fall back instead of forward).
+7. Receive the spectator's portion 
+
 
 # Controls
 
@@ -283,20 +297,35 @@ Video: https://www.youtube.com/watch?v=LsPap-P06jI
 Video: https://www.youtube.com/watch?v=jzjhcfVvWRA
 
 
-## Decisions
+## Back to the Future
+
+Based on Back to The Future (Roberto Giobbi - Card College Light, based on a trick by Al Leech) and [Decisions by MLT Magic Tricks](https://www.youtube.com/watch?v=hXrmygSTowo).
 
 1. Ask the spectator to shuffle.
-2. Look at the cards. Check the value of the first card and suit of the second and take out a "prediction card" facedown on the table that is the combination of the two. If impossible, change the first cards to make it possible (e.g. by hesitating on a prediction or asking for more shuffling).
-3. Shuffle retaining top two.
-4. Ask spectator to deal some cards from the top and stop when they want (between 10 and 20 or so).
-5. Ask them to deal from that pile into two different piles (alternating).
-6. Ask them to take one pile and deal some cards from it.
-7. Reverse it by counting it.
-8. Deal the same number of cards from the other pile on top of the previous.
-9. Eliminate pairs of cards from the edges of the pile. You can spread them and take from one edge while the spectator takes from the other.
-10. The two center cards determine the number and suit of the prediction.
+2. Say that sometimes predictions are not supernatural powers. Sometimes they are just visions from the future. One needs only to transport themselves into the future, see the result of our present actions and come back with that knowledge. Close your eyes for a moment. Open them a few seconds later and say that you have seen exactly the outcome of the next few minutes.
+3. Say that you will thus make a prediction using a card in the deck.
+4. Look at the cards. Check the value of the first card and suit of the second (or vice versa) and take out a "prediction card" facedown on the table that is the combination of the two. If impossible, change the first cards to make it possible (e.g. by hesitating on a prediction or asking for more shuffling).
+5. (Optional) Shuffle retaining top two.
+6. Ask spectator to deal some cards from the top and stop when they want (between 10 and 20 or so).
+7. (Optional) After they have dealt at least 2 cards, say "of course you can deal from the middle or from the bottom as well if you want. Or even shuffle again.".
+8. Ask them to deal from that pile into two different piles (alternating). The "selected" cards are now on top of each pile.
+9. Ask them to take one pile and deal some cards from it.
+10. Reverse it by counting it and saying that we will need the same number of cards from the second pile.
+11. Deal the same number of cards from the other pile on top of the previous.
+12. Eliminate pairs of cards from the edges of the pile. You can spread them and take from one edge while the spectator takes from the other.
+13. Remind the spectator that they shuffled, they dealt, they chose how many cards to deal each time. And yet...
+14. The two center cards determine the number and suit of the prediction.
 
-Video: https://www.youtube.com/watch?v=hXrmygSTowo
+
+## Manto
+
+By Richard Vollmer, read in Roberto Giobbi - Card College Light.
+
+1. (Setup or peek the first 21 cards of the deck, counting how many red/black.)
+2. Write a prediction that says: "There are 21 cards face up. X Are red. Y are black."
+3. Use the [Cut And Turn Over](#cut-and-turn-over-cato) principle to apparently shuffle the order and orientation of the cards.
+4. Summarize that the deck was shuffled not only by you but also your spectator, with complete freedom to cut and turn over cards. Nevertheless...
+5. Reveal the correct prediction and spread the deck, counting the cards and how many are red/black.
 
 ## Biddle trick
 
@@ -335,7 +364,7 @@ Video: https://www.youtube.com/watch?v=F8pePRJs4wo
 | ------------ | ----------------------------------------- | ---------------- |
 | Biddle trick | [Alex Pandrea](https://www.youtube.com/watch?v=cTPG1HsvQ2E), [Sean Devine](https://www.youtube.com/watch?v=F8pePRJs4wo) | 2 |
 | Chameleon Sandwich | [Doug Conn](https://www.youtube.com/watch?v=JDK0sq_4A4M) | 3 |
-| [Coincidencia Total by Juan Tamariz](https://www.youtube.com/watch?v=3N1In1-QtNY) | [Magicurzay](https://www.youtube.com/watch?v=YTK9BPG-9IY) | 4 |
+| [Coincidencia Total by Juan Tamariz](https://www.youtube.com/watch?v=3N1In1-QtNY) | [Magicurzay](https://www.youtube.com/watch?v=YTK9BPG-9IY) | 4 | 
 
 Also see: https://www.conjuringarchive.com/
 
