@@ -5,7 +5,7 @@
 1. The _patter_, story and personality of each performance is what makes it enjoyable and memorable.
 2. Never announce your intention until all preliminary actions which make it possible are completed.
 3. Never repeat a trick without replicating it by a different method.
-4. Think of the sleights as your safety net in case the misdirection goes wrong.
+4. Think of the sleights as *your safety net in case the misdirection goes wrong*.
 
 
 # Important terms
@@ -14,6 +14,7 @@
 - **Injog**: While running cards, move the right hand closer to the body so the drawn card is shifted towards you.
 - **Outjog**: Same as injog, but the card protrudes away from you.
 - **Pinky break**: Hold the left pinky between top and bottom packets to keep the position and later do a sleight (like a cut, etc).. You should then square the deck and switch the pinky break from being between packets to just pressed against the gap.
+- **Biddle grip**: Hold the deck with the hand above it, thumb to one side and fingers to the other.
 
 
 # Shuffles
@@ -91,6 +92,33 @@ Discovered by Bob Hummer, it's a method of retaining face up and face down cards
 7. In your last shuffle, subtly rotate your pack (easy to do after an Overhand Shuffle, just let the cards in the left hand fall back instead of forward).
 7. Receive the spectator's portion 
 
+# False cuts
+
+## Simple false cut ?
+
+1. Grab the bottom portion of the deck with the right hand, lifting it as it clears the top portion.
+2. (Optional: Square the packet by tapping it's inner bottom edge on top of the other packet).
+2. Place the cut packet on the table.
+3. Place the other packet on top. When done at speed it gives the illusion of a cut.
+
+## False kick cut
+
+1. Hold the deck in the right hand, thumb in the bottom inner edge and ring finger in the top right corner.
+2. Kick cut the top half of the deck from your right hand to your left (use your index finger to throw the top third onto your left hand. Also known as swing cut).
+3. Rotate your left hand to hold the top half vertically.
+4. Tap the right half on the left half, perpendicularly.
+5. Drop the right half on the table.
+6. Drop the left half on top.
+
+## False triple cut
+
+1. Hold the deck in the right hand, thumb in the bottom inner edge and ring finger in the top right corner.
+2. Kick cut the top third packet from your right hand to your left (use your index finger to throw the top third onto your left hand. Also known as swing cut).
+3. Grab a pinky break above the packet in the left hand.
+4. Kick cut the middle third onto the pinky break.
+5. Drop the right third on the table.
+6. Place the top packet of the right hand on top of the packet on the table.
+7. Place the final packet on top.
 
 # Controls
 
@@ -136,7 +164,19 @@ Way of counting cards to make them appear more than the number they really are.
 
 ## Glide
 
-While holding the deck facedown but with the left hand on top, use the ring finger to slide the facecard backwards so you can bottom deal the second to last (and so on).
+While holding the deck facedown but with the left hand on top (close to Biddle grip), use the ring finger to slide the facecard backwards so you can bottom deal the second to last (and so on).
+
+## Down under deal
+
+With a packet in hand, alternating dealing a card to the table and moving one to the bottom, it masks that the single remaining card is predetermined.
+
+| Number of cards | Resulting card (from top) | Resulting card (from bottom) |
+| --------------- | ------------------------- | ---------------------------- |
+| 8               | 1                         | 8                            |
+| 7               | 2                         | 6                            |
+| 6               | 3                         | 4                            |
+| 5               | 4                         | 2                            |
+| 4               | 1                         | 4                            |
 
 
 # Glimpses
@@ -186,7 +226,7 @@ Uses a known/glimpsed card (cut to the top or bottom of the spectator card) to i
 
 # Forces
 
-### Cross-cut force
+### Cross-cut force (Crisscross cut force)
 
 1. Instruct the spectator to cut the deck anywhere.
 2. Finish the cut in a cross so it's noticeable where the deck was cut.
@@ -207,6 +247,13 @@ Dave Williamson addition:
 3. While moving the thumb over the cards they could have picked, transfer the card to the left using the left fingers.
 
 Video: https://youtu.be/Ar_c5kdHKew?t=680
+
+### Swing cut force
+
+1. Riffle through the deck until spectator calls stop.
+2. Start a swing cut on the stopped portion.
+3. After tapping both portions of the deck, use your right forefinger to outjog the top card of the left portion (previous top card).
+4. Place the right packet on top.
 
 ### Lift shuffle force
 
@@ -358,6 +405,67 @@ Video: https://www.youtube.com/watch?v=F8pePRJs4wo
 5. The spectator names every card they're holding saying "My card is the &lt;name of the card&gt;".
 6. After some theatrics you identify their card saying that their voice was more solid when they said that name.
 
+## Mr. King's Tapestry
+
+Story: "Mr. King, a great lover of art, bought a rare tapestry. It had beautiful patterns, looked a little something like this":
+
+Take out the 4 Kings, Queens, Jacks and Tens and make a grid with them, face up (R = Random, K = King):
+
+```
+R R K K
+R R R R
+K R R K
+R R R R
+```
+
+"Mr. King knew the value of the tapestry, so he asked his initial to be woven into it."
+
+Flip some cards face down in a shape of a K, facing your spectators.
+
+
+```
+D U U D
+U D U D
+U U D D
+U D U D
+```
+
+"Unfortunately, Mr. King was right to mark it, as it got stolen a few days later. A few suspicious figures broke into Mr. King's home and rolled the tapestry up."
+
+Instruct the spectator to "roll" (flip) any edge on top of the inner row/column, until only a pile remains. This will put the CATO principle into action.
+
+"The thieves sold the tapestry to an antique dealer. One day Mr. King passed by the shop and instantly recognized it. The shop owner asked for proof, of course, and Mr. King was happy to oblige: he rolled the tapestry and four hidden motifs emerged."
+
+Spread the deck, reveal that only 4 cards are face down: they are the Kings!
+
+This trick works with any combination of cards and patterns. To create one yourself, copy the following alternating (CATO) pattern:
+
+```
+D U D U
+U D U D
+D U D U
+U D U D
+```
+
+Given this original pattern, consider that every position with a card that you want to reveal in the end needs to be flipped. Notice how in the original trick the Kings are placed and flip the 3rd, 4th, 9th and 12th positions.
+
+
+## Fully Automatic Aces (Card College Lighter)
+
+1. Setup: Ace of Spades, Red Ace, &lt;deck&gt;, Red Ace, Ace of Clubs.
+2. Say you will show many different ways to manipulate the deck.
+3. False cut / False shuffle.
+4. Reveal the top Ace by turning it over.
+5. Say that this was evidently sleight of hand, but in this day and age we don't have time for manipulations.
+6. Press the top and bottom cards and throw the rest of the deck onto the left hand.
+7. The bottom Ace should remain face down in the right hand. Reveal it.
+8. Drop the Aces onto the table and hold the deck in dealing position.
+9. Deal cards until a spectator calls stop. Reinforce that they could have stopped anywhere.
+10. Drop one black Ace on top of the pile you dealt and drop the rest of the deck on it.
+11. Repeat the process.
+12. Ribbon spread the deck, say you used the spectator and the Aces to find the other Aces!
+13. Use the black Aces to turn over the cards on top of them: it's the red Aces!
+
 # Trick database
 
 | Trick        | Explanation                               | Difficulty (1-5) |
@@ -369,3 +477,10 @@ Video: https://www.youtube.com/watch?v=F8pePRJs4wo
 Also see: https://www.conjuringarchive.com/
 
 
+# Routine tips
+
+- Keep the routines short (3 tricks, 15 minutes altogether)
+
+# Funny lines
+
+- "May I ask you to help me? You'll get 50% of course. 50% of the applause!" (Roberto Giobbi)
