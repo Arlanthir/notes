@@ -6,6 +6,7 @@
 2. Never announce your intention until all preliminary actions which make it possible are completed.
 3. Never repeat a trick without replicating it by a different method.
 4. Think of the sleights as *your safety net in case the misdirection goes wrong*.
+5. Don't run when you're not being chased: don't overjustify regular things that the audience has not reason to suspect (yet).
 
 
 # Important terms
@@ -15,6 +16,8 @@
 - **Outjog**: Same as injog, but the card protrudes away from you.
 - **Pinky break**: Hold the left pinky between top and bottom packets to keep the position and later do a sleight (like a cut, etc).. You should then square the deck and switch the pinky break from being between packets to just pressed against the gap.
 - **Biddle grip**: Hold the deck with the hand above it, thumb to one side and fingers to the other.
+- **Onbeat**: During the performance of a trick, while the audience is invested and with full attention.
+- **Offbeat**: While the audience thinks the trick is finished, and the attention dwindles.
 
 
 # Shuffles
@@ -78,6 +81,12 @@ Cut the deck in two packs, riffle the two packs together so they interlace.
 - To retain the bottom cards during a riffle shuffle, make sure you start with the hand that has the bottom half of the deck.
 - A good subtlety as convincer that the deck is shuffled: cut the deck to the left and retain top by finishing the left, then repeat by cutting the top portion to the right and retaining it (this will appear as if you don't always finish with the same side).
 
+## Hindu shuffle
+
+1. Hold deck with your right hand on top, fingers grasping the the sides of the deck.
+2. With your left thumb and fingers, take packets from the top.
+3. Drop each packet on top of any packets on the left palm.
+
 ## Cut And Turn Over (CATO)
 
 Discovered by Bob Hummer, it's a method of retaining face up and face down cards seamlessly.
@@ -110,7 +119,15 @@ Discovered by Bob Hummer, it's a method of retaining face up and face down cards
 5. Drop the right half on the table.
 6. Drop the left half on top.
 
-## False triple cut
+## False triple cut on table:
+
+1. Cut the top portion to the table
+2. Cut a middle portion to the table.
+3. Put the bottom of the deck on the table.
+4. Pick up the first portion, put on top of the second.
+5. Pick everything up, put on top of the last.
+
+## False triple cut on hand
 
 1. Hold the deck in the right hand, thumb in the bottom inner edge and ring finger in the top right corner.
 2. Kick cut the top third packet from your right hand to your left (use your index finger to throw the top third onto your left hand. Also known as swing cut).
@@ -233,6 +250,13 @@ Uses a known/glimpsed card (cut to the top or bottom of the spectator card) to i
 3. Spend some time explaining the trick you will do afterwards.
 4. Instruct the spectator to turn over the top card of the bottom portion, reinforcing that it's the card they cut to (in fact, it isn't, it is the card that was initially on top of the deck).
 
+### Hindu force (bottom card)
+
+1. Start a Hindu shuffle.
+2. When spectator calls stop, show them the bottom card of the right hand.
+
+[Video](https://www.youtube.com/watch?v=eg5OHLu8Nys)
+
 ### Backslip force
 
 1. Hold the deck in the left hand, face to the palm.
@@ -261,6 +285,16 @@ Video: https://youtu.be/Ar_c5kdHKew?t=680
 2. When they yell stop, drop packet **A** on top of the deck.
 3. The previous top card is on top.
 
+# Color changes
+
+Apparently transforming one card in another.
+
+## Shake color change
+
+1. Pick two cards back-to-back with thumb and middle finger on opposite corners.
+2. While shaking, use the ring finger and/or index finger to rotate the cards together.
+3. Place the two cards on top of deck.
+4. Pick up only the top one to hand out for examination.
 
 # Double lifts
 
@@ -480,6 +514,47 @@ Also see: https://www.conjuringarchive.com/
 # Routine tips
 
 - Keep the routines short (3 tricks, 15 minutes altogether)
+
+# Gimmicks
+
+## Invisible Deck
+
+The Invisible Deck is a gimmicked deck where the card backs are treated with roughing fluid so they stick together. Half of the deck is therefore facing up (e.g. odd cards plus red Kings) and the other is facing down (e.g. even cards with black Kings).
+
+The usual routine with the invisible deck is:
+
+1. Ask the spectator to imagine he takes an invisible deck.
+2. They take the deck out of the box, spread the cards and choose any one.
+3. They turn that card face down.
+4. They put the deck inside the imagined box and give it/throw it to you.
+5. You open the Invisible Deck, spread it and find the pair of the selected card, separate it and show a face-down card.
+6. The face-down card is the selected card.
+
+Pairing of the cards:
+- All odd cards are facing the same way.
+- All even cards are facing the same way.
+- Spades are paired with Hearts.
+- Clubs are paired with Diamonds.
+- Each pair sums 13 (Ace = 1, Jack = 11, Queen = 12).
+- Kings are paired together.
+- Red Kings are on the odd side.
+- Black Kings are on the even side.
+
+Mnemonic for the position of the deck in the box:
+- Odd side facing the Ace on the box
+- Even side facing the 2 rider drawings (or the 10 of hearts).
+
+Handling tips:
+- Press hard when spreading the deck.
+- Grab the selected card with the left fingers while spreading its pair with the right thumb.
+- To instantly reset, don’t square the deck while showing selection, hold it on one hand while the other shows the selection and returns it in its original position.
+- Simplified Craig Petty handling:
+  1. Open the deck pair-side up.
+  2. Lift selected side towards you.
+  3. Just search for the selected card, separate it and outjog it to show its back.
+- To break the deck in:
+  1. Dribble the cards a few times.
+  2. Rub each pair against each other.
 
 # Funny lines
 
