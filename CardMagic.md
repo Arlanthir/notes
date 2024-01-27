@@ -380,7 +380,7 @@ Video: https://www.youtube.com/watch?v=jzjhcfVvWRA
 
 ## Back to the Future
 
-Based on Back to The Future (Roberto Giobbi - Card College Light, based on a trick by Al Leech) and [Decisions by MLT Magic Tricks](https://www.youtube.com/watch?v=hXrmygSTowo).
+Based on Back to The Future (Roberto Giobbi - Card College Light, based on *The spectator does a trick* by Al Leech) and [Decisions by MLT Magic Tricks](https://www.youtube.com/watch?v=hXrmygSTowo).
 
 1. Ask the spectator to shuffle.
 2. Say that sometimes predictions are not supernatural powers. Sometimes they are just visions from the future. One needs only to transport themselves into the future, see the result of our present actions and come back with that knowledge. Close your eyes for a moment. Open them a few seconds later and say that you have seen exactly the outcome of the next few minutes.
@@ -555,6 +555,21 @@ Handling tips:
 - To break the deck in:
   1. Dribble the cards a few times.
   2. Rub each pair against each other.
+
+### Routines with the Invisible Deck
+
+Idea: Join elements from Craig Petty's Across with the presentation of "Back to the Future" by Pit Hartling (Flicking Fingers DVD & Linking Ring Parade Oct. 2019)
+
+1. Announce you will invert time and do a trick in reverse.
+2. You choose a card from the deck and announce "this is your card!", but you reveal it to have no face.
+3. "The card has no face yet because you haven't selected it from the deck yet!"
+4. Switch it with a forced regular card and place it face down to the side.
+5. Force a duplicate with the Invisible Deck.
+6. The spectator peeks at the card, puts it face down in the deck.
+7. You spread the deck showing the card is gone.
+8. The "prediction"/"found" card now has a face. It is the selected card!
+
+Confirm: https://www.youtube.com/watch?v=GfLpHBe3QV4 https://www.youtube.com/watch?v=FFqQram8oVw
 
 # Funny lines
 
