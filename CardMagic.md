@@ -558,7 +558,7 @@ Handling tips:
 
 ### Routines with the Invisible Deck
 
-Idea: Join elements from Craig Petty's Across with the presentation of "Back to the Future" by Pit Hartling (Flicking Fingers DVD & Linking Ring Parade Oct. 2019)
+Idea: Join elements from Craig Petty's Across with the presentation of ["Back to the Future" by Pit Hartling](https://www.youtube.com/watch?v=GfLpHBe3QV4).
 
 1. Announce you will invert time and do a trick in reverse.
 2. You choose a card from the deck and announce "this is your card!", but you reveal it to have no face.
@@ -569,7 +569,7 @@ Idea: Join elements from Craig Petty's Across with the presentation of "Back to 
 7. You spread the deck showing the card is gone.
 8. The "prediction"/"found" card now has a face. It is the selected card!
 
-Confirm: https://www.youtube.com/watch?v=GfLpHBe3QV4 https://www.youtube.com/watch?v=FFqQram8oVw
+Confirm: 
 
 # Funny lines
 
