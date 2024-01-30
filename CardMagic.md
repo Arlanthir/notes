@@ -167,15 +167,25 @@ Video: https://www.youtube.com/watch?v=nHQZojNUsVs
 
 ## Elmsley count
 
-Way of counting cards to make them appear more than the number they really are.
+Way of counting cards to make them appear more than the number they really are, or hide face-up cards while counting.
 
-1. Take (e.g.) 4 cards in the left hand.
-2. Push the top card with the thumb, grab the bottom 3 with the right hand, while counting "one".
+To count 1 more card:
+
+1. Take (e.g.) 4 cards in the right hand, holding them by pinching the inner right corner.
+2. Pull the top card with the left thumb, grab the bottom 3 with the right hand, while counting "one".
 3. Take the 3 cards and slide them on top of the left one.
 4. Grab the previously drawn card with the right fingers to the bottom of the pack.
 5. Slide off the top card with the left thumb while counting "two".
 6. Count off the remaining 3 cards normally without grabbing the previous one.
 
+To hide the cards between the top 2 and the bottom one:
+
+1. Take (e.g.) 4 cards in the right hand, holding them by pinching the inner right corner.
+2. Pull the top card with the left thumb, grab the others with the right hand, while counting "one".
+3. Push off all cards except the bottom with the right thumb.
+4. Grab the bottom left card with the right fingers to below the kept card (not pushed off).
+5. Slide the pushed-off cards to the left hand while counting "two".
+6. Count off the remaining cards normally without grabbing the previous ones.
 
 # False deals
 
@@ -412,14 +422,15 @@ By Richard Vollmer, read in Roberto Giobbi - Card College Light.
 
 1. Force a card or use a key card.
 2. Spread the deck and choose 5 cards where the second is the chosen card.
-3. Place the cards on top of the deck and hold only the top portion.
+3. Place the cards on top of the deck and hold only the top half of the deck (including those cards) in Biddle grip.
 4. Show each card one by one, moving them to the left hand.
 5. The spectator should reply mentally to each one whether that's their card.
-6. On the third, grab the second back to the bottom of the pack, similar to Elmsley count.
-7. Place the top portion back on the deck.
-8. Elmsley count the 4 cards as 5 (facedown).
-9. Tell them to hold on to the 5 cards.
-10. Their card is still inside the deck, faceup.
+6. Before moving the second card to the left hand, prepare a pinky break.
+7. When moving the third card to the left hand, steal the second card to the bottom of the pack, using your right fingers.
+8. Place the top half back on the deck.
+9. Elmsley count the 4 cards as 5 (facedown).
+10. Tell them to hold on to the 5 cards.
+11. Their card is still inside the deck, faceup.
 
 Video: https://www.youtube.com/watch?v=cTPG1HsvQ2E
 
