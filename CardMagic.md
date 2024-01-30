@@ -165,6 +165,16 @@ Video: https://www.youtube.com/watch?v=nHQZojNUsVs
 
 # False counts
 
+## Biddle count
+
+Way of counting cards to make them appear more than the number they really are.
+
+1. Hold the cards in Biddle grip, in the right hand.
+2. Slide the first card to the left hand while counting "one".
+3. Before moving the second card to the left hand, prepare a pinky break.
+4. While moving the third card to the left hand, steal the second card to the bottom of the pack, using your right fingers.
+5. Cound the remaining cards normally.
+
 ## Elmsley count
 
 Way of counting cards to make them appear more than the number they really are, or hide face-up cards while counting.
@@ -428,7 +438,7 @@ By Richard Vollmer, read in Roberto Giobbi - Card College Light.
 6. Before moving the second card to the left hand, prepare a pinky break.
 7. When moving the third card to the left hand, steal the second card to the bottom of the pack, using your right fingers.
 8. Place the top half back on the deck.
-9. Elmsley count the 4 cards as 5 (facedown).
+9. Biddle count or Elmsley count the 4 cards as 5 (facedown).
 10. Tell them to hold on to the 5 cards.
 11. Their card is still inside the deck, faceup.
 
