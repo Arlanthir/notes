@@ -87,6 +87,18 @@ Cut the deck in two packs, riffle the two packs together so they interlace.
 2. With your left thumb and fingers, take packets from the top.
 3. Drop each packet on top of any packets on the left palm.
 
+# False shuffles
+
+## Charlier shuffle
+
+Has the effect of a simple cut.
+
+1. Hold the packet in the left hand in dealing position.
+2. Push a block of cards from the top to your right hand.
+3. Push a block of cards from the bottom of the left packet to the top of the right one.
+4. Push a block of cards from the top of the left packet to the bottom of the right one.
+5. Repeat steps 3 and 4 until you run out of cards.
+
 ## Cut And Turn Over (CATO)
 
 Discovered by Bob Hummer, it's a method of retaining face up and face down cards seamlessly.
@@ -99,7 +111,7 @@ Discovered by Bob Hummer, it's a method of retaining face up and face down cards
 6. Remark how this chaotic shuffle not only mixes the order of the cards but also whether they are face up or face down.
 6. Repeat as many times as wanted. If at any point the spectator rotates their pack, make sure to rotate yours as well.
 7. In your last shuffle, subtly rotate your pack (easy to do after an Overhand Shuffle, just let the cards in the left hand fall back instead of forward).
-7. Receive the spectator's portion 
+7. Receive the spectator's portion.
 
 # False cuts
 
@@ -207,14 +219,15 @@ While holding the deck facedown but with the left hand on top (close to Biddle g
 
 With a packet in hand, alternating dealing a card to the table and moving one to the bottom, it masks that the single remaining card is predetermined.
 
-| Number of cards | Resulting card (from top) | Resulting card (from bottom) |
-| --------------- | ------------------------- | ---------------------------- |
-| 8               | 1                         | 8                            |
-| 7               | 2                         | 6                            |
-| 6               | 3                         | 4                            |
-| 5               | 4                         | 2                            |
-| 4               | 1                         | 4                            |
+| Number of cards | Resulting card (from bottom) | Resulting card (from top) |
+| --------------- | ---------------------------- | ---------------------------- |
+| 8               | 1                            | 8                            |
+| 7               | 2                            | 6                            |
+| 6               | 3                            | 4                            |
+| 5               | 4                            | 2                            |
+| 4               | 1                            | 4                            |
 
+This means that if we have 4-8 cards and we want to end up with the bottom card, we can make the necessary modifications before the down-under deal by transfering 8 cards from the top to the bottom (one at a time or in groups).
 
 # Glimpses
 
@@ -359,6 +372,24 @@ Video: https://www.youtube.com/watch?v=QyqdJnXpvz0
 
 Video: https://www.youtube.com/watch?v=U-GvSSBLVhg
 
+# Other principles
+
+## Multiple outs / I make the rules
+
+Because the magician does not reveal what will happen next, they can change their actions along the way. For instance, if a selected card is 4th from the top, a selected number of 3 or 4 can find it:
+- If the chosen number is 3, the magician can say "the next card is your card!".
+- If the chosen number is 4, the magician can say "the last card dealt is your card!".
+
+# Stacks
+
+## Si Stebbins
+
+- Very little memorization.
+- Colors alternate.
+
+Order:
+- Values increment by 3: A-4-7-10-K-3-6-9-Q-2-5-8-J (top to face).
+- Suits alternate clubs-hearts-spades-diamonds (**CH**a**S**e**D**).
 
 # Practice routines
 
@@ -521,6 +552,8 @@ Given this original pattern, consider that every position with a card that you w
 12. Ribbon spread the deck, say you used the spectator and the Aces to find the other Aces!
 13. Use the black Aces to turn over the cards on top of them: it's the red Aces!
 
+If the audience is on the other side of the table, ribbon spread the deck from the right to the left, in order to position the face-up cards left of the cards to be revealed (in the audience's perspective). This will reinforce that the reveals are "after" (to the right) the key cards.
+
 # Trick database
 
 | Trick        | Explanation                               | Difficulty (1-5) |
@@ -531,10 +564,6 @@ Given this original pattern, consider that every position with a card that you w
 
 Also see: https://www.conjuringarchive.com/
 
-
-# Routine tips
-
-- Keep the routines short (3 tricks, 15 minutes altogether)
 
 # Gimmicks
 
@@ -590,8 +619,9 @@ Idea: Join elements from Craig Petty's Across with the presentation of ["Back to
 7. You spread the deck showing the card is gone.
 8. The "prediction"/"found" card now has a face. It is the selected card!
 
-Confirm: 
 
-# Funny lines
+# Presentation ideas
 
+- Keep the routines short (3 tricks, 15 minutes altogether)
 - "May I ask you to help me? You'll get 50% of course. 50% of the applause!" (Roberto Giobbi)
+- For tricks with a small number of cards, consider replacing the cards with pieces of cardboard with other texts (names, emotions, etc). (Roberto Giobbi)
