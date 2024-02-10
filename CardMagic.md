@@ -323,10 +323,11 @@ Video: https://youtu.be/Ar_c5kdHKew?t=680
 
 Forces 9th card from the top. Transforms a number choice into a card force.
 
-1. Ask the spectator to name a number between 10 and 20.
+1. Ask the spectator to name a number **_between_** 10 and 20 (therefore excluding 10 and 20).
 2. Deal that many cards off the deck (reversing them).
-3. Add the two digits of the spectator's number
+3. Add the two digits of the spectator's number.
 4. Deal that many cards from the previously dealt pile.
+   - Alternatively: If someone names, e.g., "17," mention that the number consists of a "1" (deal 1 card) and a "7" (deal 7 cards).
 5. The final dealt card is the one that was originally in the 9th position from the top of the deck.
 
 # Color changes
