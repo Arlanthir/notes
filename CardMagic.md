@@ -80,6 +80,7 @@ Cut the deck in two packs, riffle the two packs together so they interlace.
 - To retain the top cards during a riffle shuffle, make sure the hand with the top half of the deck finishes last.
 - To retain the bottom cards during a riffle shuffle, make sure you start with the hand that has the bottom half of the deck.
 - A good subtlety as convincer that the deck is shuffled: cut the deck to the left and retain top by finishing the left, then repeat by cutting the top portion to the right and retaining it (this will appear as if you don't always finish with the same side).
+- Another good subtlety is to stare at the deck while squaring and preparing to cut, but stare at the spectators and say something while splitting the piles. They will instinctively meet your eyes and miss the separation of the piles.
 
 ## Hindu shuffle
 
@@ -318,6 +319,16 @@ Video: https://youtu.be/Ar_c5kdHKew?t=680
 2. When they yell stop, drop packet **A** on top of the deck.
 3. The previous top card is on top.
 
+### 10-20 force
+
+Forces 9th card from the top. Transforms a number choice into a card force.
+
+1. Ask the spectator to name a number between 10 and 20.
+2. Deal that many cards off the deck (reversing them).
+3. Add the two digits of the spectator's number
+4. Deal that many cards from the previously dealt pile.
+5. The final dealt card is the one that was originally in the 9th position from the top of the deck.
+
 # Color changes
 
 Apparently transforming one card in another.
@@ -357,6 +368,15 @@ Mask the sleight by moving your hand while you do it.
 
 Video: https://www.youtube.com/watch?v=QyqdJnXpvz0
 
+# Stacking the top during performance
+
+## Culling short stacks
+
+1. While searching for a known selected card, take a few other cards from the deck along with it.
+2. Hesitate on the choice, looking at your spectator and deciding if "they are the type who would choose this card".
+3. Eventually decide on the selected card, putting the rest on top of the deck.
+
+With some practice, depending on the state of the deck, this maneuver can be used to set the deck in alternating red-black, or at least a good portion of it.
 
 # Flourishes
 
@@ -476,6 +496,28 @@ By Richard Vollmer, read in Roberto Giobbi - Card College Light.
 13. Reveal the face-down piles and show that your black cards are underneath the spectator's black cards, and the same for red.
 14. The coordination/synchronization was a success!
 
+# Numerology (Card College Lightest)
+
+(Interesting trick to deal a lot of cards face up and stack or memorize cards for other tricks)
+
+1. Have the spectator shuffle the deck.
+2. Have the spectator cut about a quarter of the deck (must &le; 19 cards)
+3. Ask them to count the cards they have selected, in secret, and store them away.
+4. Deal cards from the rest of the deck, face up.
+5. The spectator should remember which card landed in the position of their number.
+6. Stop at 19th card.
+7. Ask "I assume you must have seen your card, yes?".
+8. Put the rest of the deck on top.
+9. Seen card is 33th (`52 - 19`) from the top (because it's `19 - x` from the bottom and there are `x` cards missing on top).
+10. Spectator should repeat 3 times:
+    1. Draw a card from the deck face-up into a pile while counting "10".
+    2. Draw another on top counting "9".
+    3. Repeat until they reach "1".
+    4. If any card matches the number they are saying, stop, leaving that card on top. Aces count as 1, court cards can count as 10.
+    5. Otherwise, on "0", take the top card from the deck and leave it face-down on top of the pile.
+11. Sum the values of the cards in the piles (face-down cards are 0). The spectator's card is at that position in the remainder of the deck!
+
+
 ## Man seeks woman
 
 This trick uses the Ramasee principle, where you reverse one of the piles and loop any of the piles until they match.
@@ -486,49 +528,17 @@ This trick uses the Ramasee principle, where you reverse one of the piles and lo
 4. Cut and/or Charlier shuffle. Optionally, Charlier shuffle face up.
 5. Deal the top four cards to your left (reversing their order).
 6. Show the remaining 4 cards and place them face down on the right.
-7. Have the spectator slide a card from the top of either packet to its bottom, 3 times (like typing "man"), or 4x + 3 times (3, 7, 11, ...).
+7. Have the spectator slide a card from the top of either packet to its bottom, 3 times (like typing "man"), or `4x + 3` times (3, 7, 11, ...).
 8. (Multiple cards can be moved at once).
 9. Point out that if the spectator chose differently, different cards would be on top.
 10. Remove the top card of each packet together to the side.
-11. Repeat step 6, now 5 times (like typing "seeks"), or 3x + 2 times (2, 5, 8, ...).
+11. Repeat step 6, now 5 times (like typing "seeks"), or `3x + 2` times (2, 5, 8, ...).
 12. Remove the top card of each packet together to the side.
 13. Repeat step 6, now 5 times (like typing "woman"), or any odd number of times (1, 3, 5, 7, ...).
 14. Reveal that the pairs are all matched up!
 
 **Alternate presentation**: since you can use infinite numbers for each slide, you can ask the spectator to guess how many "tinder swipes" each card did before matching. If they hit a good number (e.g. an odd number in the last step), the trick will seem even more impossible. Otherwise, just say you feel like they needed a bit more and add as many cards as you need.
 
-
-## Biddle trick
-
-1. Force a card or use a key card.
-2. Spread the deck and choose 5 cards where the second is the chosen card.
-3. Place the cards on top of the deck and hold only the top half of the deck (including those cards) in Biddle grip.
-4. Show each card one by one, moving them to the left hand.
-5. The spectator should reply mentally to each one whether that's their card.
-6. Before moving the second card to the left hand, prepare a pinky break.
-7. When moving the third card to the left hand, steal the second card to the bottom of the pack, using your right fingers.
-8. Place the top half back on the deck.
-9. Biddle count or Elmsley count the 4 cards as 5 (facedown).
-10. Tell them to hold on to the 5 cards.
-11. Their card is still inside the deck, faceup.
-
-Video: https://www.youtube.com/watch?v=cTPG1HsvQ2E
-
-Alternative:
-
-Don't use a key card, control the card to second from the bottom (e.g. control to the top and then keep top and bottom cards while overhand shuffling).
-You can then make the 5 card selection facedown, which adds to the effect.
-
-Video: https://www.youtube.com/watch?v=F8pePRJs4wo
-
-## Truth Detector (inspired by Lie Detector of Card College Light)
-
-1. Force a card, e.g.: Glimpse the top card by spreading the deck with the "deck is shuffled line" and use a cross-cut to force the top card.
-2. Explain that the voice betrays the sincerity of a person, and by hearing alone you can detect whether someone is lying. Thus you want to conduct an experiment to detect when they are truthful.
-3. The spectator is to select another 4 cards and hold them alongside their card.
-4. You turn your back to the spectator.
-5. The spectator names every card they're holding saying "My card is the &lt;name of the card&gt;".
-6. After some theatrics you identify their card saying that their voice was more solid when they said that name.
 
 ## Mr. King's Tapestry
 
@@ -593,6 +603,38 @@ Given this original pattern, consider that every position with a card that you w
 
 If the audience is on the other side of the table, ribbon spread the deck from the right to the left, in order to position the face-up cards left of the cards to be revealed (in the audience's perspective). This will reinforce that the reveals are "after" (to the right) the key cards.
 
+## Biddle trick
+
+1. Force a card or use a key card.
+2. Spread the deck and choose 5 cards where the second is the chosen card.
+3. Place the cards on top of the deck and hold only the top half of the deck (including those cards) in Biddle grip.
+4. Show each card one by one, moving them to the left hand.
+5. The spectator should reply mentally to each one whether that's their card.
+6. Before moving the second card to the left hand, prepare a pinky break.
+7. When moving the third card to the left hand, steal the second card to the bottom of the pack, using your right fingers.
+8. Place the top half back on the deck.
+9. Biddle count or Elmsley count the 4 cards as 5 (facedown).
+10. Tell them to hold on to the 5 cards.
+11. Their card is still inside the deck, faceup.
+
+Video: https://www.youtube.com/watch?v=cTPG1HsvQ2E
+
+Alternative:
+
+Don't use a key card, control the card to second from the bottom (e.g. control to the top and then keep top and bottom cards while overhand shuffling).
+You can then make the 5 card selection facedown, which adds to the effect.
+
+Video: https://www.youtube.com/watch?v=F8pePRJs4wo
+
+## Truth Detector (inspired by Lie Detector of Card College Light)
+
+1. Force a card, e.g.: Glimpse the top card by spreading the deck with the "deck is shuffled line" and use a cross-cut to force the top card.
+2. Explain that the voice betrays the sincerity of a person, and by hearing alone you can detect whether someone is lying. Thus you want to conduct an experiment to detect when they are truthful.
+3. The spectator is to select another 4 cards and hold them alongside their card.
+4. You turn your back to the spectator.
+5. The spectator names every card they're holding saying "My card is the &lt;name of the card&gt;".
+6. After some theatrics you identify their card saying that their voice was more solid when they said that name.
+
 # Trick database
 
 | Trick        | Explanation                               | Difficulty (1-5) |
@@ -602,7 +644,6 @@ If the audience is on the other side of the table, ribbon spread the deck from t
 | [Coincidencia Total by Juan Tamariz](https://www.youtube.com/watch?v=3N1In1-QtNY) | [Magicurzay](https://www.youtube.com/watch?v=YTK9BPG-9IY) | 4 | 
 
 Also see: https://www.conjuringarchive.com/
-
 
 # Gimmicks
 
