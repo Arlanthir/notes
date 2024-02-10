@@ -459,6 +459,45 @@ By Richard Vollmer, read in Roberto Giobbi - Card College Light.
 4. Summarize that the deck was shuffled not only by you but also your spectator, with complete freedom to cut and turn over cards. Nevertheless...
 5. Reveal the correct prediction and spread the deck, counting the cards and how many are red/black.
 
+## Posi-negative coordination (Card College Lightest)
+
+1. Setup: alternate colors in deck. Alternatively, alternate colors in only one portion and use that portion.
+2. Spread the deck irregularly (so some colors seem to repeat) and show that it is "shuffled", saying "values are all mixed" to pull attention towards the values and not the colors.
+3. Separate into two halves, the bottom colors must be different.
+4. Riffle shuffle the two halves together. Spectator can square them.
+5. (Due to the Gilbreath principle, colors either alternate or repeat only once. No group of 3 ever occurs.)
+6. Tell the spectator to deal a card face down to the left and another face up to the right.
+7. Repeat the previous step until all cards are dealt.
+8. During the deal, point out how the face-up pile is naturally random.
+9. Say that this step is to build up coordination inside the spectator, between their left side and right side.
+10. Have the spectator take the face-up pile and deal red cards to the left and black cards to the right.
+11. Say this step is to synchronize your coordination to theirs, and we'll see if they match.
+12. Do the same with your face-down cards, when the spectator puts a card to their left you put a card to **_your_** left.
+13. Reveal the face-down piles and show that your black cards are underneath the spectator's black cards, and the same for red.
+14. The coordination/synchronization was a success!
+
+## Man seeks woman
+
+This trick uses the Ramasee principle, where you reverse one of the piles and loop any of the piles until they match.
+
+1. Grab the 4 Kings and 4 Queens in the same order of suits.
+2. "When cards were first introduced, they mirrored society, just like the game of chess. With time, that has been lost, but I'd like to revive it for today. The Kings and Queens will stand for men and women of our times, in search of their match".
+3. Place one packet on top of the other.
+4. Cut and/or Charlier shuffle. Optionally, Charlier shuffle face up.
+5. Deal the top four cards to your left (reversing their order).
+6. Show the remaining 4 cards and place them face down on the right.
+7. Have the spectator slide a card from the top of either packet to its bottom, 3 times (like typing "man"), or 4x + 3 times (3, 7, 11, ...).
+8. (Multiple cards can be moved at once).
+9. Point out that if the spectator chose differently, different cards would be on top.
+10. Remove the top card of each packet together to the side.
+11. Repeat step 6, now 5 times (like typing "seeks"), or 3x + 2 times (2, 5, 8, ...).
+12. Remove the top card of each packet together to the side.
+13. Repeat step 6, now 5 times (like typing "woman"), or any odd number of times (1, 3, 5, 7, ...).
+14. Reveal that the pairs are all matched up!
+
+**Alternate presentation**: since you can use infinite numbers for each slide, you can ask the spectator to guess how many "tinder swipes" each card did before matching. If they hit a good number (e.g. an odd number in the last step), the trick will seem even more impossible. Otherwise, just say you feel like they needed a bit more and add as many cards as you need.
+
+
 ## Biddle trick
 
 1. Force a card or use a key card.
