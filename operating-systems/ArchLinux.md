@@ -2,17 +2,19 @@
 
 ## Basics
 
-| Command                 | Action                                                                 |
-| ----------------------- | ---------------------------------------------------------------------- |
-| `pacman -S <package>`   | Install package                                                        |
-| `pacman -R <package>`   | Remove package                                                         |
-| `pacman -Ss <query>`    | Search package                                                         |
-| `pacman -Syu`           | Update packages                                                        |
-| `pacman -Sc`            | Clear cache                                                            |
-| `pacman -Qi <package>`  | Show info (e.g. dependencies of &lt;package&gt; and what installed it) |
-| `pacman -Ql <package>`  | List all files installed by &lt;package&gt;                            |
-| `pacman -Qo <file>`     | Check which package installed &lt;file&gt;                             |
-| `sudo pacman -Qtdq \| sudo pacman -R -` | Remove all unused (orphan) packages                    |
+| Command                   | Action                                                                 |
+| ------------------------- | ---------------------------------------------------------------------- |
+| `pacman -S <package>`     | Install package                                                        |
+| `pacman -R <package>`     | Remove package                                                         |
+| `pacman -Ss <query>`      | Search package                                                         |
+| `pacman -Syu`             | Update packages                                                        |
+| `pacman -Syudd`            | Update packages, skip dependency checks                               |
+| `pacman -Syu --noconfirm` | Update packages without asking for confirmations (replacements, etc)   |
+| `pacman -Sc`              | Clear cache                                                            |
+| `pacman -Qi <package>`    | Show info (e.g. dependencies of &lt;package&gt; and what installed it) |
+| `pacman -Ql <package>`    | List all files installed by &lt;package&gt;                            |
+| `pacman -Qo <file>`       | Check which package installed &lt;file&gt;                             |
+| `sudo pacman -Qtdq \| sudo pacman -R -` | Remove all unused (orphan) packages                      |
 
 *Note*: When your system is very outdated and updating it results in corrupted packages error, update the keyring first: `sudo pacman -S archlinux-keyring`.
 
