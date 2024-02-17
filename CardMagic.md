@@ -423,6 +423,48 @@ Order:
 
 # Tricks
 
+## Detective
+
+From [Matt McGurk's](https://www.youtube.com/watch?v=BEqX6sp-iaU) channel.
+
+1. Take out a Queen or a Jack from the deck and say he/she is a detective that will help you find a card chosen by the spectator.
+2. While you're explaining this, separate two piles of 15 cards each (pushing groups of 3 or 2 cards at a time to make it seem you're not actually counting).
+3. Place the packets in front of one another and ask the spectator to cut each one to the side.
+4. Let the spectator choose a card from the unused rest of the deck.
+5. The spectator chooses one pile and puts their card face down on top of it.
+6. Put either of the packets of the other row on top of it (you can let the spectator choose).
+7. Put the Queen/Jack face up on the other packet of this row.
+8. Put the fourth packet on top of the Queen/Jack.
+9. You're left with two packets, ask the spectator which goes on top of which.
+10. The spectator can cut the cards.
+11. Deal cards into two piles.
+12. Keep the pile containing the face-up Queen/Jack.
+13. Repeat steps 10-12 until only two cards remain: the Detective and the chosen card!
+
+The reason it works is that the initial procedure ensures that in the starting pile there are 15 cards between the two cards (the face-up one and the selection). After the first deal, there are then 7 cards between them. After the next deal, there are 3 cards between them. After the next deal, there are four cards left, and the two cards are separated by 1 card. Hence, after the last deal, the two cards will be together in one pile.
+
+It’s a nice progression from 15 to 7 to 3 to 1 - i.e. (n-1)/2.
+
+## In the middle
+
+From [CardMechanic's](https://youtu.be/Klin-FUf0RU?t=896) channel.
+
+1. Ask the spectator to choose a card.
+2. Split the deck into two almost exactly equal piles.
+3. The spectator puts their card on top of one of the piles.
+4. Put the other one on top.
+5. Deal deck into 4 different piles.
+6. Show each pile to spectator and they choose which one contains their card.
+7. Eliminate the rest.
+8. Deal that pile again into 4 equal piles.
+9. Say that you will eliminate piles now, but without seeing the cards.
+10. Eliminate the first pile, with the most cards.
+11. From the other piles, take out the middle card of each.
+12. Make a new pile with the remaining 3 cards (in the same order).
+13. Say that you still have one card in the middle, show that one: it is the spectator's card.
+
+This works because after step 6 the spectator's card is exactly in the middle of the 13-card pile.
+
 ## Water and Oil
 
 1. Choose 3 red cards and 3 black cards.
@@ -449,6 +491,21 @@ Video: https://www.youtube.com/watch?v=LsPap-P06jI
 
 Video: https://www.youtube.com/watch?v=jzjhcfVvWRA
 
+## 4-Way prediction
+
+From [CardMechanic's](https://www.youtube.com/watch?v=Klin-FUf0RU&t=503) channel.
+
+1. Glimpse the bottom card (e.g. 2 of Clubs).
+2. Spread the cards on a table like a casino wash (but remember where the bottom card is).
+3. Ask one spectator to feel where the 2 of Clubs is and pick it out.
+4. Receive it, glimpse what it is (e.g. 4 of Hearts) and place it face down to the side.
+5. Ask the next spectator to feel where the 4 of Hearts is and pick it out.
+6. Glimpse it (e.g. 7 of Spades).
+7. (Optionally repeat steps 5-6 for a third spectator, or more.)
+8. Say now it's your turn, and you'll pick the 7 of Spades out of the wash.
+9. Pick the original bottom card (2 of Clubs).
+10. Pick up the chosen cards, slide the last one to the bottom and reverse them.
+11. You can now reveal the cards in order!
 
 ## Back to the Future
 
@@ -497,7 +554,7 @@ By Richard Vollmer, read in Roberto Giobbi - Card College Light.
 13. Reveal the face-down piles and show that your black cards are underneath the spectator's black cards, and the same for red.
 14. The coordination/synchronization was a success!
 
-# Numerology (Card College Lightest)
+## Numerology (Card College Lightest)
 
 (Interesting trick to deal a lot of cards face up and stack or memorize cards for other tricks)
 
