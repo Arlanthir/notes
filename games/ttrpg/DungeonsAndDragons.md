@@ -117,9 +117,11 @@ Proficiency bonus starts at +2 in level 1 and increases by on every 4 levels.
 
 ### Alignment
 
-Two axis:
+Two axes:
 1. Lawful, Neutral or Chaotic
 2. Good, Neutral or Evil
+
+E.g. *Lawful good*
 
 ### Leveling up
 
@@ -132,11 +134,12 @@ When a class provides an Ability Score Improvement while gaining a level, this m
 
 Define, among others:
 1. Ability Score Increases at the start (e.g. +2 Constitution, +1 Wisdom)
-2. Speed (e.g. 25-35 feet)
-3. Special features (e.g. Darkvision)
-4. Resistances / weaknesses
-5. Proficiencies
-6. Languages
+2. Size
+3. Speed (e.g. 25-35 feet)
+4. Special features (e.g. Darkvision)
+5. Resistances / weaknesses
+6. Proficiencies
+7. Languages
 
 - Dwarf
 - Elf
@@ -191,6 +194,31 @@ Typical DCs:
 - Very hard: 25
 - Nearly impossible: 30
 
+Each ability (except Constitution) has associated skills:
+- Strength
+  - Athletics
+- Dexterity
+  - Acrobatics
+  - Sleight of Hand
+  - Stealth
+- Intelligence
+  - Arcana
+  - History
+  - Investigation
+  - Nature
+  - Religion
+- Wisdom
+  - Animal Handling
+  - Insight
+  - Medicine
+  - Perception
+  - Survival
+- Charisma
+  - Deception
+  - Intimidation
+  - Performance
+  - Persuasion
+
 ### Saving throws
 
 Saving throws are just like ability checks, just with different proficiencies. They are usually made in reaction to a threat, such as a magical effect, poison, disease, etc.
@@ -229,19 +257,86 @@ The skills may also be different, such as the player rolling a stealth skill che
 
 - Round down any decimal numbers
 
+## Movement
+
+- Character speed is the number of feet they move per round (6 seconds).
+- Difficult terrain costs 1 additional speed per foot (e.g. swamp, rubble, ice).
+  - Other creatures count as difficult terrain
+  - You can only move through other creatures if they are friendly **or** 2 sizes smaller or larger than you
+  - You can't end your turn in another creature's space
+- Climbing, swimming and crawling also cost 1 additional speed per foot.
+  - Climbing slippery surfaces or swimming in rough water may need a successful athletics check.
+  - Stacks with difficult terrain: crawling 1 foot on difficult terrain costs 3 feet.
+- Long jump:
+  - Run 10 feet and cover *your Str in feet* in the air. The covered distance still counts as movement distance you have to spend.
+  - Without running 10 feet prior, you can only cover half the distance in the jump.
+  - If clearing obstacles, you must succeed a DC 10 *athletics* check.
+  - If landing in difficult terrain, you must succeed a DC 10 *acrobatics* check, otherwise you fall prone.
+- High jump:
+  - Run 10 feet and reach *3 + Str modifier* feet up.
+  - Without running 10 feet prior, you can only cover half the distance in the jump.
+- A falling creature takes 1d6 bludgeoning damage for every 10 feet it fell (max 20d6). It falls prone as long as it took damage.
+- Dropping to **prone** doesn't cost any movement
+- Standing up from **prone** costs half your movement speed. You can't stand up if you have 0 speed.
+
+If using a grid, typically each square represents 5 feet. 
+- Diagonals can be counted as 5 feet; or
+- Alternating between 5 and 10 feet each
+
+Creature sizes:
+- Tiny occupies 2.5x2.5 feet
+- Small occupies 5x5 feet
+- Medium occupies 5x5 feet
+- Large occupies 10x10 feet
+- Huge occupies 15x15 feet
+- Gargantuan occupies 20x20 feet
+
+A creature can squeeze into a space one size smaller than it.
+- Movement costs 1 more in each such space.
+- Disadvantage or attack rolls and Dex saving throws.
+- Advantage on attack rolls against it.
+
+### Flying
+
+If a flying creature is knocked prone, has its speed reduced to 0 or otherwise immobilized, it falls.
+- Exception: if it has the ability to *hover* or if being held aloft by magic (e.g. **fly** spell).
+
 ## Combat
 
 When combat begins:
-1. Roll initiative: Dexterity check to determine order of creatures' turns.
+1. **Determine surprise**: If one side is trying to be stealthy, compare their *stealth* checks to the other side's *passive wisdom*. Anyone who fails is *surprised* and cannot move, act or react in their first turn.
+2. **Establish positions**: Describe the scene in *theater of the mind* or place characters in a battle map.
+3. **Roll initiative**: Dexterity check to determine order of creatures' turns. Tie breaks can be decided by:
+   - Players deciding between their ties
+   - DM deciding between monsters' ties
+   - DM deciding between player and monster ties
+   - Rolling a d20 tiebreaker
+
+Each round of combat lasts 6 seconds.
+
+Each turn, in any order:
+1. Move
+   - Move up to your character's speed, taking the [movement rules](#movement) into account 
+   - You can break up movement in between the other actions in the turn, or between different attacks in the same action
+   - Moving 
+2. Action (single)
+3. Bonus action (single)
+4. Free actions
+   - Communicate through brief sounds/gestures
+   - Interact with a single object or feature of the environment (open a door, draw your weapon)
+   - Some interactions may require a full action (e.g. opening a stuck door or turn a crank to lower a drawbridge)
+5. Reaction (single)
+   - Attack of opportunity
+   - Another reaction given by an abilitiy, spell, etc
+
 
 Attack action:
 1. Attack roll
-  - Melee attack roll: d20 + proficiency bonus (if proficient with the weapon) + strength modifier
-  - Ranged attack roll: d20 + proficiency bonus (if proficient with the weapon) + dexterity modifier
+   - Melee attack roll: d20 + proficiency bonus (if proficient with the weapon) + strength modifier
+   - Ranged attack roll: d20 + proficiency bonus (if proficient with the weapon) + dexterity modifier
 2. Damage roll
-  - Die indicated by the weapon + ability modifier (but not proficiency bonus).
+   - Die indicated by the weapon + ability modifier (but not proficiency bonus).
 
-Movement, Actions, Bonus Actions?
 
 ## Magic
 
@@ -259,6 +354,32 @@ Spells
 1. Spend a spell slot of the spell's level or higher (spell slots recover at long rests).
 
 Spellcasting focus (e.g. Bard's instrument)
+
+## Conditions
+
+Suffocating:
+- A creature can hold its breath for *1 + Con modifier* minutes (min 30 seconds).
+  - After that, it resists *Con modifier* rounds (min 1) before dropping to 0 HP.
+
+Lighting:
+- Lightly obscured (dim light, fog): disadvantage on perception checks that rely on sight.
+- Heavily obscured (darkness): creature is blinded.
+- Bright light: normal.
+- Dim light: shadows, boundary between a source of bright light and darkness, normal.
+
+## Rests
+
+- Short rest
+  - 1h long, eating, drinking, reading, healing
+  - Spend a Hit Die and regain that much HP + Con modifier
+    - Repeat until wanted (or max Hit Dice)
+
+- Long rest
+  - 8h long, 6h sleeping + 2 resting
+  - Regain all HP
+  - Regain half Hit Dice (min 1)
+  - Must have at least 1 HP to long rest
+  - At least 24h between long rests
 
 ## Inspiration
 
@@ -297,21 +418,47 @@ Vehicles:
 - **Warship**: 2.5 mph, 25000 gp
 
 Lifestyle expenses:
+- Paid between adventures for the days the PCs are not exploring.
+- **Modest**: 1 gp per day
 - **Comfortable**: 2 gp per day
 - **Wealthy**: 4 gp per day
 - **Aristocratic**: minimum 10 gp per day
 
 Inn stay (per night):
+- **Modest**: 5 sp
 - **Comfortable**: 8 sp
 - **Wealthy**: 2 gp
 - **Aristocratic**: 4 gp
 
 Meals (per day):
+- **Modest**: 3 sp
 - **Comfortable**: 5 sp
 - **Wealthy**: 8 gp
 - **Aristocratic**: 2 gp
 
 **Hireling**: 2 gp per day (minimum)
+
+## Downtime
+
+You can spend days of downtime in various activities.
+- Crafting
+  - Item of up to 5 gp market value per day, spending half that gp in raw materials
+  - Players can combine efforts
+  - Discount of 1 gp in lifestyle
+- Practicing a profession
+  - Provides Modest lifestyle
+  - If member of an organization (such as a guild), provides Comfortable lifestyle instead
+  - If proficient in Performance, provides Wealthy lifestyle instead
+- Recuperating
+  - 3 days = DC 15 Con saving throw, choose:
+    - End one effect on you that prevents regaining HP
+    - Advantage on saving throws against one disease or poison affecting you
+- Researching
+  - Costs 1 gp per day
+  - DM sets number of days and any investigation/persuasion checks needed
+- Training
+  - DM sets number of days and any checks to find instructor
+  - 250 days and 1 gp per day to gain proficiency in a new tool or language
 
 ## Customization
 
