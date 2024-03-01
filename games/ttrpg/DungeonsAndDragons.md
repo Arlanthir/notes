@@ -72,11 +72,14 @@ See the Armor table (p. 145) for details.
 
 ### Weapons
 
-Two types of weapons:
+Types of weapons:
 - Melee
-  - Attack targets within 5 feet (throw attack is considered Improved Weapon, 1d4, normal range 20 feet, long range 60 feet).
+  - Attack targets within 5 feet
+    - Throw attack of a weapon without the *Thrown* property is considered Improvised Weapon, 1d4, normal range 20 feet, long range 60 feet.
 - Ranged
   - Attack targets at a distance.
+- Unarmed strike
+  - Has proficiency bonus. *1 + Str modifier* bludgeoning damage.
 
 Weapon properties:
 - **Ammunition**: At the end of a battle, you can spend 1 minute to recover half the expended ammunition. Melee attack is considered Improved Weapon, 1d4 damage.
@@ -318,8 +321,27 @@ Each turn, in any order:
 1. Move
    - Move up to your character's speed, taking the [movement rules](#movement) into account 
    - You can break up movement in between the other actions in the turn, or between different attacks in the same action
-   - Moving 
+   - Leaving an hostile creature's reach allows it one opportunity attack as a reaction
 2. Action (single)
+   - Attack
+   - Cast a spell
+   - Dash (another move)
+   - Disengage (allows movement without provoking attacks of opportunity)
+   - Dodge
+     - Until your next turn, attacks made by creatures you can see have disadvantage and you have advantage on Dexterity saving throws.
+     - You lose the benefit if you are incapacitated or your speed drops to 0.
+   - Help
+     - Give advantage to another creature on its next ability check to perform the task you are helping with.
+     - Help a friend attack a creature within 5 feet of you, by giving them advantage on their first attack roll.
+   - Hide (with stealth check)
+   - Improvise an action (the DM decides whether it's possible and if it needs any roll)
+   - Ready
+     - Holds your action until a specific trigger triggers your reaction.
+     - Readying spells requires [concentration](#magic).
+   - Search (*perception* or *investigation* check)
+   - Use an object
+     - Certain objects require an action to use (e.g. Potion of Healing).
+     - Using two objects requires the action and the free action.
 3. Bonus action (single)
 4. Free actions
    - Communicate through brief sounds/gestures
@@ -331,10 +353,21 @@ Each turn, in any order:
 
 
 Attack action:
-1. Attack roll
+1. Determine (dis)advantage
+   - If you can't see the target, you have disadvantage (even if you can hear it)
+   - If the attacker isn't where you attacked, you automatically miss but the DM doesn't say whether you guessed the location correctly
+   - If the target can't see you, you have advantage
+   - If you are hidden (unseen and unheard) you give away your location after the attack (whether it hits or misses)
+   - Long ranged attacks have disadvantage
+   - Ranged attacks while another creature is within 5 feet from you have disadvantage
+     - As long as the creature can see you and is not incapacitated
+2. Attack roll
    - Melee attack roll: d20 + proficiency bonus (if proficient with the weapon) + strength modifier
+     - Unarmed strike: Has proficiency bonus. *1 + Str modifier* bludgeoning damage.
    - Ranged attack roll: d20 + proficiency bonus (if proficient with the weapon) + dexterity modifier
-2. Damage roll
+   - On a 1, the attack always misses (critical miss)
+   - On a 20, the attack always hits (critical hit)
+3. Damage roll
    - Die indicated by the weapon + ability modifier (but not proficiency bonus).
 
 
