@@ -76,6 +76,7 @@ Types of weapons:
 - Melee
   - Attack targets within 5 feet
     - Throw attack of a weapon without the *Thrown* property is considered Improvised Weapon, 1d4, normal range 20 feet, long range 60 feet.
+    - Melee attack of a ranged weapon is also an Improvised Weapon.
 - Ranged
   - Attack targets at a distance.
 - Unarmed strike
@@ -188,6 +189,7 @@ Define, among others:
 3. If it's a skill (e.g. Acrobatics) you're proficient in, add the Proficiency Bonus
 4. Apply other bonuses and penalties (e.g. feats, spells, etc)
 5. Compare to target number (e.g. DC (Difficulty Class) for ability checks and AC (Armor Class) for attacks)
+   - It succeeds if its &le; DC or AC
 
 Typical DCs:
 - Very easy: 5
@@ -274,17 +276,17 @@ The skills may also be different, such as the player rolling a stealth skill che
   - Run 10 feet and cover *your Str in feet* in the air. The covered distance still counts as movement distance you have to spend.
   - Without running 10 feet prior, you can only cover half the distance in the jump.
   - If clearing obstacles, you must succeed a DC 10 *athletics* check.
-  - If landing in difficult terrain, you must succeed a DC 10 *acrobatics* check, otherwise you fall prone.
+  - If landing in difficult terrain, you must succeed a DC 10 *acrobatics* check, otherwise you fall **prone**.
 - High jump:
   - Run 10 feet and reach *3 + Str modifier* feet up.
   - Without running 10 feet prior, you can only cover half the distance in the jump.
-- A falling creature takes 1d6 bludgeoning damage for every 10 feet it fell (max 20d6). It falls prone as long as it took damage.
+- A falling creature takes 1d6 bludgeoning damage for every 10 feet it fell (max 20d6). It falls **prone** as long as it took damage.
 - Dropping to **prone** doesn't cost any movement
 - Standing up from **prone** costs half your movement speed. You can't stand up if you have 0 speed.
 
 If using a grid, typically each square represents 5 feet. 
-- Diagonals can be counted as 5 feet; or
-- Alternating between 5 and 10 feet each
+- Diagonals can be counted as 5 feet (*PHB*); or
+- Alternating between 5 and 10 feet each (*DMG*)
 
 Creature sizes:
 - Tiny occupies 2.5x2.5 feet
@@ -301,7 +303,7 @@ A creature can squeeze into a space one size smaller than it.
 
 ### Flying
 
-If a flying creature is knocked prone, has its speed reduced to 0 or otherwise immobilized, it falls.
+If a flying creature is knocked **prone**, has its speed reduced to 0 or otherwise immobilized, it falls.
 - Exception: if it has the ability to *hover* or if being held aloft by magic (e.g. **fly** spell).
 
 ## Combat
@@ -343,6 +345,8 @@ Each turn, in any order:
      - Certain objects require an action to use (e.g. Potion of Healing).
      - Using two objects requires the action and the free action.
 3. Bonus action (single)
+   - Attack with a light melee weapon if you attacked with another on your action (don't add a positive ability modifier to the second damage roll)
+   - Another bonus action given by an ability, spell, etc
 4. Free actions
    - Communicate through brief sounds/gestures
    - Interact with a single object or feature of the environment (open a door, draw your weapon)
@@ -359,17 +363,42 @@ Attack action:
    - If the target can't see you, you have advantage
    - If you are hidden (unseen and unheard) you give away your location after the attack (whether it hits or misses)
    - Long ranged attacks have disadvantage
-   - Ranged attacks while another creature is within 5 feet from you have disadvantage
+   - Ranged attacks while a hostile creature is within 5 feet from you have disadvantage
      - As long as the creature can see you and is not incapacitated
 2. Attack roll
    - Melee attack roll: d20 + proficiency bonus (if proficient with the weapon) + strength modifier
      - Unarmed strike: Has proficiency bonus. *1 + Str modifier* bludgeoning damage.
    - Ranged attack roll: d20 + proficiency bonus (if proficient with the weapon) + dexterity modifier
+     - If target has half cover, it gains +2 to AC and Dextery saving throws
+     - If target has 3/4 cover, it gains +5 to AC and Dextery saving throws
+     - If target has full cover, it can't be targeted
    - On a 1, the attack always misses (critical miss)
    - On a 20, the attack always hits (critical hit)
+   - When the result is equal to or greater than the target AC, it succeeds
 3. Damage roll
    - Die indicated by the weapon + ability modifier (but not proficiency bonus).
+   - If the attack was a critical hit, double the damage dice (but not the modifier)
 
+Special melee attacks:
+- Grapple
+  - The target must be one size larger or less
+  - Requires one free hand
+  - Grapple check instead of attack roll (*athletics* check contested by target's *athletics* or *acrobatics* check)
+  - Automatic success if target is incapacitated
+  - On success, target is **grappled**
+  - Releasing requires no action
+- Shove
+  - The target must be one size larger or less
+  - Shove check instead of attack roll (*athletics* check contested by target's *athletics* or *acrobatics* check)
+  - Automatic success if target is incapacitated
+  - On success, you knock the target **prone** or push it 5 feet away from you
+
+### Underwater combat
+
+- Melee attacks of creatures without swimming speed have **disadvantage** (except dagger, javelin, shortswod, spear, trident).
+- Ranged attacks in normal range have disadvantage (except crossbow, net, javelin, spear, trident, dart).
+- Ranged attacks in long range automatically miss.
+- Creatures fully immersed in water have resistance to fire damage.
 
 ## Magic
 
@@ -388,17 +417,86 @@ Spells
 
 Spellcasting focus (e.g. Bard's instrument)
 
-## Conditions
+## Damage types
 
-Suffocating:
-- A creature can hold its breath for *1 + Con modifier* minutes (min 30 seconds).
-  - After that, it resists *Con modifier* rounds (min 1) before dropping to 0 HP.
+For resistances and vulnerabilities:
+- Acid
+- Bludgeoning
+- Cold
+- Fire
+- Force (pure magical energy)
+- Lightning
+- Necrotic
+- Piercing
+- Poison
+- Psychic
+- Radiant
+- Slashing
+- Thunder (burst of sound)
+
+**Resistance** means a creature takes just half the damage of that type. **Vulnerability** means it takes double.
+
+## Conditions
 
 Lighting:
 - Lightly obscured (dim light, fog): disadvantage on perception checks that rely on sight.
 - Heavily obscured (darkness): creature is blinded.
 - Bright light: normal.
 - Dim light: shadows, boundary between a source of bright light and darkness, normal.
+
+Suffocating:
+- A creature can hold its breath for *1 + Con modifier* minutes (min 30 seconds).
+  - After that, it resists *Con modifier* rounds (min 1) before dropping to 0 HP.
+
+Grappled:
+- The grappled creature can use its action to repeat the grappling contest and try to release itself.
+- The grappling creature can move the grappled one.
+  - At half speed as long as creature is not two or more sizes smaller.
+
+Instant death:
+- If damage reduces you to 0 HP and the remaining damage equals or exceeds your Max HP, you die instantly.
+- Generally monsters die instantly as soon as their HP is 0 (important NPCs and villains may behave like PCs).
+  - PCs can still choose to knock a creature out instead of killing it when they reduce its HP to 0 (it becomes stable)
+
+Unconscious:
+- If your HP is reduced to 0 (but above `- Max HP`) you fall **unconscious**.
+- You regain consciousness if you regain any HP.
+- Whenever you start your turn with 0 HP, you must make a **death saving throw**.
+  - Roll a d20, 10 or higher you succeed. 9 or lower you fail.
+    - Rolling 1 counts as two failures.
+    - Rolling 20 regains you 1 HP and consciousness.
+  - 3 successes make you **stable**.
+  - 3 failures and the character dies.
+- Any additional damage counts as a failed **death saving throw**.
+  - Critical hits count as two **death saving throws**.
+  - If the damage equals or exceeds your Max HP, you die instantly.
+- You can attempt to stabilize an unsconscious creature with a DC 10 *medicine* check.
+
+Stable:
+- Stable creatures have 0 HP but don't need to make **death saving throws**.
+- If you take damage while stable, you start making **death saving throws** again.
+- A stable creature regains 1 HP after `1d4` hours.
+
+Temporary HP:
+- Bonus HP in a different pool
+- Doesn't stack, each time you regain temporary HP you have to choose which amount is the new one
+- Healing doesn't restore temporary HP
+- A long rest clears temporary HP
+
+## Mounts
+
+- You can mount willing creatures that are at least a size larger than you.
+- Mounting or dismounting takes half your speed.
+- If the mount is moved against its will, you must succeed a **DC 10 Dexterity saving throw** or fall off the mount, **prone**.
+  - Same throw if you are knocked **prone** while mounted.
+- If the mount is knocked **prone**, you can use your reaction to dismount.
+  - Otherwise, you fall **prone** beside it.
+- If the mount provokes an opportunity attack, the attacker may attack you or the mount.
+- Controlled mounts have three actions:
+  - Dash
+  - Disengage
+  - Dodge
+- Independent mounts have their own initiative and actions (including attacking).
 
 ## Rests
 
