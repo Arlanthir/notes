@@ -407,15 +407,34 @@ Different abilities can be used for spellcasting (e.g. Intelligence, Charisma)
 - Spell Save DC = 8 + Proficiency Bonus + Ability modifier
 - Spell Attack modifier = Proficiency Bonus + Ability modifier
 
-Cantrips
+Spells:
+- You can't cast spells while wearing Armor you're not proficient in.
+- Each spell has a 0-9 level that denotes its power.
+- **Cantrips**: level 0 spells that characters can cast at will, without preparing or expending slots.
+- level 1-9 require casters to spend a spell slot of that level or higher.
+  - Some spells become more powerful when cast using a higher slot.
+- Spell slots are recovered at long rests.
+- **Rituals**: spells that can be cast as rituals (if class allows), taking 10 minutes longer to cast but not expending a slot.
+- Some spells allow casting using the bonus action. If you do so, you can't cast another spell as an action (except a cantrip with casting time of 1 action).
+- Casting times of several rounds require **concentration**. If **concentration** is broken, the spell fails but you don't expend the slot.
 
-Rituals
+Casting:
 
-Spells
-
-1. Spend a spell slot of the spell's level or higher (spell slots recover at long rests).
-
-Spellcasting focus (e.g. Bard's instrument)
+1. Fulfill the spell's requirements:
+   - **V**erbal (words)
+   - **S**omatic (gestures of a free hand)
+   - **M**aterial
+     - Free materials can be replaced by a **component pouch** or a **spellcasting focus** (e.g. the Bard's instrument).
+     - Some materials are consumed.
+     - Requires a free hand, but may be the same as for the somatic components.
+2. Expend a spell slot of the spell's level or higher.
+3. If required, maintain **concentration** while casting or for the duration of the spell.
+   - You can end concentration at will (no action required).
+   - Casting another spell requiring concentration ends the current concentration.
+   - Taking damage ends concentration unless you succeed a **Constitution saving throw**.
+     - DC is 10 or half the damage, whichever is higher.
+   - Being incapacitated or killed ends concentration.
+   - The DM may issue a **DC 10 Con saving throw** in other situations that defy concentration.
 
 ## Damage types
 
