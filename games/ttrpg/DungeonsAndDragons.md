@@ -365,6 +365,7 @@ Each turn, in any order:
    - Long ranged attacks have disadvantage
    - Ranged attacks while a hostile creature is within 5 feet from you have disadvantage
      - As long as the creature can see you and is not incapacitated
+   - (*Optional*) Flanking: Allies engaged in melee on opposite sides of one enemy have advantage to their attack rolls against it.
 2. Attack roll
    - Melee attack roll: d20 + proficiency bonus (if proficient with the weapon) + strength modifier
      - Unarmed strike: Has proficiency bonus. *1 + Str modifier* bludgeoning damage.
