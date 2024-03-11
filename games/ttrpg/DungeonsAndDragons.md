@@ -876,3 +876,178 @@ Example feats:
 - Sharpshooter: Long range attacks don't cause disadvantage; ranged attacks ignore half cover and three-quarters cover; choice to take a -5 penalty to a proficient ranged weapon attack, to deal +10 damage.
 - Skilled: Proficiency in three skills or tools of your choice.
 - Tough: Your Max HP gains 2 * level.
+
+
+# Nimble
+
+A set of "House rules" to simplify D&D 5E and provide meaningful choices.
+
+## Combat
+
+### Initiative
+
+Players roll initiative (Wisdom) to determine how many actions they can do on their first turn:
+
+| Wis check | Action points |
+| --------- | ------------- |
+| 0-9       | 1             |
+| 10-19     | 2             |
+| 20+       | 3             |
+
+When surprised, roll with disadvantage. When surprising, roll with advantage.
+
+The actual order starts with whoever is ready first or the one that makes more sense thematically. The DM chooses when monsters act.
+
+### Action points
+
+Instead of move, action, bonus action and reaction, players have **3 Action Points**.
+
+- 1 AP can be spent to: attack, move, use a bonus action or reaction, drink a potion, cast a
+cantrip/bonus action/reaction spell, or use any of the other more obscure actions (e.g.,
+hide).
+  - PCs still get one free action per round (e.g., drop an item, open an unlocked door).
+- Leveled spells with casting time of 1 action cost 2 AP.
+- Making more attacks than *normally allowed by your class* is allowed with **stacking disadvantage** (i.e. bonus attack 2 may have disadvantage of two dice).
+  - Casting more spells than *normally allowed by your class* (e.g. cantrip and leveled spell) also triggers **stacking disadvantage**.
+  - Spells that trigger saving throws: the **saving throw is rolled with stacking advantage** by the target.
+- Any feature or ability that allow actions to be made as a bonus action (e.g., Step of the Wind, Cunning Action, Flurry of Blows, Two-Weapon Fighting) instead can be done for 0 AP once per round each.
+
+### Attacks
+
+1. There's no attack roll, players roll damage immediately.
+   A *primary die* is chosen on multiple dice damage rolls (e.g. one of a different color, or the one that lands furthest to the left).
+   1. On a 1: miss
+   2. On a Max roll: critical hit
+      - Reroll primary die and add it to damage total.
+      - Chain more rolls if you keep rolling Max.
+   - **Advantage** and **disadvantage**:
+     - Roll one more die and ignore the lowest/highest.
+2. Saving throw spells cannot critical hit or miss, even if they roll for damage.
+
+### Heroic Reactions
+
+- **Block/dodge**: Reduce damage taken from a single attack by your AC modifier (`AC - 8`). The DM can determine some damage is unavoidable (e.g. psychic).
+- **Opportunity attack**: Made with **disadvantage** when enemy moves out of range. Common monsters don't have opportunity attacks.
+- **Interpose**: Push ally away and take their space, receiving the damage of an attack. They are pushed to an adjacent space of your choice.
+- **Help**: Give an ally advantage in a roll.
+- **Assess**: Skill check to uncover information (e.g. weakness, enemy plans, etc).
+
+## Monsters
+
+Monster AC is simplified into three groups:
+1. **0–13**: takes damage as usual: damage dice + ability modifier.
+2. **14-17**: takes damage only from the dice, ignoring damage modifiers (e.g. Str/Dex bonuses) unless they are negative.
+3. **18+**: takes half damage from all sources (rounded up).
+
+PC critical hits, saving throw spells, and damage type vulnerabilities ignore monster armor altogether.
+
+Difficulty:
+- For an easier game, limit exploding critical hits for monsters to 1 per attack.
+- For a harder mode, add the monster's *"to hit"* bonus instead of its attribute modifier.
+
+Minions:
+- Use a single damage die for each minion and roll them all at the same time: 1d4 for weak minions, up to 1d12 for a stronger minion.
+- Minions do not use modifiers, they miss on a 1 and do not crit. PCs can block/dodge minion attacks as if they were a single attack.
+- Any damage kills minions, no need to track HP individually, and a crit can kill more than one if it makes sense.
+
+## Mana
+
+Replaces spell slots.
+
+- A spell costs Mana points equal to its level.
+- Spellcasters have Max Mana = `number of spell slots + spellcaster level`.
+- Half-casters (Paladin & Ranger) have Max Mana = `spellcaster level + Proficiency Bonus`.
+- Quarter-casters (e.g., certain Fighter and Rogue subclasses) have Max Mana = `number of spell slots + Proficiency Bonus`
+- Arcane Recovery regains Mana equal to 1/2 class level (rounded up).
+- Sorcery Points can be converted into Mana and vice versa, 1 to 1.
+
+### Dying
+
+When HP drops to 0, players gain one level of exhaustion and the *dying* condition.
+
+Dying:
+- Your AP is limited to 1 per round.
+- Attacking or casting spells requires a DC 12 Str save, increasing exhaustion on failure.
+- Taking damage increases exhaustion by 2.
+- Taking a critical hit increases exhaustion by 3.
+
+Exhaustion:
+- Cumulative -1 penalty to d20 rolls outside combat, per level.
+- Exhaustion level 6 still means death.
+- A long rest still cures one level of exhaustion.
+
+## Sleeping
+
+Long rest requires 6h of sleep in a safe location (e.g. inn), and may trigger complications or boons depending on price.
+
+- Poor: 5 cp / night; 1d4, complication on 1
+- Modest: 5 sp / night; 1d8, complication on 1
+- Comfortable: 1 gp / night
+- Lavish: 5 gp / night; one temporary boon
+
+| 2d6 | Complication                                                                   |
+| --- | ------------------------------------------------------------------------------ |
+| 2   | Lose all your money.                                                           |
+| 3   | Lose half your money.                                                          |
+| 4   | Contract a disease: gain 1 level of exhaustion and must find a way to cure it. |
+| 5   | Pests in your supplies, 1d20 gp to replace.                                    |
+| 6-8 | No complication.                                                               |
+| 9   | Restless sleep, recover no Hit Dice.                                           |
+| 10  | Make a contact that could prove useful in the future.                          |
+| 11  | Overhear a useful rumor.                                                       |
+| 12  | Choose another boon or complication.                                           |
+
+| 1d6 | Temporary boon                      |
+| --- | ----------------------------------- |
+| 1   | Recover all Hit Dice.               |
+| 2   | Gain temporary HP equal to level.   |
+| 3   | Gain 2 temporary Hit Dice.          |
+| 4   | 10ft extra speed today.             |
+| 5   | Gain inspiration.                   |
+| 6   | Heal an extra level of exhaustion.  |
+
+## Character creation
+
+Ability scores:
+
+Choose a stat array for your main ability scores, then allocate 3 additional points (in at least 2 different abilities):
+- Balanced: 14, 13, 12, 11, 11 (61 points)
+- Standard: 15, 14, 12, 10, 8 (59 points)
+- Min-Max: 15, 15, 10, 9, 8 (57 points)
+
+Constitution is removed.
+
+HP: Roll your Hit Die with advantage and add it to the maximum possible Hit Die roll.
+
+Saving throws:
+- Str saving throws replace Con saving throw.
+- Choose 1 saving throw proficiency that fits with your class or background.
+- A character can only have proficiency with 1 kind of save.
+- New save: Will, combines Int, Wis, Cha: A player uses the sum of the highest and lowest of those 3 abilities as their Will save modifier.
+
+Skills:
+
+- Proficiency bonus is no longer added to skills.
+- Instead you can allocate 6 points (in addition to the bonuses granted by your ability score modifiers) into at least 3 different skills.
+
+Some skills are merged, the new list is:
+- Arcana (Int)
+- Examination (Int), Replaces Medicine and Investigation
+- Influence (Cha), Replaces Persuasion, Deception, and Performance
+- Insight (Cha)
+- Intimidation (Str)
+- Lore (Int), Replaces History and Religion
+- Naturecraft (Wis), Replaces Animal Handling, Nature, and Survival
+- Perception (Wis)
+- Sleight of Hand (Dex)
+- Stealth (Dex)
+
+Hit Dice are rolled with advantage.
+
+Leveling Up:
+
+1. Roll your Hit Die with advantage, increase your Max HP by that amount.
+2. Gain 1 point to allocate to any skill.
+3. You may move 1 Skill Point to a different skill.
+4. Classes with Expertise gain 1 additional Skill Point each level.
+5. Increase your Mana by an appropriate amount.
