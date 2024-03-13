@@ -330,6 +330,29 @@ Forces 9th card from the top. Transforms a number choice into a card force.
    - Alternatively: If someone names, e.g., "17," mention that the number consists of a "1" (deal 1 card) and a "7" (deal 7 cards).
 5. The final dealt card is the one that was originally in the 9th position from the top of the deck.
 
+### Timing force
+
+1. Have the card on top.
+2. Swivel cut about a fourth of the deck to your left hand and hold a pinky break.
+3. Put the other cards on top.
+4. Start cutting packets to the table while you ask for the spectator to say stop.
+5. Time it so you cut 3 packets from the top portion and stop talking 1 packet before the card.
+6. Most spectators will ask you to stop while you cut the next 2 packets.
+7. The forced card will either be the top card of the left packet or the right packet. Show it.
+8. If the spectator hasn't said anything, show that you have few cards in the left and that they need to be quicker.
+9. Repeat the process, cutting the first three packets very quickly while you talk so they can't stop there.
+
+### Vernon substitute transfer
+
+1. N Forced cards on bottom, with pinky break.
+2. Spread the deck and ask the spectator to touch N cards.
+3. Outjog those cards and square the deck.
+4. Rotate the outjogged cards to the left using your right hand.
+5. Hold the deck using the right hand in Biddle grip.
+6. Separate the bottom cards with the left hand and use it to strip out the outjogged cards on top of it, keeping the break.
+7. Touch the deck onto the left hand cards while squaring it, just barely, to steal the previously outjogged cards to the bottom.
+8. Your left hand contains the forced cards.
+
 # Color changes
 
 Apparently transforming one card in another.
@@ -719,7 +742,7 @@ The usual routine with the invisible deck is:
 6. The face-down card is the selected card.
 
 Pairing of the cards:
-- All odd cards are facing the same way.
+- All odd cards are facing the same way
 - All even cards are facing the same way.
 - Spades are paired with Hearts.
 - Clubs are paired with Diamonds.
@@ -727,6 +750,11 @@ Pairing of the cards:
 - Kings are paired together.
 - Red Kings are on the odd side.
 - Black Kings are on the even side.
+
+Alternate pairing: Flip over all the clubs/diamonds pairs.
+- Even spades and hearts facing the same way as odd clubs and diamonds.
+- King of spades and King of diamonds in the even spades and hearts side.
+- King of hearts and King of clubs in the odd spades and hearts side.
 
 Mnemonic for the position of the deck in the box:
 - Odd side facing the Ace on the box
@@ -744,7 +772,72 @@ Handling tips:
   1. Dribble the cards a few times.
   2. Rub each pair against each other.
 
+### Invisible deck underrated properties
+
+- More tangible presentation: spectator actually reverses card in a different color deck and watches it affect the invisible deck.
+- You can remove the top card and carefully dribble the deck and it will appear entirely face down.
+- If every card faces the same way, you can reverse some cards in the deck to instantly vanish them.
+- If you spread the deck face up, it will hide any facedown cards.
+- If you spread the deck face down, it wil show the facedown cards (seemingly appearing out of thin air).
+- If you write a forced prediction on the back of every card, you can let the spectator freely select a card and not only is it turned over in the deck, it has the prediction on the back.
+- If you write different predictions on the back of each card, you can force a card (e.g. with another deck) and not only is it turned over in the prediction deck, it has the prediction on the back.
+
 ### Routines with the Invisible Deck
+
+#### Cards across
+
+From Craig Petty's Visible. Requires two Invisible Decks of the same color.
+
+1. Setup: Separate the rough/smooth cards of one Invisible Deck so they are all face up.
+2. Setup: Bottom of the deck are 10 rough/smooth cards face up, 3 rough/smooth face down hidden in between some of them.
+   - You can use the final card as your reminder that it's the end of the pile (e.g. a red Queen).
+3. Setup: Top of the deck are 3 rough/smooth copies of the hidden cards.
+4. Turn the deck face up and count off the apparent 10 cards (with the 3 hiding in between).
+5. Give that pack for the spectator to hold.
+6. Turn the deck face down and force the top 3 cards (e.g. cross-cut force).
+7. Explain that you will make those cards disappear from the deck and appear in the cards held by the spectator.
+8. Insert the cards face up in the face down deck and square them.
+9. Turn the deck face up and, spreading it, show that there are no face down cards, they vanished.
+10. Count the held cards previously in the spectator's hand, separating the rough/smooth pairs and revealing the selected cards.
+
+#### Symbiotic
+
+1. Setup: Separate the rough/smooth cards of one Invisible Deck so they are all face up.
+2. Setup: Flip 5 cards face down (e.g. the first 5 Si Stebbins cards) and hide them in the deck.
+3. Setup: Prepare regular copies of those 5 cards to be forced in a regular deck.
+4. Spread the prepared deck face up so the cards remain hidden. Tuck it away and give it for the spectator to hold.
+5. Force the 5 cards in the regular deck (e.g. cross-cut force, Vernon substitute transfer).
+6. Ask the spectator to deal them onto the table face up.
+7. Spread the Invisible Deck face down and the cards appear, (try to match the card order by spreading the deck in the right direction).
+
+#### Do as I do
+
+From Craig Petty's Visible.
+
+1. Present a Si Stebbins or memorized deck to a spectator.
+2. Explain you will ask them to make some actions under the table and you will do the same.
+3. Ask them to turn the deck face up.
+4. Ask them to do any number of simple cuts.
+5. Ask them to take the top card and, without looking at it, reverse it and put it in the middle of the deck.
+6. Ask them to place the deck on the table (face up).
+7. Look at the face up card and determine which card came next in sequence: that is the reversed card.
+8. Flip your invisible deck so that the card should be reversed when you show it.
+9. Spread through the deck and "find the reversed card".
+10. Ask the spectator to spread their deck and find their reversed card.
+11. Ask them to reveal it: both cards are the same!
+
+#### Invisible aces
+
+From Craig Petty's Visible, based on "The card that matters" by Rick Lax.
+
+1. Take out the Aces (and pairing Queens) from the invisible deck.
+2. Use Equivoque / Magician's Choice to force the Queens:
+   1. Picture cards vs number cards
+   2. Female cards vs male cards
+3. Ask the spectator to choose the suit of the Queen.
+4. Reveal the Queen behind the Ace.
+
+#### Idea: Reversed trick
 
 Idea: Join elements from Craig Petty's Across with the presentation of ["Back to the Future" by Pit Hartling](https://www.youtube.com/watch?v=GfLpHBe3QV4).
 
@@ -761,5 +854,7 @@ Idea: Join elements from Craig Petty's Across with the presentation of ["Back to
 # Presentation ideas
 
 - Keep the routines short (3 tricks, 15 minutes altogether)
-- "May I ask you to help me? You'll get 50% of course. 50% of the applause!" (Roberto Giobbi)
 - For tricks with a small number of cards, consider replacing the cards with pieces of cardboard with other texts (names, emotions, etc). (Roberto Giobbi)
+- "May I ask you to help me? You'll get 50% of course. 50% of the applause!" (Roberto Giobbi)
+- "I don't want you to think I'm going to cheat. I'm going to cheat, I just don't want you to think that!" (Craig Petty)
+- (When the spectator makes a mistake) "Oh no problem, it's absolutely my fault, I shouldn't have picked you." (Craig Petty)
