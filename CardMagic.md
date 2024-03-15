@@ -6,7 +6,7 @@
 2. Never announce your intention until all preliminary actions which make it possible are completed.
 3. Never repeat a trick without replicating it by a different method.
 4. Think of the sleights as *your safety net in case the misdirection goes wrong*.
-5. Don't run when you're not being chased: don't overjustify regular things that the audience has not reason to suspect (yet).
+5. Don't run when you're not being chased: don't overjustify regular things that the audience has no reason to suspect (yet).
 
 
 # Important terms
@@ -804,7 +804,7 @@ From Craig Petty's Visible. Requires two Invisible Decks of the same color.
 
 1. Setup: Separate the rough/smooth cards of one Invisible Deck so they are all face up.
 2. Setup: Flip 5 cards face down (e.g. the first 5 Si Stebbins cards) and hide them in the deck.
-3. Setup: Prepare regular copies of those 5 cards to be forced in a regular deck.
+3. Setup: Prepare regular copies of those 5 cards to be forced in a regular deck (preferably of a different color).
 4. Spread the prepared deck face up so the cards remain hidden. Tuck it away and give it for the spectator to hold.
 5. Force the 5 cards in the regular deck (e.g. cross-cut force, Vernon substitute transfer).
 6. Ask the spectator to deal them onto the table face up.
