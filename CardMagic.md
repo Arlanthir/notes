@@ -537,7 +537,7 @@ Based on Back to The Future (Roberto Giobbi - Card College Light, based on *The 
 1. Ask the spectator to shuffle.
 2. Say that sometimes predictions are not supernatural powers. Sometimes they are just visions from the future. One needs only to transport themselves into the future, see the result of our present actions and come back with that knowledge. Close your eyes for a moment. Open them a few seconds later and say that you have seen exactly the outcome of the next few minutes.
 3. Say that you will thus make a prediction using a card in the deck.
-4. Look at the cards. Check the value of the first card and suit of the second (or vice versa) and take out a "prediction card" facedown on the table that is the combination of the two. If impossible, change the first cards to make it possible (e.g. by hesitating on a prediction or asking for more shuffling).
+4. Look at the cards. Check the value of the first card and suit of the second (or vice versa) and take out a "prediction card" facedown on the table that is the combination of the two. If they are two numbers of the same suit, make the prediction be the sum of the values if possible. If impossible, change the first cards to make it possible (e.g. by hesitating on a prediction or asking for more shuffling).
 5. (Optional) Shuffle retaining top two.
 6. Ask spectator to deal some cards from the top and stop when they want (between 10 and 20 or so).
 7. (Optional) After they have dealt at least 2 cards, say "of course you can deal from the middle or from the bottom as well if you want. Or even shuffle again.".
