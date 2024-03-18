@@ -775,7 +775,6 @@ Handling tips:
 ### Invisible deck underrated properties
 
 - More tangible presentation: spectator actually reverses card in a different color deck and watches it affect the invisible deck.
-- You can remove the top card and carefully dribble the deck and it will appear entirely face down.
 - If every card faces the same way, you can reverse some cards in the deck to instantly vanish them.
 - If you spread the deck face up, it will hide any facedown cards.
 - If you spread the deck face down, it wil show the facedown cards (seemingly appearing out of thin air).
