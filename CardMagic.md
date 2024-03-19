@@ -163,12 +163,15 @@ Discovered by Bob Hummer, it's a method of retaining face up and face down cards
 ## Ed Marlo Convincing Control (selection to bottom)
 
 1. Spread the cards for spectator to touch one.
-2. Lift the cards to show them the selected card.
-3. While returning spread to dealing position, outjog the card above the selection instead of the selection.
-4. Still during the movement, cull the selection with the right fingers to the bottom of the right pack and open it like a book.
-5. Close the deck so the selection is now on the bottom of the deck and there is a fake outjogged card.
+2. Grab the cards with the right hand, the spectator's card is the bottom one.
+3. Lift the cards to show them the selected card, while positioning it close to the second from the bottom.
+4. Lift your left hand to help show the card.
+5. While returning spread to dealing position, cull the bottom card with the right hand so that the second from the bottom is the one on the edge.
+6. Still during movement, press the culled card to open it like a book and make space for the rest of the deck.
+7. Outjog the fake selection by returning the right hand cards to regular position without it.
+8. Close the deck so the selection is now on the bottom of the deck and there is a fake outjogged card.
 
-Video: https://www.youtube.com/watch?v=nHQZojNUsVs
+Video: https://youtu.be/5qD6iLTA6ys?si=Nap1Th7xqFudrEpc&t=408
 
 ## Spread and break control (selection to top)
 
