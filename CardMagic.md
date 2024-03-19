@@ -367,12 +367,23 @@ Forces 9th card from the top. Transforms a number choice into a card force.
 
 Apparently transforming one card in another.
 
-## Shake color change
+## Twirl color change (pivot color change)
 
 1. Pick two cards back-to-back with thumb and middle finger on opposite corners.
 2. While shaking, use the ring finger and/or index finger to rotate the cards together.
 3. Place the two cards on top of deck.
 4. Pick up only the top one to hand out for examination.
+
+## Erdnase color change
+
+1. Have the two cards on top of the deck, face up.
+2. Cover the top card with your right hand, straight and flat.
+3. Outjog the card towards the spectator by moving the deck towards you while the pressure of your fingers keeps the card in place.
+4. Outjog the second card towards you using the right hand's thumb pad, pulling it until it clears the first card.
+5. Use your left index finger to return the top card flush with the deck while you adjust your left hand so the top card moves as little as possible.
+6. Palm the replacement card to reveal the card still on top before you change, or just cover the top immediately by restoring your hand to the original position.
+
+[Video by Alex Boyer](https://www.youtube.com/watch?v=tEPAj-l_-F4).
 
 # Double lifts
 
