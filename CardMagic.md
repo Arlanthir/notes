@@ -157,7 +157,7 @@ Discovered by Bob Hummer, it's a method of retaining face up and face down cards
 1. Open the deck bookwise so the spectator can replace their previously chosen card on top of the left pack.
 2. Take away the top portion of the deck, but applying pressure with the left fingers to transfer the top card from the right to the left (**backslip**).
 3. Insert that card into the middle of the right pack "so it's completely lost".
-4. Give that pack to the spectator to shuffle while you false shuffle the left pack.
+4. Give that pack to the spectator to shuffle while you false shuffle the left pack (alternatively just cut that portion to the bottom).
 5. Reassemble the deck with your pack on top. The chosen card is now on top.
 
 ## Ed Marlo Convincing Control (selection to bottom)
@@ -175,6 +175,13 @@ Video: https://www.youtube.com/watch?v=nHQZojNUsVs
 1. Spread the cards to receive a card to be replaced.
 2. When closing the spread after the replacement, catch a break above the replaced card while the spread covers it.
 3. Square the deck and pivot it into an overhand lift shuffle, controlling packet **A** as usual.
+
+## Double undercut (stock to bottom)
+
+1. Hold a pinky break under the stock.
+2. Transfer to a right thumb break while separating roughly half the deck.
+3. Use the left hand to cut the bottom half to on top of the break.
+4. Use the break to cut that portion to the bottom.
 
 # False counts
 
@@ -715,6 +722,35 @@ Video: https://www.youtube.com/watch?v=F8pePRJs4wo
 4. You turn your back to the spectator.
 5. The spectator names every card they're holding saying "My card is the &lt;name of the card&gt;".
 6. After some theatrics you identify their card saying that their voice was more solid when they said that name.
+
+## Out of Sight, Out of Mind
+
+Originally by Dai Vernon, this is [SpideyHypnosis's handling](https://www.youtube.com/watch?v=PTy68aZSMvc).
+
+1. Have the spectator shuffle the deck.
+2. Explain that you will try to read the spectator's mind to discover a card they are merely thinking of.
+3. Show them the top 6 cards of the deck slowly, one by one, and instruct them to think of one.
+4. After the sixth card, ask them if they have chosen one. If they have, proceed, otherwise repeat with another six cards.
+5. When they say yes, put three of the cards on top of the deck, hold a break, put the other three on top.
+6. Double undercut to move the top three cards to the bottom.
+7. Say that, most of the time, spectators choose a card and hold it, but this time he/she is merely thinking of one. While you say this, take a card from the middle of the deck and move it to the bottom, to hide the three bottom cards.
+8. (Optional) False riffle shuffle retaining top and bottom.
+9. Start showing cards from the bottom to "recreate the image of the card in the spectator's mind".
+10. Hold those 7 cards with the right hand, keep spreading the deck with the left slowly until around halfpoint.
+11. Ask them if they've already seen their card.
+    - If so: cut the bottom 7 cards to the top.
+    - If not: Run three cards from the bottom to the top (either face up and throw the deck on top or face down, injog and throw the deck on top).
+12. Their card is now 4-6th from the top.
+13. (Optional) Place the deck on top of the spectator's hands.
+14. Start taking cards from the top at an angle, "feeling them", subtly peeking them.
+15. After 3 cards, hold a break before you take the 4th.
+16. Take the 4th and the 5th over the pinky break, remembering their values.
+17. Go to take the 6th but instead say "no, I'm going to stop right here".
+18. Ask them to name the card they're thinking of.
+    - If it was the 4th: double lift and show it.
+    - If it was the 5th: drop the break and show your top card.
+    - If it was the 6th: ask the spectator to turn over the next card.
+19. If you had to double lift, hold the two turned cards and turn the rest of the packet face up to clear the lift.
 
 # Trick database
 
