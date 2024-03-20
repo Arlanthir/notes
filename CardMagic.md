@@ -766,6 +766,8 @@ Originally by Dai Vernon, this is [SpideyHypnosis's handling](https://www.youtub
     - If it was the 6th: ask the spectator to turn over the next card.
 19. If you had to double lift, hold the two turned cards and turn the rest of the packet face up to clear the lift.
 
+Alternative: Always place the 7 seen cards on top regardless. If they say they saw it, it's 4, 5, or 6. If not, it's 8, 9, or 10.
+
 # Trick database
 
 | Trick        | Explanation                               | Difficulty (1-5) |
