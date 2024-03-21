@@ -346,7 +346,7 @@ Forces 9th card from the top. Transforms a number choice into a card force.
    - Alternatively: If someone names, e.g., "17," mention that the number consists of a "1" (deal 1 card) and a "7" (deal 7 cards).
 5. The final dealt card is the one that was originally in the 9th position from the top of the deck.
 
-### Timing force
+### Psychological stop force / timing force
 
 1. Have the card on top.
 2. Swivel cut about a fourth of the deck to your left hand and hold a pinky break.
