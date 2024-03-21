@@ -301,6 +301,12 @@ Uses a known/glimpsed card (cut to the top or bottom of the spectator card) to i
 
 [Video](https://www.youtube.com/watch?v=eg5OHLu8Nys)
 
+### Glide force (bottom card)
+
+1. Glide the bottom card and start second dealing from the bottom.
+2. Ask the spectator to tell you to stop when they want to.
+3. When spectator calls stop, show them the real bottom card.
+
 ### Backslip force
 
 1. Hold the deck in the left hand, face to the palm.
