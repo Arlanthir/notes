@@ -1,14 +1,5 @@
 # Card Magic
 
-# Rules
-
-1. The _patter_, story and personality of each performance is what makes it enjoyable and memorable.
-2. Never announce your intention until all preliminary actions which make it possible are completed.
-3. Never repeat a trick without replicating it by a different method.
-4. Think of the sleights as *your safety net in case the misdirection goes wrong*.
-5. Don't run when you're not being chased: don't overjustify regular things that the audience has no reason to suspect (yet).
-
-
 # Important terms
 
 - **Run**: While performing an overhand shuffle, take cards one by one from the right pile to the top of the left pile using the left thumb.
@@ -358,6 +349,26 @@ Forces 9th card from the top. Transforms a number choice into a card force.
 8. If the spectator hasn't said anything, show that you have few cards in the left and that they need to be quicker.
 9. Repeat the process, cutting the first three packets very quickly while you talk so they can't stop there.
 
+### Hofzinser under the spread force
+
+Harder version that forces the card on the bottom:
+1. Start spreading the deck from the left to the right hand.
+2. At the same time, use your right middle finger to cull the bottom card under the spread, all the way to your right hand.
+3. Use your left index and pinky fingers to apply pressure to the deck and allow the cull, while relaxing your middle and ring fingers so they don't block the card.
+4. Spread the cards on top of the culled card, continuously hiding it.
+5. Ask the spectator to touch a card.
+6. When they do, separate the hands at that selection, making it the card at the edge of the right hand cards.
+7. Use your left thumb to confirm "this one?".
+8. Push the culled card under the selection, flush, while using the left packet to square everything up.
+9. Lift the right hand cards to show the forced selection as the bottom card.
+
+Easier version that forces the card on top:
+1. Instead of culling the bottom card, (reverse) count up to 3 cards to your right hand saying "in a moment I will ask you to touch a card".
+2. The cards are now in the same position as if they were culled, with the top card now on the bottom of the small packet.
+3. Start spreading the cards on top of the previous packet.
+
+[Video by Reid Ferry](https://www.youtube.com/watch?v=xqLa7iVR5BA).
+
 ### Vernon substitute transfer
 
 1. N Forced cards on bottom, with pinky break.
@@ -387,7 +398,9 @@ Apparently transforming one card in another.
 3. Outjog the card towards the spectator by moving the deck towards you while the pressure of your fingers keeps the card in place.
 4. Outjog the second card towards you using the right hand's thumb pad, pulling it until it clears the first card.
 5. Use your left index finger to return the top card flush with the deck while you adjust your left hand so the top card moves as little as possible.
-6. Palm the replacement card to reveal the card still on top before you change, or just cover the top immediately by restoring your hand to the original position.
+6. Use the deck as a pressure point to keep the "palmed" card connected to your right hand while you reveal the top card for the last time.
+7. Cover the top card with your right hand, leave the switched card and square it.
+8. Remove your right hand waving it magically along the diagonal of the card.
 
 [Video by Alex Boyer](https://www.youtube.com/watch?v=tEPAj-l_-F4).
 
@@ -743,6 +756,39 @@ Video: https://www.youtube.com/watch?v=F8pePRJs4wo
 5. The spectator names every card they're holding saying "My card is the &lt;name of the card&gt;".
 6. After some theatrics you identify their card saying that their voice was more solid when they said that name.
 
+## Triple Fantasia
+
+By [Luís de Matos](https://www.youtube.com/watch?v=0_yVLkLWTlk), inspired by Juan Tamariz (Juego de las cuatro cartas azules) and/or Tom Mullica (Tom-foolery transformation).
+
+1. Packet setup: 3 face-up red-backed Aces, on top of 4 face-down blue-backed Kings, on top of the final face-up Ace.
+2. Hold the packet on the left hand, take off the first two Aces with the right hand.
+3. Instead of taking the third Ace, grab the full packet with the right hand and use the left hand to hold on to the last card.
+4. Pass the last card to the top (front) of the right hand packet.
+5. Square everything in the left hand, returning to a sort of original position.
+6. Repeat the steps, this time revealing a blue-backed card.
+7. Repeat the steps until all cards seem face-down blue cards.
+8. Repeat the steps revealing the Aces again, but flip them when moving them to the front, revealing the red backs.
+9. Repeat the steps revealing the blue backs again, but flip them when moving them to the front, revealing the Kings.
+
+## Chicago Opener (Red Hot Mamma)
+
+1. Setup: Duplicate with different colored back on the bottom, regular card on top of it.
+2. Spread the cards and ask the spectator to select one (free).
+3. Start a Hindu shuffle and tell the spectator to call stop.
+4. When they do, offer the stripped cards so far so they can put their card on top.
+5. Place the rest of the deck on top, so that the different colored back card sits on top of it.
+6. Spread the deck, cut it so that the different color is on top.
+7. Double lift and show that it's the spectator's card.
+8. Flip back and remove the top card to the table.
+9. Say that against your better judgment you will repeat the trick.
+10. Hindu force the bottom card.
+11. Immediately complete the shuffle so that the card is somewhere in the middle.
+12. Spread the deck and act confused as to why there's no different colored back.
+13. (Optional) Close the deck and spread it again, in a seemingly desperate attempt to make it work.
+14. Reveal the card on the table, saying that the different back was there all along!
+
+[Performance by Craig Petty](https://www.youtube.com/watch?v=G1kTV5rIKa4).
+
 ## Out of Sight, Out of Mind
 
 Originally by Dai Vernon, this is [SpideyHypnosis's handling](https://www.youtube.com/watch?v=PTy68aZSMvc).
@@ -908,9 +954,18 @@ Idea: Join elements from Craig Petty's Across with the presentation of ["Back to
 8. The "prediction"/"found" card now has a face. It is the selected card!
 
 
-# Presentation ideas
+# Presentation rules
 
-- Keep the routines short (3 tricks, 15 minutes altogether)
+1. The _patter_, story and personality of each performance is what makes it enjoyable and memorable.
+2. Never announce your intention until all preliminary actions which make it possible are completed.
+3. Never repeat a trick without replicating it by a different method.
+4. Think of the sleights as *your safety net in case the misdirection goes wrong*.
+5. Don't run when you're not being chased: don't overjustify regular things that the audience has no reason to suspect (yet).
+6. Keep the routines short (3 tricks, 15 minutes altogether).
+7. Before revealing found cards, ask the spectator to name their card so the reveal has more impact.
+
+## Other ideas and quotes
+
 - For tricks with a small number of cards, consider replacing the cards with pieces of cardboard with other texts (names, emotions, etc). (Roberto Giobbi)
 - "May I ask you to help me? You'll get 50% of course. 50% of the applause!" (Roberto Giobbi)
 - "I don't want you to think I'm going to cheat. I'm going to cheat, I just don't want you to think that!" (Craig Petty)
