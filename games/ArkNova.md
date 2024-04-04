@@ -90,7 +90,7 @@ Através de algumas recompensas, é possível fazer *upgrade* às cartas de **A�
 5. Colocar a carta do animal ao lado do Zoo.
 6. Ganhar os benefícios do canto inferior direito da carta (nomeadamente **Appeal**).
 7. Executar a ação da carta de animal, escrita no centro dela.
-   - Alguns animais provocam **Efeitos Interativos** (Venom, Constriction). Só são aplicados a quem tiver 5 ou mais **Appeal**.
+   - Alguns animais provocam **Efeitos Interativos** (Constriction, Hypnosis, Pilfering, Venom). Só são aplicados a quem tiver 5 ou mais **Appeal**.
 
 #### Association
 
@@ -141,16 +141,16 @@ Uma de duas opções:
 - Pode-se realizar a **Ação** duas vezes, com o mesmo poder (exceto tokens X, usados individualmente para cada vez).
 - Depois de usar a carta com token, descartar o token.
 
-#### Venom
-
-- Distribui-se nas cartas de **Ação** da esquerda para a direita. Se uma carta já tem token de Venom, descarta-se o duplicado.
-- Em cada turno, se existe uma carta de **Ação** com token de Venom e fizermos outra **Ação**, perdemos 2 dinheiro.
-- Depois de usar a carta com token, descartar o token.
-
 #### Constriction
 
 - Distribui-se nas cartas de **Ação** da direita para a esquerda. Se uma carta já tem token de Constriction, descarta-se o duplicado.
 - Poder da carta com token é reduzido em 2.
+- Depois de usar a carta com token, descartar o token.
+
+#### Venom
+
+- Distribui-se nas cartas de **Ação** da esquerda para a direita. Se uma carta já tem token de Venom, descarta-se o duplicado.
+- Em cada turno, se existe uma carta de **Ação** com token de Venom e fizermos outra **Ação**, perdemos 2 dinheiro.
 - Depois de usar a carta com token, descartar o token.
 
 ### Tracks
