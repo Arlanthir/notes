@@ -63,17 +63,19 @@ Através de algumas recompensas, é possível fazer *upgrade* às cartas de **A�
 1. Construir um edifício (ou mais, após *upgrade II*) de tamanho X (poder) ou inferior.
    - Com o *upgrade II*, novos edifícios ficam disponíveis (**Aviário** e **Reptilário**).
      - (O **Petting Zoo** está disponível mesmo no nível I.)
+     - Cada jogador só pode ter um de cada **Recinto Especial** (1 **Petting Zoo** + 1 **Aviário** + 1 **Reptilário**).
    - Com o *upgrade II*, novos espaços ficam disponíveis (ocupados por pá rosa).
 2. Pagar 2 x tamanho, em dinheiro.
-3. Colocar o edifício onde couber no tabuleiro.
+3. Colocar o edifício onde couber no tabuleiro. Não cobrir água nem rochas.
    - Adjacente a algum edifício já existente. Se ainda não existir, ao longo de uma das bordas do tabuleiro.
    - **Pavilhão**: Ganhar 1 **Appeal** imediatamente.
    - **Quiosque**: Vão dar dinheiro no **Break**. Tem de haver pelo menos 2 espaços entre **Quiosques** (exemplo no tabuleiro pessoal).
    - **Recinto** (Enclosure): É colocado com o número para cima, para simbolizar que está desocupado.
 4. Se o edifício cobrir algum símbolo amarelo no tabuleiro pessoal, ganhar o bónus correspondente.
-5. Para os **Recintos Especiais** (**Aviário**, **Reptilário**), opcionalmente mover para lá os animais que podem estar lá:
+5. Para os **Recintos Especiais** exceto **Petting Zoo** (**Aviário**, **Reptilário**), opcionalmente mover para lá os animais que podem estar lá:
    1. Ocupar os slots necessários do **Recinto Especial** com um cubo da cor do jogador.
    2. Virar um **Recinto** normal onde o animal pudesse estar para o lado desocupado.
+6. Se todos os espaços livres (exceto água e rochas) forem cobertos, o jogador ganha imediatamente 7 **Appeal**.
 
 #### Animals
 
@@ -118,7 +120,7 @@ Através de algumas recompensas, é possível fazer *upgrade* às cartas de **A�
        - Deslizar cartas para a direita e remover aquelas que ultrapassem os slots disponíveis para o número de jogadores.
      - (Opcional com *upgrade II*): jogar **Projeto de Conservação** da **Reputação**, pagando o custo da pasta.
      - Colocar um cubo do lado esquerdo do tabuleiro pessoal na carta de **Projeto de Conservação** (que ainda não tenha cubos do mesmo jogador), no nível (desocupado) atingido.
-       - Alguns projetos exigem que se liberte animais do Zoo. Desocupar o **Recinto** apropriado (virando ou removendo cubos) e perder o número de **Appeal** indicado pela carta do animal.
+       - Alguns projetos exigem que se liberte animais do Zoo. Desocupar o **Recinto** apropriado (removendo cubos de um **Recinto especial** (sempre que possível) ou virando o **Recinto standard** mais pequeno válido para o animal) e perder o número de **Appeal** indicado pela carta do animal (não se perde o resto dos benefícios do canto inferior direito, como **Reputação** ou **Pontos de Conservação**).
      - Ganhar pontos de **Conservação** correspondentes.
      - Ganhar recompensa desbloqueada no tabuleiro pessoal.
 
@@ -130,6 +132,7 @@ Uma de duas opções:
   1. Custo de poder no canto superior esquerdo da carta.
   2. Outros requisitos do lado esquerdo da carta.
   3. Realizar a ação imediata da carta.
+     - Algumas cartas trazem um edifício único, deve ser colocado no tabuleiro pessoal virado para cima (não é um **Recinto**).
   4. Colocar a carta junto ao Zoo.
   5. Ter em atenção quando pode disparar alguma possível ação recorrente da carta.
 - **Break** X e ganhar X dinheiro (ou 2X, com *upgrade II*).
@@ -163,6 +166,7 @@ Uma de duas opções:
 #### Reputação
 
 - Quando se sobe até um espaço de **Reputação** com recompensa, ganha-la imediatamente.
+- É preciso o *upgrade II* da **Ação** **Cards** para passar do nível 9 para o 10 de **Reputação**.
 - Quando se está no espaço final da **Reputação** e se recebe mais um ponto, ganha-se 1 de **Appeal** (cada vez).
 
 ### Break / Pausa
@@ -194,3 +198,10 @@ Uma de duas opções:
   3. Determinar o número mais baixo de **Appeal** ligado à posição do jogador na track de **Conservação** e subtrair esse número ao verdadeiro indicador de **Appeal** (se não tiverem cruzado, será negativo, é normal).
   4. O vencedor é quem tiver a pontuação final mais alta.
      - Em caso de empate, ganha quem tiver apoiado mais **Projetos de Conservação** (ver cubos em falta no lado esquerdo do tabuleiro pessoal).
+
+## Tips
+
+- Pode não parecer, mas o jogo é uma corrida (sprint, não maratona).
+- Os pontos de **Conservação** são muito importantes (valem até 3 dos outros) e mais difíceis de conseguir.
+  - Investir nos donativos (portanto virar a carta de **Association** cedo).
+  - Apoiar vários **Projetos de Conservação** mesmo que nos níveis mais baixos, em vez de competir para o nível mais alto e arriscar que alguém se antecipe.
