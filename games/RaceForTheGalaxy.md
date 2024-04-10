@@ -109,3 +109,7 @@ Cada carta pode conter habilidades que se aplicam a uma determinada **Fase** do 
     - Se o oponente escolheu apenas uma delas, recebe o seu **Bónus** apenas na primeira fase correspondente.
     - As habilidades de cartas jogadas na primeira fase podem ser usadas na segunda.
   - Se um jogador escolher 2 cartas de **Consume**, tem de vender um recurso antes de consumir ganhando o dobro dos **VPs**.
+
+## Variante solo (Epyo's Campaigns)
+
+https://boardgamegeek.com/thread/2681238/race-for-the-galaxy-solo-campaigns
