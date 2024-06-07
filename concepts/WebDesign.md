@@ -132,6 +132,7 @@ Example system having 16px as a base value (because 16 is the default base font-
 3. Weights
    - Stick to about 2, usually normal (400/500) and bold (600/700).
 4. Line-height
+   - Typically around 1.2 for headings and 1.4 for body text.
 5. Headings style (h1, h2, etc)
 
 ### Color palette
