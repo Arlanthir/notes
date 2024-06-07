@@ -245,8 +245,9 @@ Texture
 - Full image backgrounds.
   - Tips to increase text contrast:
     1. Add an overlay / lower the image contrast.
-    2. Colorize the image.
-    3. Add text shadow.
+    2. Blur the image.
+    3. Colorize the image.
+    4. Add text shadow.
 
 Flourishes
 - Link style.
