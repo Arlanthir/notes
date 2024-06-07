@@ -110,6 +110,30 @@ Example system having 16px as a base value (because 16 is the default base font-
 - 640px (40rem)
 - 768px (48rem)
 
+### Typography
+
+1. Typefaces
+   - Choose one for headlines and another for body text.
+   - Rule of thumb: filter font choosing to fonts with 5+ weights (10 styles including italics), they tend to have been crafted with care.
+2. Sizes
+   - Preferably based on the spacing and sizing system.
+   - e.g.
+     - 12
+     - 14 (0.875rem)
+     - 16
+     - 18 (1.125rem)
+     - 20 (1.25rem)
+     - 24
+     - 30 (1.875rem)
+     - 36 (2.25rem)
+     - 48
+     - 60 (3.75rem)
+     - 72 (4.5rem)
+3. Weights
+   - Stick to about 2, usually normal (400/500) and bold (600/700).
+4. Line-height
+5. Headings style (h1, h2, etc)
+
 ### Color palette
 
 You will need:
@@ -131,18 +155,6 @@ For the non-grayscale colors:
 3. Fill in the gaps.
    - Visually find the colors mid-way between the base and the edges.
    - Repeat between any pair of colors where you still need a shade (e.g. until you have 9 shades).
-
-### Typography
-
-1. Typefaces
-   - Choose one for headlines and another for body text.
-   - Rule of thumb: filter font choosing to fonts with 5+ weights (10 styles including italics), they tend to have been crafted with care.
-2. Sizes
-   - Preferably based on the spacing and sizing system.
-   - e.g. 12, 14 (0.875rem), 16, 18 (1.125rem), 20 (1.25rem), 24, 30 (1.875rem), 36 (2.25rem), 48, 60 (3.75rem), 72 (4.5rem)
-3. Weights
-   - Stick to about 2, usually normal (400/500) and bold (600/700).
-4. Line-height
 
 ### Buttons
 
@@ -210,6 +222,7 @@ Consider replacing borders with:
 - Limit paragraphs to about 8-13 words, or 45-75 characters per line (20-35em).
 - Long lines need taller line-height.
 - Large text size needs shorter line-height.
+- Baseline align horizontal copies with different font sizes.
 - Don't center-align long paragraphs.
 - Right-align numbers.
 - Tighten headlines letter-spacing in fonts designed for body text.
