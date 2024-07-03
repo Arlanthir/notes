@@ -1,6 +1,6 @@
 # Arch Linux
 
-## Basics
+## Package Basics
 
 | Command                   | Action                                                                 |
 | ------------------------- | ---------------------------------------------------------------------- |
@@ -8,12 +8,14 @@
 | `pacman -R <package>`     | Remove package                                                         |
 | `pacman -Ss <query>`      | Search package                                                         |
 | `pacman -Syu`             | Update packages                                                        |
-| `pacman -Syudd`            | Update packages, skip dependency checks                               |
+| `pacman -Syudd`           | Update packages, skip dependency checks                                |
 | `pacman -Syu --noconfirm` | Update packages without asking for confirmations (replacements, etc)   |
 | `pacman -Sc`              | Clear cache                                                            |
 | `pacman -Qi <package>`    | Show info (e.g. dependencies of &lt;package&gt; and what installed it) |
 | `pacman -Ql <package>`    | List all files installed by &lt;package&gt;                            |
 | `pacman -Qo <file>`       | Check which package installed &lt;file&gt;                             |
+| `pacman -Qm`              | List installed packages from AUR                                       |
+| `pacman -Sg <group>`      | Check which packages belong to a group                                 |
 | `sudo pacman -Qtdq \| sudo pacman -R -` | Remove all unused (orphan) packages                      |
 
 *Note*: When your system is very outdated and updating it results in corrupted packages error, update the keyring first: `sudo pacman -S archlinux-keyring`.
@@ -24,50 +26,61 @@ User-provided software, available in https://aur.archlinux.org/index.php
 
 ### Install packages manually
 
-1. Download the tarball  
-  `curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/package_name.tar.gz`
-2. Extract it, go to the folder  
-  `tar -xvf package_name.tar.gz -C dirname`  
-  `cd dirname`
-3. Create package and install it  
-  `makepkg -sri` (install dependencies, remove dependencies after build, install after build)
+```bash
+# Download the tarball
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/package_name.tar.gz
+tar -xvf package_name.tar.gz -C dirname
+cd dirname
+makepkg -si # (install dependencies, install after build); or
+makepkg -sri # (install dependencies, remove dependencies after build, install after build)
+```
 
-If makepkg complains about PGP keys (ex: `1EB2638FF56C0C53`):  
-`gpg --recv-keys --keyserver hkp://pgp.mit.edu 1EB2638FF56C0C53`
+If makepkg complains about PGP keys (ex: `1EB2638FF56C0C53`):
+```bash
+gpg --recv-keys --keyserver hkp://pgp.mit.edu 1EB2638FF56C0C53
+```
 
-To install using root, use su (not recommended):  
-`su -s /bin/bash nobody`
+To install using root, use su (not recommended): `su -s /bin/bash nobody`
 
-### List AUR packages
-`pacman -Qm`
+
+### Install packages automatically with paru (AUR)
+```bash
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
+
+`paru` supports the same operations as `pacman`
+
+Additional commands:
+
+| Command                   | Action                                                 |
+| ------------------------- | ------------------------------------------------------ |
+| `paru`                    | Upgrade all packages (including from official repos)   |
+| `paru -Sua`               | Upgrade AUR packages only                              |
+| `paru -G <package>`       | Download the PKGBUILD only                             |
+
 
 ### Install packages automatically with yay (AUR)
+
+Previous alternative, written in Go. Equivalent commands to `paru` (and `pacman`).
+
 ```bash
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -sri
+makepkg -si
 ```
 
-`yay` supports the same operations as `pacman`
 
-Additionally, it allows full update of pacman and AUR packages with a single simple command:
+# Installation guide (2024-07-01)
 
-```
-yay
-```
+Always compare to the [updated official guide](https://wiki.archlinux.org/title/installation_guide).
 
-To only download the PKGBUILD of a package, do:
-
-`yay -G <package_name>`
-
-
-## Installation guide (2021-01-08)
-
-### First steps
+## First steps
 
 Burn the ISO to a USB
 ```bash
-dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync
+dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress
 # If EFI boot hangs, repeat the `dd` command a couple of times (this was actually in the wiki...)
 ```
 
@@ -81,81 +94,102 @@ Change keyboard layout
 loadkeys pt-latin1
 ```
 
-Check if wired connection is available
+Confirm that wired connection is available
 ```bash
 ping archlinux.org
 ```
 
-If not, enable wired connection
+Configure Wireless
+
 ```bash
-ip link                                       # to find out <interface>
-systemctl enable dhcpcd@<interface>.service
-# Or try: dhcpcd.service (the above seems to have timeout errors, and disable ethernet hotplug)
-dhcpcd
+iwctl
+device list
+# If needed:
+# device <name> set-property Powered on
+# adapter <adapter> set-property Powered on
+station <name> scan
+station <name> get-networks
+station <name> connect <SSID>
+exit
 ```
 
-Configure Wireless  
-`wifi-menu`
-
-Check if UEFI mode is on
+Confirm NTP is enabled
 ```bash
-ls /sys/firmware/efi/efivars      # only exists if UEFI
+timedatectl
 ```
 
-Start time sync and check status
+Otherwise
 ```bash
 timedatectl status
 timedatectl set-ntp true
 timedatectl status
 ```
 
-### Setup disk
+## Setup disk
+
+Verify boot mode:
+```bash
+cat /sys/firmware/efi/fw_platform_size
+# 64 bit UEFI (ideal), 32 bit UEFI (limited), non-existent (BIOS)
+```
 
 Check disks
 ```bash
-lsblk                   # or: fdisk -l
+fdisk -l | more         # or: lsblk
 fdisk -l /dev/sdx       # where sdx is your desired disk; nvme should appear as nvme0n1
 ```
 
-Check current partition table  
-`parted /dev/sdx print`
-
-#### Swap  Partition
-
-##### Partitioning using MBR, / + swap
-**Note**: This bricked an Acer's HDD, maybe because Swap comes first or because lack of formatting
-```bash
-parted /dev/sdx
-mklabel msdos                             # create new partition table
-mkpart primary linux-swap 1MiB 6GiB
-mkpart primary ext4 6GiB 100%
-set 2 boot on                             # if dual-booting, don't change boot flag
-quit
+Check current partition table
+```
+parted /dev/sdx print
 ```
 
-##### Partitioning using MBR, / without swap
-```bash
-parted /dev/sdx
-mklabel msdos                             # create new partition table
-mkpart primary ext4 1MiB 100%
-set 1 boot on                             # if dual-booting, don't change boot flag
-quit
-```
+**Note**: Skip creating and formatting UEFI partition if it's already present.
 
-##### Partitioning using GPT, / without swap
+### Partition
+
+Partitioning using GPT, / without swap
 ```bash
-parted /dev/sdx
+parted /dev/sdx # Or /dev/nvme0n1
 mklabel gpt
 mkpart primary fat32 1MiB 261MiB
 set 1 esp on
 mkpart primary ext4 261MiB 100%
 quit
-mkfs.fat -F32 /dev/sdx1   # Or /dev/nvme0n1p1
 ```
 
-Check partitions  
+<details>
+  <summary>Previously: Partitioning using MBR (BIOS)</summary>
+
+  Partitioning using MBR, / + swap  
+  **Note**: This bricked an Acer's HDD, maybe because Swap comes first or because of lack of formatting
+  ```bash
+  parted /dev/sdx
+  mklabel msdos                             # create new partition table
+  mkpart primary linux-swap 1MiB 6GiB
+  mkpart primary ext4 6GiB 100%
+  set 2 boot on                             # if dual-booting, don't change boot flag
+  quit
+  ```
+
+  Partitioning using MBR, / without swap
+  ```bash
+  parted /dev/sdx
+  mklabel msdos                             # create new partition table
+  mkpart primary ext4 1MiB 100%
+  set 1 boot on                             # if dual-booting, don't change boot flag
+  quit
+  ```
+</details><br>
+
+Check partitions
 ```bash
 lsblk /dev/sdx    # Or /dev/nvme0n1
+```
+
+Format UEFI partitions (only if newly created)
+```bash
+mkfs.fat -F32 /dev/sdx1   # Or /dev/nvme0n1pX
 ```
 
 Format ext4 partitions  
@@ -169,38 +203,35 @@ mkswap /dev/sdxY
 swapon /dev/sdxY
 ```
 
-Mount root partition  
+Mount root partition
 ```bash
-mount /dev/sdxY /mnt    # Or /dev/nvme0n1pY
+mount /dev/sdxY /mnt    # Or /dev/nvme0n1p2
 ```
 Mount EFI partition
 ```bash
 # If using EFISTUB / systemd-boot
-mount /dev/sdx1 /mnt/boot   # Or /dev/nvme0n1p1
+mount --mkdir /dev/sdx1 /mnt/boot   # Or /dev/nvme0n1p1
 # If using GRUB
-mkdir /mnt/efi
-mount /dev/sdx1 /mnt/efi    # Or /dev/nvme0n1p1
+mount --mkdir /dev/sdx1 /mnt/efi    # Or /dev/nvme0n1p1
 ```
 
 Configure swap file if not using a partition
 ```bash
-fallocate -l 4G /mnt/swapfile
-chmod 600 /mnt/swapfile
-mkswap /mnt/swapfile
+mkswap -U clear --size 4G --file /mnt/swapfile
 swapon /mnt/swapfile
 ```
 
-### Installation
+## Installation
 
 Update mirror list with preferred mirrors on the top:
 ```bash
 nano /etc/pacman.d/mirrorlist
 ```
-(To cut two lines, press Ctrl+K two times in a row)
+(To cut two lines, press `Ctrl+K` two times in a row)
 
 Install:
 ```bash
-pacstrap /mnt base linux linux-firmware base-devel git nano dhcpcd dosfstools e2fsprogs ntfs-3g
+pacstrap -K /mnt base linux linux-firmware base-devel git nano dosfstools e2fsprogs ntfs-3g # ALSO: intel-ucode or amd-ucode
 ```
 
 Generate fstab:
@@ -213,27 +244,26 @@ Check the generated fstab and fix it:
 ```bash
 nano /mnt/etc/fstab
 ```
-- Remove `/mnt`from swapfile if any
+- Remove `/mnt` from swapfile if any
 - Add option `discard` to non-NVMe SSD drives
 
 Add optional NTFS drive (remember to install ntfs-3g and to create the mnt folder):
-```
+```bash
 lsblk -f                # print UUIDs
 
 #UUID=...    /mnt/data   ntfs-3g   rw,exec,permissions,auto,x-gvfs-show   0 0
-UUID=...    /mnt/data   ntfs-3g   defaults,uid=1000,gid=1000,exec,x-gvfs-show   0 0
-defaults,uid=1000,gid=1000,dmask=000,fmask=000,exec,x-gvfs-show
+UUID=...    /mnt/data   ntfs-3g   defaults,uid=1000,gid=1000,dmask=022,fmask=133,exec,x-gvfs-show   0 0
+# Consider mounting to /media/data instead of enabling x-gvfs-show
 ```
 
-If mounting ntfs-3g drives with write permissions, make sure Windows fast startup is disabled, so Windows fully unmount disks.
+If mounting ntfs-3g drives with write permissions, make sure Windows fast startup is disabled, so Windows fully unmounts disks.
 
-Copy any other configuration files to the new system in `/mnt` (such as netctl profiles in `/etc/netctl`)  
-Then chroot to it:
+Chroot to the new system:
 ```bash
 arch-chroot /mnt
 ```
 
-#### Set time zone
+### Set time zone
 ```bash
 tzselect
 # ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
@@ -251,7 +281,7 @@ Alternatively, you can use Arch in localtime as well (not recommended):
 timedatectl set-local-rtc 1
 ```
 
-#### Configure locale
+### Configure locale
 
 ```bash
 nano /etc/locale.gen
@@ -272,23 +302,13 @@ KEYMAP=pt-latin1
 #FONT=Lat2-Terminus16
 ```
 
-### Hostname
-
-Add your chosen computer name in `nano /etc/hostname`. Make a matching edit to `/etc/hosts`:
+### Network
 
 ```bash
-127.0.0.1 localhost
-::1		localhost
-127.0.1.1	<myhostname>.localdomain	<myhostname>
-```
-
-```bash
-pacman -S iw wpa_supplicant dialog
-```
-
-Reconfigure Wireless:
-```bash
-wifi-menu
+pacman -S networkmanager
+systemctl enable NetworkManager.service
+nano /etc/hostname
+<your_chosen_hostname>
 ```
 
 ### Root password
@@ -298,19 +318,19 @@ Set the root password:
 passwd
 ```
 
-### Bootloader: systemd-boot
+## Bootloader
 
-Manages UEFI boot entries.
+### UEFI systemd-boot
 
 ```bash
 bootctl install
 ```
 
-Configure:
+Configure manually:
 
 /boot/loader/loader.conf:
 
-```
+```bash
 default arch.conf
 timeout 0 # Hides the menu, hold a key while booting to override
 console-mode max
@@ -320,92 +340,82 @@ console-mode max
 
 (remember to change disk/partition and intel to amd if applicable)
 
-```
+```bash
 title   Arch Linux
 linux   /vmlinuz-linux
-initrd  /intel-ucode.img
+initrd  /intel-ucode.img # or amd-ucode.img
 initrd  /initramfs-linux.img
-#options root="LABEL=arch_os" rw quiet
 options root="/dev/nvme0n1p2" rw quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3
 ```
 
-To check failed initializations (because of quiet option):
-```
+To later check failed initializations (because of `quiet` option):
+```bash
 systemctl --failed
 ```
 
-To update an existing installation: 
+To update an existing installation:
 
 ```bash
 bootctl update
 ```
 
+To repair Windows boot if missing, refer to the Windows notes in this repository.
 
-### Bootloader: EFISTUB
+<details>
+  <summary>Other bootloaders</summary>
 
-Boots directly into Linux kernel, useful if Linux is the only OS in the disk and only has one kernel.
+  ### Bootloader: EFISTUB
 
-```bash
-pacman -S efibootmgr
-# If intel:
-pacman -S intel-ucode
-# If amd:
-pacman -S amd-ucode
-# Troubleshooting: verify that /boot has initramfs-linux.img, intel-ucode.img and vmlinuz-linux
-# They should automatically be populated when /boot is mounted and pacman installs kernels (linux) or *-ucode
+  Boots directly into Linux kernel, useful if Linux is the only OS in the disk and only has one kernel.
 
-# Find the PARTUUID of the / partition:
-lsblk -o NAME,MOUNTPOINT,PARTUUID
+  ```bash
+  pacman -S efibootmgr
+  # Troubleshooting: verify that /boot has initramfs-linux.img, intel-ucode.img/amd-ucode.img and vmlinuz-linux
+  # They should automatically be populated when /boot is mounted and pacman installs kernels (linux) or *-ucode
 
-efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux --unicode 'root=PARTUUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX rw initrd=\<intel or amd>-ucode.img initrd=\initramfs-linux.img' --verbose
+  # Find the PARTUUID of the / partition:
+  lsblk -o NAME,MOUNTPOINT,PARTUUID
 
-# To remove an entry inserted by mistake (e.g. Boot0000):
-efibootmgr -b 0000 -B
+  efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux --unicode 'root=PARTUUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX rw initrd=\<intel or amd>-ucode.img initrd=\initramfs-linux.img' --verbose
 
-# If no entry shows, it may be because the motherboard (e.g. MSI) expects a bootloader to be installed in the "fallback" location.
-# You can sort of workaround it by creating a dummy file in <boot partition>/EFI/BOOT/BOOTX64.EFI
+  # To remove an entry inserted by mistake (e.g. Boot0000):
+  efibootmgr -b 0000 -B
 
-```
+  # If no entry shows, it may be because the motherboard (e.g. MSI) expects a bootloader to be installed in the "fallback" location.
+  # You can sort of workaround it by creating a dummy file in <boot partition>/EFI/BOOT/BOOTX64.EFI
 
-### Bootloader: GRUB
+  ```
 
-#### EFI
-```bash
-pacman -S grub efibootmgr os-prober
-# If intel:
-pacman -S intel-ucode
-# If amd:
-pacman -S amd-ucode
-#mkdir /efi
-#mount /dev/sdx1 /efi
-grub-install --target=x86_64-efi --efi-directory=efi --bootloader-id=GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
+  ### Bootloader: GRUB
 
-# If GRUB doesn't run, it may be because the motherboard (e.g. MSI) expects it to be installed in the "fallback" location.
-# Use instead:
-grub-install --target=x86_64-efi --efi-directory=efi --removable
+  #### EFI
+  ```bash
+  pacman -S grub efibootmgr os-prober
+  #mkdir /efi
+  #mount /dev/sdx1 /efi
+  grub-install --target=x86_64-efi --efi-directory=efi --bootloader-id=GRUB
+  grub-mkconfig -o /boot/grub/grub.cfg
 
-# Or fix a previous install:
-mv /efi/EFI/GRUB /efi/EFI/BOOT
-mv /efi/EFI/BOOT/grubx64.efi /efi/EFI/BOOT/BOOTX64.EFI
+  # If GRUB doesn't run, it may be because the motherboard (e.g. MSI) expects it to be installed in the "fallback" location.
+  # Use instead:
+  grub-install --target=x86_64-efi --efi-directory=efi --removable
 
-```
+  # Or fix a previous install:
+  mv /efi/EFI/GRUB /efi/EFI/BOOT
+  mv /efi/EFI/BOOT/grubx64.efi /efi/EFI/BOOT/BOOTX64.EFI
 
-#### MBR
-```bash
-pacman -S grub os-prober
-grub-install --target=i386-pc /dev/sdx
-grub-mkconfig -o /boot/grub/grub.cfg
-```
+  ```
 
-Enable dhcpcd if needed:
-```bash
-ip link                                       # to find out <interface>
-systemctl enable dhcpcd@<interface>.service
-# Or try: dhcpcd.service (the above seems to have timeout errors, and disable ethernet hotplug)
-```
+  #### MBR
+  ```bash
+  pacman -S grub os-prober
+  grub-install --target=i386-pc /dev/sdx
+  grub-mkconfig -o /boot/grub/grub.cfg
+  ```
 
-Reboot:
+</details><br>
+
+## Reboot
 ```bash
 exit
 umount -R /mnt
@@ -415,11 +425,13 @@ reboot
 ## Post-install
 
 Enable multilib repository:  
-Uncomment from /etc/pacman.conf:
+Uncomment the following two lines from `/etc/pacman.conf`:
 ```
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 ```
+
+TODO: Uncomment Color in /etc/pacman.conf file.
 
 ```bash
 pacman -Sy
@@ -436,11 +448,8 @@ passwd <username>                                # setup password
 pacman -S sudo
 EDITOR="nano" visudo
 
-# OLD: # Add:
-# OLD: <USERNAME>        ALL=(ALL) ALL
-
-# Instead, uncomment the line:
-%wheel ALL=(ALL) ALL
+# Uncomment the line:
+%wheel ALL=(ALL:ALL) ALL
 
 # Uncomment the line:
 Defaults env_keep += "HOME"
@@ -456,121 +465,49 @@ sudo gpasswd -d <user> <group>  # Remove user from group
 sudo groupdel <group>           # Delete a group
 ```
 
-### Install Graphical Environment
+## Graphical Environment
 
 ```bash
-pacman -S xorg-server
-
 # Graphics drivers:
 pacman -S xf86-video-intel mesa lib32-mesa         # Intel drivers
 pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings   # Nvidia drivers
 pacman -S vulkan-icd-loader lib32-vulkan-icd-loader # Vulkan support
 ```
 
-To check (later) that Direct Rendering is being used:  
+To check (later) that Direct Rendering is being used:
 ```bash
 sudo pacman -S mesa-demos
 glxinfo | grep direct
 ```
 
-#### GNOME
-
+Wayland with nvidia:
 ```bash
-pacman -S gnome gnome-extra chrome-gnome-shell
-
-systemctl enable gdm.service
-systemctl enable NetworkManager.service
+nano /etc/modprobe.d/nvidia_drm.conf
+options nvidia_drm modeset=1 fbdev=1
 ```
 
-When using nvidia proprietary drivers, it may be needed to uncomment the line `#WaylandEnable=false` in `/etc/gdm/custom.conf`.
-
-##### Printing
+### KDE
 
 ```bash
-sudo pacman -S cups cups-pdf ghostscript gsfonts hplip system-config-printer
-sudo systemctl enable org.cups.cupsd.service
-sudo systemctl start org.cups.cupsd.service
-```
-
-Remember to go to "Printer > Configure" (or Print Settings application, right-click on printer) and set (default) properties.
-
-##### Additional packages
-
-```bash
-pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav   # GStreamer codecs
-pacman -S gnome-tweak-tool arc-gtk-theme arc-icon-theme   # Appearance
-pacman -S atom openssh  # Development
-pacman -S ttf-liberation adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts # Fonts
-```
-
-AUR packages:
-```bash
-gnome-shell-extension-dash-to-dock
-```
-
-Other GNOME extensions (visit the links in the GNOME Web Browser):  
-- https://extensions.gnome.org/extension/307/dash-to-dock/
-
-
-##### Settings 
-
-###### Settings application
-- Region & Language > Input Sources > Your desired keyboard
-- Details > Date & Time > Automatic Date & Time / Time Zone
-- Details > Users > Photo
-
-
-###### Gnome tweak tool
-- Appearance > Themes > Applications > Arc-Dark
-- Appearance > Themes > Icons > Arc
-- Desktop > Icons on Desktop
-- Top Bar
-- Windows > Titlebar Buttons
-
-###### Dash-to-dock (right click on dock's Applications icon)
-- Position and size > Icon size: 32
-- Launchers > Move the applications button at the beginning of the dock
-- Appearance > Shrink the dash
-- Appearance > Show windows counter indicators
-- Appearance > Customize opacity (70%)
-
-###### Other applications
-- atom: config.cson and keymap.cson
-- terminal: Profile Preferences > Colors > White on Black
-
-###### Templates
-```bash
-touch ~/Templates/Text\ Document.txt
-```
-
-###### Alt-tab switch only between workspace apps
-```bash
-gsettings set org.gnome.shell.app-switcher current-workspace-only true
-```
-
-
-#### KDE
-
-```bash
-pacman -S plasma-meta kde-applications-meta sddm sddm-kcm noto-fonts-emoji
-# Choose phonon-qt5-vlc and cronie if asked
-systemctl enable sddm
+pacman -S plasma-meta kde-applications-meta sddm sddm-kcm
+# Choose qt6-multimedia-ffmpeg, pipewire-jack, noto-fonts, noto-fonts-emoji, phonon-qt5-vlc, pyside6, cronie, tesseract-data-eng if asked
+systemctl enable sddm # Check if needed, it gave a warning last time
 localectl set-x11-keymap pt
-# If it doesn't work (login screen shows US keyboard layout)
+# If it doesn't work (login screen shows US keyboard layout even when user starts typing password)
 nano /usr/share/sddm/scripts/Xsetup
 setxkbmap pt
 ```
 
-##### Printing
+### Printing
 
 ```bash
 sudo pacman -S cups cups-pdf print-manager hplip system-config-printer
 sudo systemctl enable cups.service
 ```
 
-##### Additional Packages
+### Additional Packages (Old)
 
-###### Pacman
+#### Pacman
 ```bash
 latte-dock
 materia-kde kvantum-theme-materia
@@ -579,17 +516,24 @@ papirus-icon-theme
 kio-gdrive # Access Google Drive through Network section on Dolphin
 ```
 
-###### AUR
+#### AUR
 ```bash
 breeze-blurred-git
 plasma5-applets-eventcalendar
 ```
 
-##### Settings
+### Settings (new)
+
+- Keyboard > Keyboard
+  - Hardware > Delay: 200
+  - Layouts > Configure Layouts > Add > pt
+- Display & Monitor > Scale: 100%
+
+### Settings
 
 Konsole > Settings > Configure Konsole > Tab Bar / Splitters > Appearance > Position > Above
 
-###### System Settings
+#### System Settings
 - Appearance > Fonts > 8pt on everything
 - Workspace Behavior
   - Desktop Effects
@@ -628,9 +572,7 @@ Konsole > Settings > Configure Konsole > Tab Bar / Splitters > Appearance > Posi
   - Power Management > Energy Saving > Screen Energy Saving (40 min)
   - Printers
 
-TODO: Keyboard repeat delay to 200ms.
-
-###### Panel
+#### Panel
 
 Right click > Edit Panel
 
@@ -649,7 +591,7 @@ Configure Event Calendar:
 - Enable Line 2, with 44% height
 - Google Calendar
 
-###### Latte Dock
+#### Latte Dock
 
 Right click > Dock Settings
 
@@ -665,7 +607,7 @@ Right click > Add Widgets
 
 Right click > Layouts > Configure > Preferences > Press Meta to activate Application Launcher
 
-###### System tray
+#### System tray
 
 Right click > Configure System Tray
 
@@ -675,13 +617,13 @@ Entries:
 - Vaults (off)
 - Volume Control (hidden)
 
-###### Calendar Widgets
+#### Calendar Widgets
 
 1. Configure the Google Calendar account in KOrganizer
 2. Add the digital clock widget and configure it using the PIM plugin
 3. The events should now appear in the Calendar widget as well
 
-###### Chrome
+#### Chrome
 - Right click on title bar > Use system title bar and borders (off)
 
 ```bash
@@ -691,7 +633,7 @@ nano ~/.config/chrome-flags.conf
 --enable-features=WebUIDarkMode
 ```
 
-###### Kvantum Manager
+#### Kvantum Manager
 
 Themes:
 
@@ -732,6 +674,84 @@ https://github.com/Akava-Design/Akava-Konsole
 - Settings > Edit Current Profile > Appearance > Edit > Blur background (on)
 - Settings > Edit Current Profile > Appearance > Edit > Background transparency (25%)
 
+<br><details>
+  <summary>GNOME</summary>
+
+  ### GNOME
+
+  ```bash
+  pacman -S gnome gnome-extra chrome-gnome-shell
+
+  systemctl enable gdm.service
+  systemctl enable NetworkManager.service
+  ```
+
+  When using nvidia proprietary drivers, it may be needed to uncomment the line `#WaylandEnable=false` in `/etc/gdm/custom.conf`.
+
+  ### Printing
+
+  ```bash
+  sudo pacman -S cups cups-pdf ghostscript gsfonts hplip system-config-printer
+  sudo systemctl enable org.cups.cupsd.service
+  sudo systemctl start org.cups.cupsd.service
+  ```
+
+  Remember to go to "Printer > Configure" (or Print Settings application, right-click on printer) and set (default) properties.
+
+  ### Additional packages
+
+  ```bash
+  pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav   # GStreamer codecs
+  pacman -S gnome-tweak-tool arc-gtk-theme arc-icon-theme   # Appearance
+  pacman -S atom openssh  # Development
+  pacman -S ttf-liberation adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts # Fonts
+  ```
+
+  AUR packages:
+  ```bash
+  gnome-shell-extension-dash-to-dock
+  ```
+
+  Other GNOME extensions (visit the links in the GNOME Web Browser):  
+  - https://extensions.gnome.org/extension/307/dash-to-dock/
+
+
+  ### Settings 
+
+  #### Settings application
+  - Region & Language > Input Sources > Your desired keyboard
+  - Details > Date & Time > Automatic Date & Time / Time Zone
+  - Details > Users > Photo
+
+
+  #### Gnome tweak tool
+  - Appearance > Themes > Applications > Arc-Dark
+  - Appearance > Themes > Icons > Arc
+  - Desktop > Icons on Desktop
+  - Top Bar
+  - Windows > Titlebar Buttons
+
+  #### Dash-to-dock (right click on dock's Applications icon)
+  - Position and size > Icon size: 32
+  - Launchers > Move the applications button at the beginning of the dock
+  - Appearance > Shrink the dash
+  - Appearance > Show windows counter indicators
+  - Appearance > Customize opacity (70%)
+
+  #### Other applications
+  - atom: config.cson and keymap.cson
+  - terminal: Profile Preferences > Colors > White on Black
+
+  #### Templates
+  ```bash
+  touch ~/Templates/Text\ Document.txt
+  ```
+
+  #### Alt-tab switch only between workspace apps
+  ```bash
+  gsettings set org.gnome.shell.app-switcher current-workspace-only true
+  ```
+</details><br>
 
 ## Other programs
 
@@ -745,7 +765,7 @@ lib32-gst-plugins-base lib32-gst-plugins-good # Wine video codecs
 
 ### AUR packages
 ```bash
-yay                 # (manual installation)
+paru/yay                   # (manual installation)
 google-chrome
 visual-studio-code-bin     # For Settings Sync to work in KDE, you may need pacman -S gnome-keyring
 tuxguitar
