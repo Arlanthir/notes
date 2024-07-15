@@ -15,6 +15,8 @@ To follow the examples and try out DynamoDB on your machine, it is recommended t
 
 Make sure to install the awslocal wrapper: `pip3 install awscli-local`.
 
+Start it with `localstack start`.
+
 Verify that it's running with `localstack status services` (should display all the available services). The running port should be 4566.
 
 You can also install [Dynobase](https://dynobase.dev/) to see an interactive visual representation of the DynamoDB state: `brew install --cask dynobase`. The free trial is about one week.
